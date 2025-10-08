@@ -5,14 +5,16 @@ import { memo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import { LayoutProps } from '../type';
+
+import Header from './Header';
+import SideBar from './SideBar';
+
 import InitClientDB from '@/features/InitClientDB';
 import Footer from '@/features/Setting/Footer';
 import SettingContainer from '@/features/Setting/SettingContainer';
 import { useActiveProfileKey } from '@/hooks/useActiveTabKey';
 
-import { LayoutProps } from '../type';
-import Header from './Header';
-import SideBar from './SideBar';
 
 const Layout = memo<LayoutProps>(({ children, category }) => {
   const ref = useRef<any>(null);

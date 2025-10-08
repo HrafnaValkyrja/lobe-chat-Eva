@@ -1,3 +1,7 @@
+import { chatSelectors } from '../../message/selectors';
+
+import { genMessage } from './util';
+
 import { THREAD_DRAFT_ID } from '@/const/message';
 import { useAgentStore } from '@/store/agent';
 import { agentChatConfigSelectors } from '@/store/agent/selectors';
@@ -6,8 +10,6 @@ import { chatHelpers } from '@/store/chat/helpers';
 import { ChatMessage } from '@/types/message';
 import { ThreadItem } from '@/types/topic';
 
-import { chatSelectors } from '../../message/selectors';
-import { genMessage } from './util';
 
 const currentTopicThreads = (s: ChatStoreState) => {
   if (!s.activeTopicId) return [];

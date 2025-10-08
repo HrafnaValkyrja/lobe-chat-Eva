@@ -6,12 +6,13 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import HistoryDivider from './HistoryDivider';
+
 import { agentChatConfigSelectors } from '@/store/agent/selectors';
 import { useAgentStore } from '@/store/agent/store';
 import { useChatStore } from '@/store/chat';
 import { topicSelectors } from '@/store/chat/selectors';
 
-import HistoryDivider from './HistoryDivider';
 
 const useStyles = createStyles(({ css, token }) => ({
   container: css`

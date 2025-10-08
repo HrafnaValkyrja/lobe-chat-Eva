@@ -1,9 +1,10 @@
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import FileItem from './Item';
+
 import { ChatFileItem } from '@/types/message';
 
-import FileItem from './Item';
 
 interface FileListViewerProps {
   items: ChatFileItem[];

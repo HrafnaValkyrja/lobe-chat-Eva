@@ -2,6 +2,10 @@
 import { eq, inArray } from 'drizzle-orm';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { DeprecatedDataImporterRepos as DataImporterRepos } from '../index';
+
+import mockImportData from './fixtures/messages.json';
+
 import { getTestDBInstance } from '@/database/core/dbForTest';
 import {
   agents,
@@ -15,8 +19,6 @@ import {
 import { CURRENT_CONFIG_VERSION } from '@/migrations';
 import { ImporterEntryData } from '@/types/importer';
 
-import { DeprecatedDataImporterRepos as DataImporterRepos } from '../index';
-import mockImportData from './fixtures/messages.json';
 
 const serverDB = await getTestDBInstance();
 

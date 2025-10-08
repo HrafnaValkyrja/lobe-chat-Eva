@@ -1,9 +1,10 @@
 import { renderHook } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 
+import { usePlatform } from './usePlatform';
+
 import * as platformUtils from '@/utils/platform';
 
-import { usePlatform } from './usePlatform';
 
 // Mocks
 vi.mock('@/utils/platform', () => ({

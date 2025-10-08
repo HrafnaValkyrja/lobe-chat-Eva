@@ -4,12 +4,13 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import { parseMcpInput } from './utils';
+
 import { isDesktop } from '@/const/version';
 import { useToolStore } from '@/store/tool';
 import { pluginSelectors } from '@/store/tool/selectors';
 import { electronStylish } from '@/styles/electron';
 
-import { parseMcpInput } from './utils';
 
 interface QuickImportSectionProps {
   form: FormInstance;

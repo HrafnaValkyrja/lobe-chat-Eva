@@ -4,6 +4,8 @@ import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import Settings from './Settings';
+
 import Deployment from '@/features/MCPPluginDetail/Deployment';
 import { DetailProvider } from '@/features/MCPPluginDetail/DetailProvider';
 import Header from '@/features/MCPPluginDetail/Header';
@@ -16,7 +18,6 @@ import { useDiscoverStore } from '@/store/discover';
 import { useToolStore } from '@/store/tool';
 import { McpNavKey } from '@/types/discover';
 
-import Settings from './Settings';
 
 interface DetailProps {
   identifier?: string;

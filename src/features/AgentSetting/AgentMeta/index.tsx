@@ -7,15 +7,17 @@ import { Wand2 } from 'lucide-react';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { FORM_STYLE } from '@/const/layoutTokens';
-import { INBOX_SESSION_ID } from '@/const/session';
-import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfig';
 
 import { selectors, useStore } from '../store';
+
 import AutoGenerateAvatar from './AutoGenerateAvatar';
 import AutoGenerateInput from './AutoGenerateInput';
 import AutoGenerateSelect from './AutoGenerateSelect';
 import BackgroundSwatches from './BackgroundSwatches';
+
+import { FORM_STYLE } from '@/const/layoutTokens';
+import { INBOX_SESSION_ID } from '@/const/session';
+import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfig';
 
 const AgentMeta = memo(() => {
   const { t } = useTranslation('setting');

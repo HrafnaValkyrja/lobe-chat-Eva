@@ -1,5 +1,9 @@
 import type { PartialDeep } from 'type-fest';
 
+import { MessageModel } from './message';
+import { SessionGroupModel } from './sessionGroup';
+import { TopicModel } from './topic';
+
 import { DEFAULT_AGENT_LOBE_SESSION } from '@/const/session';
 import { BaseModel } from '@/database/_deprecated/core';
 import { DBModel } from '@/database/_deprecated/core/types/db';
@@ -15,9 +19,6 @@ import {
 import { merge } from '@/utils/merge';
 import { uuid } from '@/utils/uuid';
 
-import { MessageModel } from './message';
-import { SessionGroupModel } from './sessionGroup';
-import { TopicModel } from './topic';
 
 class _SessionModel extends BaseModel {
   constructor() {

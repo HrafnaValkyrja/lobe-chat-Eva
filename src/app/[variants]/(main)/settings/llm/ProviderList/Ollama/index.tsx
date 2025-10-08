@@ -2,9 +2,10 @@
 
 import { useTranslation } from 'react-i18next';
 
+import { ProviderItem } from '../../type';
+
 import { OllamaProviderCard } from '@/config/modelProviders';
 
-import { ProviderItem } from '../../type';
 
 export const useOllamaProvider = (): ProviderItem => {
   const { t } = useTranslation('modelProvider');

@@ -12,13 +12,15 @@ import {
 } from 'drizzle-orm/pg-core';
 import { createInsertSchema } from 'drizzle-zod';
 
-import { LobeDocumentPage } from '@/types/document';
 
 import { idGenerator } from '../utils/idGenerator';
+
 import { createdAt, timestamps } from './_helpers';
 import { files } from './file';
 import { chunks } from './rag';
 import { users } from './user';
+
+import { LobeDocumentPage } from '@/types/document';
 
 /**
  * 文档表 - 存储文件内容或网页搜索结果

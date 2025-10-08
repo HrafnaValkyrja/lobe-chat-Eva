@@ -4,6 +4,7 @@ import { Pricing } from 'model-bank';
 import OpenAI from 'openai';
 
 import { ChatPayloadForTransformStream } from '../streams/protocol';
+
 import { withUsageCost } from './utils/withUsageCost';
 
 const log = debug('lobe-cost:convertOpenAIUsage');
@@ -58,7 +59,7 @@ export const convertOpenAIUsage = (
   const finalData = {};
 
   Object.entries(data).forEach(([key, value]) => {
-    if (!!value) {
+    if (value) {
       // @ts-ignore
       finalData[key] = value;
     }

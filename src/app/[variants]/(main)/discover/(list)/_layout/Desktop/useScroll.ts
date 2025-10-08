@@ -1,9 +1,10 @@
 import { throttle } from 'lodash-es';
 import { useEffect, useRef } from 'react';
 
+import { SCROLL_PARENT_ID } from '../../../features/const';
+
 import { isOnServerSide } from '@/utils/env';
 
-import { SCROLL_PARENT_ID } from '../../../features/const';
 
 export const useScroll = (onScroll: (scroll: number, delta: number) => void) => {
   const lastScrollTop = useRef(0);

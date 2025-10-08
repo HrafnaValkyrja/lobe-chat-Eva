@@ -21,7 +21,7 @@ const TXTViewer: DocRenderer = ({ mainState: { currentDocument } }) => {
   const { styles } = useStyles();
   return (
     <Flexbox className={styles.page} id="txt-renderer">
-      {!!currentDocument?.fileData ? (
+      {currentDocument?.fileData ? (
         <Highlighter
           language={'txt'}
           showLanguage={false}

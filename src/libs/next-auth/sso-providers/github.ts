@@ -1,8 +1,9 @@
 import GitHub from 'next-auth/providers/github';
 
+import { CommonProviderConfig } from './sso.config';
+
 import { authEnv } from '@/envs/auth';
 
-import { CommonProviderConfig } from './sso.config';
 
 const provider = {
   id: 'github',

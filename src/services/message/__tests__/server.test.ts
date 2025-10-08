@@ -1,8 +1,9 @@
 import { describe, expect, it } from 'vitest';
 
+import { ServerService } from '../server';
+
 import { INBOX_SESSION_ID } from '@/const/session';
 
-import { ServerService } from '../server';
 
 describe('ServerService', () => {
   describe('toDbSessionId', () => {

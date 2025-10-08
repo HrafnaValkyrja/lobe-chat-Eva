@@ -1,9 +1,10 @@
 import React, { memo, useCallback } from 'react';
 import { Virtuoso } from 'react-virtuoso';
 
+import Item from './SearchItem';
+
 import { UniformSearchResult } from '@/types/tool/search';
 
-import Item from './SearchItem';
 
 interface ResultListProps {
   dataSources: UniformSearchResult[];

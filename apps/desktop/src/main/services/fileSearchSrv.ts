@@ -1,7 +1,8 @@
+import { ServiceModule } from './index';
+
 import { FileSearchImpl, createFileSearchModule } from '@/modules/fileSearch';
 import { FileResult, SearchOptions } from '@/types/fileSearch';
 
-import { ServiceModule } from './index';
 
 /**
  * File Search Service

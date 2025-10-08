@@ -1,9 +1,5 @@
 import Dexie, { Transaction } from 'dexie';
 
-import { MigrationLLMSettings } from '@/migrations/FromV3ToV4';
-import { MigrationAgentChatConfig } from '@/migrations/FromV5ToV6';
-import { MigrationKeyValueSettings } from '@/migrations/FromV6ToV7';
-import { uuid } from '@/utils/uuid';
 
 import { DB_File } from '../schemas/files';
 import { DB_Message } from '../schemas/message';
@@ -12,6 +8,7 @@ import { DB_Session } from '../schemas/session';
 import { DB_SessionGroup } from '../schemas/sessionGroup';
 import { DB_Topic } from '../schemas/topic';
 import { DB_User } from '../schemas/user';
+
 import { migrateSettingsToUser } from './migrations/migrateSettingsToUser';
 import {
   dbSchemaV1,
@@ -24,6 +21,11 @@ import {
   dbSchemaV9,
 } from './schemas';
 import { DBModel, LOBE_CHAT_LOCAL_DB_NAME } from './types/db';
+
+import { MigrationLLMSettings } from '@/migrations/FromV3ToV4';
+import { MigrationAgentChatConfig } from '@/migrations/FromV5ToV6';
+import { MigrationKeyValueSettings } from '@/migrations/FromV6ToV7';
+import { uuid } from '@/utils/uuid';
 
 export interface LobeDBSchemaMap {
   files: DB_File;

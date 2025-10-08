@@ -1,6 +1,7 @@
+import JsonViewer from './JsonViewer';
+
 import { useAiInfraStore } from '@/store/aiInfra';
 
-import JsonViewer from './JsonViewer';
 
 const AiProviderRuntimeConfig = () => {
   const aiProviderRuntimeConfig = useAiInfraStore((s) => s.aiProviderRuntimeConfig);

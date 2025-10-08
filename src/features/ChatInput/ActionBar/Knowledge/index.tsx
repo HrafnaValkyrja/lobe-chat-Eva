@@ -2,6 +2,10 @@ import { LibraryBig } from 'lucide-react';
 import { Suspense, memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import Action from '../components/Action';
+
+import { useControls } from './useControls';
+
 import TipGuide from '@/components/TipGuide';
 import { LOBE_CHAT_CLOUD } from '@/const/branding';
 import { isServerMode } from '@/const/version';
@@ -10,8 +14,6 @@ import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfi
 import { useUserStore } from '@/store/user';
 import { preferenceSelectors } from '@/store/user/selectors';
 
-import Action from '../components/Action';
-import { useControls } from './useControls';
 
 const enableKnowledge = isServerMode;
 

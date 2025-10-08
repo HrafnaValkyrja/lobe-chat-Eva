@@ -4,10 +4,11 @@ import { Anchor, AnchorProps } from 'antd';
 import { createStyles } from 'antd-style';
 import { memo, useMemo } from 'react';
 
+import { createTOCTree } from './useToc';
+
 import { SCROLL_PARENT_ID } from '@/app/[variants]/(main)/discover/features/const';
 import { isOnServerSide } from '@/utils/env';
 
-import { createTOCTree } from './useToc';
 
 const useStyles = createStyles(({ css, token, responsive, prefixCls }) => {
   return {

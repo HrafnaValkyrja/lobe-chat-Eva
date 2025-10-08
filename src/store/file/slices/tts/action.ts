@@ -1,11 +1,12 @@
 import { SWRResponse } from 'swr';
 import { StateCreator } from 'zustand/vanilla';
 
+import { FileStore } from '../../store';
+
 import { useClientDataSWR } from '@/libs/swr';
 import { fileService } from '@/services/file';
 import { FileItem } from '@/types/files';
 
-import { FileStore } from '../../store';
 
 const FETCH_TTS_FILE = 'fetchTTSFile';
 
@@ -44,5 +45,5 @@ export const createTTSFileSlice: StateCreator<
     return res?.id;
   },
   useFetchTTSFile: (id) =>
-    useClientDataSWR(!!id ? [FETCH_TTS_FILE, id] : null, () => fileService.getFile(id!)),
+    useClientDataSWR(id ? [FETCH_TTS_FILE, id] : null, () => fileService.getFile(id!)),
 });

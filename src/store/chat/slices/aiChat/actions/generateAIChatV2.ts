@@ -15,6 +15,9 @@ import { t } from 'i18next';
 import { produce } from 'immer';
 import { StateCreator } from 'zustand/vanilla';
 
+import { chatSelectors, topicSelectors } from '../../../selectors';
+import { messageMapKey } from '../../../utils/messageMapKey';
+
 import { aiChatService } from '@/services/aiChat';
 import { chatService } from '@/services/chat';
 import { messageService } from '@/services/message';
@@ -30,8 +33,6 @@ import { ChatImageItem } from '@/types/message/image';
 import { ChatVideoItem } from '@/types/message/video';
 import { setNamespace } from '@/utils/storeDebug';
 
-import { chatSelectors, topicSelectors } from '../../../selectors';
-import { messageMapKey } from '../../../utils/messageMapKey';
 
 const n = setNamespace('ai');
 

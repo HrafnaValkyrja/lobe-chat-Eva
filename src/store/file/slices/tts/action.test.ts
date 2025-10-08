@@ -2,10 +2,11 @@ import { act, renderHook } from '@testing-library/react';
 import useSWR from 'swr';
 import { beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { useFileStore as useStore } from '../../store';
+
 import { fileService } from '@/services/file';
 import { createServerConfigStore } from '@/store/serverConfig/store';
 
-import { useFileStore as useStore } from '../../store';
 
 vi.mock('zustand/traditional');
 

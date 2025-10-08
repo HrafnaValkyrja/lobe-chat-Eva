@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation';
 import urlJoin from 'url-join';
 
+import Client from './Client';
+
 import StructuredData from '@/components/StructuredData';
 import { ldModule } from '@/server/ld';
 import { metadataModule } from '@/server/metadata';
@@ -9,7 +11,6 @@ import { translation } from '@/server/translation';
 import { PageProps } from '@/types/next';
 import { RouteVariants } from '@/utils/server/routeVariants';
 
-import Client from './Client';
 
 type DiscoverPageProps = PageProps<{ slugs: string[]; variants: string }>;
 

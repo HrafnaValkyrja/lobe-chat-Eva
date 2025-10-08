@@ -1,5 +1,13 @@
 import { z } from 'zod';
 
+import {
+  AiModelTypeSchema,
+  AiProviderModelListItem,
+  CreateAiModelSchema,
+  ToggleAiModelEnableSchema,
+  UpdateAiModelSchema,
+} from '../../../../packages/model-bank/src/types/aiModel';
+
 import { AiModelModel } from '@/database/models/aiModel';
 import { UserModel } from '@/database/models/user';
 import { AiInfraRepos } from '@/database/repositories/aiInfra';
@@ -9,13 +17,6 @@ import { getServerGlobalConfig } from '@/server/globalConfig';
 import { KeyVaultsGateKeeper } from '@/server/modules/KeyVaultsEncrypt';
 import { ProviderConfig } from '@/types/user/settings';
 
-import {
-  AiModelTypeSchema,
-  AiProviderModelListItem,
-  CreateAiModelSchema,
-  ToggleAiModelEnableSchema,
-  UpdateAiModelSchema,
-} from '../../../../packages/model-bank/src/types/aiModel';
 
 const aiModelProcedure = authedProcedure.use(serverDatabase).use(async (opts) => {
   const { ctx } = opts;

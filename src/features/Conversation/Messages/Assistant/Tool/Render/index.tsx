@@ -1,13 +1,14 @@
 import isEqual from 'fast-deep-equal';
 import { Suspense, memo } from 'react';
 
+import Arguments from './Arguments';
+import CustomRender from './CustomRender';
+import ErrorResponse from './ErrorResponse';
+
 import { LOADING_FLAT } from '@/const/message';
 import { useChatStore } from '@/store/chat';
 import { chatSelectors } from '@/store/chat/selectors';
 
-import Arguments from './Arguments';
-import CustomRender from './CustomRender';
-import ErrorResponse from './ErrorResponse';
 
 interface RenderProps {
   messageId: string;
@@ -26,7 +27,7 @@ const Render = memo<RenderProps>(
     // 如果处于 loading 或者找不到 toolMessage 则展示 Arguments
     if (loading || !toolMessage) return <Arguments arguments={requestArgs} />;
 
-    if (!!toolMessage) {
+    if (toolMessage) {
       if (toolMessage.error) {
         return <ErrorResponse {...toolMessage.error} id={messageId} plugin={toolMessage.plugin} />;
       }

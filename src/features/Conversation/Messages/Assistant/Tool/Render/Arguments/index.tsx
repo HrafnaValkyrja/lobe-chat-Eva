@@ -4,9 +4,10 @@ import { parse } from 'partial-json';
 import { ReactNode, memo, useMemo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import ObjectEntity from './ObjectEntity';
+
 import { useYamlArguments } from '@/hooks/useYamlArguments';
 
-import ObjectEntity from './ObjectEntity';
 
 const useStyles = createStyles(({ css, token, cx }) => ({
   button: css`

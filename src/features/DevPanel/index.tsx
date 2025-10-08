@@ -2,10 +2,10 @@ import { BookText, Cog, DatabaseIcon, FlagIcon, GlobeLockIcon } from 'lucide-rea
 
 import CacheViewer from './CacheViewer';
 import FeatureFlagViewer from './FeatureFlagViewer';
+import FloatPanel from './features/FloatPanel';
 import MetadataViewer from './MetadataViewer';
 import PostgresViewer from './PostgresViewer';
 import SystemInspector from './SystemInspector';
-import FloatPanel from './features/FloatPanel';
 
 const DevPanel = () => (
   <FloatPanel

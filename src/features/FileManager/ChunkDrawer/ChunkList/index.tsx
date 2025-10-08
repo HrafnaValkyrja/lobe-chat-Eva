@@ -2,10 +2,12 @@ import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 import { Virtuoso } from 'react-virtuoso';
 
-import { lambdaQuery } from '@/libs/trpc/client';
 
 import SkeletonLoading from '../Loading';
+
 import ChunkItem from './ChunkItem';
+
+import { lambdaQuery } from '@/libs/trpc/client';
 
 interface ChunkListProps {
   fileId: string;

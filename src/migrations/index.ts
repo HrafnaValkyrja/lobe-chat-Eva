@@ -1,6 +1,3 @@
-import { MigrationV2ToV3 } from '@/migrations/FromV2ToV3';
-import { VersionController } from '@/migrations/VersionController';
-import { ConfigStateAll } from '@/types/exportConfig';
 
 import { MigrationV0ToV1 } from './FromV0ToV1';
 import { MigrationV1ToV2 } from './FromV1ToV2';
@@ -8,6 +5,10 @@ import { MigrationV3ToV4 } from './FromV3ToV4';
 import { MigrationV4ToV5 } from './FromV4ToV5';
 import { MigrationV5ToV6 } from './FromV5ToV6';
 import { MigrationV6ToV7 } from './FromV6ToV7';
+
+import { MigrationV2ToV3 } from '@/migrations/FromV2ToV3';
+import { VersionController } from '@/migrations/VersionController';
+import { ConfigStateAll } from '@/types/exportConfig';
 
 // Current latest version
 export const CURRENT_CONFIG_VERSION = 7;

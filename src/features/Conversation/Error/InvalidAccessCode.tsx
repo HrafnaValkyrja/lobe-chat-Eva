@@ -5,13 +5,14 @@ import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import { useServerConfigStore } from '@/store/serverConfig';
-import { featureFlagsSelectors, serverConfigSelectors } from '@/store/serverConfig/selectors';
 
 import AccessCodeForm from './AccessCodeForm';
 import ChatInvalidAPIKey from './ChatInvalidApiKey';
 import OAuthForm from './OAuthForm';
 import { ErrorActionContainer } from './style';
+
+import { useServerConfigStore } from '@/store/serverConfig';
+import { featureFlagsSelectors, serverConfigSelectors } from '@/store/serverConfig/selectors';
 
 enum Tab {
   Api = 'api',

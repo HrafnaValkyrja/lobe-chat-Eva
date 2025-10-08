@@ -5,9 +5,10 @@ import {
 } from '@google/genai';
 import type { Pricing } from 'model-bank';
 
+import { withUsageCost } from './utils/withUsageCost';
+
 import { ModelUsage } from '@/types/message';
 
-import { withUsageCost } from './utils/withUsageCost';
 
 const getTokenCount = (details: ModalityTokenCount[] | undefined, modality: MediaModality) => {
   return details?.find((detail) => detail?.modality === modality)?.tokenCount;

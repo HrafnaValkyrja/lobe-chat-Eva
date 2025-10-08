@@ -1,12 +1,13 @@
 import { memo } from 'react';
 
+import { MarkdownElementProps } from '../type';
+
 import Thinking from '@/components/Thinking';
 import { useChatStore } from '@/store/chat';
 import { chatSelectors } from '@/store/chat/selectors';
 import { useUserStore } from '@/store/user';
 import { userGeneralSettingsSelectors } from '@/store/user/selectors';
 
-import { MarkdownElementProps } from '../type';
 
 const isThinkingClosed = (input: string = '') => {
   const openTag = `<think>`;

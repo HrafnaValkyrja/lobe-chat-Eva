@@ -1,5 +1,7 @@
 import React, { memo, useMemo } from 'react';
 
+import ThreadDivider from './ThreadDivider';
+
 import { ChatItem } from '@/features/Conversation';
 import ActionsBar from '@/features/Conversation/components/ChatItem/ActionsBar';
 import { useAgentStore } from '@/store/agent';
@@ -7,7 +9,6 @@ import { agentChatConfigSelectors } from '@/store/agent/selectors';
 import { useChatStore } from '@/store/chat';
 import { threadSelectors } from '@/store/chat/selectors';
 
-import ThreadDivider from './ThreadDivider';
 
 export interface ThreadChatItemProps {
   id: string;

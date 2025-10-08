@@ -1,7 +1,8 @@
+import { FieldType } from './type';
+
 import { LOADING_FLAT } from '@/const/message';
 import { ChatMessage } from '@/types/message';
 
-import { FieldType } from './type';
 
 interface JSONParams extends FieldType {
   messages: ChatMessage[];

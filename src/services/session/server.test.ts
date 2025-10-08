@@ -1,9 +1,10 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { ServerService } from './server';
+
 import { lambdaClient } from '@/libs/trpc/client';
 import { LobeSessionType } from '@/types/session';
 
-import { ServerService } from './server';
 
 vi.mock('@/libs/trpc/client', () => ({
   lambdaClient: {

@@ -5,7 +5,7 @@ import { z } from 'zod';
 import { isServerMode } from '@/const/version';
 
 declare global {
-  // eslint-disable-next-line @typescript-eslint/no-namespace
+   
   namespace NodeJS {
     interface ProcessEnv {
       ACCESS_CODE?: string;
@@ -63,14 +63,14 @@ export const getAppConfig = () => {
 
       ACCESS_CODES: ACCESS_CODES as any,
 
-      AGENTS_INDEX_URL: !!process.env.AGENTS_INDEX_URL
+      AGENTS_INDEX_URL: process.env.AGENTS_INDEX_URL
         ? process.env.AGENTS_INDEX_URL
         : ASSISTANT_INDEX_URL,
 
       DEFAULT_AGENT_CONFIG: process.env.DEFAULT_AGENT_CONFIG || '',
       SYSTEM_AGENT: process.env.SYSTEM_AGENT,
 
-      PLUGINS_INDEX_URL: !!process.env.PLUGINS_INDEX_URL
+      PLUGINS_INDEX_URL: process.env.PLUGINS_INDEX_URL
         ? process.env.PLUGINS_INDEX_URL
         : PLUGINS_INDEX_URL,
 

@@ -1,8 +1,9 @@
 import { memo } from 'react';
 
+import { useStore } from '../store';
+
 import Select from '@/features/ModelSelect';
 
-import { useStore } from '../store';
 
 const ModelSelect = memo(() => {
   const [model, provider, updateConfig] = useStore((s) => [

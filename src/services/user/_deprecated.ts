@@ -1,5 +1,7 @@
 import type { PartialDeep } from 'type-fest';
 
+import { IUserService } from './type';
+
 import { MessageModel } from '@/database/_deprecated/models/message';
 import { SessionModel } from '@/database/_deprecated/models/session';
 import { UserModel } from '@/database/_deprecated/models/user';
@@ -7,7 +9,6 @@ import { UserGuide, UserInitializationState, UserPreference } from '@/types/user
 import { UserSettings } from '@/types/user/settings';
 import { AsyncLocalStorage } from '@/utils/localStorage';
 
-import { IUserService } from './type';
 
 export class ClientService implements IUserService {
   private preferenceStorage: AsyncLocalStorage<UserPreference>;
@@ -46,7 +47,7 @@ export class ClientService implements IUserService {
     // Account not exist on next-auth in client mode, no need to implement this method
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   
   updateUserSettings = async (patch: PartialDeep<UserSettings>, _?: any) => {
     return UserModel.updateSettings(patch);
   };
@@ -63,7 +64,7 @@ export class ClientService implements IUserService {
     await this.preferenceStorage.saveToLocalStorage(preference);
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars,unused-imports/no-unused-vars
+  // eslint-disable-next-line unused-imports/no-unused-vars
   async updateGuide(guide: Partial<UserGuide>) {
     throw new Error('Method not implemented.');
   }

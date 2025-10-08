@@ -5,12 +5,13 @@ import { memo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import Detail from './Detail';
+import List from './List';
+
 import { useToolStore } from '@/store/tool';
 import { pluginSelectors } from '@/store/tool/selectors';
 import { LobeToolType } from '@/types/tool/tool';
 
-import Detail from './Detail';
-import List from './List';
 
 const PluginList = memo<{ keywords?: string }>(({ keywords }) => {
   const { t } = useTranslation('plugin');

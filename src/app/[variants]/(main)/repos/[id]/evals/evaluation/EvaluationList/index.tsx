@@ -11,10 +11,11 @@ import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import CreateEvaluationButton from '../CreateEvaluation';
+
 import { ragEvalService } from '@/services/ragEval';
 import { useKnowledgeBaseStore } from '@/store/knowledgeBase';
 
-import CreateEvaluationButton from '../CreateEvaluation';
 
 const createRequest = (knowledgeBaseId: string) => async () => {
   const records = await ragEvalService.getEvaluationList(knowledgeBaseId);

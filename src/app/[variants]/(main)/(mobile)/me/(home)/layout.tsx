@@ -1,10 +1,11 @@
 import { PropsWithChildren, Suspense } from 'react';
 
+import Header from './features/Header';
+
 import Loading from '@/components/Loading/BrandTextLoading';
 import MobileContentLayout from '@/components/server/MobileNavLayout';
 import InitClientDB from '@/features/InitClientDB';
 
-import Header from './features/Header';
 
 const Layout = ({ children }: PropsWithChildren) => {
   return (

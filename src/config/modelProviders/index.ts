@@ -1,4 +1,3 @@
-import { ChatModelCard, ModelProviderCard } from '@/types/llm';
 
 import Ai21Provider from './ai21';
 import Ai302Provider from './ai302';
@@ -64,6 +63,8 @@ import XAIProvider from './xai';
 import XinferenceProvider from './xinference';
 import ZeroOneProvider from './zeroone';
 import ZhiPuProvider from './zhipu';
+
+import { ChatModelCard, ModelProviderCard } from '@/types/llm';
 
 /**
  * @deprecated

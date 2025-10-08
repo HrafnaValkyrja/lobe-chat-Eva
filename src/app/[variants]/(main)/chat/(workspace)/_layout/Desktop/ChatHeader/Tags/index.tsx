@@ -4,6 +4,10 @@ import isEqual from 'fast-deep-equal';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import HistoryLimitTags from './HistoryLimitTags';
+import KnowledgeTag from './KnowledgeTag';
+import SearchTags from './SearchTags';
+
 import ModelSwitchPanel from '@/features/ModelSwitchPanel';
 import PluginTag from '@/features/PluginTag';
 import { useAgentEnableSearch } from '@/hooks/useAgentEnableSearch';
@@ -13,9 +17,6 @@ import { agentChatConfigSelectors, agentSelectors } from '@/store/agent/selector
 import { useUserStore } from '@/store/user';
 import { authSelectors } from '@/store/user/selectors';
 
-import HistoryLimitTags from './HistoryLimitTags';
-import KnowledgeTag from './KnowledgeTag';
-import SearchTags from './SearchTags';
 
 const TitleTags = memo(() => {
   const [model, provider, hasKnowledge, isLoading] = useAgentStore((s) => [

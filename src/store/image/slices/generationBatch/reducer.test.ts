@@ -1,7 +1,8 @@
+import { GenerationBatchDispatch, generationBatchReducer } from './reducer';
+
 import { AsyncTaskStatus } from '@/types/asyncTask';
 import { Generation, GenerationBatch } from '@/types/generation';
 
-import { GenerationBatchDispatch, generationBatchReducer } from './reducer';
 
 // Test data factory functions
 const createMockGeneration = (overrides: Partial<Generation> = {}): Generation => ({

@@ -5,12 +5,14 @@ import React, { memo, useCallback, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { GroupedVirtuoso, VirtuosoHandle } from 'react-virtuoso';
 
+import TopicItem from '../TopicItem';
+
+import TopicGroupItem from './GroupItem';
+
 import { useChatStore } from '@/store/chat';
 import { topicSelectors } from '@/store/chat/selectors';
 import { ChatTopic } from '@/types/topic';
 
-import TopicItem from '../TopicItem';
-import TopicGroupItem from './GroupItem';
 
 const ByTimeMode = memo(() => {
   const { t } = useTranslation('topic');

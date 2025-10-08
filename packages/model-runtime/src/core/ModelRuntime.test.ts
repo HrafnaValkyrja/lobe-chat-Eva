@@ -6,13 +6,15 @@ import { LangfuseGenerationClient, LangfuseTraceClient } from 'langfuse-core';
 import { ModelProvider } from 'model-bank';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-import * as langfuseCfg from '@/envs/langfuse';
-import { createTraceOptions } from '@/server/modules/ModelRuntime';
 
 import { ChatStreamPayload, LobeOpenAI, ModelRuntime } from '../index';
 import { providerRuntimeMap } from '../runtimeMap';
 import { CreateImagePayload } from '../types/image';
+
 import { AgentChatOptions } from './ModelRuntime';
+
+import * as langfuseCfg from '@/envs/langfuse';
+import { createTraceOptions } from '@/server/modules/ModelRuntime';
 
 const specialProviders = [
   { id: 'openai', payload: { apiKey: 'user-openai-key', baseURL: 'user-endpoint' } },

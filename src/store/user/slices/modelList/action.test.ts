@@ -1,14 +1,16 @@
 import { act, renderHook, waitFor } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 
+import { settingsSelectors } from '../settings/selectors';
+
+import { CustomModelCardDispatch } from './reducers/customModelCard';
+import { modelProviderSelectors } from './selectors';
+
 import { modelsService } from '@/services/models';
 import { userService } from '@/services/user';
 import { useUserStore } from '@/store/user';
 import { ProviderConfig } from '@/types/user/settings';
 
-import { settingsSelectors } from '../settings/selectors';
-import { CustomModelCardDispatch } from './reducers/customModelCard';
-import { modelProviderSelectors } from './selectors';
 
 // Mock userService
 vi.mock('@/services/user', () => ({

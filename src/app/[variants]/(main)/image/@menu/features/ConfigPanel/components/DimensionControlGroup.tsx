@@ -6,9 +6,10 @@ import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import AspectRatioSelect from '../../../components/AspectRatioSelect';
+
 import { useDimensionControl } from '@/store/image/slices/generationConfig/hooks';
 
-import AspectRatioSelect from '../../../components/AspectRatioSelect';
 
 const styles = {
   aspectRatioSelect: {

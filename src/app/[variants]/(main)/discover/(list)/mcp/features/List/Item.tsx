@@ -12,14 +12,15 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 
+import ConnectionTypeTag from './ConnectionTypeTag';
+import MetaInfo from './MetaInfo';
+
 import InstallationIcon from '@/components/MCPDepsIcon';
 import OfficialIcon from '@/components/OfficialIcon';
 import PublishedTime from '@/components/PublishedTime';
 import Scores from '@/features/MCP/Scores';
 import { DiscoverMcpItem } from '@/types/discover';
 
-import ConnectionTypeTag from './ConnectionTypeTag';
-import MetaInfo from './MetaInfo';
 
 const useStyles = createStyles(({ css, token }) => {
   return {

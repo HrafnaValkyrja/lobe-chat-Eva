@@ -1,8 +1,9 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import MenuController from '../MenuCtr';
+
 import type { App } from '@/core/App';
 
-import MenuController from '../MenuCtr';
 
 // 模拟 App 及其依赖项
 const mockRefreshMenus = vi.fn();

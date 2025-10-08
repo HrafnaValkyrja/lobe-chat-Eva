@@ -1,9 +1,10 @@
 import { ChatModelCard } from '@lobechat/types';
 import { describe, expect, it } from 'vitest';
 
+import { parseModelString, transformToChatModelCards } from './parseModels';
+
 import { LOBE_DEFAULT_MODEL_LIST, OpenAIProviderCard } from '@/config/modelProviders';
 
-import { parseModelString, transformToChatModelCards } from './parseModels';
 
 describe('parseModelString', () => {
   it('custom deletion, addition, and renaming of models', () => {

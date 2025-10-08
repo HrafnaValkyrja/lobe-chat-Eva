@@ -4,9 +4,9 @@ import { Button, Text } from '@lobehub/ui';
 import { LobeChat } from '@lobehub/ui/brand';
 import { Col, Flex, Row, Skeleton } from 'antd';
 import { createStyles } from 'antd-style';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { AuthError } from 'next-auth';
 import { signIn } from 'next-auth/react';
-import { useRouter, useSearchParams } from 'next/navigation';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 

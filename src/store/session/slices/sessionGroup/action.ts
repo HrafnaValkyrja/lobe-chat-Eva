@@ -1,12 +1,13 @@
 import { t } from 'i18next';
 import { StateCreator } from 'zustand/vanilla';
 
+import { SessionGroupsDispatch, sessionGroupsReducer } from './reducer';
+
 import { message } from '@/components/AntdStaticMethods';
 import { sessionService } from '@/services/session';
 import { SessionStore } from '@/store/session';
 import { SessionGroupItem } from '@/types/session';
 
-import { SessionGroupsDispatch, sessionGroupsReducer } from './reducer';
 
 /* eslint-disable typescript-sort-keys/interface */
 export interface SessionGroupAction {
@@ -17,7 +18,7 @@ export interface SessionGroupAction {
   updateSessionGroupSort: (items: SessionGroupItem[]) => Promise<void>;
   internal_dispatchSessionGroups: (payload: SessionGroupsDispatch) => void;
 }
-/* eslint-enable */
+ 
 
 export const createSessionGroupSlice: StateCreator<
   SessionStore,

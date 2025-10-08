@@ -1,6 +1,8 @@
 import { sql } from 'drizzle-orm';
 import pMap from 'p-map';
 
+import { LobeChatDatabase } from '../../type';
+
 import {
   FilterCondition,
   PaginationParams,
@@ -8,7 +10,6 @@ import {
   TableColumnInfo,
 } from '@/types/tableViewer';
 
-import { LobeChatDatabase } from '../../type';
 
 export class TableViewerRepo {
   private userId: string;

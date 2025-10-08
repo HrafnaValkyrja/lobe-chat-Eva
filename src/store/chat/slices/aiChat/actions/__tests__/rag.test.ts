@@ -1,6 +1,8 @@
 import { act, renderHook } from '@testing-library/react';
 import { Mock, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { useChatStore } from '../../../../store';
+
 import { chatService } from '@/services/chat';
 import { ragService } from '@/services/rag';
 import { useAgentStore } from '@/store/agent';
@@ -10,7 +12,6 @@ import { systemAgentSelectors } from '@/store/user/selectors';
 import { ChatMessage } from '@/types/message';
 import { QueryRewriteSystemAgent } from '@/types/user/settings';
 
-import { useChatStore } from '../../../../store';
 
 // Mock services
 vi.mock('@/services/chat', () => ({

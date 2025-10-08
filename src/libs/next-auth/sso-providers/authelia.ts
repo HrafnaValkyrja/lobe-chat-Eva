@@ -1,8 +1,9 @@
 import type { OIDCConfig } from '@auth/core/providers';
 
+import { CommonProviderConfig } from './sso.config';
+
 import { authEnv } from '@/envs/auth';
 
-import { CommonProviderConfig } from './sso.config';
 
 export type AutheliaProfile = {
   // The users display name

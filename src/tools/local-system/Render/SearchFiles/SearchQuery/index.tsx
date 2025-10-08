@@ -5,11 +5,12 @@ import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import SearchView from './SearchView';
+
 import { useChatStore } from '@/store/chat';
 import { chatToolSelectors } from '@/store/chat/selectors';
 import { LocalFileSearchState } from '@/tools/local-system/type';
 
-import SearchView from './SearchView';
 
 interface SearchQueryViewProps {
   args: LocalSearchFilesParams;

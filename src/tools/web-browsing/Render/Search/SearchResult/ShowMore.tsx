@@ -3,10 +3,11 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import { EngineAvatarGroup } from '../../../components/EngineAvatar';
+
 import { useChatStore } from '@/store/chat';
 import { WebBrowsingManifest } from '@/tools/web-browsing';
 
-import { EngineAvatarGroup } from '../../../components/EngineAvatar';
 
 const useStyles = createStyles(({ css, token }) => ({
   container: css`

@@ -1,6 +1,8 @@
 import { act, renderHook } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 
+import { useChatStore } from '../../../store';
+
 import { fileService } from '@/services/file';
 import { ClientService } from '@/services/file/_deprecated';
 import { messageService } from '@/services/message';
@@ -11,7 +13,6 @@ import { useFileStore } from '@/store/file';
 import { ChatMessage } from '@/types/message';
 import { DallEImageItem } from '@/types/tool/dalle';
 
-import { useChatStore } from '../../../store';
 
 describe('chatToolSlice - dalle', () => {
   describe('generateImageFromPrompts', () => {

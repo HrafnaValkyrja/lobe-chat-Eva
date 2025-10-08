@@ -1,8 +1,9 @@
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
+import { CreateMessageParams, MessageModel } from '../message';
+
 import { ChatMessage } from '@/types/message';
 
-import { CreateMessageParams, MessageModel } from '../message';
 
 describe('MessageModel', () => {
   let messageData: CreateMessageParams;

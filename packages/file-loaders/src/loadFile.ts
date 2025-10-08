@@ -1,6 +1,7 @@
-import debug from 'debug';
 import { stat } from 'node:fs/promises';
 import * as path from 'node:path';
+
+import debug from 'debug';
 
 import { fileLoaders } from './loaders';
 import { TextLoader } from './loaders/text';

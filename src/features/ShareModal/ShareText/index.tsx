@@ -7,6 +7,12 @@ import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import { useStyles } from '../style';
+
+import Preview from './Preview';
+import { generateMarkdown } from './template';
+import { FieldType } from './type';
+
 import { FORM_STYLE } from '@/const/layoutTokens';
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { useAgentStore } from '@/store/agent';
@@ -14,10 +20,6 @@ import { agentSelectors } from '@/store/agent/selectors';
 import { useChatStore } from '@/store/chat';
 import { chatSelectors, topicSelectors } from '@/store/chat/selectors';
 
-import { useStyles } from '../style';
-import Preview from './Preview';
-import { generateMarkdown } from './template';
-import { FieldType } from './type';
 
 const DEFAULT_FIELD_VALUE: FieldType = {
   includeTool: true,

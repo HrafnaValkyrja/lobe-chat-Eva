@@ -2,13 +2,14 @@ import { ScrollShadow } from '@lobehub/ui';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
-import { useQuery } from '@/hooks/useQuery';
-import { AssistantNavKey } from '@/types/discover';
 
 import ActionButton from './ActionButton';
 import Related from './Related';
 import Summary from './Summary';
 import TocList from './TocList';
+
+import { useQuery } from '@/hooks/useQuery';
+import { AssistantNavKey } from '@/types/discover';
 
 const Sidebar = memo<{ mobile?: boolean }>(({ mobile }) => {
   const { activeTab = AssistantNavKey.Overview } = useQuery() as { activeTab: AssistantNavKey };

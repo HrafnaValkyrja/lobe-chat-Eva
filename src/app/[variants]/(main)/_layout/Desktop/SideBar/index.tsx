@@ -4,6 +4,11 @@ import { SideNav } from '@lobehub/ui';
 import { useTheme } from 'antd-style';
 import { Suspense, memo } from 'react';
 
+import Avatar from './Avatar';
+import BottomActions from './BottomActions';
+import PinList from './PinList';
+import TopActions from './TopActions';
+
 import { isDesktop } from '@/const/version';
 import { useActiveTabKey } from '@/hooks/useActiveTabKey';
 import { useIsSingleMode } from '@/hooks/useIsSingleMode';
@@ -13,10 +18,6 @@ import { systemStatusSelectors } from '@/store/global/selectors';
 import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfig';
 import { electronStylish } from '@/styles/electron';
 
-import Avatar from './Avatar';
-import BottomActions from './BottomActions';
-import PinList from './PinList';
-import TopActions from './TopActions';
 
 const Top = () => {
   const [isPinned] = usePinnedAgentState();

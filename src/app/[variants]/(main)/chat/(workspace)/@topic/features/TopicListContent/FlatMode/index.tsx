@@ -5,11 +5,12 @@ import React, { memo, useCallback, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Virtuoso, VirtuosoHandle } from 'react-virtuoso';
 
+import TopicItem from '../TopicItem';
+
 import { useChatStore } from '@/store/chat';
 import { topicSelectors } from '@/store/chat/selectors';
 import { ChatTopic } from '@/types/topic';
 
-import TopicItem from '../TopicItem';
 
 const FlatMode = memo(() => {
   const { t } = useTranslation('topic');

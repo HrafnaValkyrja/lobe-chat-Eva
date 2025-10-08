@@ -9,12 +9,13 @@ import {
 import { clientApiKeyManager } from '@lobechat/utils/client';
 import { ModelProvider } from 'model-bank';
 
+import { resolveRuntimeProvider } from './chat/helper';
+
 import { aiProviderSelectors, useAiInfraStore } from '@/store/aiInfra';
 import { useUserStore } from '@/store/user';
 import { keyVaultsConfigSelectors, userProfileSelectors } from '@/store/user/selectors';
 import { obfuscatePayloadWithXOR } from '@/utils/client/xor-obfuscation';
 
-import { resolveRuntimeProvider } from './chat/helper';
 
 export const getProviderAuthPayload = (
   provider: string,
@@ -88,7 +89,7 @@ const createAuthTokenWithPayload = (payload = {}) => {
 };
 
 interface AuthParams {
-  // eslint-disable-next-line no-undef
+   
   headers?: HeadersInit;
   payload?: Record<string, any>;
   provider?: string;
@@ -119,7 +120,7 @@ export const createXorKeyVaultsPayload = (provider: string) => {
   return obfuscatePayloadWithXOR(payload);
 };
 
-// eslint-disable-next-line no-undef
+ 
 export const createHeaderWithAuth = async (params?: AuthParams): Promise<HeadersInit> => {
   let payload = params?.payload || {};
 
@@ -129,6 +130,6 @@ export const createHeaderWithAuth = async (params?: AuthParams): Promise<Headers
 
   const token = createAuthTokenWithPayload(payload);
 
-  // eslint-disable-next-line no-undef
+   
   return { ...params?.headers, [LOBE_CHAT_AUTH_HEADER]: token };
 };

@@ -3,6 +3,11 @@ import Link from 'next/link';
 import { Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 
+import Cover from './Cover';
+import PublishedTime from './PublishedTime';
+import ReadDetail from './ReadDetail';
+import VersionTag from './VersionTag';
+
 import { CustomMDX } from '@/components/mdx';
 import Image from '@/components/mdx/Image';
 import { OFFICIAL_SITE } from '@/const/url';
@@ -10,10 +15,6 @@ import { Locales } from '@/locales/resources';
 import { ChangelogService } from '@/server/services/changelog';
 import { ChangelogIndexItem } from '@/types/changelog';
 
-import Cover from './Cover';
-import PublishedTime from './PublishedTime';
-import ReadDetail from './ReadDetail';
-import VersionTag from './VersionTag';
 
 const Post = async ({
   id,

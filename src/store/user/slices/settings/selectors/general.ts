@@ -1,4 +1,5 @@
 import { UserStore } from '../../../store';
+
 import { currentSettings } from './settings';
 
 const generalConfig = (s: UserStore) => currentSettings(s).general || {};

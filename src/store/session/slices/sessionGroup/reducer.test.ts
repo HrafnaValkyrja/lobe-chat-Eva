@@ -1,9 +1,10 @@
 import { nanoid } from 'nanoid';
 import { describe, expect, it } from 'vitest';
 
+import { sessionGroupsReducer } from './reducer';
+
 import { SessionGroupItem } from '@/types/session';
 
-import { sessionGroupsReducer } from './reducer';
 
 describe('sessionGroupsReducer', () => {
   const initialState: SessionGroupItem[] = [

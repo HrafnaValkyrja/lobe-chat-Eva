@@ -5,6 +5,7 @@ import { Flexbox } from 'react-layout-kit';
 
 import Title from '../../../../../../features/Title';
 import { useDetailContext } from '../../DetailProvider';
+
 import ProviderList from './ProviderList';
 
 const Overview = memo(() => {

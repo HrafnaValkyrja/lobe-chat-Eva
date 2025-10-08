@@ -1,6 +1,7 @@
+import { Meta, V2ConfigState } from '../../FromV1ToV2/types/v2';
+
 import { V1Config } from '@/migrations/FromV1ToV2/types/v1';
 
-import { Meta, V2ConfigState } from '../../FromV1ToV2/types/v2';
 
 export interface V3ConfigState extends V2ConfigState {
   sessionGroups: V3SessionGroup[];

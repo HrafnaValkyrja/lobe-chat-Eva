@@ -4,6 +4,14 @@ import { PluginRequestPayload, createHeadersWithPluginSettings } from '@lobehub/
 import { merge } from 'lodash-es';
 import { ModelProvider } from 'model-bank';
 
+import { createHeaderWithAuth } from '../_auth';
+import { API_ENDPOINTS } from '../_url';
+
+import { initializeWithClientStore } from './clientModelRuntime';
+import { contextEngineering } from './contextEngineering';
+import { findDeploymentName, isEnableFetchOnClient, resolveRuntimeProvider } from './helper';
+import { FetchOptions } from './types';
+
 import { enableAuth } from '@/const/auth';
 import { DEFAULT_AGENT_CONFIG } from '@/const/settings';
 import { isDesktop } from '@/const/version';
@@ -34,12 +42,7 @@ import {
 } from '@/utils/fetch';
 import { createTraceHeader, getTraceId } from '@/utils/trace';
 
-import { createHeaderWithAuth } from '../_auth';
-import { API_ENDPOINTS } from '../_url';
-import { initializeWithClientStore } from './clientModelRuntime';
-import { contextEngineering } from './contextEngineering';
-import { findDeploymentName, isEnableFetchOnClient, resolveRuntimeProvider } from './helper';
-import { FetchOptions } from './types';
+
 
 interface GetChatCompletionPayload extends Partial<Omit<ChatStreamPayload, 'messages'>> {
   messages: ChatMessage[];

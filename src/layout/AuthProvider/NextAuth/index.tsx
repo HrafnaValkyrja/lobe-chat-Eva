@@ -1,9 +1,10 @@
 import { SessionProvider } from 'next-auth/react';
 import { PropsWithChildren } from 'react';
 
+import UserUpdater from './UserUpdater';
+
 import { API_ENDPOINTS } from '@/services/_url';
 
-import UserUpdater from './UserUpdater';
 
 const NextAuth = ({ children }: PropsWithChildren) => {
   return (

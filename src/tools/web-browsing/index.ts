@@ -1,8 +1,9 @@
 import dayjs from 'dayjs';
 
+import { systemPrompt } from './systemRole';
+
 import { BuiltinToolManifest } from '@/types/tool';
 
-import { systemPrompt } from './systemRole';
 
 export const WebBrowsingApiName = {
   crawlMultiPages: 'crawlMultiPages',

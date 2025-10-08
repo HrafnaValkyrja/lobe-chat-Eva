@@ -3,11 +3,12 @@ import { chainTranslate } from '@lobechat/prompts';
 import { act, renderHook } from '@testing-library/react';
 import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { useChatStore } from '../../store';
+
 import { chatService } from '@/services/chat';
 import { messageService } from '@/services/message';
 import { messageMapKey } from '@/store/chat/utils/messageMapKey';
 
-import { useChatStore } from '../../store';
 
 // Mock messageService 和 chatService
 vi.mock('@/services/message', () => ({

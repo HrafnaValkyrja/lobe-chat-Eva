@@ -3,9 +3,10 @@ import { Langfuse } from 'langfuse';
 import { CreateLangfuseTraceBody } from 'langfuse-core';
 import { describe, expect, it, vi } from 'vitest';
 
+import { TraceClient } from './index';
+
 import * as server from '@/envs/langfuse';
 
-import { TraceClient } from './index';
 
 describe('TraceClient', () => {
   it('should not initialize Langfuse client when ENABLE_LANGFUSE is false', () => {

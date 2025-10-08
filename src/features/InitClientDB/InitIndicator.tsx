@@ -8,10 +8,11 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import ErrorResult from './ErrorResult';
+
 import { useGlobalStore } from '@/store/global';
 import { ClientDatabaseInitStages, DatabaseLoadingState } from '@/types/clientDB';
 
-import ErrorResult from './ErrorResult';
 
 const useStyles = createStyles(({ css, token, prefixCls }) => ({
   bg: css`

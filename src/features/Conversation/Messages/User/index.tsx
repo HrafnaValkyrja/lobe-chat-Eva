@@ -1,13 +1,14 @@
 import { ReactNode, memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import FileListViewer from './FileListViewer';
+import ImageFileListViewer from './ImageFileListViewer';
+import VideoFileListViewer from './VideoFileListViewer';
+
 import BubblesLoading from '@/components/BubblesLoading';
 import { LOADING_FLAT } from '@/const/message';
 import { ChatMessage } from '@/types/message';
 
-import FileListViewer from './FileListViewer';
-import ImageFileListViewer from './ImageFileListViewer';
-import VideoFileListViewer from './VideoFileListViewer';
 
 export const UserMessage = memo<
   ChatMessage & {

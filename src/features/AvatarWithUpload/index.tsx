@@ -4,12 +4,13 @@ import { LoadingOutlined } from '@ant-design/icons';
 import { Spin, Upload } from 'antd';
 import React, { memo, useCallback } from 'react';
 
+import UserAvatar, { type UserAvatarProps } from '../User/UserAvatar';
+
 import { fetchErrorNotification } from '@/components/Error/fetchErrorNotification';
 import { useUserStore } from '@/store/user';
 import { imageToBase64 } from '@/utils/imageToBase64';
 import { createUploadImageHandler } from '@/utils/uploadFIle';
 
-import UserAvatar, { type UserAvatarProps } from '../User/UserAvatar';
 
 interface AvatarWithUploadProps extends UserAvatarProps {
   compressSize?: number;

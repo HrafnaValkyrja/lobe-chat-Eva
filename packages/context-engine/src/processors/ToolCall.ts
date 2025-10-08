@@ -110,7 +110,7 @@ export class ToolCallProcessor extends BaseProcessor {
 
     if (!supportTools || (!hasTools && hasEmptyToolCalls)) {
       // 如果不支持工具或只有空的工具调用，返回普通消息（移除工具相关属性）
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+       
       const { tools, tool_calls, ...messageWithoutTools } = message;
       return messageWithoutTools;
     }

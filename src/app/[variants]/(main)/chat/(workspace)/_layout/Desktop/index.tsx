@@ -1,13 +1,15 @@
 import { Suspense } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
-import MainInterfaceTracker from '@/components/Analytics/MainInterfaceTracker';
-import BrandTextLoading from '@/components/Loading/BrandTextLoading';
 
 import { LayoutProps } from '../type';
+
 import ChatHeader from './ChatHeader';
 import Portal from './Portal';
 import TopicPanel from './TopicPanel';
+
+import MainInterfaceTracker from '@/components/Analytics/MainInterfaceTracker';
+import BrandTextLoading from '@/components/Loading/BrandTextLoading';
 
 const Layout = ({ children, topic, conversation, portal }: LayoutProps) => {
   return (

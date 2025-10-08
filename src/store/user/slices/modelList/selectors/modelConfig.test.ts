@@ -1,11 +1,13 @@
 import { describe, expect, it } from 'vitest';
 
-import { UserStore } from '@/store/user';
-import { merge } from '@/utils/merge';
 
 import { UserState } from '../../../initialState';
 import { UserSettingsState, initialSettingsState } from '../../settings/initialState';
+
 import { modelConfigSelectors } from './modelConfig';
+
+import { UserStore } from '@/store/user';
+import { merge } from '@/utils/merge';
 
 describe('modelConfigSelectors', () => {
   describe('isProviderEnabled', () => {

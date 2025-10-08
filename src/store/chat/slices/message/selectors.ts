@@ -1,3 +1,6 @@
+import { chatHelpers } from '../../helpers';
+import type { ChatStoreState } from '../../initialState';
+
 import { DEFAULT_USER_AVATAR } from '@/const/meta';
 import { INBOX_SESSION_ID } from '@/const/session';
 import { useAgentStore } from '@/store/agent';
@@ -9,8 +12,6 @@ import { useUserStore } from '@/store/user';
 import { userProfileSelectors } from '@/store/user/selectors';
 import { ChatFileItem, ChatMessage } from '@/types/message';
 
-import { chatHelpers } from '../../helpers';
-import type { ChatStoreState } from '../../initialState';
 
 const getMeta = (message: ChatMessage) => {
   switch (message.role) {

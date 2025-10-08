@@ -7,12 +7,13 @@ import { useTranslation } from 'react-i18next';
 import { Center } from 'react-layout-kit';
 import { Virtuoso, VirtuosoHandle } from 'react-virtuoso';
 
+import { SkeletonList } from '../../SkeletonList';
+import TopicItem from '../TopicItem';
+
 import { useChatStore } from '@/store/chat';
 import { topicSelectors } from '@/store/chat/selectors';
 import { ChatTopic } from '@/types/topic';
 
-import { SkeletonList } from '../../SkeletonList';
-import TopicItem from '../TopicItem';
 
 const SearchResult = memo(() => {
   const { t } = useTranslation('topic');

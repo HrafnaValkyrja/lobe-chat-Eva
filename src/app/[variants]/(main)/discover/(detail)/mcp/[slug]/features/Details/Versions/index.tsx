@@ -8,11 +8,12 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import InlineTable from '@/components/InlineTable';
 
 import PublishedTime from '../../../../../../../../../../components/PublishedTime';
 import { useDetailContext } from '../../../../../../../../../../features/MCPPluginDetail/DetailProvider';
 import Title from '../../../../../../features/Title';
+
+import InlineTable from '@/components/InlineTable';
 
 const Versions = memo(() => {
   const theme = useTheme();

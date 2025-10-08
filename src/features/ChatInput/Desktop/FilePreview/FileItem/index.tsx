@@ -5,11 +5,13 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import UploadDetail from '../../../components/UploadDetail';
+
+import Content from './Content';
+
 import { useFileStore } from '@/store/file';
 import { UploadFileItem } from '@/types/files/upload';
 
-import UploadDetail from '../../../components/UploadDetail';
-import Content from './Content';
 
 const useStyles = createStyles(({ css, token }) => ({
   actions: css`

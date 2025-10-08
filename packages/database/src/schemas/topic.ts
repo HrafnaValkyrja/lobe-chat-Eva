@@ -2,14 +2,16 @@
 import { boolean, index, jsonb, pgTable, primaryKey, text, uniqueIndex } from 'drizzle-orm/pg-core';
 import { createInsertSchema } from 'drizzle-zod';
 
-import { ChatTopicMetadata } from '@/types/topic';
 
 import { idGenerator } from '../utils/idGenerator';
+
 import { createdAt, timestamps, timestamptz } from './_helpers';
 import { chatGroups } from './chatGroup';
 import { documents } from './document';
 import { sessions } from './session';
 import { users } from './user';
+
+import { ChatTopicMetadata } from '@/types/topic';
 
 export const topics = pgTable(
   'topics',

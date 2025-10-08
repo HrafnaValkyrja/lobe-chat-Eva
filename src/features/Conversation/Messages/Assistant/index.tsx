@@ -1,6 +1,14 @@
 import { ReactNode, memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import { DefaultMessage } from '../Default';
+
+import FileChunks from './FileChunks';
+import IntentUnderstanding from './IntentUnderstanding';
+import Reasoning from './Reasoning';
+import SearchGrounding from './SearchGrounding';
+import Tool from './Tool';
+
 import { LOADING_FLAT } from '@/const/message';
 import ImageFileListViewer from '@/features/Conversation/Messages/User/ImageFileListViewer';
 import VideoFileListViewer from '@/features/Conversation/Messages/User/VideoFileListViewer';
@@ -8,12 +16,6 @@ import { useChatStore } from '@/store/chat';
 import { aiChatSelectors, chatSelectors } from '@/store/chat/selectors';
 import { ChatMessage } from '@/types/message';
 
-import { DefaultMessage } from '../Default';
-import FileChunks from './FileChunks';
-import IntentUnderstanding from './IntentUnderstanding';
-import Reasoning from './Reasoning';
-import SearchGrounding from './SearchGrounding';
-import Tool from './Tool';
 
 export const AssistantMessage = memo<
   ChatMessage & {

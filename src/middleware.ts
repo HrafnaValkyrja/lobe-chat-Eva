@@ -5,6 +5,10 @@ import { NextRequest, NextResponse } from 'next/server';
 import { UAParser } from 'ua-parser-js';
 import urlJoin from 'url-join';
 
+import { oidcEnv } from './envs/oidc';
+import { parseBrowserLanguage } from './utils/locale';
+import { RouteVariants } from './utils/server/routeVariants';
+
 import { OAUTH_AUTHORIZED } from '@/const/auth';
 import { LOBE_LOCALE_COOKIE } from '@/const/locale';
 import { LOBE_THEME_APPEARANCE } from '@/const/theme';
@@ -13,9 +17,6 @@ import { authEnv } from '@/envs/auth';
 import NextAuth from '@/libs/next-auth';
 import { Locales } from '@/locales/resources';
 
-import { oidcEnv } from './envs/oidc';
-import { parseBrowserLanguage } from './utils/locale';
-import { RouteVariants } from './utils/server/routeVariants';
 
 // Create debug logger instances
 const logDefault = debug('middleware:default');

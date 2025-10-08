@@ -5,7 +5,7 @@ import urlJoin from 'url-join';
 import { PythonOptions, PythonOutput, PythonResult } from './types';
 
 declare global {
-  // eslint-disable-next-line no-var
+   
   var loadPyodide: typeof loadPyodideType;
 }
 

@@ -14,7 +14,7 @@ import { WindowsDispatchEvents } from './windows';
 /**
  * renderer -> main dispatch events
  */
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
+ 
 export interface ClientDispatchEvents
   extends WindowsDispatchEvents,
     SystemDispatchEvents,
@@ -38,7 +38,7 @@ export type ClientEventReturnType<T extends ClientDispatchEventKey> = ReturnType
 /**
  * main -> render broadcast events
  */
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
+ 
 export interface MainBroadcastEvents
   extends AutoUpdateBroadcastEvents,
     RemoteServerBroadcastEvents,

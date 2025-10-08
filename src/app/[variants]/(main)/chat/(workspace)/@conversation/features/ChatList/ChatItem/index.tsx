@@ -1,6 +1,8 @@
 import { createStyles } from 'antd-style';
 import React, { memo, useMemo } from 'react';
 
+import Thread from './Thread';
+
 import { ChatItem } from '@/features/Conversation';
 import ActionsBar from '@/features/Conversation/components/ChatItem/ActionsBar';
 import { useAgentStore } from '@/store/agent';
@@ -8,7 +10,6 @@ import { agentChatConfigSelectors } from '@/store/agent/selectors';
 import { useChatStore } from '@/store/chat';
 import { chatSelectors, threadSelectors } from '@/store/chat/selectors';
 
-import Thread from './Thread';
 
 const useStyles = createStyles(({ css, token, isDarkMode }) => {
   const borderColor = isDarkMode ? token.colorFillSecondary : token.colorFillTertiary;

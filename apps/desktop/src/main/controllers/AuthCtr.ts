@@ -1,13 +1,16 @@
-import { DataSyncConfig } from '@lobechat/electron-client-ipc';
-import { BrowserWindow, shell } from 'electron';
 import crypto from 'node:crypto';
 import querystring from 'node:querystring';
 import { URL } from 'node:url';
 
-import { createLogger } from '@/utils/logger';
+import { DataSyncConfig } from '@lobechat/electron-client-ipc';
+import { BrowserWindow, shell } from 'electron';
+
 
 import RemoteServerConfigCtr from './RemoteServerConfigCtr';
+
 import { ControllerModule, ipcClientEvent } from './index';
+
+import { createLogger } from '@/utils/logger';
 
 // Create logger
 const logger = createLogger('controllers:AuthCtr');
@@ -33,14 +36,14 @@ export default class AuthCtr extends ControllerModule {
   /**
    * 轮询相关参数
    */
-  // eslint-disable-next-line no-undef
+   
   private pollingInterval: NodeJS.Timeout | null = null;
   private cachedRemoteUrl: string | null = null;
 
   /**
    * 自动刷新定时器
    */
-  // eslint-disable-next-line no-undef
+   
   private autoRefreshTimer: NodeJS.Timeout | null = null;
 
   /**

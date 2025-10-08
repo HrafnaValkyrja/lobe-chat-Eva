@@ -4,6 +4,7 @@ import { ModelProvider } from 'model-bank';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { testProvider } from '../../providerTestUtils';
+
 import { LobePerplexityAI } from './index';
 
 testProvider({

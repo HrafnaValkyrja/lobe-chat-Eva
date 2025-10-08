@@ -15,12 +15,14 @@ import { combineKeys } from '@lobehub/ui';
 import { memo, useEffect, useRef } from 'react';
 import { useHotkeysContext } from 'react-hotkeys-hook';
 
-import { useUserStore } from '@/store/user';
-import { preferenceSelectors, settingsSelectors } from '@/store/user/selectors';
 
 import { useChatInputStore, useStoreApi } from '../store';
+
 import Placeholder from './Placeholder';
 import { useSlashItems } from './useSlashItems';
+
+import { useUserStore } from '@/store/user';
+import { preferenceSelectors, settingsSelectors } from '@/store/user/selectors';
 
 const InputEditor = memo<{ defaultRows?: number }>(() => {
   const [editor, slashMenuRef, send, updateMarkdownContent, expand] = useChatInputStore((s) => [

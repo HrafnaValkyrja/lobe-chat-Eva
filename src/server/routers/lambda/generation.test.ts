@@ -1,12 +1,13 @@
 import { TRPCError } from '@trpc/server';
 import { describe, expect, it, vi } from 'vitest';
 
+import { generationRouter } from './generation';
+
 import { AsyncTaskModel } from '@/database/models/asyncTask';
 import { GenerationModel } from '@/database/models/generation';
 import { FileService } from '@/server/services/file';
 import { AsyncTaskStatus } from '@/types/asyncTask';
 
-import { generationRouter } from './generation';
 
 vi.mock('@/database/models/asyncTask');
 vi.mock('@/database/models/generation');

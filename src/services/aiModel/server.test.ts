@@ -1,9 +1,10 @@
 import { AiProviderModelListItem } from 'model-bank';
 import { describe, expect, it, vi } from 'vitest';
 
+import { ServerService } from './server';
+
 import { lambdaClient } from '@/libs/trpc/client';
 
-import { ServerService } from './server';
 
 vi.mock('@/libs/trpc/client', () => ({
   lambdaClient: {

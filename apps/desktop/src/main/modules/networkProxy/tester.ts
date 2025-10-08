@@ -1,11 +1,12 @@
 import { NetworkProxySettings } from '@lobechat/electron-client-ipc';
 import { fetch, getGlobalDispatcher, setGlobalDispatcher } from 'undici';
 
-import { createLogger } from '@/utils/logger';
 
 import { ProxyDispatcherManager } from './dispatcher';
 import { ProxyUrlBuilder } from './urlBuilder';
 import { ProxyConfigValidator } from './validator';
+
+import { createLogger } from '@/utils/logger';
 
 // Create logger
 const logger = createLogger('modules:networkProxy:tester');

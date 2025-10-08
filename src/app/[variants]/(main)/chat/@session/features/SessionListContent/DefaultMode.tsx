@@ -3,6 +3,13 @@ import isEqual from 'fast-deep-equal';
 import { memo, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import CollapseGroup from './CollapseGroup';
+import Actions from './CollapseGroup/Actions';
+import Inbox from './Inbox';
+import SessionList from './List';
+import ConfigGroupModal from './Modals/ConfigGroupModal';
+import RenameGroupModal from './Modals/RenameGroupModal';
+
 import { useFetchSessions } from '@/hooks/useFetchSessions';
 import { useGlobalStore } from '@/store/global';
 import { systemStatusSelectors } from '@/store/global/selectors';
@@ -10,12 +17,6 @@ import { useSessionStore } from '@/store/session';
 import { sessionSelectors } from '@/store/session/selectors';
 import { SessionDefaultGroup } from '@/types/session';
 
-import CollapseGroup from './CollapseGroup';
-import Actions from './CollapseGroup/Actions';
-import Inbox from './Inbox';
-import SessionList from './List';
-import ConfigGroupModal from './Modals/ConfigGroupModal';
-import RenameGroupModal from './Modals/RenameGroupModal';
 
 const DefaultMode = memo(() => {
   const { t } = useTranslation('chat');

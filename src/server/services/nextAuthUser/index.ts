@@ -1,7 +1,16 @@
 import { LobeChatDatabase } from '@lobechat/database';
 import { and, eq } from 'drizzle-orm';
-import { Adapter, AdapterAccount } from 'next-auth/adapters';
 import { NextResponse } from 'next/server';
+import { Adapter, AdapterAccount } from 'next-auth/adapters';
+
+import { AgentService } from '../agent';
+
+import {
+  mapAdapterUserToLobeUser,
+  mapAuthenticatorQueryResutlToAdapterAuthenticator,
+  mapLobeUserToAdapterUser,
+  partialMapAdapterUserToLobeUser,
+} from './utils';
 
 import { UserModel } from '@/database/models/user';
 import {
@@ -15,13 +24,6 @@ import {
 import { pino } from '@/libs/logger';
 import { merge } from '@/utils/merge';
 
-import { AgentService } from '../agent';
-import {
-  mapAdapterUserToLobeUser,
-  mapAuthenticatorQueryResutlToAdapterAuthenticator,
-  mapLobeUserToAdapterUser,
-  partialMapAdapterUserToLobeUser,
-} from './utils';
 
 export class NextAuthUserService {
   private db: LobeChatDatabase;

@@ -5,14 +5,15 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import AiHeatmaps from '../AiHeatmaps';
+import TotalMessages from '../TotalMessages';
+import TotalWords from '../TotalWords';
+
 import { ProductLogo } from '@/components/Branding';
 import { OFFICIAL_URL, imageUrl } from '@/const/url';
 import { isServerMode } from '@/const/version';
 import UserAvatar from '@/features/User/UserAvatar';
 
-import AiHeatmaps from '../AiHeatmaps';
-import TotalMessages from '../TotalMessages';
-import TotalWords from '../TotalWords';
 
 const useStyles = createStyles(({ css, token, stylish, cx, responsive }) => ({
   avatar: css`

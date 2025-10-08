@@ -2,10 +2,12 @@
 
 import { useTranslation } from 'react-i18next';
 
-import { OllamaProviderCard } from '@/config/modelProviders';
 
 import ProviderDetail from '../default';
+
 import CheckError from './CheckError';
+
+import { OllamaProviderCard } from '@/config/modelProviders';
 
 const Page = () => {
   const { t } = useTranslation('modelProvider');

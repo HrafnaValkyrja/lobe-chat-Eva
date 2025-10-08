@@ -8,13 +8,15 @@ import { Mic } from 'lucide-react';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { selectors, useStore } from '../store';
+
+import { ttsOptions } from './options';
+import SelectWithTTSPreview from './SelectWithTTSPreview';
+
 import { FORM_STYLE } from '@/const/layoutTokens';
 import { useGlobalStore } from '@/store/global';
 import { globalGeneralSelectors } from '@/store/global/selectors';
 
-import { selectors, useStore } from '../store';
-import SelectWithTTSPreview from './SelectWithTTSPreview';
-import { ttsOptions } from './options';
 
 const TTS_SETTING_KEY = 'tts';
 const { openaiVoiceOptions, localeOptions } = VoiceList;

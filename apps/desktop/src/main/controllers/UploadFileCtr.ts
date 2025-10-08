@@ -1,9 +1,10 @@
 import { UploadFileParams } from '@lobechat/electron-client-ipc';
 import { CreateFileParams } from '@lobechat/electron-server-ipc';
 
+import { ControllerModule, ipcClientEvent, ipcServerEvent } from './index';
+
 import FileService from '@/services/fileSrv';
 
-import { ControllerModule, ipcClientEvent, ipcServerEvent } from './index';
 
 export default class UploadFileCtr extends ControllerModule {
   private get fileService() {

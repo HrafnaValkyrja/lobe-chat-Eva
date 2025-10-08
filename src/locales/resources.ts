@@ -1,6 +1,7 @@
+import resources from './default';
+
 import { DEFAULT_LANG } from '@/const/locale';
 
-import resources from './default';
 
 export const locales = [
   'ar',

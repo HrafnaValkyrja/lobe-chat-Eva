@@ -9,9 +9,10 @@ import { useRouter } from 'nextjs-toploader/app';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { useDetailContext } from '../../DetailProvider';
+
 import { isDeprecatedEdition } from '@/const/version';
 
-import { useDetailContext } from '../../DetailProvider';
 
 const useStyles = createStyles(({ css }) => ({
   button: css`

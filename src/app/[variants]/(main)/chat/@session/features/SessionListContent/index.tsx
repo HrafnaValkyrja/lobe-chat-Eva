@@ -2,10 +2,11 @@
 
 import { memo } from 'react';
 
-import { useSessionStore } from '@/store/session';
 
 import DefaultMode from './DefaultMode';
 import SearchMode from './SearchMode';
+
+import { useSessionStore } from '@/store/session';
 
 const SessionListContent = memo(() => {
   const isSearching = useSessionStore((s) => s.isSearching);

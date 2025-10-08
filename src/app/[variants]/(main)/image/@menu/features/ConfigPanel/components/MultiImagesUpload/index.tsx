@@ -8,14 +8,16 @@ import React, { type FC, memo, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center } from 'react-layout-kit';
 
-import { useFileStore } from '@/store/file';
-import { FileUploadStatus } from '@/types/files/upload';
 
 import { CONFIG_PANEL_WIDTH } from '../../constants';
 import { useDragAndDrop } from '../../hooks/useDragAndDrop';
 import { useUploadFilesValidation } from '../../hooks/useUploadFilesValidation';
 import { useConfigPanelStyles } from '../../style';
+
 import ImageManageModal, { type ImageItem } from './ImageManageModal';
+
+import { useFileStore } from '@/store/file';
+import { FileUploadStatus } from '@/types/files/upload';
 
 // ======== Business Types ======== //
 

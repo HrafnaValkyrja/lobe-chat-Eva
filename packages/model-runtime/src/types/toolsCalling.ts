@@ -1,5 +1,5 @@
-import { z } from 'zod';
 import type { PartialDeep } from 'type-fest';
+import { z } from 'zod';
 
 /**
  * The function that the model called.

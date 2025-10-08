@@ -1,10 +1,11 @@
 import type { PartialDeep } from 'type-fest';
 
+import { DB_Settings, DB_User, DB_UserSchema } from '../schemas/user';
+
 import { BaseModel } from '@/database/_deprecated/core';
 import { LobeAgentConfig } from '@/types/agent';
 import { uuid } from '@/utils/uuid';
 
-import { DB_Settings, DB_User, DB_UserSchema } from '../schemas/user';
 
 class _UserModel extends BaseModel {
   constructor() {

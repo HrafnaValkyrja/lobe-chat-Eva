@@ -6,6 +6,9 @@ import { memo, useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import ConfigDisplay from './ConfigDisplay';
+import { McpInstallRequest, TRUSTED_MARKETPLACES, TrustedMarketplaceId } from './types';
+
 import PluginAvatar from '@/components/Plugins/PluginAvatar';
 import PluginTag from '@/components/Plugins/PluginTag';
 import { useAgentStore } from '@/store/agent';
@@ -14,8 +17,6 @@ import { mcpStoreSelectors } from '@/store/tool/selectors';
 import { McpConnectionParams } from '@/types/plugins';
 import { LobeToolCustomPlugin } from '@/types/tool/plugin';
 
-import ConfigDisplay from './ConfigDisplay';
-import { McpInstallRequest, TRUSTED_MARKETPLACES, TrustedMarketplaceId } from './types';
 
 interface CustomPluginInstallModalProps {
   installRequest: McpInstallRequest | null;

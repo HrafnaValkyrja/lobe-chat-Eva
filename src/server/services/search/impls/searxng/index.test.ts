@@ -3,6 +3,7 @@ import { describe, expect, it, vi } from 'vitest';
 
 import { SearXNGClient } from './client';
 import { hetongxue } from './fixtures/searXNG';
+
 import { SearXNGImpl } from './index';
 
 vi.mock('@/envs/tools', () => ({

@@ -3,9 +3,10 @@ import { PreviewGroup } from '@lobehub/ui';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import { ResultFile, ResultImage } from './ResultFileItem';
+
 import GalleyGrid from '@/components/GalleyGrid';
 
-import { ResultFile, ResultImage } from './ResultFileItem';
 
 const ResultFileGallery = memo<{ files: CodeInterpreterFileItem[] }>(({ files }) => {
   if (!files || files.length === 0) {

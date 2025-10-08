@@ -3,14 +3,16 @@
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import Pagination from '../features/Pagination';
+
+import List from './features/List';
+import Loading from './loading';
+
 import { withSuspense } from '@/components/withSuspense';
 import { useQuery } from '@/hooks/useQuery';
 import { useDiscoverStore } from '@/store/discover';
 import { DiscoverTab, ModelQueryParams } from '@/types/discover';
 
-import Pagination from '../features/Pagination';
-import List from './features/List';
-import Loading from './loading';
 
 const Client = memo<{ mobile?: boolean }>(() => {
   const { q, page, category, sort, order } = useQuery() as ModelQueryParams;

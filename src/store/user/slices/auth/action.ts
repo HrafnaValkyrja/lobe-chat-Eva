@@ -1,8 +1,9 @@
 import { StateCreator } from 'zustand/vanilla';
 
+import type { UserStore } from '../../store';
+
 import { enableAuth, enableClerk, enableNextAuth } from '@/const/auth';
 
-import type { UserStore } from '../../store';
 
 export interface UserAuthAction {
   enableAuth: () => boolean;

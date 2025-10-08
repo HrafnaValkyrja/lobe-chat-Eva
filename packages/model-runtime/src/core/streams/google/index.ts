@@ -14,6 +14,7 @@ import {
   createTokenSpeedCalculator,
   generateToolCallId,
 } from '../protocol';
+
 import { GOOGLE_AI_BLOCK_REASON } from './const';
 
 export const LOBE_ERROR_KEY = '__lobe_error';
@@ -164,14 +165,14 @@ const transformGoogleGenerativeAIStream = (
     if (candidate.finishReason) {
       if (chunk.usageMetadata) {
         return [
-          !!text ? { data: text, id: context?.id, type: 'text' } : undefined,
+          text ? { data: text, id: context?.id, type: 'text' } : undefined,
           ...usageChunks,
         ].filter(Boolean) as StreamProtocolChunk[];
       }
       return { data: candidate.finishReason, id: context?.id, type: 'stop' };
     }
 
-    if (!!text?.trim()) return { data: text, id: context?.id, type: 'text' };
+    if (text?.trim()) return { data: text, id: context?.id, type: 'text' };
   }
 
   return {

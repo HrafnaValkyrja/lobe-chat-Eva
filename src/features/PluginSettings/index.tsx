@@ -6,10 +6,11 @@ import isEqual from 'fast-deep-equal';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import ItemRender from '../../components/JSONSchemaConfig/ItemRender';
+
 import { useToolStore } from '@/store/tool';
 import { pluginSelectors } from '@/store/tool/selectors';
 
-import ItemRender from '../../components/JSONSchemaConfig/ItemRender';
 
 export const transformPluginSettings = (pluginSettings: PluginSchema) => {
   if (!pluginSettings?.properties) return [];

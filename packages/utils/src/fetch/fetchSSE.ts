@@ -17,6 +17,7 @@ import {
 
 import { fetchEventSource } from '../client/fetchEventSource';
 import { nanoid } from '../uuid';
+
 import { getMessageError } from './parseError';
 
 type SSEFinishType = 'done' | 'error' | 'abort';
@@ -311,7 +312,7 @@ export const standardizeAnimationStyle = (
 /**
  * Fetch data using stream method
  */
-// eslint-disable-next-line no-undef
+ 
 export const fetchSSE = async (url: string, options: RequestInit & FetchSSEOptions = {}) => {
   let toolCalls: undefined | MessageToolCall[];
   let triggerOnMessageHandler = false;
@@ -596,7 +597,7 @@ export const fetchSSE = async (url: string, options: RequestInit & FetchSSEOptio
         grounding,
         images: images.length > 0 ? images : undefined,
         observationId,
-        reasoning: !!thinking ? { content: thinking, signature: thinkingSignature } : undefined,
+        reasoning: thinking ? { content: thinking, signature: thinkingSignature } : undefined,
         speed,
         toolCalls,
         traceId,

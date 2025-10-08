@@ -1,12 +1,13 @@
 import { memo } from 'react';
 
+import FileItemList from './FileList';
+
 import DragUpload from '@/components/DragUpload';
 import { useModelSupportVision } from '@/hooks/useModelSupportVision';
 import { useAgentStore } from '@/store/agent';
 import { agentSelectors } from '@/store/agent/slices/chat';
 import { useFileStore } from '@/store/file';
 
-import FileItemList from './FileList';
 
 const FilePreview = memo(() => {
   const model = useAgentStore(agentSelectors.currentAgentModel);

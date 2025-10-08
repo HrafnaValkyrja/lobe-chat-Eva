@@ -7,9 +7,10 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import EmbeddingStatus from './EmbeddingStatus';
+
 import { AsyncTaskStatus, FileParsingTask } from '@/types/asyncTask';
 
-import EmbeddingStatus from './EmbeddingStatus';
 
 const useStyles = createStyles(({ css, token, isDarkMode }) => ({
   errorReason: css`

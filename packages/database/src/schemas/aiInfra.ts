@@ -1,10 +1,11 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix  */
 import { boolean, integer, jsonb, pgTable, primaryKey, text, varchar } from 'drizzle-orm/pg-core';
 
-import { AiProviderConfig, AiProviderSettings } from '@/types/aiProvider';
 
 import { timestamps } from './_helpers';
 import { users } from './user';
+
+import { AiProviderConfig, AiProviderSettings } from '@/types/aiProvider';
 
 export const aiProviders = pgTable(
   'ai_providers',

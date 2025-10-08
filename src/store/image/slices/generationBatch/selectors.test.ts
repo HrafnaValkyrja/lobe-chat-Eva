@@ -1,12 +1,13 @@
 import { describe, expect, it } from 'vitest';
 
+import { generationBatchSelectors } from './selectors';
+
 import { ImageStore } from '@/store/image';
 import { initialState } from '@/store/image/initialState';
 import { AsyncTaskStatus } from '@/types/asyncTask';
 import { Generation, GenerationBatch } from '@/types/generation';
 import { merge } from '@/utils/merge';
 
-import { generationBatchSelectors } from './selectors';
 
 const initialStore = initialState as ImageStore;
 

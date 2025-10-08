@@ -1,13 +1,14 @@
 import { act, renderHook } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 
+import { useOpenChatSettings } from './useInterceptingRoutes';
+
 import { INBOX_SESSION_ID } from '@/const/session';
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { useAgentStore } from '@/store/agent';
 import { ChatSettingsTabs } from '@/store/global/initialState';
 import { useSessionStore } from '@/store/session';
 
-import { useOpenChatSettings } from './useInterceptingRoutes';
 
 // Mocks
 vi.mock('next/navigation', () => ({

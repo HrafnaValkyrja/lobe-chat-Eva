@@ -1,10 +1,12 @@
 import { memo } from 'react';
 
-import { useGenerationConfigParam } from '@/store/image/slices/generationConfig/hooks';
 
 import { useAutoDimensions } from '../hooks/useAutoDimensions';
+
 import ImageUpload from './ImageUpload';
 import MultiImagesUpload from './MultiImagesUpload';
+
+import { useGenerationConfigParam } from '@/store/image/slices/generationConfig/hooks';
 
 const ImageUrlsUpload = memo(() => {
   const { value, setValue, maxCount, maxFileSize } = useGenerationConfigParam('imageUrls');

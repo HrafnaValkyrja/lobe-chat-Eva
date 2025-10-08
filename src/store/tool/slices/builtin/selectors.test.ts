@@ -1,9 +1,11 @@
 import { describe, expect, it } from 'vitest';
 
-import { DalleManifest } from '@/tools/dalle';
 
 import { ToolStoreState, initialState } from '../../initialState';
+
 import { builtinToolSelectors } from './selectors';
+
+import { DalleManifest } from '@/tools/dalle';
 
 describe('builtinToolSelectors', () => {
   describe('metaList', () => {

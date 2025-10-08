@@ -2,9 +2,10 @@ import { Skeleton } from 'antd';
 import dynamic from 'next/dynamic';
 import { memo } from 'react';
 
+import ErrorJsonViewer from '../ErrorJsonViewer';
+
 import { ChatMessage } from '@/types/message';
 
-import ErrorJsonViewer from '../ErrorJsonViewer';
 
 const loading = () => <Skeleton active style={{ width: 300 }} />;
 

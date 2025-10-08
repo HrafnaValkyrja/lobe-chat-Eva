@@ -1,7 +1,8 @@
-import type { Migration, MigrationData } from '@/migrations/VersionController';
 
 import { V6ConfigState, V6Settings } from './types/v6';
 import { V7ConfigState, V7KeyVaults, V7Settings } from './types/v7';
+
+import type { Migration, MigrationData } from '@/migrations/VersionController';
 
 const SENSITIVE_KEYS = [
   'apiKey',

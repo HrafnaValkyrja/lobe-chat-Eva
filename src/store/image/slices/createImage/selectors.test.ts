@@ -1,10 +1,12 @@
 import { describe, expect, it } from 'vitest';
 
-import { merge } from '@/utils/merge';
 
 import { ImageStore } from '../../store';
+
 import { initialCreateImageState } from './initialState';
 import { createImageSelectors } from './selectors';
+
+import { merge } from '@/utils/merge';
 
 // 创建一个最小的 ImageStore 模拟对象
 const createMockImageStore = (overrides?: Partial<ImageStore>): ImageStore => {

@@ -1,9 +1,10 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { ServerService } from '../generationTopic';
+
 import { lambdaClient } from '@/libs/trpc/client';
 import { UpdateTopicValue } from '@/server/routers/lambda/generationTopic';
 
-import { ServerService } from '../generationTopic';
 
 vi.mock('@/libs/trpc/client', () => ({
   lambdaClient: {

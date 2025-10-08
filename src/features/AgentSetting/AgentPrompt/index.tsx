@@ -7,11 +7,12 @@ import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import { useStore } from '../store';
+
 import { FORM_STYLE } from '@/const/layoutTokens';
 import Tokens from '@/features/AgentSetting/AgentPrompt/TokenTag';
 import { useServerConfigStore } from '@/store/serverConfig';
 
-import { useStore } from '../store';
 
 const AgentPrompt = memo(() => {
   const { t } = useTranslation('setting');

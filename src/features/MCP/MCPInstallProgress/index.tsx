@@ -7,13 +7,14 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import InstallError from './InstallError';
+import MCPConfigForm from './MCPConfigForm';
+import MCPDependenciesGuide from './MCPDependenciesGuide';
+
 import { useToolStore } from '@/store/tool';
 import { mcpStoreSelectors } from '@/store/tool/selectors';
 import { MCPInstallStep } from '@/types/plugins';
 
-import InstallError from './InstallError';
-import MCPConfigForm from './MCPConfigForm';
-import MCPDependenciesGuide from './MCPDependenciesGuide';
 
 const MCPInstallProgress = memo<{ identifier: string }>(({ identifier }) => {
   const { t } = useTranslation('plugin');

@@ -2,11 +2,12 @@
 
 import { memo } from 'react';
 
+import { useCategory } from '../hooks/useCategory';
+
 import Menu from '@/components/Menu';
 import { withSuspense } from '@/components/withSuspense';
 import { SettingsTabs } from '@/store/global/initialState';
 
-import { useCategory } from '../hooks/useCategory';
 
 type CategoryContentProps = {
   activeTab: string | undefined;

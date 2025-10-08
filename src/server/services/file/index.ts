@@ -1,13 +1,14 @@
 import { LobeChatDatabase } from '@lobechat/database';
 import { TRPCError } from '@trpc/server';
 
+import { FileServiceImpl, createFileServiceModule } from './impls';
+
 import { serverDBEnv } from '@/config/db';
 import { FileModel } from '@/database/models/file';
 import { FileItem } from '@/database/schemas';
 import { TempFileManager } from '@/server/utils/tempFileManager';
 import { nanoid } from '@/utils/uuid';
 
-import { FileServiceImpl, createFileServiceModule } from './impls';
 
 /**
  * 文件服务类

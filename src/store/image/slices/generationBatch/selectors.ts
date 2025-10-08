@@ -1,7 +1,8 @@
-import { GenerationBatch } from '@/types/generation';
 
 import { ImageStoreState } from '../../initialState';
 import { generationTopicSelectors } from '../generationTopic/selectors';
+
+import { GenerationBatch } from '@/types/generation';
 
 // ====== topic batch selectors ====== //
 

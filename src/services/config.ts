@@ -2,11 +2,12 @@ import { BRANDING_NAME, isDeprecatedEdition, isServerMode } from '@lobechat/cons
 import { downloadFile, exportJSONFile } from '@lobechat/utils/client';
 import dayjs from 'dayjs';
 
+import { exportService } from './export';
+import { configService as deprecatedExportService } from './export/_deprecated';
+
 import { CURRENT_CONFIG_VERSION } from '@/migrations';
 import { ImportPgDataStructure } from '@/types/export';
 
-import { exportService } from './export';
-import { configService as deprecatedExportService } from './export/_deprecated';
 
 class ConfigService {
   exportAll = async () => {

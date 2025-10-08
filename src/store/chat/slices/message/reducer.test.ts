@@ -1,6 +1,7 @@
+import { MessageDispatch, messagesReducer } from './reducer';
+
 import { ChatMessage, ChatToolPayload } from '@/types/message';
 
-import { MessageDispatch, messagesReducer } from './reducer';
 
 describe('messagesReducer', () => {
   let initialState: ChatMessage[];

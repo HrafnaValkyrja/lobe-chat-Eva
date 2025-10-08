@@ -4,10 +4,11 @@ import isEqual from 'fast-deep-equal';
 import { memo, use, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { aiModelSelectors, useAiInfraStore } from '@/store/aiInfra';
 
 import ModelConfigForm from '../CreateNewModelModal/Form';
 import { ProviderSettingsContext } from '../ProviderSettingsContext';
+
+import { aiModelSelectors, useAiInfraStore } from '@/store/aiInfra';
 
 interface ModelConfigModalProps {
   id: string;

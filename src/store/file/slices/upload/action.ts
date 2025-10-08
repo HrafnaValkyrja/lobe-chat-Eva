@@ -2,6 +2,8 @@ import { t } from 'i18next';
 import { sha256 } from 'js-sha256';
 import { StateCreator } from 'zustand/vanilla';
 
+import { FileStore } from '../../store';
+
 import { message } from '@/components/AntdStaticMethods';
 import { LOBE_CHAT_CLOUD } from '@/const/branding';
 import { fileService } from '@/services/file';
@@ -9,7 +11,6 @@ import { uploadService } from '@/services/upload';
 import { FileMetadata, UploadFileItem } from '@/types/files';
 import { getImageDimensions } from '@/utils/client/imageDimensions';
 
-import { FileStore } from '../../store';
 
 type OnStatusUpdate = (
   data:

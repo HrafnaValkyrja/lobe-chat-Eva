@@ -6,13 +6,14 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import { ErrorActionContainer, useStyles } from '../../../../Error/style';
+
 import PluginSettingsConfig from '@/features/PluginSettings';
 import { useChatStore } from '@/store/chat';
 import { pluginHelpers, useToolStore } from '@/store/tool';
 import { pluginSelectors } from '@/store/tool/selectors';
 import { ChatPluginPayload } from '@/types/message';
 
-import { ErrorActionContainer, useStyles } from '../../../../Error/style';
 
 interface PluginSettingsProps {
   id: string;

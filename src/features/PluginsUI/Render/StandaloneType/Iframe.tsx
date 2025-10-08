@@ -2,10 +2,6 @@ import { PluginRequestPayload } from '@lobehub/chat-plugin-sdk';
 import { Skeleton } from 'antd';
 import { memo, useRef, useState } from 'react';
 
-import { useChatStore } from '@/store/chat';
-import { chatSelectors } from '@/store/chat/selectors';
-import { useToolStore } from '@/store/tool';
-import { pluginSelectors } from '@/store/tool/selectors';
 
 import { useOnPluginReadyForInteraction } from '../utils/iframeOnReady';
 import {
@@ -24,6 +20,11 @@ import {
   sendPluginSettingsToPlugin,
   sendPluginStateToPlugin,
 } from '../utils/postMessage';
+
+import { useChatStore } from '@/store/chat';
+import { chatSelectors } from '@/store/chat/selectors';
+import { useToolStore } from '@/store/tool';
+import { pluginSelectors } from '@/store/tool/selectors';
 
 // just to simplify code a little, don't use this pattern everywhere
 const getSettings = (identifier: string) =>

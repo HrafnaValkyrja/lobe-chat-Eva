@@ -1,3 +1,7 @@
+import { API_ENDPOINTS } from './_url';
+import { initializeWithClientStore } from './chat/clientModelRuntime';
+import { resolveRuntimeProvider } from './chat/helper';
+
 import { isDeprecatedEdition } from '@/const/version';
 import { createHeaderWithAuth } from '@/services/_auth';
 import { aiProviderSelectors, getAiInfraStoreState } from '@/store/aiInfra';
@@ -6,9 +10,6 @@ import { modelConfigSelectors } from '@/store/user/selectors';
 import { ChatModelCard } from '@/types/llm';
 import { getMessageError } from '@/utils/fetch';
 
-import { API_ENDPOINTS } from './_url';
-import { initializeWithClientStore } from './chat/clientModelRuntime';
-import { resolveRuntimeProvider } from './chat/helper';
 
 const isEnableFetchOnClient = (provider: string) => {
   // TODO: remove this condition in V2.0
@@ -149,7 +150,7 @@ export class ModelsService {
     if (!reader) return;
 
     // 读取和处理流数据
-    // eslint-disable-next-line no-constant-condition
+     
     while (true) {
       const { done, value } = await reader.read();
       if (done) break;

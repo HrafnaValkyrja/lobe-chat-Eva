@@ -1,12 +1,13 @@
 import { and, count, desc, eq, gt, ilike, inArray, isNull, sql } from 'drizzle-orm';
 
-import { MessageItem } from '@/types/message';
-import { TopicRankItem } from '@/types/topic';
 
 import { TopicItem, messages, topics } from '../schemas';
 import { LobeChatDatabase } from '../type';
 import { genEndDateWhere, genRangeWhere, genStartDateWhere, genWhere } from '../utils/genWhere';
 import { idGenerator } from '../utils/idGenerator';
+
+import { MessageItem } from '@/types/message';
+import { TopicRankItem } from '@/types/topic';
 
 export interface CreateTopicParams {
   favorite?: boolean;

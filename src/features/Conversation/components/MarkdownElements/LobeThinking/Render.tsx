@@ -1,5 +1,8 @@
 import { memo } from 'react';
 
+import { MarkdownElementProps } from '../type';
+import { isTagClosed } from '../utils';
+
 import Thinking from '@/components/Thinking';
 import { ARTIFACT_THINKING_TAG } from '@/const/plugin';
 import { useChatStore } from '@/store/chat';
@@ -7,8 +10,6 @@ import { chatSelectors } from '@/store/chat/selectors';
 import { useUserStore } from '@/store/user';
 import { userGeneralSettingsSelectors } from '@/store/user/selectors';
 
-import { MarkdownElementProps } from '../type';
-import { isTagClosed } from '../utils';
 
 const Render = memo<MarkdownElementProps>(({ children, id }) => {
   const [isGenerating] = useChatStore((s) => {

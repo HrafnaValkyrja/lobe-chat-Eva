@@ -16,7 +16,7 @@ export enum PluginInstallStep {
   COMPLETED = 'COMPLETED',
   ERROR = 'ERROR',
 }
-/* eslint-enable */
+ 
 
 export interface PluginInstallProgress {
   // 错误信息

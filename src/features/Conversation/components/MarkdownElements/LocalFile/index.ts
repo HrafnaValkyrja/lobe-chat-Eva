@@ -2,6 +2,7 @@ import { FC } from 'react';
 
 import { createRemarkSelfClosingTagPlugin } from '../remarkPlugins/createRemarkSelfClosingTagPlugin';
 import { MarkdownElement, MarkdownElementProps } from '../type';
+
 import RenderComponent from './Render';
 
 // 定义此元素的标签名

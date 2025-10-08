@@ -1,8 +1,9 @@
 import { PluginQueryParams, SystemDependency } from '@lobehub/market-sdk';
 
+import { CustomPluginMetadata } from '../tool/plugin';
+
 import { MCPErrorType } from '@/libs/mcp';
 
-import { CustomPluginMetadata } from '../tool/plugin';
 
 /* eslint-disable typescript-sort-keys/string-enum */
 export enum MCPInstallStep {
@@ -16,7 +17,7 @@ export enum MCPInstallStep {
   ERROR = 'Error',
 }
 
-/* eslint-enable */
+ 
 export interface CheckMcpInstallParams {
   /**
    * 安装详情

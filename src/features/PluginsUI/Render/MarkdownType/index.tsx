@@ -1,10 +1,11 @@
 import { Markdown } from '@lobehub/ui';
 import { memo } from 'react';
 
+import Loading from '../Loading';
+
 import { useUserStore } from '@/store/user';
 import { userGeneralSettingsSelectors } from '@/store/user/selectors';
 
-import Loading from '../Loading';
 
 export interface PluginMarkdownTypeProps {
   content: string;

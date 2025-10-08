@@ -1,7 +1,8 @@
+import { CreateTopicParams, ITopicService, QueryTopicParams } from './type';
+
 import { TopicModel } from '@/database/_deprecated/models/topic';
 import { ChatTopic } from '@/types/topic';
 
-import { CreateTopicParams, ITopicService, QueryTopicParams } from './type';
 
 export class ClientService implements ITopicService {
   async createTopic(params: CreateTopicParams): Promise<string> {

@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 
+import { SCROLL_PARENT_ID } from '../../features/const';
+
 import { isOnServerSide } from '@/utils/env';
 
-import { SCROLL_PARENT_ID } from '../../features/const';
 
 export const useScrollParent = () => {
   const [parent, setParent] = useState<HTMLDivElement>();

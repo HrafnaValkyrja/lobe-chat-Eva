@@ -1,13 +1,14 @@
 import { act, renderHook } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { sessionSelectors } from './selectors';
+
 import { message } from '@/components/AntdStaticMethods';
 import { SESSION_CHAT_URL } from '@/const/url';
 import { sessionService } from '@/services/session';
 import { useSessionStore } from '@/store/session';
 import { LobeSessionType } from '@/types/session';
 
-import { sessionSelectors } from './selectors';
 
 // Mock sessionService 和其他依赖项
 vi.mock('@/services/session', () => ({

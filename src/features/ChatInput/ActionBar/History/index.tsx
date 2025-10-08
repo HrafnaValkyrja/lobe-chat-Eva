@@ -2,12 +2,15 @@ import { Timer, TimerOff } from 'lucide-react';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import Action from '../components/Action';
+
+import Controls from './Controls';
+
+import { useIsMobile } from '@/hooks/useIsMobile';
 import { useAgentStore } from '@/store/agent';
 import { agentChatConfigSelectors, agentSelectors } from '@/store/agent/selectors';
-import { useIsMobile } from '@/hooks/useIsMobile';
 
-import Action from '../components/Action';
-import Controls from './Controls';
+
 
 const History = memo(() => {
   const [isLoading, chatConfig, updateAgentChatConfig] = useAgentStore((s) => [
@@ -45,7 +48,7 @@ const History = memo(() => {
           : async (e) => {
             e?.preventDefault?.();
             e?.stopPropagation?.();
-            const next = !Boolean(chatConfig.enableHistoryCount);
+            const next = !chatConfig.enableHistoryCount;
             await updateAgentChatConfig({ enableHistoryCount: next });
           }
       }

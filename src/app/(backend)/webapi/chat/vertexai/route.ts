@@ -2,10 +2,11 @@ import { ModelRuntime } from '@lobechat/model-runtime';
 import { LobeVertexAI } from '@lobechat/model-runtime/vertexai';
 import { ModelProvider } from 'model-bank';
 
+import { POST as UniverseRoute } from '../[provider]/route';
+
 import { checkAuth } from '@/app/(backend)/middleware/auth';
 import { safeParseJSON } from '@/utils/safeParseJSON';
 
-import { POST as UniverseRoute } from '../[provider]/route';
 
 export const maxDuration = 300;
 // due to the Chinese region does not support accessing Google
@@ -28,7 +29,7 @@ export const POST: any = checkAuth(async (req: Request, { jwtPayload }) =>
       const instance = LobeVertexAI.initFromVertexAI({
         googleAuthOptions,
         location: process.env.VERTEXAI_LOCATION,
-        project: !!credentials?.project_id ? credentials?.project_id : process.env.VERTEXAI_PROJECT,
+        project: credentials?.project_id ? credentials?.project_id : process.env.VERTEXAI_PROJECT,
       });
 
       return new ModelRuntime(instance);

@@ -5,10 +5,11 @@ import { CSSProperties, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import ThreadItem from './ThreadItem';
+
 import { useChatStore } from '@/store/chat';
 import { threadSelectors } from '@/store/chat/selectors';
 
-import ThreadItem from './ThreadItem';
 
 const useStyles = createStyles(({ css, token, isDarkMode }) => ({
   container: css`

@@ -11,12 +11,14 @@ import {
 } from 'drizzle-orm/pg-core';
 import { createInsertSchema } from 'drizzle-zod';
 
-import { LobeAgentChatConfig, LobeAgentTTSConfig } from '@/types/agent';
 
 import { idGenerator, randomSlug } from '../utils/idGenerator';
+
 import { timestamps } from './_helpers';
 import { files, knowledgeBases } from './file';
 import { users } from './user';
+
+import { LobeAgentChatConfig, LobeAgentTTSConfig } from '@/types/agent';
 
 // Agent table is the main table for storing agents
 // agent is a model that represents the assistant that is created by the user

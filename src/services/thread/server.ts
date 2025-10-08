@@ -1,7 +1,8 @@
+import { IThreadService } from './type';
+
 import { INBOX_SESSION_ID } from '@/const/session';
 import { lambdaClient } from '@/libs/trpc/client';
 
-import { IThreadService } from './type';
 
 export class ServerService implements IThreadService {
   getThreads: IThreadService['getThreads'] = (topicId) => {

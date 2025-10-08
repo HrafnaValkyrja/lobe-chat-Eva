@@ -4,6 +4,10 @@ import { uniqBy } from 'lodash-es';
 import useSWR, { SWRResponse, mutate } from 'swr';
 import { StateCreator } from 'zustand/vanilla';
 
+import { ToolStore } from '../../store';
+
+import { PluginInstallProgress, PluginInstallStep, PluginStoreState } from './initialState';
+
 import { notification } from '@/components/AntdStaticMethods';
 import { pluginService } from '@/services/plugin';
 import { toolService } from '@/services/tool';
@@ -15,8 +19,6 @@ import { PluginInstallError } from '@/types/tool/plugin';
 import { sleep } from '@/utils/sleep';
 import { setNamespace } from '@/utils/storeDebug';
 
-import { ToolStore } from '../../store';
-import { PluginInstallProgress, PluginInstallStep, PluginStoreState } from './initialState';
 
 const n = setNamespace('pluginStore');
 

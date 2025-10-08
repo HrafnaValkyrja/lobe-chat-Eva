@@ -1,14 +1,15 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import type { Generation, GenerationBatch } from '@/types/generation';
-
-// Import functions for testing
 import {
   DEFAULT_MAX_ITEM_WIDTH,
   getAspectRatio,
   getImageDimensions,
   getThumbnailMaxWidth,
 } from './utils';
+
+import type { Generation, GenerationBatch } from '@/types/generation';
+
+// Import functions for testing
 
 describe('getImageDimensions', () => {
   // Mock base generation object

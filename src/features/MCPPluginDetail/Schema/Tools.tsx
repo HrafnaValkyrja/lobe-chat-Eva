@@ -5,14 +5,16 @@ import { markdownToTxt } from 'markdown-to-txt';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import InlineTable from '@/components/InlineTable';
 
 import Title from '../../../app/[variants]/(main)/discover/features/Title';
 import CollapseDesc from '../CollapseDesc';
 import CollapseLayout from '../CollapseLayout';
 import { useDetailContext } from '../DetailProvider';
+
 import { useStyles } from './style';
 import { ModeType } from './types';
+
+import InlineTable from '@/components/InlineTable';
 
 interface ToolsProps {
   activeKey?: string[];

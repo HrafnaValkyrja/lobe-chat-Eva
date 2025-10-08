@@ -17,12 +17,13 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 
+import { useDetailContext } from './DetailProvider';
+
 import { SOCIAL_URL } from '@/const/branding';
 import { useToolStore } from '@/store/tool';
 import { pluginSelectors } from '@/store/tool/selectors';
 import { McpNavKey } from '@/types/discover';
 
-import { useDetailContext } from './DetailProvider';
 
 const useStyles = createStyles(({ css, token }) => {
   return {

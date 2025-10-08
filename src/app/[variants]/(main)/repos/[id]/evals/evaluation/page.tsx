@@ -2,11 +2,12 @@
 
 import { Flexbox } from 'react-layout-kit';
 
+import EmptyGuide from './EmptyGuide';
+import EvaluationList from './EvaluationList';
+
 import Loading from '@/components/Loading/BrandTextLoading';
 import { useKnowledgeBaseStore } from '@/store/knowledgeBase';
 
-import EmptyGuide from './EmptyGuide';
-import EvaluationList from './EvaluationList';
 
 interface Params {
   id: string;

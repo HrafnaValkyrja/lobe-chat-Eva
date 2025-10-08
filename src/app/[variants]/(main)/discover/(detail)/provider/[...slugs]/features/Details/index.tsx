@@ -5,13 +5,15 @@ import { useQueryState } from 'nuqs';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
-import { ProviderNavKey } from '@/types/discover';
 
 import Sidebar from '../Sidebar';
+
 import Guide from './Guide';
 import Nav from './Nav';
 import Overview from './Overview';
 import Related from './Related';
+
+import { ProviderNavKey } from '@/types/discover';
 
 const Details = memo<{ mobile?: boolean }>(({ mobile: isMobile }) => {
   const { mobile = isMobile } = useResponsive();

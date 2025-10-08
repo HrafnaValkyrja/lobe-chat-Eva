@@ -1,10 +1,11 @@
 import { ChatMessage } from '@lobechat/types';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
-import * as isCanUseFCModule from '@/helpers/isCanUseFC';
 
 import { contextEngineering } from './contextEngineering';
 import * as helpers from './helper';
+
+import * as isCanUseFCModule from '@/helpers/isCanUseFC';
 
 // Mock VARIABLE_GENERATORS
 vi.mock('@/utils/client/parserPlaceholder', () => ({

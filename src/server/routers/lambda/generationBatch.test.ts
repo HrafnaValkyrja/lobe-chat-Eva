@@ -1,10 +1,11 @@
 import { describe, expect, it, vi } from 'vitest';
 
+import { generationBatchRouter } from './generationBatch';
+
 import { GenerationBatchModel } from '@/database/models/generationBatch';
 import { GenerationBatchItem } from '@/database/schemas/generation';
 import { FileService } from '@/server/services/file';
 
-import { generationBatchRouter } from './generationBatch';
 
 vi.mock('@/database/models/generationBatch');
 vi.mock('@/server/services/file');

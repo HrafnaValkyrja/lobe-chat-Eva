@@ -13,12 +13,14 @@ import {
 } from 'drizzle-orm/pg-core';
 import { createInsertSchema } from 'drizzle-zod';
 
-import { FileSource } from '@/types/files';
 
 import { idGenerator } from '../utils/idGenerator';
+
 import { accessedAt, createdAt, timestamps } from './_helpers';
 import { asyncTasks } from './asyncTask';
 import { users } from './user';
+
+import { FileSource } from '@/types/files';
 
 export const globalFiles = pgTable('global_files', {
   hashId: varchar('hash_id', { length: 64 }).primaryKey(),

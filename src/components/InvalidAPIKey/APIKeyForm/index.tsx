@@ -5,11 +5,12 @@ import { memo, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
-import { GlobalLLMProviderKey } from '@/types/user/settings';
 
 import BedrockForm from './Bedrock';
 import { LoadingContext } from './LoadingContext';
 import ProviderApiKeyForm from './ProviderApiKeyForm';
+
+import { GlobalLLMProviderKey } from '@/types/user/settings';
 
 interface APIKeyFormProps {
   bedrockDescription: string;

@@ -1,6 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { LobeRuntimeAI } from '../BaseAI';
+
 import { createRouterRuntime } from './createRuntime';
 
 describe('createRouterRuntime', () => {

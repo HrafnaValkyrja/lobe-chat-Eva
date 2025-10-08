@@ -1,11 +1,12 @@
 import { describe, expect, it } from 'vitest';
 
+import { generationTopicSelectors } from './selectors';
+
 import { ImageStore } from '@/store/image';
 import { initialState } from '@/store/image/initialState';
 import { ImageGenerationTopic } from '@/types/generation';
 import { merge } from '@/utils/merge';
 
-import { generationTopicSelectors } from './selectors';
 
 const initialStore = initialState as ImageStore;
 

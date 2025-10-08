@@ -1,3 +1,5 @@
+import { join } from 'node:path';
+
 import { MainBroadcastEventKey, MainBroadcastParams } from '@lobechat/electron-client-ipc';
 import {
   DisplayBalloonOptions,
@@ -7,12 +9,12 @@ import {
   app,
   nativeImage,
 } from 'electron';
-import { join } from 'node:path';
+
+import type { App } from '../App';
 
 import { resourcesDir } from '@/const/dir';
 import { createLogger } from '@/utils/logger';
 
-import type { App } from '../App';
 
 // Create logger
 const logger = createLogger('core:Tray');

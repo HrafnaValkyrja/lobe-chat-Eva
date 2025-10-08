@@ -8,15 +8,18 @@ import { memo, useState } from 'react';
 import { Center, Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 
+import { MAX_WIDTH, SCROLL_PARENT_ID } from '../../../features/const';
+import { useNav } from '../../../features/useNav';
+import SortButton from '../../features/SortButton';
+
+import { useScroll } from './useScroll';
+
 import { withSuspense } from '@/components/withSuspense';
 import { useQuery } from '@/hooks/useQuery';
 import { useQueryRoute } from '@/hooks/useQueryRoute';
 import { DiscoverTab } from '@/types/discover';
 
-import { MAX_WIDTH, SCROLL_PARENT_ID } from '../../../features/const';
-import { useNav } from '../../../features/useNav';
-import SortButton from '../../features/SortButton';
-import { useScroll } from './useScroll';
+
 
 export const useStyles = createStyles(({ cx, stylish, css, token }) => ({
   container: cx(

@@ -4,10 +4,11 @@ import dynamic from 'next/dynamic';
 import { memo, useRef } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
-import { useToolStore } from '@/store/tool';
 
 import DetailLoading from './Detail/Loading';
 import List from './List';
+
+import { useToolStore } from '@/store/tool';
 
 const Detail = dynamic(() => import('./Detail'), { loading: DetailLoading, ssr: false });
 

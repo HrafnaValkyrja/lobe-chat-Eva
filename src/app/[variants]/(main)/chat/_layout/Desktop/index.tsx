@@ -1,14 +1,16 @@
 import { Suspense } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
-import { isDesktop } from '@/const/version';
-import InitClientDB from '@/features/InitClientDB';
-import ProtocolUrlHandler from '@/features/ProtocolUrlHandler';
 
 import { LayoutProps } from '../type';
+
 import RegisterHotkeys from './RegisterHotkeys';
 import SessionPanel from './SessionPanel';
 import Workspace from './Workspace';
+
+import { isDesktop } from '@/const/version';
+import InitClientDB from '@/features/InitClientDB';
+import ProtocolUrlHandler from '@/features/ProtocolUrlHandler';
 
 const Layout = ({ children, session }: LayoutProps) => {
   return (

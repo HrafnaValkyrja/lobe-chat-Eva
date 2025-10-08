@@ -2,11 +2,12 @@ import { Button } from '@lobehub/ui';
 import { ReactNode, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { MigrationError, UpgradeStatus } from './const';
+
 import { ClientService } from '@/services/import/_deprecated';
 import { useChatStore } from '@/store/chat';
 import { useSessionStore } from '@/store/session';
 
-import { MigrationError, UpgradeStatus } from './const';
 
 export interface UpgradeButtonProps {
   children?: ReactNode;

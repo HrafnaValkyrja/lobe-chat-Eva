@@ -10,8 +10,6 @@ import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 
-import { McpNavKey } from '@/types/discover';
-
 import {
   calculateScore,
   calculateScoreFlags,
@@ -19,6 +17,9 @@ import {
   getGradeColor,
   getGradeStyleClass,
 } from './calculateScore';
+
+import { McpNavKey } from '@/types/discover';
+
 
 const useStyles = createStyles(({ css, token }) => {
   return {

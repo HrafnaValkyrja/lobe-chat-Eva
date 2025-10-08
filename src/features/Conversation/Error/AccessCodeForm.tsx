@@ -3,11 +3,12 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import { FormAction } from './style';
+
 import { useChatStore } from '@/store/chat';
 import { useUserStore } from '@/store/user';
 import { keyVaultsConfigSelectors } from '@/store/user/selectors';
 
-import { FormAction } from './style';
 
 interface AccessCodeFormProps {
   id: string;

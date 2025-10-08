@@ -1,9 +1,9 @@
 import { GenerateContentResponse } from '@google/genai';
 
-import { GroundingSearch } from '@/types/search';
 
 import { nanoid } from '../../utils/uuid';
 import { convertGoogleAIUsage } from '../usageConverters/google-ai';
+
 import { type GoogleAIStreamOptions } from './google';
 import {
   ChatPayloadForTransformStream,
@@ -14,6 +14,8 @@ import {
   createTokenSpeedCalculator,
   generateToolCallId,
 } from './protocol';
+
+import { GroundingSearch } from '@/types/search';
 
 const transformVertexAIStream = (
   chunk: GenerateContentResponse,
@@ -85,7 +87,7 @@ const transformVertexAIStream = (
     const { groundingChunks, webSearchQueries } = candidate.groundingMetadata ?? {};
     if (groundingChunks) {
       return [
-        !!part?.text ? { data: part.text, id: context?.id, type: 'text' } : undefined,
+        part?.text ? { data: part.text, id: context?.id, type: 'text' } : undefined,
         {
           data: {
             citations: groundingChunks?.map((chunk) => ({
@@ -107,7 +109,7 @@ const transformVertexAIStream = (
     if (candidate.finishReason) {
       if (usageMetadata) {
         return [
-          !!part?.text ? { data: part.text, id: context?.id, type: 'text' } : undefined,
+          part?.text ? { data: part.text, id: context?.id, type: 'text' } : undefined,
           ...usageChunks,
         ].filter(Boolean) as StreamProtocolChunk[];
       }

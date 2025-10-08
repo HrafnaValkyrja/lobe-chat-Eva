@@ -3,10 +3,11 @@
 import { useRouter } from 'next/navigation';
 import { memo, useEffect } from 'react';
 
+import { AppLoadingStage } from '../stage';
+
 import { useUserStore } from '@/store/user';
 import { authSelectors } from '@/store/user/selectors';
 
-import { AppLoadingStage } from '../stage';
 
 interface RedirectProps {
   setLoadingStage: (value: AppLoadingStage) => void;

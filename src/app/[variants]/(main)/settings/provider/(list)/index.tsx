@@ -2,12 +2,14 @@
 
 import { parseAsString, useQueryState } from 'nuqs';
 
-import { isCustomBranding } from '@/const/version';
 
 import DesktopLayout from '../_layout/Desktop';
 import MobileLayout from '../_layout/Mobile';
 import ProviderDetailPage from '../detail';
+
 import Footer from './Footer';
+
+import { isCustomBranding } from '@/const/version';
 
 const Page = (props: { mobile?: boolean }) => {
   const [Provider, setProvider] = useQueryState('provider', parseAsString.withDefault('all'));

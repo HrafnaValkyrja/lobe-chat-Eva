@@ -1,9 +1,10 @@
 'use client';
 
+import { ProviderItem } from '../../type';
+
 import { OpenAIProviderCard } from '@/config/modelProviders';
 import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfig';
 
-import { ProviderItem } from '../../type';
 
 export const useOpenAIProvider = (): ProviderItem => {
   const { showOpenAIProxyUrl, showOpenAIApiKey } = useServerConfigStore(featureFlagsSelectors);

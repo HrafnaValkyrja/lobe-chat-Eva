@@ -2,6 +2,8 @@ import { act } from '@testing-library/react';
 import { ModelProvider } from 'model-bank';
 import { describe, expect, it, vi } from 'vitest';
 
+import { getProviderAuthPayload } from '../_auth';
+
 import { useUserStore } from '@/store/user';
 import {
   GlobalLLMProviderKey,
@@ -9,7 +11,6 @@ import {
   UserModelProviderConfig,
 } from '@/types/user/settings';
 
-import { getProviderAuthPayload } from '../_auth';
 
 // Mock data for different providers
 const mockZhiPuAPIKey = 'zhipu-api-key';

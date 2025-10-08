@@ -1,7 +1,8 @@
+import { chatSelectors } from '../message/selectors';
+
 import { ARTIFACT_TAG_CLOSED_REGEX, ARTIFACT_TAG_REGEX } from '@/const/plugin';
 import type { ChatStoreState } from '@/store/chat';
 
-import { chatSelectors } from '../message/selectors';
 
 const showPortal = (s: ChatStoreState) => s.showPortal;
 

@@ -1,5 +1,7 @@
 import { Mock, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { ClientService } from './_deprecated';
+
 import { FileModel } from '@/database/_deprecated/models/file';
 import { DB_File } from '@/database/_deprecated/schemas/files';
 import { fileEnv } from '@/envs/file';
@@ -7,7 +9,6 @@ import { clientS3Storage } from '@/services/file/ClientS3';
 import { serverConfigSelectors } from '@/store/serverConfig/selectors';
 import { createServerConfigStore } from '@/store/serverConfig/store';
 
-import { ClientService } from './_deprecated';
 
 const fileService = new ClientService();
 

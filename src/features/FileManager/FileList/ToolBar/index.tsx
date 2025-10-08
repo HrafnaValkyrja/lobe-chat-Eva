@@ -3,13 +3,14 @@ import { rgba } from 'polished';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import Config from './Config';
+import MultiSelectActions, { MultiSelectActionType } from './MultiSelectActions';
+
 import { useAddFilesToKnowledgeBaseModal } from '@/features/KnowledgeBaseModal';
 import { useFileStore } from '@/store/file';
 import { useKnowledgeBaseStore } from '@/store/knowledgeBase';
 import { isChunkingUnsupported } from '@/utils/isChunkingUnsupported';
 
-import Config from './Config';
-import MultiSelectActions, { MultiSelectActionType } from './MultiSelectActions';
 
 const useStyles = createStyles(({ css, token, isDarkMode }) => ({
   container: css`

@@ -1,8 +1,9 @@
 import { FC } from 'react';
 
 import { MarkdownElement, MarkdownElementProps } from '../type';
-import Component from './Render';
+
 import rehypePlugin from './rehypePlugin';
+import Component from './Render';
 
 const AntArtifactElement: MarkdownElement = {
   Component: Component as unknown as FC<MarkdownElementProps>,

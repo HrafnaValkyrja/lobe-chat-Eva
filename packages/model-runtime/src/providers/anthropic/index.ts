@@ -18,6 +18,7 @@ import { desensitizeUrl } from '../../utils/desensitizeUrl';
 import { getModelPricing } from '../../utils/getModelPricing';
 import { MODEL_LIST_CONFIGS, processModelList } from '../../utils/modelParse';
 import { StreamingResponse } from '../../utils/response';
+
 import { createAnthropicGenerateObject } from './generateObject';
 import { handleAnthropicError } from './handleAnthropicError';
 
@@ -196,7 +197,7 @@ export class LobeAnthropicAI implements LobeRuntimeAI {
     const system_message = messages.find((m) => m.role === 'system');
     const user_messages = messages.filter((m) => m.role !== 'system');
 
-    const systemPrompts = !!system_message?.content
+    const systemPrompts = system_message?.content
       ? ([
           {
             cache_control: enabledContextCaching ? { type: 'ephemeral' } : undefined,

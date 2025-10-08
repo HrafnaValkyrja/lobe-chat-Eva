@@ -1,9 +1,10 @@
 import { t } from 'i18next';
 
+import { ChatStoreState } from '../../initialState';
+
 import { ChatTopic, ChatTopicSummary, GroupedTopic } from '@/types/topic';
 import { groupTopicsByTime } from '@/utils/client/topic';
 
-import { ChatStoreState } from '../../initialState';
 
 const currentTopics = (s: ChatStoreState): ChatTopic[] | undefined => s.topicMaps[s.activeId];
 

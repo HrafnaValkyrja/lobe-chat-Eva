@@ -6,6 +6,12 @@ import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import { SkeletonList } from '../SkeletonList';
+
+import ByTimeMode from './ByTimeMode';
+import FlatMode from './FlatMode';
+import SearchResult from './SearchResult';
+
 import { imageUrl } from '@/const/url';
 import { useFetchTopics } from '@/hooks/useFetchTopics';
 import { useChatStore } from '@/store/chat';
@@ -14,10 +20,6 @@ import { useUserStore } from '@/store/user';
 import { preferenceSelectors } from '@/store/user/selectors';
 import { TopicDisplayMode } from '@/types/topic';
 
-import { SkeletonList } from '../SkeletonList';
-import ByTimeMode from './ByTimeMode';
-import FlatMode from './FlatMode';
-import SearchResult from './SearchResult';
 
 const TopicListContent = memo(() => {
   const { t } = useTranslation('topic');

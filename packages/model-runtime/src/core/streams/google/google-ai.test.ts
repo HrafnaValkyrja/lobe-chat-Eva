@@ -2,6 +2,7 @@ import { GenerateContentResponse } from '@google/genai';
 import { describe, expect, it, vi } from 'vitest';
 
 import * as uuidModule from '../../../utils/uuid';
+
 import { GoogleGenerativeAIStream, LOBE_ERROR_KEY } from './index';
 
 describe('GoogleGenerativeAIStream', () => {

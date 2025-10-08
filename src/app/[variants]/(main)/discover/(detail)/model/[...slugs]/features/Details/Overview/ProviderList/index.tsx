@@ -10,13 +10,14 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 
+import { useDetailContext } from '../../../DetailProvider';
+
 import InlineTable from '@/components/InlineTable';
 import { ModelInfoTags } from '@/components/ModelSelect';
 import { BASE_PROVIDER_DOC_URL } from '@/const/url';
 import { formatPriceByCurrency, formatTokenNumber } from '@/utils/format';
 import { getTextInputUnitRate, getTextOutputUnitRate } from '@/utils/pricing';
 
-import { useDetailContext } from '../../../DetailProvider';
 
 const ProviderList = memo(() => {
   const { providers = [] } = useDetailContext();

@@ -1,10 +1,12 @@
 import { describe, expect, it } from 'vitest';
 
-import { merge } from '@/utils/merge';
 
 import { UserState, initialState } from '../../../initialState';
 import { UserStore, useUserStore } from '../../../store';
+
 import { getDefaultModeProviderById, modelProviderSelectors } from './modelProvider';
+
+import { merge } from '@/utils/merge';
 
 describe('modelProviderSelectors', () => {
   describe('getDefaultModeProviderById', () => {

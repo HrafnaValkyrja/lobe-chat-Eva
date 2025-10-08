@@ -20,7 +20,7 @@ const getSlicedMessages = (
   if (!options.enableHistoryCount || options.historyCount === undefined) return messages;
 
   // if user send message, history will include this message so the total length should +1
-  const messagesCount = !!options.includeNewUserMessage
+  const messagesCount = options.includeNewUserMessage
     ? options.historyCount + 1
     : options.historyCount;
 

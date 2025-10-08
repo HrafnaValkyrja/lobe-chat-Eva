@@ -2,10 +2,11 @@
 import { LobeChatPluginManifest } from '@lobehub/chat-plugin-sdk';
 import { boolean, jsonb, pgTable, primaryKey, text } from 'drizzle-orm/pg-core';
 
+import { timestamps, timestamptz } from './_helpers';
+
 import { DEFAULT_PREFERENCE } from '@/const/user';
 import { CustomPluginParams } from '@/types/tool/plugin';
 
-import { timestamps, timestamptz } from './_helpers';
 
 export const users = pgTable('users', {
   id: text('id').primaryKey().notNull(),

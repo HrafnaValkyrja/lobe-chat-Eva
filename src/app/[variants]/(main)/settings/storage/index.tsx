@@ -1,9 +1,10 @@
 'use client';
 
-import { isServerMode } from '@/const/version';
 
 import Advanced from './Advanced';
 import IndexedDBStorage from './IndexedDBStorage';
+
+import { isServerMode } from '@/const/version';
 
 const StorageEstimate = () => {
   return (

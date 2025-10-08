@@ -1,5 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
+import { SessionModel } from '../session';
+
 import { DEFAULT_AGENT_CONFIG } from '@/const/settings';
 import { CreateMessageParams, MessageModel } from '@/database/_deprecated/models/message';
 import { SessionGroupModel } from '@/database/_deprecated/models/sessionGroup';
@@ -12,7 +14,6 @@ import {
   SessionGroupId,
 } from '@/types/session';
 
-import { SessionModel } from '../session';
 
 describe('SessionModel', () => {
   let sessionData: Partial<LobeAgentSession>;

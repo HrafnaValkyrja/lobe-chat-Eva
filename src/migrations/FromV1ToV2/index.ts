@@ -1,8 +1,9 @@
+import { V1Chat, V1ConfigState, V1Session, V1Topic } from './types/v1';
+import { V2ConfigState, V2Message, V2Session, V2Topic } from './types/v2';
+
 import { INBOX_SESSION_ID } from '@/const/session';
 import type { Migration, MigrationData } from '@/migrations/VersionController';
 
-import { V1Chat, V1ConfigState, V1Session, V1Topic } from './types/v1';
-import { V2ConfigState, V2Message, V2Session, V2Topic } from './types/v2';
 
 export class MigrationV1ToV2 implements Migration {
   // from this version to start migration

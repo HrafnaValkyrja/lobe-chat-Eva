@@ -7,10 +7,11 @@ import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import { CUSTOM_PROVIDER_SDK_OPTIONS } from '../../customProviderSdkOptions';
+
 import { useAiInfraStore } from '@/store/aiInfra/store';
 import { AiProviderDetailItem, UpdateAiProviderParams } from '@/types/aiProvider';
 
-import { CUSTOM_PROVIDER_SDK_OPTIONS } from '../../customProviderSdkOptions';
 
 interface CreateNewProviderProps {
   id: string;

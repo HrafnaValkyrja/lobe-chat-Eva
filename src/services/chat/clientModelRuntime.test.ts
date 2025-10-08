@@ -23,10 +23,11 @@ import { ModelProvider } from 'model-bank';
 import OpenAI from 'openai';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { initializeWithClientStore } from './clientModelRuntime';
+
 import { UserStore } from '@/store/user';
 import { UserSettingsState, initialSettingsState } from '@/store/user/slices/settings/initialState';
 
-import { initializeWithClientStore } from './clientModelRuntime';
 
 // Mocking external dependencies
 vi.mock('i18next', () => ({

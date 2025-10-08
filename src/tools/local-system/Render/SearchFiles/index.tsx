@@ -1,11 +1,12 @@
 import { LocalSearchFilesParams } from '@lobechat/electron-client-ipc';
 import { memo } from 'react';
 
+import SearchResult from './Result';
+import SearchQuery from './SearchQuery';
+
 import { LocalFileSearchState } from '@/tools/local-system/type';
 import { ChatMessagePluginError } from '@/types/message';
 
-import SearchResult from './Result';
-import SearchQuery from './SearchQuery';
 
 interface SearchFilesProps {
   args: LocalSearchFilesParams;

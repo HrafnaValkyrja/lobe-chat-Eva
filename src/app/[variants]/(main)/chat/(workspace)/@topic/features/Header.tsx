@@ -8,6 +8,8 @@ import { memo, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import TopicSearchBar from './TopicSearchBar';
+
 import SidebarHeader from '@/components/SidebarHeader';
 import { useChatStore } from '@/store/chat';
 import { topicSelectors } from '@/store/chat/selectors';
@@ -15,7 +17,6 @@ import { useUserStore } from '@/store/user';
 import { preferenceSelectors } from '@/store/user/selectors';
 import { TopicDisplayMode } from '@/types/topic';
 
-import TopicSearchBar from './TopicSearchBar';
 
 const Header = memo(() => {
   const { t } = useTranslation(['topic', 'common']);

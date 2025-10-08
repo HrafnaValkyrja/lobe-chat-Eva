@@ -1,12 +1,13 @@
 import { notFound } from 'next/navigation';
 
+import ConsentClientError from './ClientError';
+import Consent from './Consent';
+import Login from './Login';
+
 import { oidcEnv } from '@/envs/oidc';
 import { defaultClients } from '@/libs/oidc-provider/config';
 import { OIDCService } from '@/server/services/oidc';
 
-import ConsentClientError from './ClientError';
-import Consent from './Consent';
-import Login from './Login';
 
 const InteractionPage = async (props: { params: Promise<{ uid: string }> }) => {
   if (!oidcEnv.ENABLE_OIDC) return notFound();

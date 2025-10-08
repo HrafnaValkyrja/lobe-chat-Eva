@@ -7,6 +7,8 @@ import type { KeyboardEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import PromptTitle from './Title';
+
 import { loginRequired } from '@/components/Error/loginRequiredNotification';
 import { useGeminiChineseWarning } from '@/hooks/useGeminiChineseWarning';
 import { useImageStore } from '@/store/image';
@@ -16,7 +18,6 @@ import { imageGenerationConfigSelectors } from '@/store/image/slices/generationC
 import { useUserStore } from '@/store/user';
 import { authSelectors } from '@/store/user/slices/auth/selectors';
 
-import PromptTitle from './Title';
 
 interface PromptInputProps {
   disableAnimation?: boolean;

@@ -1,7 +1,7 @@
 {
-  "name": "@lobehub/chat",
-  "version": "1.135.2",
-  "description": "Lobe Chat - an open-source, high-performance chatbot framework that supports speech synthesis, multimodal, and extensible Function Call plugin system. Supports one-click free deployment of your private ChatGPT/LLM web application.",
+  "name": "lobe-chat-eva",
+  "version": "1.0.0",
+  "description": "Eva – an AI companion built on Lobe Chat for Cloudflare Workers",
   "keywords": [
     "framework",
     "chatbot",
@@ -14,25 +14,22 @@
     "tts",
     "stt"
   ],
-  "homepage": "https://github.com/lobehub/lobe-chat",
-  "bugs": {
-    "url": "https://github.com/lobehub/lobe-chat/issues/new/choose"
-  },
+  "homepage": "https://github.com/HrafnaValkyrja/lobe-chat-Eva",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lobehub/lobe-chat.git"
+    "url": "https://github.com/HrafnaValkyrja/lobe-chat-Eva.git"
   },
   "license": "MIT",
-  "author": "LobeHub <i@lobehub.com>",
+  "author": "HrafnaValkyrja",
   "sideEffects": false,
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "prebuild": "tsx scripts/prebuild.mts && npm run lint",
+    "prebuild": "tsx scripts/prebuild.mts && npm run lint:style && npm run type-check && npm run lint:circular",
     "build": "cross-env NODE_OPTIONS=--max-old-space-size=6144 next build",
     "postbuild": "npm run build-sitemap && npm run build-migrate-db",
-    "build-migrate-db": "bun run db:migrate",
+    "build-migrate-db": "tsx scripts/migrateServerDB/index.ts",
     "build-sitemap": "tsx ./scripts/buildSitemapIndex/index.ts",
     "build:analyze": "NODE_OPTIONS=--max-old-space-size=6144 ANALYZE=true next build",
     "build:docker": "npm run prebuild && NODE_OPTIONS=--max-old-space-size=6144 DOCKER=true next build && npm run build-sitemap",
@@ -54,14 +51,14 @@
     "docs:i18n": "lobe-i18n md && npm run lint:md && npm run lint:mdx && prettier -c --write locales/**/*",
     "docs:seo": "lobe-seo && npm run lint:mdx",
     "i18n": "npm run workflow:i18n && lobe-i18n && prettier -c --write \"locales/**\"",
-    "lint": "npm run lint:ts && npm run lint:style && npm run type-check && npm run lint:circular",
+    "lint": "pnpm lint:style && pnpm type-check && pnpm lint:circular",
     "lint:circular": "npm run lint:circular:main && npm run lint:circular:packages",
     "lint:circular:main": "dpdm src/**/*.ts  --no-warning --no-tree --exit-code circular:1 --no-progress -T true --skip-dynamic-imports circular",
     "lint:circular:packages": "dpdm packages/**/src/**/*.ts  --no-warning --no-tree --exit-code circular:1 --no-progress -T true --skip-dynamic-imports circular",
     "lint:md": "remark . --silent --output",
     "lint:mdx": "npm run workflow:mdx && remark \"docs/**/*.mdx\" -r ./.remarkrc.mdx.js --silent --output && eslint \"docs/**/*.mdx\" --quiet --fix",
     "lint:style": "stylelint \"{src,tests}/**/*.{js,jsx,ts,tsx}\" --fix",
-    "lint:ts": "eslint \"{src,tests}/**/*.{js,jsx,ts,tsx}\" --fix",
+    "lint:ts": "pnpm eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "prepare": "husky",
     "prettier": "prettier -c --write \"**/**\"",
     "pull": "git pull",
@@ -77,7 +74,7 @@
     "test-app": "vitest run",
     "test-app:coverage": "vitest --coverage --silent='passed-only'",
     "test:update": "vitest -u",
-    "type-check": "tsgo --noEmit",
+    "type-check": "tsc --noEmit",
     "webhook:ngrok": "ngrok http http://localhost:3011",
     "workflow:cdn": "tsx ./scripts/cdnWorkflow/index.ts",
     "workflow:changelog": "tsx ./scripts/changelogWorkflow/index.ts",
@@ -87,7 +84,12 @@
     "workflow:i18n": "tsx ./scripts/i18nWorkflow/index.ts",
     "workflow:mdx": "tsx ./scripts/mdxWorkflow/index.ts",
     "workflow:readme": "tsx ./scripts/readmeWorkflow/index.ts",
-    "workflow:set-desktop-version": "tsx ./scripts/electronWorkflow/setDesktopVersion.ts"
+    "workflow:set-desktop-version": "tsx ./scripts/electronWorkflow/setDesktopVersion.ts",
+    "build:cloudflare": "pnpm prebuild && BUILD_TARGET=cloudflare pnpm build && pnpm postbuild && opennextjs-cloudflare build --skipWranglerConfigCheck --noMinify",
+    "preview:cloudflare": "pnpm run build:cloudflare && opennextjs-cloudflare preview",
+    "deploy:cloudflare": "pnpm run build:cloudflare && opennextjs-cloudflare deploy",
+    "upload:cloudflare": "pnpm run build:cloudflare && opennextjs-cloudflare upload",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "lint-staged": {
     "*.md": [
@@ -168,6 +170,7 @@
     "@modelcontextprotocol/sdk": "^1.18.0",
     "@neondatabase/serverless": "^1.0.1",
     "@next/third-parties": "^15.5.3",
+    "@opennextjs/cloudflare": "^1.9.1",
     "@react-spring/web": "^9.7.5",
     "@serwist/next": "^9.2.1",
     "@t3-oss/env-nextjs": "^0.13.8",
@@ -184,6 +187,7 @@
     "ahooks": "^3.9.5",
     "antd": "^5.27.3",
     "antd-style": "^3.7.1",
+    "axios": "^1.12.2",
     "brotli-wasm": "^3.0.1",
     "chroma-js": "^3.1.2",
     "cookie": "^1.0.2",
@@ -290,6 +294,8 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@edge-runtime/vm": "^5.0.0",
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.37.0",
     "@huggingface/tasks": "^0.19.0",
     "@lobechat/types": "workspace:*",
     "@lobehub/i18n-cli": "^1.25.1",
@@ -297,7 +303,7 @@
     "@lobehub/market-types": "^1.11.4",
     "@lobehub/seo-cli": "^1.7.0",
     "@next/bundle-analyzer": "^15.5.3",
-    "@next/eslint-plugin-next": "^15.5.3",
+    "@next/eslint-plugin-next": "^15.3.5",
     "@peculiar/webcrypto": "^1.5.0",
     "@prettier/sync": "^0.6.1",
     "@semantic-release/exec": "^6.0.3",
@@ -324,6 +330,8 @@
     "@types/ua-parser-js": "^0.7.39",
     "@types/unist": "^3.0.3",
     "@types/ws": "^8.18.1",
+    "@typescript-eslint/eslint-plugin": "^8.46.0",
+    "@typescript-eslint/parser": "^8.46.0",
     "@typescript/native-preview": "7.0.0-dev.20250711.1",
     "@vitest/coverage-v8": "^3.2.4",
     "ajv-keywords": "^5.1.0",
@@ -337,8 +345,14 @@
     "dpdm-fast": "^1.0.13",
     "drizzle-dbml-generator": "^0.10.0",
     "drizzle-kit": "^0.31.4",
-    "eslint": "^8.57.1",
+    "eslint": "^9.37.0",
+    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-mdx": "^3.6.2",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-sort": "^4.0.0",
+    "eslint-plugin-typescript-sort-keys": "^3.3.0",
+    "eslint-plugin-unicorn": "^61.0.2",
+    "eslint-plugin-unused-imports": "^4.2.0",
     "fake-indexeddb": "^6.2.2",
     "fs-extra": "^11.3.1",
     "glob": "^11.0.3",
@@ -370,7 +384,8 @@
     "unified": "^11.0.5",
     "unist-util-visit": "^5.0.0",
     "vite": "^7.1.5",
-    "vitest": "^3.2.4"
+    "vitest": "^3.2.4",
+    "wrangler": "^4.42.0"
   },
   "packageManager": "pnpm@10.18.0",
   "publishConfig": {

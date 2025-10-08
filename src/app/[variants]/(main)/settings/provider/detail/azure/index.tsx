@@ -5,16 +5,17 @@ import { createStyles } from 'antd-style';
 import { ModelProvider } from 'model-bank';
 import { useTranslation } from 'react-i18next';
 
+import { KeyVaultsConfigKey, LLMProviderApiTokenKey, LLMProviderBaseUrlKey } from '../../const';
+import { SkeletonInput } from '../../features/ProviderConfig';
+import { ProviderItem } from '../../type';
+import ProviderDetail from '../default';
+
 import { FormInput, FormPassword } from '@/components/FormInput';
 import { AzureProviderCard } from '@/config/modelProviders';
 import { aiProviderSelectors, useAiInfraStore } from '@/store/aiInfra';
 import { useUserStore } from '@/store/user';
 import { modelProviderSelectors } from '@/store/user/selectors';
 
-import { KeyVaultsConfigKey, LLMProviderApiTokenKey, LLMProviderBaseUrlKey } from '../../const';
-import { SkeletonInput } from '../../features/ProviderConfig';
-import { ProviderItem } from '../../type';
-import ProviderDetail from '../default';
 
 const useStyles = createStyles(({ css, token }) => ({
   markdown: css`

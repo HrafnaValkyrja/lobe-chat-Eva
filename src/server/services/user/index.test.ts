@@ -2,12 +2,13 @@ import { UserJSON } from '@clerk/backend';
 import { LobeChatDatabase } from '@lobechat/database';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { UserService } from './index';
+
 import { UserModel } from '@/database/models/user';
 import { UserItem } from '@/database/schemas';
 import { pino } from '@/libs/logger';
 import { AgentService } from '@/server/services/agent';
 
-import { UserService } from './index';
 
 // Mock @/libs/analytics to avoid server-side environment variable access in client test environment
 vi.mock('@/libs/analytics', () => ({

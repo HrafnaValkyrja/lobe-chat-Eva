@@ -2,10 +2,11 @@
 
 import { useQueryState } from 'nuqs';
 
-import { useImageStore } from '@/store/image';
 
 import Content from './Content';
 import EmptyState from './EmptyState';
+
+import { useImageStore } from '@/store/image';
 
 const ImageWorkspace = () => {
   const [topic] = useQueryState('topic');

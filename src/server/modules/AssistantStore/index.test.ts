@@ -1,9 +1,10 @@
 // @vitest-environment node
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { AssistantStore } from './index';
+
 import { EdgeConfig } from '@/server/modules/EdgeConfig';
 
-import { AssistantStore } from './index';
 
 const baseURL = 'https://registry.npmmirror.com/@lobehub/agents-index/v1/files/public';
 
@@ -189,7 +190,7 @@ describe('AssistantStore', () => {
     global.fetch = vi.fn().mockRejectedValue(new Error('something else'));
     const store = new AssistantStore();
 
-    // eslint-disable-next-line @typescript-eslint/no-empty-function
+     
     vi.spyOn(console, 'error').mockImplementation(() => {});
 
     await expect(store.getAgentIndex()).rejects.toThrow('something else');

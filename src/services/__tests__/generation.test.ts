@@ -1,8 +1,9 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { generationService } from '../generation';
+
 import { lambdaClient } from '@/libs/trpc/client';
 
-import { generationService } from '../generation';
 
 vi.mock('@/libs/trpc/client', () => ({
   lambdaClient: {

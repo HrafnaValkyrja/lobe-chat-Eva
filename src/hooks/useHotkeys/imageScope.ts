@@ -1,12 +1,13 @@
 import { useEffect } from 'react';
 import { useHotkeysContext } from 'react-hotkeys-hook';
 
+import { useHotkeyById } from './useHotkeyById';
+
 import { FOLDER_WIDTH } from '@/const/layoutTokens';
 import { useGlobalStore } from '@/store/global';
 import { systemStatusSelectors } from '@/store/global/selectors';
 import { HotkeyEnum, HotkeyScopeEnum } from '@/types/hotkey';
 
-import { useHotkeyById } from './useHotkeyById';
 
 export const useToggleImageLeftPanelHotkey = () => {
   const showImagePanel = useGlobalStore(systemStatusSelectors.showImagePanel);

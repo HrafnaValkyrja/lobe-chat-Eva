@@ -1,3 +1,8 @@
+import { Buffer } from 'node:buffer';
+import http, { IncomingMessage, OutgoingHttpHeaders } from 'node:http';
+import https from 'node:https';
+import { URL } from 'node:url';
+
 import {
   ProxyTRPCRequestParams,
   ProxyTRPCRequestResult,
@@ -6,16 +11,14 @@ import {
 import { IpcMainEvent, WebContents, ipcMain } from 'electron';
 import { HttpProxyAgent } from 'http-proxy-agent';
 import { HttpsProxyAgent } from 'https-proxy-agent';
-import { Buffer } from 'node:buffer';
-import http, { IncomingMessage, OutgoingHttpHeaders } from 'node:http';
-import https from 'node:https';
-import { URL } from 'node:url';
+
+import RemoteServerConfigCtr from './RemoteServerConfigCtr';
+
+import { ControllerModule, ipcClientEvent } from './index';
 
 import { defaultProxySettings } from '@/const/store';
 import { createLogger } from '@/utils/logger';
 
-import RemoteServerConfigCtr from './RemoteServerConfigCtr';
-import { ControllerModule, ipcClientEvent } from './index';
 
 // Create logger
 const logger = createLogger('controllers:RemoteServerSyncCtr');

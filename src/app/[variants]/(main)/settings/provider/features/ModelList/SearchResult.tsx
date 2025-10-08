@@ -7,9 +7,10 @@ import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import ModelItem from './ModelItem';
+
 import { aiModelSelectors, useAiInfraStore } from '@/store/aiInfra';
 
-import ModelItem from './ModelItem';
 
 const SearchResult = memo(() => {
   const { t } = useTranslation('modelProvider');

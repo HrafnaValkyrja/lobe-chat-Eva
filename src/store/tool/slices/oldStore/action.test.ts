@@ -3,12 +3,13 @@ import { act, renderHook } from '@testing-library/react';
 import useSWR from 'swr';
 import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { useToolStore } from '../../store';
+
 import { notification } from '@/components/AntdStaticMethods';
 import { pluginService } from '@/services/plugin';
 import { toolService } from '@/services/tool';
 import { DiscoverPluginItem } from '@/types/discover';
 
-import { useToolStore } from '../../store';
 
 // Mock necessary modules and functions
 vi.mock('@/components/AntdStaticMethods', () => ({

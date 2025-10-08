@@ -1,5 +1,8 @@
 import { Suspense } from 'react';
 
+import ImageWorkspace from './features/ImageWorkspace';
+import SkeletonList from './features/ImageWorkspace/SkeletonList';
+
 import StructuredData from '@/components/StructuredData';
 import { BRANDING_NAME } from '@/const/branding';
 import InitClientDB from '@/features/InitClientDB';
@@ -9,8 +12,6 @@ import { translation } from '@/server/translation';
 import { DynamicLayoutProps } from '@/types/next';
 import { RouteVariants } from '@/utils/server/routeVariants';
 
-import ImageWorkspace from './features/ImageWorkspace';
-import SkeletonList from './features/ImageWorkspace/SkeletonList';
 
 export const generateMetadata = async (props: DynamicLayoutProps) => {
   const locale = await RouteVariants.getLocale(props);

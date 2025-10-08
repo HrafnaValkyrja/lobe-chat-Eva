@@ -1,5 +1,6 @@
-import debug from 'debug';
 import { readFile } from 'node:fs/promises';
+
+import debug from 'debug';
 import type { PDFDocumentProxy, PDFPageProxy } from 'pdfjs-dist';
 import { getDocument, version } from 'pdfjs-dist/legacy/build/pdf.mjs';
 // @ts-ignore
@@ -7,6 +8,7 @@ import * as _pdfjsWorker from 'pdfjs-dist/legacy/build/pdf.worker.mjs';
 import type { TextContent } from 'pdfjs-dist/types/src/display/api';
 
 import type { DocumentPage, FileLoaderInterface } from '../../types';
+
 import { promptTemplate } from './prompt';
 
 const log = debug('file-loaders:pdf');

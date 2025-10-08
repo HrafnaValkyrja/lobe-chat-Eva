@@ -17,6 +17,7 @@ import {
   createSSEProtocolTransformer,
   createTokenSpeedCalculator,
 } from '../protocol';
+
 import { OpenAIStreamOptions } from './openai';
 
 const transformOpenAIStream = (
@@ -186,7 +187,7 @@ const transformOpenAIStream = (
       },
       type: errorName,
     } as ChatMessageError;
-    /* eslint-enable */
+     
 
     return { data: errorData, id: streamContext.id, type: 'error' };
   }

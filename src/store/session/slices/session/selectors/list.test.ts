@@ -1,8 +1,9 @@
+import { sessionSelectors } from './list';
+
 import { DEFAULT_AGENT_LOBE_SESSION } from '@/const/session';
 import type { SessionStore } from '@/store/session';
 import { LobeAgentSession, LobeSessionType } from '@/types/session';
 
-import { sessionSelectors } from './list';
 
 describe('currentSession', () => {
   const s = {

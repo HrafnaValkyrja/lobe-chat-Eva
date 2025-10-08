@@ -1,11 +1,12 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { UPLOAD_NETWORK_ERROR, uploadService } from '../upload';
+
 import { fileEnv } from '@/envs/file';
 import { edgeClient } from '@/libs/trpc/client';
 import { API_ENDPOINTS } from '@/services/_url';
 import { clientS3Storage } from '@/services/file/ClientS3';
 
-import { UPLOAD_NETWORK_ERROR, uploadService } from '../upload';
 
 // Mock dependencies
 vi.mock('@/libs/trpc/client', () => ({

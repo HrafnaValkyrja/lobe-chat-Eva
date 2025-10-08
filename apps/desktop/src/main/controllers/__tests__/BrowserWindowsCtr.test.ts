@@ -1,11 +1,12 @@
 import { InterceptRouteParams } from '@lobechat/electron-client-ipc';
 import { Mock, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import BrowserWindowsCtr from '../BrowserWindowsCtr';
+
 import { AppBrowsersIdentifiers, BrowsersIdentifiers } from '@/appBrowsers';
 import type { App } from '@/core/App';
 import type { IpcClientEventSender } from '@/types/ipcClientEvent';
 
-import BrowserWindowsCtr from '../BrowserWindowsCtr';
 
 // 模拟 App 及其依赖项
 const mockToggleVisible = vi.fn();

@@ -3,6 +3,11 @@ import isEqual from 'fast-deep-equal';
 import { SWRResponse, mutate } from 'swr';
 import { StateCreator } from 'zustand/vanilla';
 
+import type { ImageStore } from '../../store';
+
+import { GenerationTopicDispatch, generationTopicReducer } from './reducer';
+import { generationTopicSelectors } from './selectors';
+
 import { LOADING_FLAT } from '@/const/message';
 import { useClientDataSWR } from '@/libs/swr';
 import { UpdateTopicValue } from '@/server/routers/lambda/generationTopic';
@@ -15,9 +20,6 @@ import { ImageGenerationTopic } from '@/types/generation';
 import { merge } from '@/utils/merge';
 import { setNamespace } from '@/utils/storeDebug';
 
-import type { ImageStore } from '../../store';
-import { GenerationTopicDispatch, generationTopicReducer } from './reducer';
-import { generationTopicSelectors } from './selectors';
 
 const FETCH_GENERATION_TOPICS_KEY = 'fetchGenerationTopics';
 

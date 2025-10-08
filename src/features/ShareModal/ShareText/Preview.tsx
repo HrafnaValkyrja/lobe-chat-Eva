@@ -1,9 +1,10 @@
 import { Markdown } from '@lobehub/ui';
 import { memo } from 'react';
 
+import { useContainerStyles } from '../style';
+
 import { useIsMobile } from '@/hooks/useIsMobile';
 
-import { useContainerStyles } from '../style';
 
 const Preview = memo<{ content: string }>(({ content }) => {
   const { styles } = useContainerStyles();

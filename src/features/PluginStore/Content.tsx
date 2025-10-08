@@ -4,16 +4,17 @@ import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import { isDesktop } from '@/const/version';
-import { useServerConfigStore } from '@/store/serverConfig';
-import { useToolStore } from '@/store/tool';
-import { PluginStoreTabs } from '@/store/tool/slices/oldStore';
 
 import AddPluginButton from './AddPluginButton';
 import InstalledList from './InstalledList';
 import McpList from './McpList';
 import PluginList from './PluginList';
 import Search from './Search';
+
+import { isDesktop } from '@/const/version';
+import { useServerConfigStore } from '@/store/serverConfig';
+import { useToolStore } from '@/store/tool';
+import { PluginStoreTabs } from '@/store/tool/slices/oldStore';
 
 export const Content = memo(() => {
   const { t } = useTranslation('plugin');

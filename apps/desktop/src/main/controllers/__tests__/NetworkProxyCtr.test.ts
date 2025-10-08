@@ -1,9 +1,10 @@
 import { NetworkProxySettings } from '@lobechat/electron-client-ipc';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import NetworkProxyCtr from '../NetworkProxyCtr';
+
 import type { App } from '@/core/App';
 
-import NetworkProxyCtr from '../NetworkProxyCtr';
 
 // 模拟 logger
 vi.mock('@/utils/logger', () => ({

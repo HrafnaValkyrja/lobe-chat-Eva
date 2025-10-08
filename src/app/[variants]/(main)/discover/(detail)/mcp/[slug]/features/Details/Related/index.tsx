@@ -3,10 +3,11 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import { useDetailContext } from '@/features/MCPPluginDetail/DetailProvider';
 
 import McpList from '../../../../../../(list)/mcp/features/List';
 import Title from '../../../../../../features/Title';
+
+import { useDetailContext } from '@/features/MCPPluginDetail/DetailProvider';
 
 const Related = memo(() => {
   const { t } = useTranslation('discover');

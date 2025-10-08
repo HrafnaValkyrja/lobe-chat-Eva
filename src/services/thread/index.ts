@@ -1,7 +1,8 @@
-import { isDesktop } from '@/const/version';
 
 import { ClientService } from './client';
 import { ServerService } from './server';
+
+import { isDesktop } from '@/const/version';
 
 export const threadService =
   process.env.NEXT_PUBLIC_SERVICE_MODE === 'server' || isDesktop

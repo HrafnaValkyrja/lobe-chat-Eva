@@ -10,11 +10,13 @@ import { ModelProvider } from 'model-bank';
 import useSWR, { SWRResponse } from 'swr';
 import type { StateCreator } from 'zustand/vanilla';
 
-import type { UserStore } from '@/store/user';
 
 import { settingsSelectors } from '../settings/selectors';
+
 import { CustomModelCardDispatch, customModelCardsReducer } from './reducers/customModelCard';
 import { modelProviderSelectors } from './selectors/modelProvider';
+
+import type { UserStore } from '@/store/user';
 
 /**
  * 设置操作

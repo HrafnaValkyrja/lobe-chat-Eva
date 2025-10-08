@@ -6,10 +6,11 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import ShareButton from '../../stats/features/ShareButton';
+
 import { useActiveProfileKey } from '@/hooks/useActiveTabKey';
 import { mobileHeaderSticky } from '@/styles/mobileHeader';
 
-import ShareButton from '../../stats/features/ShareButton';
 
 const Header = memo(() => {
   const { t } = useTranslation('auth');

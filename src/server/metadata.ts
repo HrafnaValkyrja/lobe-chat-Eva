@@ -30,9 +30,9 @@ export class Meta {
     type?: 'website' | 'article';
     url: string;
   }): Metadata {
-    // eslint-disable-next-line no-param-reassign
+     
     const formatedTitle = formatTitleLength(title, 21);
-    // eslint-disable-next-line no-param-reassign
+     
     const formatedDescription = formatDescLength(description, tags);
     const siteTitle = title.includes(BRANDING_NAME) ? title : title + ` · ${BRANDING_NAME}`;
     return {

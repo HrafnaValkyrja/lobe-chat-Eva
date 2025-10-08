@@ -4,6 +4,9 @@ import { Fragment, Suspense } from 'react';
 import { Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 
+import GridLayout from './features/GridLayout';
+import Post from './features/Post';
+
 import Pagination from '@/app/[variants]/@modal/(.)changelog/modal/features/Pagination';
 import UpdateChangelogStatus from '@/app/[variants]/@modal/(.)changelog/modal/features/UpdateChangelogStatus';
 import StructuredData from '@/components/StructuredData';
@@ -17,8 +20,6 @@ import { translation } from '@/server/translation';
 import { DynamicLayoutProps } from '@/types/next';
 import { RouteVariants } from '@/utils/server/routeVariants';
 
-import GridLayout from './features/GridLayout';
-import Post from './features/Post';
 
 export const generateMetadata = async (props: DynamicLayoutProps) => {
   const locale = await RouteVariants.getLocale(props);

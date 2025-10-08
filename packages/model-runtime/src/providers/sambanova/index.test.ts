@@ -2,6 +2,7 @@
 import { ModelProvider } from 'model-bank';
 
 import { testProvider } from '../../providerTestUtils';
+
 import { LobeSambaNovaAI } from './index';
 
 const provider = ModelProvider.SambaNova;

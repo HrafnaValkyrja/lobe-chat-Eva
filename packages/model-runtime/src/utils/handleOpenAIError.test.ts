@@ -2,6 +2,7 @@ import OpenAI from 'openai';
 import { describe, expect, it } from 'vitest';
 
 import { AgentRuntimeErrorType } from '../types/error';
+
 import { handleOpenAIError } from './handleOpenAIError';
 
 describe('handleOpenAIError', () => {

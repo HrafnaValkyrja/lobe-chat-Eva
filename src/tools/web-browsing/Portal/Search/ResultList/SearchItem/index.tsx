@@ -3,11 +3,12 @@ import { createStyles } from 'antd-style';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import TitleExtra from './TitleExtra';
+import Video from './Video';
+
 import WebFavicon from '@/components/WebFavicon';
 import { UniformSearchResult } from '@/types/tool/search';
 
-import TitleExtra from './TitleExtra';
-import Video from './Video';
 
 const useStyles = createStyles(({ css, token }) => {
   return {

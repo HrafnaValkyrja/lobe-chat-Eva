@@ -1,8 +1,9 @@
+import { readFileSync, unlinkSync, writeFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+
 import { consola } from 'consola';
 import { globSync } from 'glob';
 import matter from 'gray-matter';
-import { readFileSync, unlinkSync, writeFileSync } from 'node:fs';
-import { resolve } from 'node:path';
 
 const fixWinPath = (path: string) => path.replaceAll('\\', '/');
 

@@ -7,13 +7,14 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import FCSearchModel from './FCSearchModel';
+import ModelBuiltinSearch from './ModelBuiltinSearch';
+
 import { useAgentStore } from '@/store/agent';
 import { agentChatConfigSelectors, agentSelectors } from '@/store/agent/slices/chat';
 import { aiModelSelectors, aiProviderSelectors, useAiInfraStore } from '@/store/aiInfra';
 import { SearchMode } from '@/types/search';
 
-import FCSearchModel from './FCSearchModel';
-import ModelBuiltinSearch from './ModelBuiltinSearch';
 
 const useStyles = createStyles(({ css, token }) => ({
   active: css`

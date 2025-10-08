@@ -2,13 +2,14 @@ import { Button } from '@lobehub/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { ErrorActionContainer, FormAction } from '../style';
+
 import UserLoginOrSignup from '@/features/User/UserLoginOrSignup';
 import { useGreeting } from '@/hooks/useGreeting';
 import { useChatStore } from '@/store/chat';
 import { useUserStore } from '@/store/user';
 import { userProfileSelectors } from '@/store/user/selectors';
 
-import { ErrorActionContainer, FormAction } from '../style';
 
 const ClerkLogin = memo<{ id: string }>(({ id }) => {
   const { t } = useTranslation('error');

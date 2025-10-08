@@ -4,10 +4,11 @@ import { ArrowLeftRight, XIcon } from 'lucide-react';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import Title from './Title';
+
 import SidebarHeader from '@/components/SidebarHeader';
 import { useChatStore } from '@/store/chat';
 
-import Title from './Title';
 
 const Header = memo(() => {
   const theme = useTheme();

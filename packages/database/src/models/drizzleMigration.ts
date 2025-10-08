@@ -1,6 +1,7 @@
 import { sql } from 'drizzle-orm';
 
 import { LobeChatDatabase } from '../type';
+
 import { MigrationTableItem } from '@/types/clientDB';
 
 export class DrizzleMigrationModel {

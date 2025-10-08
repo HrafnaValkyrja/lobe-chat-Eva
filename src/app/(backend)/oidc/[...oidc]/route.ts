@@ -1,6 +1,7 @@
+import { URL } from 'node:url';
+
 import debug from 'debug';
 import { NextRequest, NextResponse } from 'next/server';
-import { URL } from 'node:url';
 
 import { oidcEnv } from '@/envs/oidc';
 import { createNodeRequest, createNodeResponse } from '@/libs/oidc-provider/http-adapter';
@@ -79,7 +80,7 @@ const handler = async (req: NextRequest) => {
     log('Final Response Headers: %O', finalHeaders);
 
     return new NextResponse(finalBody, {
-      // eslint-disable-next-line no-undef
+       
       headers: finalHeaders as HeadersInit,
       status: finalStatus,
     });

@@ -10,10 +10,11 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 
-import PublishedTime from '@/components/PublishedTime';
 
 import { useDetailContext } from './DetailProvider';
 import TagList from './TagList';
+
+import PublishedTime from '@/components/PublishedTime';
 
 const useStyles = createStyles(({ css, token }) => {
   return {

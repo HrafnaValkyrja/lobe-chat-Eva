@@ -7,14 +7,16 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import { useStyles } from '../style';
+
+import Preview from './Preview';
+import { generateMarkdown } from './template';
+
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { useChatStore } from '@/store/chat';
 import { topicSelectors } from '@/store/chat/selectors';
 import { ChatMessage } from '@/types/message';
 
-import { useStyles } from '../style';
-import Preview from './Preview';
-import { generateMarkdown } from './template';
 
 interface ShareTextProps {
   item: ChatMessage;

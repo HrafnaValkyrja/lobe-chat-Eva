@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
 import { obfuscatePayloadWithXOR } from '../client/xor-obfuscation';
+
 import { getXorPayload } from './xor';
 
 describe('getXorPayload', () => {

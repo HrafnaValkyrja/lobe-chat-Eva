@@ -4,10 +4,12 @@ import { createStyles } from 'antd-style';
 import { memo, useState } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
-import { UniformSearchResult } from '@/types/tool/search';
 
 import { ENGINE_ICON_MAP } from '../../../../const';
+
 import TitleExtra from './TitleExtra';
+
+import { UniformSearchResult } from '@/types/tool/search';
 
 const useStyles = createStyles(({ css, token }) => {
   return {

@@ -1,10 +1,11 @@
 import { app } from 'electron';
 
+import { App } from '../App';
+
 import { isDev } from '@/const/env';
 import { createLogger } from '@/utils/logger';
 import { getProtocolScheme, parseProtocolUrl } from '@/utils/protocol';
 
-import { App } from '../App';
 
 // Create logger
 const logger = createLogger('core:ProtocolManager');

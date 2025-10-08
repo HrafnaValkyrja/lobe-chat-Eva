@@ -6,6 +6,10 @@ import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import ActionPopover from '../components/ActionPopover';
+
+import TokenProgress from './TokenProgress';
+
 import { createChatToolsEngine } from '@/helpers/toolEngineering';
 import { useModelContextWindowTokens } from '@/hooks/useModelContextWindowTokens';
 import { useModelSupportToolUse } from '@/hooks/useModelSupportToolUse';
@@ -17,8 +21,6 @@ import { chatSelectors, topicSelectors } from '@/store/chat/selectors';
 import { useToolStore } from '@/store/tool';
 import { toolSelectors } from '@/store/tool/selectors';
 
-import ActionPopover from '../components/ActionPopover';
-import TokenProgress from './TokenProgress';
 
 interface TokenTagProps {
   total: string;

@@ -1,11 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import { Mock, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { AssistantMessageExtra } from './Assistant';
+
 import { useAgentStore } from '@/store/agent';
 import { agentSelectors } from '@/store/agent/selectors';
 import { ChatMessage } from '@/types/message';
 
-import { AssistantMessageExtra } from './Assistant';
 
 // Mock TTS and Translate components
 vi.mock('./TTS', () => ({

@@ -7,10 +7,11 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 
+import GridLayout from './GridLayout';
+
 import { BRANDING_NAME, SOCIAL_URL } from '@/const/branding';
 import { OFFICIAL_SITE } from '@/const/url';
 
-import GridLayout from './GridLayout';
 
 const Hero = memo(() => {
   const { t } = useTranslation('changelog');

@@ -2,11 +2,12 @@
 
 import { memo } from 'react';
 
+import SystemRoleContent from './SystemRoleContent';
+
 import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfig';
 import { useSessionStore } from '@/store/session';
 import { sessionSelectors } from '@/store/session/selectors';
 
-import SystemRoleContent from './SystemRoleContent';
 
 const SystemRole = memo(() => {
   const { isAgentEditable: showSystemRole } = useServerConfigStore(featureFlagsSelectors);

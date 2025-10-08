@@ -1,12 +1,13 @@
 import { CSSProperties, memo, useEffect, useState } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import Inspectors from './Inspector';
+import Render from './Render';
+
 import AnimatedCollapsed from '@/components/AnimatedCollapsed';
 import { useChatStore } from '@/store/chat';
 import { chatSelectors } from '@/store/chat/selectors';
 
-import Inspectors from './Inspector';
-import Render from './Render';
 
 export interface InspectorProps {
   apiName: string;

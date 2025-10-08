@@ -6,11 +6,12 @@ import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 import Balancer from 'react-wrap-balancer';
 
+import FileItem from './Item';
+
 import SkeletonLoading from '@/components/Loading/SkeletonLoading';
 import { useChatStore } from '@/store/chat';
 import { chatSelectors } from '@/store/chat/selectors';
 
-import FileItem from './Item';
 
 const FileList = () => {
   const { t } = useTranslation('portal');

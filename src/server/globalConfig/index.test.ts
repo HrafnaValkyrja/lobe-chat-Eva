@@ -1,12 +1,14 @@
 import { describe, expect, it, vi } from 'vitest';
 
+import { parseAgentConfig } from './parseDefaultAgent';
+import { parseFilesConfig } from './parseFilesConfig';
+
+import { getServerDefaultAgentConfig, getServerDefaultFilesConfig } from './index';
+
 import { getAppConfig } from '@/envs/app';
 import { SystemEmbeddingConfig } from '@/types/knowledgeBase';
 import { FilesConfigItem } from '@/types/user/settings/filesConfig';
 
-import { getServerDefaultAgentConfig, getServerDefaultFilesConfig } from './index';
-import { parseAgentConfig } from './parseDefaultAgent';
-import { parseFilesConfig } from './parseFilesConfig';
 
 vi.mock('@/envs/app', () => ({
   getAppConfig: vi.fn(),

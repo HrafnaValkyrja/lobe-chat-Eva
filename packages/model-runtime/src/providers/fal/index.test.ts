@@ -3,6 +3,7 @@ import { fal } from '@fal-ai/client';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { CreateImagePayload } from '../../types';
+
 import { LobeFalAI } from './index';
 
 // Mock the fal client

@@ -2,9 +2,10 @@
 
 import { useTranslation } from 'react-i18next';
 
+import ProviderDetail from '../default';
+
 import { NewAPIProviderCard } from '@/config/modelProviders';
 
-import ProviderDetail from '../default';
 
 const Page = () => {
   const { t } = useTranslation('modelProvider');

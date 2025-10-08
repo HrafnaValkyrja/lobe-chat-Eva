@@ -4,12 +4,13 @@ import { act, renderHook, waitFor } from '@testing-library/react';
 import { mutate } from 'swr';
 import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { useChatStore } from '../../store';
+
 import { messageService } from '@/services/message';
 import { topicService } from '@/services/topic';
 import { messageMapKey } from '@/store/chat/utils/messageMapKey';
 import { ChatMessage } from '@/types/message';
 
-import { useChatStore } from '../../store';
 
 vi.stubGlobal(
   'fetch',

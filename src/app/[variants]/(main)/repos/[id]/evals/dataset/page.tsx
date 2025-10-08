@@ -3,12 +3,13 @@
 import { createStyles } from 'antd-style';
 import { Flexbox } from 'react-layout-kit';
 
-import Loading from '@/components/Loading/BrandTextLoading';
-import { useKnowledgeBaseStore } from '@/store/knowledgeBase';
 
 import DatasetDetail from './DatasetDetail';
 import DatasetList from './DatasetList';
 import EmptyGuide from './EmptyGuide';
+
+import Loading from '@/components/Loading/BrandTextLoading';
+import { useKnowledgeBaseStore } from '@/store/knowledgeBase';
 
 const useStyles = createStyles(({ css, token }) => ({
   sider: css`

@@ -1,6 +1,8 @@
 import { eq, inArray } from 'drizzle-orm';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { ClientService } from './client';
+
 import { clientDB, initializeDB } from '@/database/client/db';
 import mockImportData from '@/database/repositories/dataImporter/deprecated/__tests__/fixtures/messages.json';
 import {
@@ -15,7 +17,6 @@ import {
 import { CURRENT_CONFIG_VERSION } from '@/migrations';
 import { ImportResults, ImporterEntryData } from '@/types/importer';
 
-import { ClientService } from './client';
 
 const userId = 'test-user-id';
 const service = new ClientService(userId);

@@ -9,6 +9,13 @@ import { memo, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import { useStore } from '../store';
+
+import AddPluginButton from './AddPluginButton';
+import LoadingList from './LoadingList';
+import LocalPluginItem from './LocalPluginItem';
+import PluginAction from './PluginAction';
+
 import PluginAvatar from '@/components/Plugins/PluginAvatar';
 import PluginTag from '@/components/Plugins/PluginTag';
 import { FORM_STYLE } from '@/const/layoutTokens';
@@ -18,11 +25,6 @@ import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfi
 import { pluginHelpers, useToolStore } from '@/store/tool';
 import { toolSelectors } from '@/store/tool/selectors';
 
-import { useStore } from '../store';
-import AddPluginButton from './AddPluginButton';
-import LoadingList from './LoadingList';
-import LocalPluginItem from './LocalPluginItem';
-import PluginAction from './PluginAction';
 
 const AgentPlugin = memo(() => {
   const { t } = useTranslation('setting');

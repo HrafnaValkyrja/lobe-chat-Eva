@@ -1,9 +1,10 @@
 import { and, desc, eq } from 'drizzle-orm';
 
+import { InstalledPluginItem, NewInstalledPlugin, userInstalledPlugins } from '../schemas';
 import { LobeChatDatabase } from '../type';
+
 import { LobeTool } from '@/types/tool';
 
-import { InstalledPluginItem, NewInstalledPlugin, userInstalledPlugins } from '../schemas';
 
 export class PluginModel {
   private userId: string;

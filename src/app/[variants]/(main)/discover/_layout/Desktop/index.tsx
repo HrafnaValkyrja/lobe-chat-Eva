@@ -1,9 +1,10 @@
 import { PropsWithChildren } from 'react';
 
-import NProgress from '@/components/NProgress';
 
 import Container from './Container';
 import Header from './Header';
+
+import NProgress from '@/components/NProgress';
 
 const Layout = ({ children }: PropsWithChildren) => {
   return (

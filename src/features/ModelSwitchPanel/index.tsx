@@ -1,6 +1,6 @@
 import { ActionIcon, Icon } from '@lobehub/ui';
-import { createStyles } from 'antd-style';
 import type { ItemType } from 'antd/es/menu/interface';
+import { createStyles } from 'antd-style';
 import { LucideArrowRight, LucideBolt } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';

@@ -1,10 +1,11 @@
 import { StateCreator } from 'zustand/vanilla';
 
+import { ToolStore } from '../../store';
+
 import { OpenAIImagePayload } from '@/types/openai/image';
 import { DallEImageItem } from '@/types/tool/dalle';
 import { setNamespace } from '@/utils/storeDebug';
 
-import { ToolStore } from '../../store';
 
 const n = setNamespace('builtinTool');
 

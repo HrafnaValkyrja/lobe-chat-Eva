@@ -3,6 +3,11 @@ import { t } from 'i18next';
 import { merge } from 'lodash-es';
 import { StateCreator } from 'zustand/vanilla';
 
+import { ToolStore } from '../../store';
+import { pluginSelectors } from '../plugin/selectors';
+
+import { defaultCustomPlugin } from './initialState';
+
 import { notification } from '@/components/AntdStaticMethods';
 import { mcpService } from '@/services/mcp';
 import { pluginService } from '@/services/plugin';
@@ -11,9 +16,7 @@ import { pluginHelpers } from '@/store/tool/helpers';
 import { LobeToolCustomPlugin, PluginInstallError } from '@/types/tool/plugin';
 import { setNamespace } from '@/utils/storeDebug';
 
-import { ToolStore } from '../../store';
-import { pluginSelectors } from '../plugin/selectors';
-import { defaultCustomPlugin } from './initialState';
+
 
 const n = setNamespace('customPlugin');
 
@@ -47,7 +50,7 @@ export const createCustomPluginSlice: StateCreator<
       updateInstallLoadingState(id, true);
       let manifest: LobeChatPluginManifest;
       // mean this is a mcp plugin
-      if (!!plugin.customParams?.mcp) {
+      if (plugin.customParams?.mcp) {
         const url = plugin.customParams?.mcp?.url;
         if (!url) return;
 

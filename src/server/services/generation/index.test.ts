@@ -5,12 +5,13 @@ import { nanoid } from 'nanoid';
 import sharp from 'sharp';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { GenerationService, fetchImageFromUrl } from './index';
+
 import { FileService } from '@/server/services/file';
 import { calculateThumbnailDimensions } from '@/utils/number';
 import { getYYYYmmddHHMMss } from '@/utils/time';
 import { inferFileExtensionFromImageUrl } from '@/utils/url';
 
-import { GenerationService, fetchImageFromUrl } from './index';
 
 // Mock fetch globally
 const mockFetch = vi.fn();

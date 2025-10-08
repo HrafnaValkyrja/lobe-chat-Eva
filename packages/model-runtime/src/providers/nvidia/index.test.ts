@@ -2,6 +2,7 @@
 import { ModelProvider } from 'model-bank';
 
 import { testProvider } from '../../providerTestUtils';
+
 import { LobeNvidiaAI } from './index';
 
 const provider = ModelProvider.Nvidia;

@@ -4,6 +4,8 @@ import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { SWRConfiguration } from 'swr';
 
+import CommonSTT from './common';
+
 import { useAgentStore } from '@/store/agent';
 import { agentSelectors } from '@/store/agent/slices/chat';
 import { useChatStore } from '@/store/chat';
@@ -15,7 +17,6 @@ import { settingsSelectors } from '@/store/user/selectors';
 import { ChatMessageError } from '@/types/message';
 import { getMessageError } from '@/utils/fetch';
 
-import CommonSTT from './common';
 
 interface STTConfig extends SWRConfiguration {
   onTextChange: (value: string) => void;

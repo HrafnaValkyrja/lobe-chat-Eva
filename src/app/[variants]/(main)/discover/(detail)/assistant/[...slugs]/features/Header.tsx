@@ -11,11 +11,13 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 
-import { formatIntergerNumber } from '@/utils/format';
 
 import { useCategory } from '../../../../(list)/assistant/features/Category/useCategory';
 import PublishedTime from '../../../../../../../../components/PublishedTime';
+
 import { useDetailContext } from './DetailProvider';
+
+import { formatIntergerNumber } from '@/utils/format';
 
 const useStyles = createStyles(({ css, token }) => {
   return {

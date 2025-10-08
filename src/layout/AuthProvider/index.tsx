@@ -1,10 +1,11 @@
 import { PropsWithChildren } from 'react';
 
-import { authEnv } from '@/envs/auth';
 
 import Clerk from './Clerk';
 import NextAuth from './NextAuth';
 import NoAuth from './NoAuth';
+
+import { authEnv } from '@/envs/auth';
 
 const AuthProvider = ({ children }: PropsWithChildren) => {
   if (authEnv.NEXT_PUBLIC_ENABLE_CLERK_AUTH) return <Clerk>{children}</Clerk>;

@@ -3,7 +3,7 @@ import { createEnv } from '@t3-oss/env-nextjs';
 import { z } from 'zod';
 
 declare global {
-  // eslint-disable-next-line @typescript-eslint/no-namespace
+   
   namespace NodeJS {
     interface ProcessEnv {
       // ===== Clerk ===== //

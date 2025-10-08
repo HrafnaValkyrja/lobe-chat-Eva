@@ -5,7 +5,7 @@ import { pino } from '@/libs/logger';
 import { createEdgeContext } from '@/libs/trpc/edge/context';
 import { edgeRouter } from '@/server/routers/edge';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs'; // Force Node.js runtime for Workers compatibility (see https://nextjs.org/docs/api-reference/edge-runtime) 
 
 const handler = (req: NextRequest) =>
   fetchRequestHandler({

@@ -1,3 +1,5 @@
+import { currentSettings } from '../../settings/selectors/settings';
+
 import { UserStore } from '@/store/user';
 import {
   AWSBedrockKeyVault,
@@ -7,7 +9,6 @@ import {
   UserKeyVaults,
 } from '@/types/user/settings';
 
-import { currentSettings } from '../../settings/selectors/settings';
 
 export const keyVaultsSettings = (s: UserStore): UserKeyVaults =>
   currentSettings(s).keyVaults || {};

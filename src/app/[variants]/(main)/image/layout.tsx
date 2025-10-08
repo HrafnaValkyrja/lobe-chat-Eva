@@ -1,10 +1,11 @@
-import ServerLayout from '@/components/server/ServerLayout';
-import { isServerMode } from '@/const/version';
 
-import NotSupportClient from './NotSupportClient';
 import Desktop from './_layout/Desktop';
 import Mobile from './_layout/Mobile';
 import { LayoutProps } from './_layout/type';
+import NotSupportClient from './NotSupportClient';
+
+import ServerLayout from '@/components/server/ServerLayout';
+import { isServerMode } from '@/const/version';
 
 const AiImageLayout = ServerLayout({ Desktop, Mobile });
 

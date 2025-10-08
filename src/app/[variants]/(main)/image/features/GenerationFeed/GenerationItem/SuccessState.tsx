@@ -3,12 +3,13 @@
 import { Block } from '@lobehub/ui';
 import { memo } from 'react';
 
-import ImageItem from '@/components/ImageItem';
 
 import { ActionButtons } from './ActionButtons';
 import { useStyles } from './styles';
 import { SuccessStateProps } from './types';
 import { getThumbnailMaxWidth } from './utils';
+
+import ImageItem from '@/components/ImageItem';
 
 // 成功状态组件
 export const SuccessState = memo<SuccessStateProps>(

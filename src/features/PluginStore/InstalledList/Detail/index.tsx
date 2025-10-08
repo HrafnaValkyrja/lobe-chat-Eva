@@ -2,6 +2,7 @@ import { memo } from 'react';
 
 import McpDetail from '../../McpList/Detail';
 import PluginDetail from '../../PluginList/Detail';
+
 import CustomPluginEmptyState from './CustomPluginEmptyState';
 
 interface DetailProps {

@@ -6,9 +6,10 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import Card from './Card';
+
 import { aiProviderSelectors, useAiInfraStore } from '@/store/aiInfra';
 
-import Card from './Card';
 
 const loadingArr = Array.from({ length: 12 })
   .fill('-')

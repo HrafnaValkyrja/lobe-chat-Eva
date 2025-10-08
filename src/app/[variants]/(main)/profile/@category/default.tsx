@@ -1,8 +1,9 @@
 import { Suspense } from 'react';
 
+import CategoryContent from './features/CategoryContent';
+
 import SkeletonLoading from '@/components/Loading/SkeletonLoading';
 
-import CategoryContent from './features/CategoryContent';
 
 const Category = () => {
   return (

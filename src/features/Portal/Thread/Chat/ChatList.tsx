@@ -1,12 +1,13 @@
 import React, { memo, useCallback } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import ThreadChatItem from './ChatItem';
+
 import { SkeletonList, VirtualizedList } from '@/features/Conversation';
 import { useFetchThreads } from '@/hooks/useFetchThreads';
 import { useChatStore } from '@/store/chat';
 import { threadSelectors } from '@/store/chat/selectors';
 
-import ThreadChatItem from './ChatItem';
 
 interface ChatListProps {
   mobile?: boolean;

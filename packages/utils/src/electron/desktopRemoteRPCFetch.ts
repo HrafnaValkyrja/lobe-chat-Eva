@@ -8,7 +8,7 @@ import { getRequestBody, headersToRecord } from '@/utils/fetch';
 
 const log = debug('utils:desktopRemoteRPCFetch');
 
-// eslint-disable-next-line no-undef
+ 
 export const desktopRemoteRPCFetch = async (input: string, init?: RequestInit) => {
   const isSyncActive = electronSyncSelectors.isSyncActive(getElectronStoreState());
   log('isSyncActive:', isSyncActive);
@@ -61,7 +61,7 @@ export const desktopRemoteRPCFetch = async (input: string, init?: RequestInit) =
   }
 };
 
-// eslint-disable-next-line no-undef
+ 
 export const fetchWithDesktopRemoteRPC = (async (input: RequestInfo | URL, init?: RequestInit) => {
   if (isDesktop) {
     const res = await desktopRemoteRPCFetch(input as string, init);
@@ -71,7 +71,7 @@ export const fetchWithDesktopRemoteRPC = (async (input: RequestInfo | URL, init?
   return fetch(input, init);
 }) as typeof fetch;
 
-// eslint-disable-next-line no-undef
+ 
 export const fetchWithInvokeStream = async (input: RequestInfo | URL, init?: RequestInit) => {
   if (isDesktop) {
     const isSyncActive = electronSyncSelectors.isSyncActive(getElectronStoreState());

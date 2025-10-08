@@ -1,8 +1,9 @@
-import debug from 'debug';
 import fs from 'node:fs';
 import net from 'node:net';
 import os from 'node:os';
 import path from 'node:path';
+
+import debug from 'debug';
 
 import { SOCK_FILE, SOCK_INFO_FILE, WINDOW_PIPE_FILE } from './const';
 import { ServerDispatchEventKey } from './events';

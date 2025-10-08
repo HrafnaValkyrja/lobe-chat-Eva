@@ -1,10 +1,10 @@
 import { describe } from 'vitest';
 
-import { MigrationData, VersionController } from '@/migrations/VersionController';
 
 import { MigrationV1ToV2 } from '../FromV1ToV2';
 import inputV1Data from '../FromV1ToV2/fixtures/input-v1-session.json';
 import { MigrationV2ToV3 } from '../FromV2ToV3';
+
 import azureInputV3 from './fixtures/azure-input-v3.json';
 import azureOutputV4 from './fixtures/azure-output-v4.json';
 import ollamaInputV3 from './fixtures/ollama-input-v3.json';
@@ -14,7 +14,10 @@ import openaiOutputV4 from './fixtures/openai-output-v4.json';
 import openrouterInputV3 from './fixtures/openrouter-input-v3.json';
 import openrouterOutputV4 from './fixtures/openrouter-output-v4.json';
 import outputV4Data from './fixtures/output-v4-from-v1.json';
+
 import { MigrationV3ToV4 } from './index';
+
+import { MigrationData, VersionController } from '@/migrations/VersionController';
 
 describe('MigrationV3ToV4', () => {
   let migrations;

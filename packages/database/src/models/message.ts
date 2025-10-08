@@ -17,8 +17,6 @@ import type { HeatmapsProps } from '@lobehub/charts';
 import dayjs from 'dayjs';
 import { and, asc, count, desc, eq, gt, inArray, isNotNull, isNull, like, sql } from 'drizzle-orm';
 
-import { merge } from '@/utils/merge';
-import { today } from '@/utils/time';
 
 import {
   MessagePluginItem,
@@ -38,6 +36,9 @@ import {
 import { LobeChatDatabase } from '../type';
 import { genEndDateWhere, genRangeWhere, genStartDateWhere, genWhere } from '../utils/genWhere';
 import { idGenerator } from '../utils/idGenerator';
+
+import { merge } from '@/utils/merge';
+import { today } from '@/utils/time';
 
 export interface QueryMessageParams {
   current?: number;
@@ -108,7 +109,7 @@ export class MessageModel {
         ttsContentMd5: messageTTS.contentMd5,
         ttsFile: messageTTS.fileId,
         ttsVoice: messageTTS.voice,
-        /* eslint-enable */
+         
       })
       .from(messages)
       .where(
@@ -236,7 +237,7 @@ export class MessageModel {
           },
           fileList: fileList
             .filter((relation) => relation.messageId === item.id)
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+             
             .map<ChatFileItem>(({ id, url, size, fileType, name }) => ({
               content: documentsMap[id],
               fileType: fileType!,
@@ -248,7 +249,7 @@ export class MessageModel {
 
           imageList: imageList
             .filter((relation) => relation.messageId === item.id)
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+             
             .map<ChatImageItem>(({ id, url, name }) => ({ alt: name!, id, url })),
 
           meta: {},
@@ -257,7 +258,7 @@ export class MessageModel {
           ragRawQuery: messageQuery?.userQuery,
           videoList: videoList
             .filter((relation) => relation.messageId === item.id)
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+             
             .map<ChatVideoItem>(({ id, url, name }) => ({ alt: name!, id, url })),
         } as unknown as ChatMessage;
       },

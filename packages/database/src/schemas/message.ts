@@ -12,10 +12,9 @@ import {
 } from 'drizzle-orm/pg-core';
 import { createInsertSchema, createSelectSchema } from 'drizzle-zod';
 
-import { ModelReasoning } from '@/types/message';
-import { GroundingSearch } from '@/types/search';
 
 import { idGenerator } from '../utils/idGenerator';
+
 import { timestamps, varchar255 } from './_helpers';
 import { agents } from './agent';
 import { chatGroups } from './chatGroup';
@@ -24,6 +23,9 @@ import { chunks, embeddings } from './rag';
 import { sessions } from './session';
 import { threads, topics } from './topic';
 import { users } from './user';
+
+import { ModelReasoning } from '@/types/message';
+import { GroundingSearch } from '@/types/search';
 
 /**
  * Message groups table for multi-models parallel conversations
@@ -51,7 +53,7 @@ export const messageGroups = pgTable(
     }),
 
     // 关联的用户消息
-    // eslint-disable-next-line @typescript-eslint/no-use-before-define
+     
     parentMessageId: text('parent_message_id').references(() => messages.id, {
       onDelete: 'cascade',
     }),

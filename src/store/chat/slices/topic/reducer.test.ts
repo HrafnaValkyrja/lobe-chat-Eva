@@ -1,9 +1,10 @@
 import { produce } from 'immer';
 import { expect } from 'vitest';
 
+import { ChatTopicDispatch, topicReducer } from './reducer';
+
 import { ChatTopic } from '@/types/topic';
 
-import { ChatTopicDispatch, topicReducer } from './reducer';
 
 describe('topicReducer', () => {
   let state: ChatTopic[];

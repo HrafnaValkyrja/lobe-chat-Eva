@@ -52,13 +52,13 @@ const customHttpBatchLink = httpBatchLink({
     if (isDesktop) {
       const { desktopRemoteRPCFetch } = await import('@/utils/electron/desktopRemoteRPCFetch');
 
-      // eslint-disable-next-line no-undef
+       
       const res = await desktopRemoteRPCFetch(input as string, init as RequestInit);
 
       if (res) return res;
     }
 
-    // eslint-disable-next-line no-undef
+     
     return await fetch(input, init as RequestInit);
   },
   headers: async () => {

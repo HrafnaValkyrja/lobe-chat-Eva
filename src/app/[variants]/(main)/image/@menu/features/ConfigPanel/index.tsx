@@ -6,10 +6,6 @@ import { ReactNode, memo, useCallback, useEffect, useMemo, useRef, useState } fr
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import { useFetchAiImageConfig } from '@/hooks/useFetchAiImageConfig';
-import { imageGenerationConfigSelectors } from '@/store/image/selectors';
-import { useDimensionControl } from '@/store/image/slices/generationConfig/hooks';
-import { useImageStore } from '@/store/image/store';
 
 import CfgSliderInput from './components/CfgSliderInput';
 import DimensionControlGroup from './components/DimensionControlGroup';
@@ -22,6 +18,11 @@ import QualitySelect from './components/QualitySelect';
 import SeedNumberInput from './components/SeedNumberInput';
 import SizeSelect from './components/SizeSelect';
 import StepsSliderInput from './components/StepsSliderInput';
+
+import { useFetchAiImageConfig } from '@/hooks/useFetchAiImageConfig';
+import { imageGenerationConfigSelectors } from '@/store/image/selectors';
+import { useDimensionControl } from '@/store/image/slices/generationConfig/hooks';
+import { useImageStore } from '@/store/image/store';
 
 interface ConfigItemLayoutProps {
   children: ReactNode;

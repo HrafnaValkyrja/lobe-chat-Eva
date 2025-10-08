@@ -14,14 +14,15 @@ import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import { GenerationItem } from './GenerationItem';
+import { DEFAULT_MAX_ITEM_WIDTH } from './GenerationItem/utils';
+import { ReferenceImages } from './ReferenceImages';
+
 import InvalidAPIKey from '@/components/InvalidAPIKey';
 import { useImageStore } from '@/store/image';
 import { AsyncTaskErrorType } from '@/types/asyncTask';
 import { GenerationBatch } from '@/types/generation';
 
-import { GenerationItem } from './GenerationItem';
-import { DEFAULT_MAX_ITEM_WIDTH } from './GenerationItem/utils';
-import { ReferenceImages } from './ReferenceImages';
 
 const useStyles = createStyles(({ cx, css, token }) => ({
   batchActions: cx(

@@ -4,6 +4,7 @@ import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import * as anthropicHelpers from '../../utils/anthropicHelpers';
 import * as debugStreamModule from '../../utils/debugStream';
+
 import { LobeAnthropicAI } from './index';
 
 const provider = 'anthropic';

@@ -7,6 +7,7 @@ import type { Stream } from 'openai/streaming';
 
 import { ChatStreamCallbacks } from '../../types';
 import { convertOpenAIUsage } from '../usageConverters';
+
 import {
   StreamContext,
   StreamProtocolChunk,
@@ -115,7 +116,7 @@ export const transformQwenStream = (
 export const QwenAIStream = (
   stream: Stream<OpenAI.ChatCompletionChunk> | ReadableStream,
   // TODO: preserve for RFC 097
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars, unused-imports/no-unused-vars
+  // eslint-disable-next-line unused-imports/no-unused-vars
   {
     callbacks,
     inputStartAt,

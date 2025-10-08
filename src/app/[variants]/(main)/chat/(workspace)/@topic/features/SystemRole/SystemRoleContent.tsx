@@ -9,6 +9,8 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 import useMergeState from 'use-merge-value';
 
+import { useStyles } from './style';
+
 import SidebarHeader from '@/components/SidebarHeader';
 import AgentInfo from '@/features/AgentInfo';
 import { useOpenChatSettings } from '@/hooks/useInterceptingRoutes';
@@ -20,7 +22,6 @@ import { systemStatusSelectors } from '@/store/global/selectors';
 import { useSessionStore } from '@/store/session';
 import { sessionMetaSelectors, sessionSelectors } from '@/store/session/selectors';
 
-import { useStyles } from './style';
 
 const SystemRole = memo(() => {
   const [editing, setEditing] = useState(false);

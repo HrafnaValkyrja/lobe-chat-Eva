@@ -5,11 +5,12 @@ import dayjs from 'dayjs';
 import { PropsWithChildren, memo, useEffect, useState } from 'react';
 import { isRtlLang } from 'rtl-detect';
 
+import Editor from './Editor';
+
 import { createI18nNext } from '@/locales/create';
 import { isOnServerSide } from '@/utils/env';
 import { getAntdLocale } from '@/utils/locale';
 
-import Editor from './Editor';
 
 const updateDayjs = async (lang: string) => {
   // load default lang

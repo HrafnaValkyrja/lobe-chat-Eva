@@ -1,10 +1,11 @@
 import { memo } from 'react';
 
+import Loading from '../Loading';
+import { useParseContent } from '../useParseContent';
+
 import { BuiltinToolsRenders } from '@/tools/renders';
 import { safeParseJSON } from '@/utils/safeParseJSON';
 
-import Loading from '../Loading';
-import { useParseContent } from '../useParseContent';
 
 export interface BuiltinTypeProps {
   apiName?: string;

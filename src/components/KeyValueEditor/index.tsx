@@ -8,9 +8,10 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 import { v4 as uuidv4 } from 'uuid';
 
+import { KeyValueItem, localListToRecord, recordToLocalList } from './utils';
+
 import { FormInput } from '@/components/FormInput';
 
-import { KeyValueItem, localListToRecord, recordToLocalList } from './utils';
 
 const useStyles = createStyles(({ css, token }) => ({
   container: css`

@@ -7,6 +7,10 @@ import { gt, valid } from 'semver';
 import useSWR, { SWRResponse } from 'swr';
 import { StateCreator } from 'zustand/vanilla';
 
+import { ToolStore } from '../../store';
+
+import { MCPStoreState } from './initialState';
+
 import { CURRENT_VERSION } from '@/const/version';
 import { MCPErrorData } from '@/libs/mcp/types';
 import { discoverService } from '@/services/discover';
@@ -25,8 +29,6 @@ import {
 import { sleep } from '@/utils/sleep';
 import { setNamespace } from '@/utils/storeDebug';
 
-import { ToolStore } from '../../store';
-import { MCPStoreState } from './initialState';
 
 const n = setNamespace('mcpStore');
 

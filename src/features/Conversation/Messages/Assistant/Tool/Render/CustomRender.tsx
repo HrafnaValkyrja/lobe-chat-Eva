@@ -6,14 +6,15 @@ import { memo, useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import Arguments from './Arguments';
+import KeyValueEditor from './KeyValueEditor';
+
 import PluginResult from '@/features/Conversation/Messages/Assistant/Tool/Inspector/PluginResult';
 import PluginRender from '@/features/PluginsUI/Render';
 import { useChatStore } from '@/store/chat';
 import { chatSelectors } from '@/store/chat/selectors';
 import { ChatMessage } from '@/types/message';
 
-import Arguments from './Arguments';
-import KeyValueEditor from './KeyValueEditor';
 
 const safeParseJson = (str: string): Record<string, any> => {
   try {

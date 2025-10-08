@@ -1,11 +1,14 @@
-import { MigrationData, VersionController } from '@/migrations/VersionController';
 
 import { MigrationV1ToV2 } from '../FromV1ToV2';
 import inputV1Data from '../FromV1ToV2/fixtures/input-v1-session.json';
+
 import inputV2Data from './fixtures/input-v2-session.json';
 import outputV3DataFromV1 from './fixtures/output-v3-from-v1.json';
 import outputV3Data from './fixtures/output-v3.json';
+
 import { MigrationV2ToV3 } from './index';
+
+import { MigrationData, VersionController } from '@/migrations/VersionController';
 
 describe('MigrationV2ToV3', () => {
   let migrations;

@@ -1,12 +1,14 @@
-import { sha256 } from 'js-sha256';
 import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 
-import { electronIpcClient } from '@/server/modules/ElectronIPCClient';
-import { inferContentTypeFromImageUrl } from '@/utils/url';
+import { sha256 } from 'js-sha256';
+
 
 import { FileServiceImpl } from './type';
 import { extractKeyFromUrlOrReturnOriginal } from './utils';
+
+import { electronIpcClient } from '@/server/modules/ElectronIPCClient';
+import { inferContentTypeFromImageUrl } from '@/utils/url';
 
 /**
  * 桌面应用本地文件服务实现

@@ -10,12 +10,13 @@ import { Trans, useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 import Balancer from 'react-wrap-balancer';
 
+import { MigrationError, UpgradeStatus, V1DB_NAME, V1DB_TABLE_NAME } from './const';
+import ExportConfigButton from './ExportConfigButton';
+import UpgradeButton from './UpgradeButton';
+
 import { GITHUB_ISSUES } from '@/const/url';
 import { githubService } from '@/services/github';
 
-import ExportConfigButton from './ExportConfigButton';
-import UpgradeButton from './UpgradeButton';
-import { MigrationError, UpgradeStatus, V1DB_NAME, V1DB_TABLE_NAME } from './const';
 
 const clearLocal = async () => {
   const store = createStore(V1DB_NAME, V1DB_TABLE_NAME);

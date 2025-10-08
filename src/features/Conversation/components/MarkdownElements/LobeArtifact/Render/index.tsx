@@ -6,13 +6,16 @@ import { memo, useContext, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import { InPortalThreadContext } from '../../../ChatItem/InPortalThreadContext';
+import { MarkdownElementProps } from '../../type';
+
+import ArtifactIcon from './Icon';
+
 import { useChatStore } from '@/store/chat';
 import { chatPortalSelectors, chatSelectors } from '@/store/chat/selectors';
 import { dotLoading } from '@/styles/loading';
 
-import { InPortalThreadContext } from '../../../ChatItem/InPortalThreadContext';
-import { MarkdownElementProps } from '../../type';
-import ArtifactIcon from './Icon';
+
 
 const useStyles = createStyles(({ css, token, isDarkMode }) => ({
   avatar: css`

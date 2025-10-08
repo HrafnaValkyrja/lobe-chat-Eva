@@ -3,6 +3,11 @@ import React, { memo, useMemo, useState } from 'react';
 import { Flexbox } from 'react-layout-kit';
 import { shallow } from 'zustand/shallow';
 
+import ListItem from '../../ListItem';
+import CreateGroupModal from '../../Modals/CreateGroupModal';
+
+import Actions from './Actions';
+
 import { isDesktop } from '@/const/version';
 import { useAgentStore } from '@/store/agent';
 import { agentSelectors } from '@/store/agent/selectors';
@@ -13,9 +18,7 @@ import { useSessionStore } from '@/store/session';
 import { sessionHelpers } from '@/store/session/helpers';
 import { sessionMetaSelectors, sessionSelectors } from '@/store/session/selectors';
 
-import ListItem from '../../ListItem';
-import CreateGroupModal from '../../Modals/CreateGroupModal';
-import Actions from './Actions';
+
 
 interface SessionItemProps {
   id: string;

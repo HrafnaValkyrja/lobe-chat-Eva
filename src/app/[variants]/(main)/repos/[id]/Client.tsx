@@ -3,12 +3,13 @@
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import Menu from './features/Menu';
+import { useKnowledgeBaseItem } from './hooks/useKnowledgeItem';
+
 import FileManager from '@/features/FileManager';
 import FilePanel from '@/features/FileSidePanel';
 import { knowledgeBaseSelectors, useKnowledgeBaseStore } from '@/store/knowledgeBase';
 
-import Menu from './features/Menu';
-import { useKnowledgeBaseItem } from './hooks/useKnowledgeItem';
 
 const RepoClientPage = memo<{ id: string }>(({ id }) => {
   useKnowledgeBaseItem(id);

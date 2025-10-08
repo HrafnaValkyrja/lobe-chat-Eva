@@ -1,7 +1,8 @@
+import { RouteVariants } from './routeVariants';
+
 import { translation } from '@/server/translation';
 import { DynamicLayoutProps } from '@/types/next';
 
-import { RouteVariants } from './routeVariants';
 
 export const parsePageMetaProps = async (props: DynamicLayoutProps) => {
   const { locale: hl, isMobile } = await RouteVariants.getVariantsFromProps(props);

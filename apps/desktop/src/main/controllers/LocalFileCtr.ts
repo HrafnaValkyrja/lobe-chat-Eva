@@ -1,3 +1,8 @@
+import * as fs from 'node:fs';
+import { rename as renamePromise } from 'node:fs/promises';
+import * as path from 'node:path';
+import { promisify } from 'node:util';
+
 import {
   ListLocalFileParams,
   LocalMoveFilesResultItem,
@@ -13,17 +18,14 @@ import {
 } from '@lobechat/electron-client-ipc';
 import { SYSTEM_FILES_TO_IGNORE, loadFile } from '@lobechat/file-loaders';
 import { shell } from 'electron';
-import * as fs from 'node:fs';
-import { rename as renamePromise } from 'node:fs/promises';
-import * as path from 'node:path';
-import { promisify } from 'node:util';
+
+import { ControllerModule, ipcClientEvent } from './index';
 
 import FileSearchService from '@/services/fileSearchSrv';
 import { FileResult, SearchOptions } from '@/types/fileSearch';
 import { makeSureDirExist } from '@/utils/file-system';
 import { createLogger } from '@/utils/logger';
 
-import { ControllerModule, ipcClientEvent } from './index';
 
 // 创建日志记录器
 const logger = createLogger('controllers:LocalFileCtr');

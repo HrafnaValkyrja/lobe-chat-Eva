@@ -2,11 +2,12 @@ import { LobeChatDatabase } from '@lobechat/database';
 import { loadFile } from '@lobechat/file-loaders';
 import debug from 'debug';
 
+import { FileService } from '../file';
+
 import { DocumentModel } from '@/database/models/document';
 import { FileModel } from '@/database/models/file';
 import { LobeDocument } from '@/types/document';
 
-import { FileService } from '../file';
 
 const log = debug('lobe-chat:service:document');
 

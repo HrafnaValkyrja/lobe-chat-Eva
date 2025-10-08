@@ -9,14 +9,15 @@ import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 import { Virtuoso } from 'react-virtuoso';
 
-import { useFileStore } from '@/store/file';
-import { SortType } from '@/types/files';
 
 import EmptyStatus from './EmptyStatus';
 import FileListItem, { FILE_DATE_WIDTH, FILE_SIZE_WIDTH } from './FileListItem';
 import FileSkeleton from './FileSkeleton';
 import ToolBar from './ToolBar';
 import { useCheckTaskStatus } from './useCheckTaskStatus';
+
+import { useFileStore } from '@/store/file';
+import { SortType } from '@/types/files';
 
 const useStyles = createStyles(({ css, token, isDarkMode }) => ({
   header: css`

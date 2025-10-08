@@ -3,12 +3,13 @@ import { createWithEqualityFn } from 'zustand/traditional';
 import { StateCreator } from 'zustand/vanilla';
 
 import { createDevtools } from '../middleware/createDevtools';
+
 import { ToolStoreState, initialState } from './initialState';
 import { BuiltinToolAction, createBuiltinToolSlice } from './slices/builtin';
 import { CustomPluginAction, createCustomPluginSlice } from './slices/customPlugin';
 import { PluginMCPStoreAction, createMCPPluginStoreSlice } from './slices/mcpStore';
-import { PluginAction, createPluginSlice } from './slices/plugin';
 import { PluginStoreAction, createPluginStoreSlice } from './slices/oldStore';
+import { PluginAction, createPluginSlice } from './slices/plugin';
 
 //  ===============  聚合 createStoreFn ============ //
 

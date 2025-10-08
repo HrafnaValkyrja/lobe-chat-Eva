@@ -4,6 +4,12 @@ import { notFound } from 'next/navigation';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import Breadcrumb from '../../features/Breadcrumb';
+import { TocProvider } from '../../features/Toc/useToc';
+
+import Details from './features/Details';
+import Loading from './loading';
+
 import { withSuspense } from '@/components/withSuspense';
 import { DetailProvider } from '@/features/MCPPluginDetail/DetailProvider';
 import Header from '@/features/MCPPluginDetail/Header';
@@ -12,10 +18,7 @@ import { useQuery } from '@/hooks/useQuery';
 import { useDiscoverStore } from '@/store/discover';
 import { DiscoverTab } from '@/types/discover';
 
-import Breadcrumb from '../../features/Breadcrumb';
-import { TocProvider } from '../../features/Toc/useToc';
-import Details from './features/Details';
-import Loading from './loading';
+
 
 const Client = memo<{ identifier: string; mobile?: boolean }>(({ identifier, mobile }) => {
   const { version } = useQuery() as { version?: string };

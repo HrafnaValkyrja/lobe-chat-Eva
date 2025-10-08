@@ -5,7 +5,7 @@ import { RequestFilteringAgentOptions, useAgent as ssrfAgent } from 'request-fil
  * SSRF-safe fetch implementation for server-side use
  * Uses request-filtering-agent to prevent requests to private IP addresses
  */
-// eslint-disable-next-line no-undef
+ 
 export const ssrfSafeFetch = async (url: string, options?: RequestInit): Promise<Response> => {
   try {
     // Configure SSRF protection options

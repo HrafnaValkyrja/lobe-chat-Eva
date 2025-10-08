@@ -1,6 +1,10 @@
 import { notFound } from 'next/navigation';
 import urlJoin from 'url-join';
 
+import Breadcrumb from '../../features/Breadcrumb';
+
+import Client from './Client';
+
 import StructuredData from '@/components/StructuredData';
 import { Locales } from '@/locales/resources';
 import { ldModule } from '@/server/ld';
@@ -11,8 +15,6 @@ import { DiscoverTab } from '@/types/discover';
 import { PageProps } from '@/types/next';
 import { RouteVariants } from '@/utils/server/routeVariants';
 
-import Breadcrumb from '../../features/Breadcrumb';
-import Client from './Client';
 
 type DiscoverPageProps = PageProps<
   { slugs: string[]; variants: string },

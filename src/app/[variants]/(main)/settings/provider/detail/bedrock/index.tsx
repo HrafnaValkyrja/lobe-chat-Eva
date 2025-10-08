@@ -3,15 +3,16 @@
 import { Select } from '@lobehub/ui';
 import { useTranslation } from 'react-i18next';
 
+import { KeyVaultsConfigKey } from '../../const';
+import { SkeletonInput } from '../../features/ProviderConfig';
+import { ProviderItem } from '../../type';
+import ProviderDetail from '../default';
+
 import { FormPassword } from '@/components/FormInput';
 import { BedrockProviderCard } from '@/config/modelProviders';
 import { aiProviderSelectors, useAiInfraStore } from '@/store/aiInfra';
 import { GlobalLLMProviderKey } from '@/types/user/settings';
 
-import { KeyVaultsConfigKey } from '../../const';
-import { SkeletonInput } from '../../features/ProviderConfig';
-import { ProviderItem } from '../../type';
-import ProviderDetail from '../default';
 
 const providerKey: GlobalLLMProviderKey = 'bedrock';
 

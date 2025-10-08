@@ -27,7 +27,7 @@ const mcpProcedure = isServerMode ? authedProcedure : passwordProcedure;
 
 export const mcpRouter = router({
   getStdioMcpServerManifest: mcpProcedure.input(stdioParamsSchema).query(async ({ input }) => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+     
     const { env: _, ...rest } = input;
     log('getStdioMcpServerManifest input: %O', rest);
 

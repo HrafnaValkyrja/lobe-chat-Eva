@@ -7,13 +7,14 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import ApiVisualizer from './ApiVisualizer';
+import PluginEmptyState from './EmptyState';
+
 import ManifestPreviewer from '@/components/ManifestPreviewer';
 import PluginAvatar from '@/components/Plugins/PluginAvatar';
 import PluginTag from '@/components/Plugins/PluginTag';
 import { pluginHelpers } from '@/store/tool';
 
-import ApiVisualizer from './ApiVisualizer';
-import PluginEmptyState from './EmptyState';
 
 const PluginPreview = memo<{ form: FormInstance }>(({ form }) => {
   const { t } = useTranslation('plugin');

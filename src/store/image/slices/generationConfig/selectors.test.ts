@@ -2,11 +2,12 @@ import { ModelParamsSchema, RuntimeImageGenParams, gptImage1ParamsSchema } from 
 import { AIImageModelCard } from 'model-bank';
 import { describe, expect, it, vi } from 'vitest';
 
+import { imageGenerationConfigSelectors } from './selectors';
+
 import { ImageStore } from '@/store/image';
 import { initialState } from '@/store/image/initialState';
 import { merge } from '@/utils/merge';
 
-import { imageGenerationConfigSelectors } from './selectors';
 
 // Mock external dependencies
 vi.mock('@/store/aiInfra', () => ({

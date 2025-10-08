@@ -15,6 +15,20 @@ import {
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import ErrorMessageExtra, { useErrorContent } from '../../Error';
+import { renderMessagesExtra } from '../../Extras';
+import {
+  markdownCustomRenders,
+  renderBelowMessages,
+  renderMessages,
+  useAvatarsClick,
+} from '../../Messages';
+import History from '../History';
+import { markdownElements } from '../MarkdownElements';
+
+import { InPortalThreadContext } from './InPortalThreadContext';
+import { normalizeThinkTags, processWithArtifact } from './utils';
+
 import { HtmlPreviewAction } from '@/components/HtmlPreview';
 import { isDesktop } from '@/const/version';
 import ChatItem from '@/features/ChatItem';
@@ -31,18 +45,7 @@ import { useUserStore } from '@/store/user';
 import { userGeneralSettingsSelectors } from '@/store/user/selectors';
 import { ChatMessage } from '@/types/message';
 
-import ErrorMessageExtra, { useErrorContent } from '../../Error';
-import { renderMessagesExtra } from '../../Extras';
-import {
-  markdownCustomRenders,
-  renderBelowMessages,
-  renderMessages,
-  useAvatarsClick,
-} from '../../Messages';
-import History from '../History';
-import { markdownElements } from '../MarkdownElements';
-import { InPortalThreadContext } from './InPortalThreadContext';
-import { normalizeThinkTags, processWithArtifact } from './utils';
+
 
 const rehypePlugins = markdownElements.map((element) => element.rehypePlugin).filter(Boolean);
 const remarkPlugins = markdownElements.map((element) => element.remarkPlugin).filter(Boolean);

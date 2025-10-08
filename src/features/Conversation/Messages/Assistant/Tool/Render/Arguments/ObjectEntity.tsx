@@ -1,10 +1,11 @@
 import { createStyles } from 'antd-style';
 import { memo } from 'react';
 
+import ValueCell from './ValueCell';
+
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { shinyTextStylish } from '@/styles/loading';
 
-import ValueCell from './ValueCell';
 
 const useStyles = createStyles(({ css, token }) => ({
   arrayRow: css`

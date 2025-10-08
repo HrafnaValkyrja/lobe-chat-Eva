@@ -2,11 +2,12 @@
 
 import { ChatHeader } from '@lobehub/ui/chat';
 
+import HeaderAction from './HeaderAction';
+import Main from './Main';
+
 import { useGlobalStore } from '@/store/global';
 import { systemStatusSelectors } from '@/store/global/selectors';
 
-import HeaderAction from './HeaderAction';
-import Main from './Main';
 
 const Header = () => {
   const showHeader = useGlobalStore(systemStatusSelectors.showChatHeader);

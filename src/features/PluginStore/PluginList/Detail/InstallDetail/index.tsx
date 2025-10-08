@@ -1,11 +1,12 @@
 import { memo, useState } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
-import { PluginNavKey } from '@/types/discover';
 
 import Nav from './Nav';
 import Settings from './Settings';
 import Tools from './Tools';
+
+import { PluginNavKey } from '@/types/discover';
 
 const InstallDetail = memo(() => {
   const [activeTab, setActiveTab] = useState(PluginNavKey.Tools);

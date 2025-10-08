@@ -4,9 +4,10 @@ import { createStyles } from 'antd-style';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import { LayoutProps } from './type';
+
 import { useShowMobileWorkspace } from '@/hooks/useShowMobileWorkspace';
 
-import { LayoutProps } from './type';
 
 const useStyles = createStyles(({ css, token }) => ({
   main: css`

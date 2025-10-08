@@ -4,9 +4,10 @@ import { fluxSchnellParamsSchema } from 'model-bank';
 import { AIImageModelCard } from 'model-bank';
 import { describe, expect, it, vi } from 'vitest';
 
+import { useGenerationConfigParam } from './hooks';
+
 import { useImageStore } from '@/store/image';
 
-import { useGenerationConfigParam } from './hooks';
 
 // Mock external dependencies
 vi.mock('@/store/aiInfra', () => ({

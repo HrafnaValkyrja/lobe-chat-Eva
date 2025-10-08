@@ -1,8 +1,5 @@
 import { ReactNode, memo } from 'react';
 
-import { useStore } from '@/features/AgentSetting/store';
-import { ChatSettingsTabs } from '@/store/global/initialState';
-import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfig';
 
 import AgentChat from './AgentChat';
 import AgentMeta from './AgentMeta';
@@ -11,6 +8,10 @@ import AgentOpening from './AgentOpening';
 import AgentPlugin from './AgentPlugin';
 import AgentPrompt from './AgentPrompt';
 import AgentTTS from './AgentTTS';
+
+import { useStore } from '@/features/AgentSetting/store';
+import { ChatSettingsTabs } from '@/store/global/initialState';
+import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfig';
 
 export interface AgentSettingsContentProps {
   loadingSkeleton: ReactNode;

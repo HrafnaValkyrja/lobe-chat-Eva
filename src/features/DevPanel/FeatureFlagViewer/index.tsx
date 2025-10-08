@@ -1,6 +1,7 @@
+import FeatureFlagForm from './Form';
+
 import { getServerFeatureFlagsValue } from '@/config/featureFlags';
 
-import FeatureFlagForm from './Form';
 
 const FeatureFlagViewer = () => {
   const serverFeatureFlags = getServerFeatureFlagsValue();

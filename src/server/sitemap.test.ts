@@ -1,9 +1,10 @@
 // @vitest-environment node
 import { describe, expect, it, vi } from 'vitest';
 
+import { LAST_MODIFIED, Sitemap, SitemapType } from './sitemap';
+
 import { getCanonicalUrl } from '@/server/utils/url';
 
-import { LAST_MODIFIED, Sitemap, SitemapType } from './sitemap';
 
 const LOCALE_COUNT = 18;
 

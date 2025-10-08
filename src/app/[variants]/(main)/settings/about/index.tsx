@@ -8,14 +8,15 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import { BRANDING_EMAIL, BRANDING_NAME, SOCIAL_URL } from '@/const/branding';
-import { BLOG, OFFICIAL_SITE, PRIVACY_URL, TERMS_URL, mailTo } from '@/const/url';
 
 import AboutList from './features/AboutList';
 import Analytics from './features/Analytics';
 import ItemCard from './features/ItemCard';
 import ItemLink from './features/ItemLink';
 import Version from './features/Version';
+
+import { BRANDING_EMAIL, BRANDING_NAME, SOCIAL_URL } from '@/const/branding';
+import { BLOG, OFFICIAL_SITE, PRIVACY_URL, TERMS_URL, mailTo } from '@/const/url';
 
 const useStyles = createStyles(({ css, token }) => ({
   title: css`

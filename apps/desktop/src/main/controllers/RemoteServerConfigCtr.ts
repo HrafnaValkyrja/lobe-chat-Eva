@@ -1,12 +1,14 @@
-import { DataSyncConfig } from '@lobechat/electron-client-ipc';
-import { safeStorage } from 'electron';
 import querystring from 'node:querystring';
 import { URL } from 'node:url';
+
+import { DataSyncConfig } from '@lobechat/electron-client-ipc';
+import { safeStorage } from 'electron';
+
+import { ControllerModule, ipcClientEvent } from './index';
 
 import { OFFICIAL_CLOUD_SERVER } from '@/const/env';
 import { createLogger } from '@/utils/logger';
 
-import { ControllerModule, ipcClientEvent } from './index';
 
 // Create logger
 const logger = createLogger('controllers:RemoteServerConfigCtr');

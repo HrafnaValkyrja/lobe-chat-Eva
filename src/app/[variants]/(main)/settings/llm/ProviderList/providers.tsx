@@ -1,5 +1,16 @@
 import { useMemo } from 'react';
 
+
+import { ProviderItem } from '../type';
+
+import { useAzureProvider } from './Azure';
+import { useBedrockProvider } from './Bedrock';
+import { useCloudflareProvider } from './Cloudflare';
+import { useGithubProvider } from './Github';
+import { useHuggingFaceProvider } from './HuggingFace';
+import { useOllamaProvider } from './Ollama';
+import { useOpenAIProvider } from './OpenAI';
+
 import {
   Ai21ProviderCard,
   Ai302ProviderCard,
@@ -46,15 +57,6 @@ import {
   ZeroOneProviderCard,
   ZhiPuProviderCard,
 } from '@/config/modelProviders';
-
-import { ProviderItem } from '../type';
-import { useAzureProvider } from './Azure';
-import { useBedrockProvider } from './Bedrock';
-import { useCloudflareProvider } from './Cloudflare';
-import { useGithubProvider } from './Github';
-import { useHuggingFaceProvider } from './HuggingFace';
-import { useOllamaProvider } from './Ollama';
-import { useOpenAIProvider } from './OpenAI';
 
 export const useProviderList = (): ProviderItem[] => {
   const AzureProvider = useAzureProvider();

@@ -1,8 +1,9 @@
 import { describe, expect, it } from 'vitest';
 
+import { GenerationTopicDispatch, generationTopicReducer } from './reducer';
+
 import { ImageGenerationTopic } from '@/types/generation';
 
-import { GenerationTopicDispatch, generationTopicReducer } from './reducer';
 
 describe('generationTopicReducer', () => {
   let state: ImageGenerationTopic[];

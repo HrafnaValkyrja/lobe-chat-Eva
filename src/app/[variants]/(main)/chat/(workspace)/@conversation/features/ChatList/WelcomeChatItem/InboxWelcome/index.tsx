@@ -6,14 +6,15 @@ import { memo } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import AddButton from './AddButton';
+import AgentsSuggest from './AgentsSuggest';
+import QuestionSuggest from './QuestionSuggest';
+
 import { BRANDING_NAME } from '@/const/branding';
 import { isCustomBranding } from '@/const/version';
 import { useGreeting } from '@/hooks/useGreeting';
 import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfig';
 
-import AddButton from './AddButton';
-import AgentsSuggest from './AgentsSuggest';
-import QuestionSuggest from './QuestionSuggest';
 
 const useStyles = createStyles(({ css, responsive }) => ({
   container: css`

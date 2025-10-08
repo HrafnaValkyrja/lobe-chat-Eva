@@ -1,9 +1,10 @@
 import isEqual from 'fast-deep-equal';
 import React, { memo } from 'react';
 
+import { MarkdownElementProps } from '../../type';
+
 import { LocalFile } from '@/features/LocalFile';
 
-import { MarkdownElementProps } from '../../type';
 
 interface LocalFileProps {
   isDirectory: boolean;

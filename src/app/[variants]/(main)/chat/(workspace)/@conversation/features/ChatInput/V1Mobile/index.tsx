@@ -1,21 +1,22 @@
 'use client';
 
 import { Skeleton } from 'antd';
-import { useTheme } from 'antd-style';
 import { TextAreaRef } from 'antd/es/input/TextArea';
+import { useTheme } from 'antd-style';
 import { memo, useRef, useState } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
-import { ActionKeys } from '@/features/ChatInput/ActionBar/config';
-import { useInitAgentConfig } from '@/hooks/useInitAgentConfig';
-import { useChatStore } from '@/store/chat';
-import { chatSelectors } from '@/store/chat/selectors';
 
 import ActionBar from './ActionBar';
 import Files from './Files';
 import InputArea from './InputArea';
 import SendButton from './Send';
 import { useSendMessage } from './useSend';
+
+import { ActionKeys } from '@/features/ChatInput/ActionBar/config';
+import { useInitAgentConfig } from '@/hooks/useInitAgentConfig';
+import { useChatStore } from '@/store/chat';
+import { chatSelectors } from '@/store/chat/selectors';
 
 const defaultLeftActions: ActionKeys[] = [
   'model',

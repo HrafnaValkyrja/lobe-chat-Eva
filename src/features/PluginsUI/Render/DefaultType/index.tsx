@@ -2,12 +2,14 @@ import { Skeleton } from 'antd';
 import dynamic from 'next/dynamic';
 import { Suspense, memo } from 'react';
 
-import { useToolStore } from '@/store/tool';
-import { pluginSelectors } from '@/store/tool/selectors';
 
 import Loading from '../Loading';
 import { useParseContent } from '../useParseContent';
+
 import IFrameRender from './IFrameRender';
+
+import { useToolStore } from '@/store/tool';
+import { pluginSelectors } from '@/store/tool/selectors';
 
 const SystemJsRender = dynamic(() => import('./SystemJsRender'), { ssr: false });
 

@@ -6,11 +6,12 @@ import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import GroupItem from './GroupItem';
+
 import { useSessionStore } from '@/store/session';
 import { sessionGroupSelectors } from '@/store/session/selectors';
 import { SessionGroupItem } from '@/types/session';
 
-import GroupItem from './GroupItem';
 
 const useStyles = createStyles(({ css, token }) => ({
   container: css`

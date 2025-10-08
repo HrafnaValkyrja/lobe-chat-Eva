@@ -1,8 +1,9 @@
 import { OIDCConfig, OIDCUserConfig } from '@auth/core/providers';
 
+import { CommonProviderConfig } from './sso.config';
+
 import { authEnv } from '@/envs/auth';
 
-import { CommonProviderConfig } from './sso.config';
 
 interface LogtoProfile extends Record<string, any> {
   email: string;

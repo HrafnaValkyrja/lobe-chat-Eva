@@ -1,11 +1,12 @@
 import type { PartialDeep } from 'type-fest';
 import { describe, expect, it, vi } from 'vitest';
 
+import { ServerService } from './server';
+
 import { lambdaClient } from '@/libs/trpc/client';
 import { UserInitializationState, UserPreference } from '@/types/user';
 import { UserSettings } from '@/types/user/settings';
 
-import { ServerService } from './server';
 
 vi.mock('@/libs/trpc/client', () => ({
   lambdaClient: {

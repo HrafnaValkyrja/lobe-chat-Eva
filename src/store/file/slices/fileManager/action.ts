@@ -1,6 +1,10 @@
 import { SWRResponse, mutate } from 'swr';
 import { StateCreator } from 'zustand/vanilla';
 
+import { FileStore } from '../../store';
+
+import { fileManagerSelectors } from './selectors';
+
 import { FILE_UPLOAD_BLACKLIST } from '@/const/file';
 import { useClientDataSWR } from '@/libs/swr';
 import { fileService } from '@/services/file';
@@ -12,8 +16,6 @@ import {
 } from '@/store/file/reducers/uploadFileList';
 import { FileListItem, QueryFileListParams } from '@/types/files';
 
-import { FileStore } from '../../store';
-import { fileManagerSelectors } from './selectors';
 
 const serverFileService = new ServerService();
 

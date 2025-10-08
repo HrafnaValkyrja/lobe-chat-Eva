@@ -7,12 +7,13 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import { aiProviderSelectors } from '@/store/aiInfra';
-import { useAiInfraStore } from '@/store/aiInfra/store';
 
 import All from './All';
 import ProviderItem from './Item';
 import SortProviderModal from './SortProviderModal';
+
+import { aiProviderSelectors } from '@/store/aiInfra';
+import { useAiInfraStore } from '@/store/aiInfra/store';
 
 const ProviderList = (props: {
   mobile?: boolean;

@@ -2,11 +2,12 @@ import { act, renderHook } from '@testing-library/react';
 import { App } from 'antd';
 import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { getContainer, useDragUpload } from './useDragUpload';
+
 import { useModelSupportVision } from '@/hooks/useModelSupportVision';
 import { useAgentStore } from '@/store/agent';
 import { agentSelectors } from '@/store/agent/slices/chat';
 
-import { getContainer, useDragUpload } from './useDragUpload';
 
 // Mock the hooks and components
 vi.mock('@/hooks/useModelSupportVision');

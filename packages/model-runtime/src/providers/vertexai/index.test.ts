@@ -2,6 +2,7 @@
 import { describe, expect, it, vi } from 'vitest';
 
 import { AgentRuntimeErrorType } from '../../types/error';
+
 import { LobeVertexAI } from './index';
 
 // Mock dependencies

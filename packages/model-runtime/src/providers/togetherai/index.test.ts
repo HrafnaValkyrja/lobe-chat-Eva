@@ -1,5 +1,6 @@
 // @vitest-environment node
 import { testProvider } from '../../providerTestUtils';
+
 import { LobeTogetherAI } from './index';
 
 testProvider({

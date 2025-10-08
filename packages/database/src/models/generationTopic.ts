@@ -1,10 +1,11 @@
 import { and, desc, eq } from 'drizzle-orm';
 
+import { GenerationTopicItem, generationTopics } from '../schemas/generation';
 import { LobeChatDatabase } from '../type';
+
 import { FileService } from '@/server/services/file';
 import { GenerationAsset, ImageGenerationTopic } from '@/types/generation';
 
-import { GenerationTopicItem, generationTopics } from '../schemas/generation';
 
 export class GenerationTopicModel {
   private userId: string;

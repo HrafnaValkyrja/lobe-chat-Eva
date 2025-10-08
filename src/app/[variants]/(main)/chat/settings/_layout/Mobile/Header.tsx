@@ -4,10 +4,11 @@ import { ChatHeader } from '@lobehub/ui/mobile';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import HeaderContent from '../../features/HeaderContent';
+
 import { useQueryRoute } from '@/hooks/useQueryRoute';
 import { mobileHeaderSticky } from '@/styles/mobileHeader';
 
-import HeaderContent from '../../features/HeaderContent';
 
 const Header = memo(() => {
   const { t } = useTranslation('setting');

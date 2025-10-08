@@ -8,12 +8,13 @@ import { memo, useState } from 'react';
 import { Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 
+import { useNav } from '../../../features/useNav';
+
 import Menu from '@/components/Menu';
 import { withSuspense } from '@/components/withSuspense';
 import { useQueryRoute } from '@/hooks/useQueryRoute';
 import { DiscoverTab } from '@/types/discover';
 
-import { useNav } from '../../../features/useNav';
 
 export const useStyles = createStyles(({ css, token }) => ({
   activeNavItem: css`

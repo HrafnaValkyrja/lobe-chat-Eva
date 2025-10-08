@@ -3,6 +3,7 @@ import { LobeOpenAICompatibleRuntime } from '@lobechat/model-runtime';
 import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { testProvider } from '../../providerTestUtils';
+
 import { LobeMistralAI } from './index';
 
 testProvider({

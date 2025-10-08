@@ -2,6 +2,7 @@
 import { ModelProvider } from 'model-bank';
 
 import { testProvider } from '../../providerTestUtils';
+
 import { LobeSearch1API } from './index';
 
 const provider = ModelProvider.Search1API;

@@ -5,9 +5,10 @@ import { Empty } from 'antd';
 import { memo } from 'react';
 import { Center } from 'react-layout-kit';
 
+import Item from './Item';
+
 import { DiscoverMcpItem } from '@/types/discover';
 
-import Item from './Item';
 
 interface McpListProps {
   data?: DiscoverMcpItem[];

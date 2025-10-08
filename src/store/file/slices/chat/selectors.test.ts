@@ -1,9 +1,10 @@
 import { describe, expect, it } from 'vitest';
 
+import { fileChatSelectors, filesSelectors } from './selectors';
+
 import { FilesStoreState, initialState } from '@/store/file/initialState';
 import { UPLOAD_STATUS_SET, UploadFileItem } from '@/types/files/upload';
 
-import { fileChatSelectors, filesSelectors } from './selectors';
 
 describe('filesSelectors', () => {
   describe('chatUploadFileList', () => {

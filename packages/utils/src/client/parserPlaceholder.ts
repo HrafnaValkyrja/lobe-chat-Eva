@@ -1,9 +1,10 @@
 import { template } from 'lodash-es';
 
+import { uuid } from '../uuid';
+
 import { useUserStore } from '@/store/user';
 import { userProfileSelectors } from '@/store/user/selectors';
 
-import { uuid } from '../uuid';
 
 const placeholderVariablesRegex = /{{(.*?)}}/g;
 

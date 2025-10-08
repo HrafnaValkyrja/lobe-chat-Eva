@@ -1,6 +1,8 @@
 import { AiProviderModelListItem, EnabledAiModel } from 'model-bank';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { AiInfraRepos } from './index';
+
 import { DEFAULT_MODEL_PROVIDER_LIST } from '@/config/modelProviders';
 import { clientDB, initializeDB } from '@/database/client/db';
 import {
@@ -10,7 +12,6 @@ import {
   EnabledProvider,
 } from '@/types/aiProvider';
 
-import { AiInfraRepos } from './index';
 
 const userId = 'test-user-id';
 const mockProviderConfigs = {

@@ -7,10 +7,11 @@ import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import { Option } from './Option';
+
 import { useElectronStore } from '@/store/electron';
 import { electronSyncSelectors } from '@/store/electron/selectors';
 
-import { Option } from './Option';
 
 const useStyles = createStyles(({ token, css }) => {
   return {

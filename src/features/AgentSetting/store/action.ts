@@ -9,6 +9,12 @@ import { getSingletonAnalyticsOptional } from '@lobehub/analytics';
 import type { PartialDeep } from 'type-fest';
 import { StateCreator } from 'zustand/vanilla';
 
+import { LoadingState } from '../store/initialState';
+
+import { State, initialState } from './initialState';
+import { ConfigDispatch, configReducer } from './reducers/config';
+import { MetaDataDispatch, metaDataReducer } from './reducers/meta';
+
 import { chatService } from '@/services/chat';
 import { globalHelpers } from '@/store/global/helpers';
 import { useUserStore } from '@/store/user';
@@ -20,10 +26,6 @@ import { MessageTextChunk } from '@/utils/fetch';
 import { merge } from '@/utils/merge';
 import { setNamespace } from '@/utils/storeDebug';
 
-import { LoadingState } from '../store/initialState';
-import { State, initialState } from './initialState';
-import { ConfigDispatch, configReducer } from './reducers/config';
-import { MetaDataDispatch, metaDataReducer } from './reducers/meta';
 
 export interface PublicAction {
   /**

@@ -1,11 +1,12 @@
 import { StateCreator } from 'zustand/vanilla';
 
-import { ChatStore } from '@/store/chat/store';
 
 import { AIGenerateAction, generateAIChat } from './generateAIChat';
 import { AIGenerateV2Action, generateAIChatV2 } from './generateAIChatV2';
 import { ChatMemoryAction, chatMemory } from './memory';
 import { ChatRAGAction, chatRag } from './rag';
+
+import { ChatStore } from '@/store/chat/store';
 
 export interface ChatAIChatAction
   extends ChatRAGAction,

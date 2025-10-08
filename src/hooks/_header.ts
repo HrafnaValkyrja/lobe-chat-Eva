@@ -6,14 +6,14 @@ import { keyVaultsConfigSelectors } from '@/store/user/selectors';
  * TODO: Need to be removed after tts refactor
  * @deprecated
  */
-// eslint-disable-next-line no-undef
+ 
 export const createHeaderWithOpenAI = (header?: HeadersInit): HeadersInit => {
   const openai = keyVaultsConfigSelectors.openAIConfig(useUserStore.getState());
 
   const apiKey = openai.apiKey || '';
   const endpoint = openai.baseURL || '';
 
-  // eslint-disable-next-line no-undef
+   
   return {
     ...header,
     [LOBE_CHAT_ACCESS_CODE]: keyVaultsConfigSelectors.password(useUserStore.getState()),

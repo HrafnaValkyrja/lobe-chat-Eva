@@ -1,6 +1,7 @@
+import JsonViewer from './JsonViewer';
+
 import { useServerConfigStore } from '@/store/serverConfig';
 
-import JsonViewer from './JsonViewer';
 
 export const ServerConfig = () => {
   const serverConfig = useServerConfigStore((s) => s.serverConfig);

@@ -5,6 +5,8 @@ import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import EditCustomPlugin from '../../EditCustomPlugin';
+
 import PluginDetailModal from '@/features/PluginDetailModal';
 import { useAgentStore } from '@/store/agent';
 import { agentSelectors } from '@/store/agent/selectors';
@@ -13,7 +15,6 @@ import { pluginHelpers, useToolStore } from '@/store/tool';
 import { pluginSelectors, pluginStoreSelectors } from '@/store/tool/selectors';
 import { LobeToolType } from '@/types/tool/tool';
 
-import EditCustomPlugin from '../../EditCustomPlugin';
 
 interface ActionsProps {
   identifier: string;

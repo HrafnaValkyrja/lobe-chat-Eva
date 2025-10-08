@@ -5,11 +5,12 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import PGliteIcon from './PGliteIcon';
+
 import DataStyleModal from '@/components/DataStyleModal';
 import { useGlobalStore } from '@/store/global';
 import { useServerConfigStore } from '@/store/serverConfig';
 
-import PGliteIcon from './PGliteIcon';
 
 const useStyles = createStyles(({ css, token, isDarkMode, responsive }) => ({
   desc: css`

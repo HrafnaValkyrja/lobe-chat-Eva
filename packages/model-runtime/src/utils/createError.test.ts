@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
 import { AgentRuntimeErrorType } from '../types/error';
+
 import { AgentRuntimeError } from './createError';
 
 describe('AgentRuntimeError', () => {

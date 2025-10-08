@@ -1,9 +1,10 @@
 import { FluentEmoji } from '@lobehub/ui';
 import { t } from 'i18next';
 
+import Description from './Description';
+
 import { notification } from '@/components/AntdStaticMethods';
 
-import Description from './Description';
 
 export const fetchErrorNotification = {
   error: ({ status, errorMessage }: { errorMessage: string; status: number }) => {

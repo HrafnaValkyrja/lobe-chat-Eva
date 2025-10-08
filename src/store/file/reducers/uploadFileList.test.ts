@@ -1,8 +1,9 @@
 import { describe, expect, it } from 'vitest';
 
+import { uploadFileListReducer } from './uploadFileList';
+
 import { UploadFileItem } from '@/types/files/upload';
 
-import { uploadFileListReducer } from './uploadFileList';
 
 // 创建测试用的文件项
 const createMockFile = (id: string): UploadFileItem => ({

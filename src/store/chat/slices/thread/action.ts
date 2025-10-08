@@ -5,6 +5,8 @@ import isEqual from 'fast-deep-equal';
 import { SWRResponse, mutate } from 'swr';
 import { StateCreator } from 'zustand/vanilla';
 
+import { ThreadDispatch, threadReducer } from './reducer';
+
 import { LOADING_FLAT, THREAD_DRAFT_ID } from '@/const/message';
 import { isDeprecatedEdition } from '@/const/version';
 import { useClientDataSWR } from '@/libs/swr';
@@ -21,7 +23,6 @@ import { ThreadItem, ThreadType } from '@/types/topic';
 import { merge } from '@/utils/merge';
 import { setNamespace } from '@/utils/storeDebug';
 
-import { ThreadDispatch, threadReducer } from './reducer';
 
 const n = setNamespace('thd');
 const SWR_USE_FETCH_THREADS = 'SWR_USE_FETCH_THREADS';

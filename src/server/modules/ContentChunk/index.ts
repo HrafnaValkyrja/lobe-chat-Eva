@@ -1,12 +1,13 @@
 import { Strategy } from 'unstructured-client/sdk/models/shared';
 
+import { ChunkingRuleParser } from './rules';
+import type { ChunkingService } from './rules';
+
 import type { NewChunkItem, NewUnstructuredChunkItem } from '@/database/schemas';
 import { knowledgeEnv } from '@/envs/knowledge';
 import { ChunkingLoader } from '@/libs/langchain';
 import { ChunkingStrategy, Unstructured } from '@/libs/unstructured';
 
-import { ChunkingRuleParser } from './rules';
-import type { ChunkingService } from './rules';
 
 export interface ChunkContentParams {
   content: Uint8Array;

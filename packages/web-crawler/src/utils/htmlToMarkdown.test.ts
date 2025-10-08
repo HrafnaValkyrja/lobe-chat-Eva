@@ -1,8 +1,10 @@
 import { readFileSync } from 'node:fs';
 import * as path from 'node:path';
+
 import { describe, expect, it } from 'vitest';
 
 import { FilterOptions } from '../type';
+
 import { htmlToMarkdown } from './htmlToMarkdown';
 
 interface TestItem {

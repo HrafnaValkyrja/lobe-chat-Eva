@@ -5,9 +5,10 @@ import { Empty } from 'antd';
 import { memo } from 'react';
 import { Center } from 'react-layout-kit';
 
+import Item from './Item';
+
 import { DiscoverAssistantItem } from '@/types/discover';
 
-import Item from './Item';
 
 export interface AssistantListProps {
   data?: DiscoverAssistantItem[];

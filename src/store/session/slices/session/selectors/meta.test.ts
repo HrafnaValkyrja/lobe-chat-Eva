@@ -1,12 +1,13 @@
 import { describe, expect, it } from 'vitest';
 
+import { sessionMetaSelectors } from './meta';
+
 import { DEFAULT_AVATAR } from '@/const/meta';
 import { DEFAULT_AGENT_CONFIG, DEFAUTT_AGENT_TTS_CONFIG } from '@/const/settings';
 import { SessionStore } from '@/store/session';
 import { MetaData } from '@/types/meta';
 import { LobeAgentSession, LobeSessionType } from '@/types/session';
 
-import { sessionMetaSelectors } from './meta';
 
 vi.mock('i18next', () => ({
   t: vi.fn((key) => key), // Simplified mock return value

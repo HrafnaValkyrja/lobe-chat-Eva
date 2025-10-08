@@ -7,11 +7,12 @@
  * @link https://trpc.io/docs/v11/router
  * @link https://trpc.io/docs/v11/procedures
  */
+import { edgeTrpc } from './init';
+import { jwtPayloadChecker } from './middleware/jwtPayload';
+
 import { DESKTOP_USER_ID } from '@/const/desktop';
 import { isDesktop } from '@/const/version';
 
-import { edgeTrpc } from './init';
-import { jwtPayloadChecker } from './middleware/jwtPayload';
 
 /**
  * Create a router

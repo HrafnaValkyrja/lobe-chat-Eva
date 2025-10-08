@@ -2,10 +2,11 @@ import { type ActionIconGroupEvent } from '@lobehub/ui';
 import { type ChatItemProps } from '@lobehub/ui/chat';
 import { FC, ReactNode } from 'react';
 
+import { type ActionsBarProps } from '../components/ChatItem/ActionsBar';
+
 import { LLMRoleType } from '@/types/llm';
 import { ChatMessage } from '@/types/message';
 
-import { type ActionsBarProps } from '../components/ChatItem/ActionsBar';
 
 export type OnActionsClick = (action: ActionIconGroupEvent, message: ChatMessage) => void;
 export type OnAvatarsClick = (role: RenderRole) => ChatItemProps['onAvatarClick'];

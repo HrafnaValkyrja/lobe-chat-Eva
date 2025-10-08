@@ -2,10 +2,11 @@
 
 import { memo } from 'react';
 
+import Toast from './Toast';
+
 import { useGlobalStore } from '@/store/global';
 import { systemStatusSelectors } from '@/store/global/selectors';
 
-import Toast from './Toast';
 
 const ZenModeToast = memo(() => {
   const inZenMode = useGlobalStore(systemStatusSelectors.inZenMode);

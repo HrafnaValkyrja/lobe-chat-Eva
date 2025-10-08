@@ -2,6 +2,7 @@ import { UploadFileItem } from '../files';
 import { MetaData } from '../meta';
 import { MessageSemanticSearchChunk } from '../rag';
 import { GroundingSearch } from '../search';
+
 import type { ChatMessageError, MessageMetadata, MessageRoleType, ModelReasoning } from './base';
 import { ChatImageItem } from './image';
 import { ChatPluginPayload, ChatToolPayload } from './tools';

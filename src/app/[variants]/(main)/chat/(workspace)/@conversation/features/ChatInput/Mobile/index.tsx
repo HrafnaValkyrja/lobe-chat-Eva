@@ -5,6 +5,8 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import { useSend } from '../useSend';
+
 import {
   type ActionKey,
   type ActionKeys,
@@ -14,7 +16,6 @@ import {
 import { useChatStore } from '@/store/chat';
 import { aiChatSelectors } from '@/store/chat/slices/aiChat/selectors';
 
-import { useSend } from '../useSend';
 
 const leftActions: ActionKeys[] = [
   'model',

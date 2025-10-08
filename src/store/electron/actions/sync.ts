@@ -3,10 +3,11 @@ import isEqual from 'fast-deep-equal';
 import useSWR, { SWRResponse, mutate } from 'swr';
 import type { StateCreator } from 'zustand/vanilla';
 
-import { remoteServerService } from '@/services/electron/remoteServer';
 
 import { initialState } from '../initialState';
 import type { ElectronStore } from '../store';
+
+import { remoteServerService } from '@/services/electron/remoteServer';
 
 /**
  * 设置操作

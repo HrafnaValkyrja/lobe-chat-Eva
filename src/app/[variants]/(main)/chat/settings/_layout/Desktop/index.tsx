@@ -1,11 +1,12 @@
 import { PropsWithChildren } from 'react';
 
+import Header from './Header';
+
 import SafeSpacing from '@/components/SafeSpacing';
 import { HEADER_HEIGHT } from '@/const/layoutTokens';
 import Footer from '@/features/Setting/Footer';
 import SettingContainer from '@/features/Setting/SettingContainer';
 
-import Header from './Header';
 
 const Layout = ({ children }: PropsWithChildren) => (
   <>

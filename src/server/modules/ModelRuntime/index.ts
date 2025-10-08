@@ -2,9 +2,10 @@ import { ModelRuntime } from '@lobechat/model-runtime';
 import { ClientSecretPayload } from '@lobechat/types';
 import { ModelProvider } from 'model-bank';
 
+import apiKeyManager from './apiKeyManager';
+
 import { getLLMConfig } from '@/envs/llm';
 
-import apiKeyManager from './apiKeyManager';
 
 export * from './trace';
 

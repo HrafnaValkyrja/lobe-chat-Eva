@@ -1,8 +1,9 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import DevtoolsCtr from '../DevtoolsCtr';
+
 import type { App } from '@/core/App';
 
-import DevtoolsCtr from '../DevtoolsCtr';
 
 // 模拟 App 及其依赖项
 const mockShow = vi.fn();

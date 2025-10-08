@@ -2,9 +2,10 @@ import { ChatCompletionTool, OpenAIPluginManifest } from '@lobechat/types';
 import { LobeChatPluginManifest, pluginManifestSchema } from '@lobehub/chat-plugin-sdk';
 import { uniqBy } from 'lodash-es';
 
+import { genToolCallingName } from './toolCall';
+
 import { API_ENDPOINTS } from '@/services/_url';
 
-import { genToolCallingName } from './toolCall';
 
 const fetchJSON = async <T = any>(url: string, proxy = false): Promise<T> => {
   // 2. 发送请求

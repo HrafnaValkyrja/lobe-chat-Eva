@@ -88,7 +88,7 @@ const DatasetDetail = () => {
     },
   ];
 
-  const request = !!activeDatasetId ? createRequest(activeDatasetId) : undefined;
+  const request = activeDatasetId ? createRequest(activeDatasetId) : undefined;
 
   return !activeDatasetId ? (
     <Center height={'100%'} width={'100%'}>

@@ -1,9 +1,10 @@
 import debug from 'debug';
 
-import { getServerDB } from '@/database/core/db-adaptor';
 
 import { asyncAuth } from './asyncAuth';
 import { asyncTrpc } from './init';
+
+import { getServerDB } from '@/database/core/db-adaptor';
 
 const log = debug('lobe-async:middleware');
 

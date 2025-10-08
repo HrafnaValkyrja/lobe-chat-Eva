@@ -4,11 +4,12 @@ import { createStyles } from 'antd-style';
 import { memo } from 'react';
 import { Flexbox, FlexboxProps } from 'react-layout-kit';
 
+import UserAvatar, { type UserAvatarProps } from './UserAvatar';
+
 import PlanTag from '@/features/User/PlanTag';
 import { useUserStore } from '@/store/user';
 import { authSelectors, userProfileSelectors } from '@/store/user/selectors';
 
-import UserAvatar, { type UserAvatarProps } from './UserAvatar';
 
 const useStyles = createStyles(({ css, token }) => ({
   nickname: css`

@@ -4,10 +4,11 @@ import { drizzle as nodeDrizzle } from 'drizzle-orm/node-postgres';
 import { Pool as NodePool } from 'pg';
 import ws from 'ws';
 
-import { serverDBEnv } from '@/config/db';
 
 import * as schema from '../schemas';
 import { LobeChatDatabase } from '../type';
+
+import { serverDBEnv } from '@/config/db';
 
 export const getDBInstance = (): LobeChatDatabase => {
   if (!(process.env.NEXT_PUBLIC_SERVICE_MODE === 'server')) return {} as any;

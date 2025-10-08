@@ -3,6 +3,9 @@ import { createTRPCClient, httpLink } from '@trpc/client';
 import superjson from 'superjson';
 import urlJoin from 'url-join';
 
+import { asyncRouter } from './index';
+import type { AsyncRouter } from './index';
+
 import { serverDBEnv } from '@/config/db';
 import { LOBE_CHAT_AUTH_HEADER } from '@/const/auth';
 import { isDesktop } from '@/const/version';
@@ -11,8 +14,6 @@ import { createAsyncCallerFactory } from '@/libs/trpc/async';
 import { createAsyncContextInner } from '@/libs/trpc/async/context';
 import { KeyVaultsGateKeeper } from '@/server/modules/KeyVaultsEncrypt';
 
-import { asyncRouter } from './index';
-import type { AsyncRouter } from './index';
 
 export const createAsyncServerClient = async (userId: string, payload: ClientSecretPayload) => {
   const gateKeeper = await KeyVaultsGateKeeper.initWithEnvKey();

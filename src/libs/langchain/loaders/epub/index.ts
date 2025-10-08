@@ -1,10 +1,11 @@
 import { EPubLoader as Loader } from '@langchain/community/document_loaders/fs/epub';
 import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
 
+import { loaderConfig } from '../config';
+
 import { TempFileManager } from '@/server/utils/tempFileManager';
 import { nanoid } from '@/utils/uuid';
 
-import { loaderConfig } from '../config';
 
 export const EPubLoader = async (content: Uint8Array) => {
   const tempManager = new TempFileManager('epub-');

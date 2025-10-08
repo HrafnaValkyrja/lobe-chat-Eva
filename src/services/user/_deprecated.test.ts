@@ -1,11 +1,12 @@
 import type { PartialDeep } from 'type-fest';
 import { Mock, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { ClientService } from './_deprecated';
+
 import { UserModel } from '@/database/_deprecated/models/user';
 import { UserPreference } from '@/types/user';
 import { UserSettings } from '@/types/user/settings';
 
-import { ClientService } from './_deprecated';
 
 vi.mock('@/database/_deprecated/models/user', () => ({
   UserModel: {

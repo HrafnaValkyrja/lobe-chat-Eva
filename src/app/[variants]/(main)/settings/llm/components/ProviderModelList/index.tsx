@@ -6,13 +6,14 @@ import { ReactNode, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import ModelConfigModal from './ModelConfigModal';
+import ModelFetcher from './ModelFetcher';
+import OptionRender from './Option';
+
 import { useUserStore } from '@/store/user';
 import { modelProviderSelectors } from '@/store/user/selectors';
 import { GlobalLLMProviderKey } from '@/types/user/settings';
 
-import ModelConfigModal from './ModelConfigModal';
-import ModelFetcher from './ModelFetcher';
-import OptionRender from './Option';
 
 const styles = {
   divStyle: css`

@@ -1,9 +1,10 @@
 import { LobeHub, LobeHubProps } from '@lobehub/ui/brand';
 import { memo } from 'react';
 
+import CustomLogo from './Custom';
+
 import { isCustomBranding } from '@/const/version';
 
-import CustomLogo from './Custom';
 
 interface ProductLogoProps extends LobeHubProps {
   height?: number;

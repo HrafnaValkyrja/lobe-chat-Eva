@@ -1,8 +1,9 @@
 /* eslint-disable unicorn/no-process-exit */
-import fs from 'fs-extra';
 import { execSync } from 'node:child_process';
 import os from 'node:os';
 import path from 'node:path';
+
+import fs from 'fs-extra';
 
 const rootDir = path.resolve(__dirname, '../..');
 

@@ -5,10 +5,11 @@ import { memo, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import ModelItem from './ModelItem';
+
 import { useAiInfraStore } from '@/store/aiInfra';
 import { aiModelSelectors } from '@/store/aiInfra/selectors';
 
-import ModelItem from './ModelItem';
 
 interface DisabledModelsProps {
   activeTab: string;

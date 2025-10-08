@@ -17,14 +17,15 @@ import { Loader2Icon, TriangleAlert } from 'lucide-react';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { FORM_STYLE } from '@/const/layoutTokens';
-import { useUserStore } from '@/store/user';
-import { settingsSelectors } from '@/store/user/selectors';
 
 import ChatPreview from './ChatPreview';
 import ChatTransitionPreview from './ChatTransitionPreview';
 import HighlighterPreview from './HighlighterPreview';
 import MermaidPreview from './MermaidPreview';
+
+import { FORM_STYLE } from '@/const/layoutTokens';
+import { useUserStore } from '@/store/user';
+import { settingsSelectors } from '@/store/user/selectors';
 
 const ChatAppearance = memo(() => {
   const { t } = useTranslation('setting');

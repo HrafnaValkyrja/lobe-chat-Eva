@@ -1,14 +1,15 @@
 import { redirect } from 'next/navigation';
 import { Center } from 'react-layout-kit';
 
+import Category from './features/Category';
+import UserBanner from './features/UserBanner';
+
 import BrandWatermark from '@/components/BrandWatermark';
 import { metadataModule } from '@/server/metadata';
 import { translation } from '@/server/translation';
 import { DynamicLayoutProps } from '@/types/next';
 import { RouteVariants } from '@/utils/server/routeVariants';
 
-import Category from './features/Category';
-import UserBanner from './features/UserBanner';
 
 export const generateMetadata = async (props: DynamicLayoutProps) => {
   const locale = await RouteVariants.getLocale(props);

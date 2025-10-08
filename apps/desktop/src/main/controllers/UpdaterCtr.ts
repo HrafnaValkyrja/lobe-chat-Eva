@@ -1,6 +1,7 @@
+import { ControllerModule, ipcClientEvent } from './index';
+
 import { createLogger } from '@/utils/logger';
 
-import { ControllerModule, ipcClientEvent } from './index';
 
 const logger = createLogger('controllers:UpdaterCtr');
 

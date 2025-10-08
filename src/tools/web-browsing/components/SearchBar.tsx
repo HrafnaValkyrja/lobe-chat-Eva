@@ -5,14 +5,16 @@ import { ReactNode, memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import { CATEGORY_ICON_MAP, ENGINE_ICON_MAP } from '../const';
+
+import { CategoryAvatar } from './CategoryAvatar';
+import { EngineAvatar } from './EngineAvatar';
+
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { useChatStore } from '@/store/chat';
 import { chatToolSelectors } from '@/store/chat/selectors';
 import { SearchQuery } from '@/types/tool/search';
 
-import { CATEGORY_ICON_MAP, ENGINE_ICON_MAP } from '../const';
-import { CategoryAvatar } from './CategoryAvatar';
-import { EngineAvatar } from './EngineAvatar';
 
 interface SearchBarProps {
   aiSummary?: boolean;

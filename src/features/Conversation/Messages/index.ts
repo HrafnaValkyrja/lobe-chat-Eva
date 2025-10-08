@@ -1,14 +1,16 @@
 import { useCallback } from 'react';
 
+import { MarkdownCustomRender, RenderBelowMessage, RenderMessage } from '../types';
+
+import { AssistantMessage } from './Assistant';
+import { DefaultBelowMessage, DefaultMessage } from './Default';
+import { UserBelowMessage, UserMarkdownRender, UserMessage } from './User';
+
 import { useOpenChatSettings } from '@/hooks/useInterceptingRoutes';
 import { useGlobalStore } from '@/store/global';
 import { useSessionStore } from '@/store/session';
 import { sessionSelectors } from '@/store/session/selectors';
 
-import { MarkdownCustomRender, RenderBelowMessage, RenderMessage } from '../types';
-import { AssistantMessage } from './Assistant';
-import { DefaultBelowMessage, DefaultMessage } from './Default';
-import { UserBelowMessage, UserMarkdownRender, UserMessage } from './User';
 
 export const renderMessages: Record<string, RenderMessage> = {
   assistant: AssistantMessage,

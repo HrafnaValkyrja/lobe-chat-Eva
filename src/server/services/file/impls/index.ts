@@ -1,8 +1,9 @@
-import { isDesktop } from '@/const/version';
 
 import { DesktopLocalFileImpl } from './local';
 import { S3StaticFileImpl } from './s3';
 import { FileServiceImpl } from './type';
+
+import { isDesktop } from '@/const/version';
 
 /**
  * 创建文件服务模块

@@ -1,13 +1,14 @@
 import { describe, expect, it } from 'vitest';
 
-import { ChatModelCard } from '@/types/llm';
-
 import {
   AddCustomModelCard,
   DeleteCustomModelCard,
   UpdateCustomModelCard,
   customModelCardsReducer,
 } from './customModelCard';
+
+import { ChatModelCard } from '@/types/llm';
+
 
 describe('customModelCardsReducer', () => {
   const initialState: ChatModelCard[] = [

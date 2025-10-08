@@ -1,10 +1,11 @@
+import { IImportService } from './type';
+
 import { clientDB } from '@/database/client/db';
 import { DataImporterRepos } from '@/database/repositories/dataImporter';
 import { BaseClientService } from '@/services/baseClientService';
 import { useUserStore } from '@/store/user';
 import { ImportStage } from '@/types/importer';
 
-import { IImportService } from './type';
 
 export class ClientService extends BaseClientService implements IImportService {
   private get dataImporter(): DataImporterRepos {

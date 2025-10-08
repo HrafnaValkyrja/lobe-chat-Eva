@@ -2,10 +2,11 @@
 
 import { ReactNode, memo } from 'react';
 
+import { Provider, createServerConfigStore } from './store';
+
 import { IFeatureFlags } from '@/config/featureFlags';
 import { GlobalServerConfig } from '@/types/serverConfig';
 
-import { Provider, createServerConfigStore } from './store';
 
 interface GlobalStoreProviderProps {
   children: ReactNode;

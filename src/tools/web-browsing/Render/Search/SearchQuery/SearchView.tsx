@@ -6,10 +6,11 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import { EngineAvatarGroup } from '../../../components/EngineAvatar';
+
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { shinyTextStylish } from '@/styles/loading';
 
-import { EngineAvatarGroup } from '../../../components/EngineAvatar';
 
 const useStyles = createStyles(({ css, token }) => ({
   font: css`

@@ -3,10 +3,11 @@
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
-import { useAiInfraStore } from '@/store/aiInfra';
 
 import ModelList from '../../features/ModelList';
 import ProviderConfig, { ProviderConfigProps } from '../../features/ProviderConfig';
+
+import { useAiInfraStore } from '@/store/aiInfra';
 
 interface ProviderDetailProps extends ProviderConfigProps {
   showConfig?: boolean;

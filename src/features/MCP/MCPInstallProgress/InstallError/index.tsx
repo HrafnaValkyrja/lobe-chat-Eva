@@ -4,10 +4,11 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import ErrorDetails from './ErrorDetails';
+
 import { useToolStore } from '@/store/tool';
 import { MCPErrorInfo } from '@/types/plugins';
 
-import ErrorDetails from './ErrorDetails';
 
 interface InstallErrorProps {
   errorInfo: MCPErrorInfo;

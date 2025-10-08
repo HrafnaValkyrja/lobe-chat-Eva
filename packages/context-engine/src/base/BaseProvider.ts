@@ -1,4 +1,5 @@
 import type { PipelineContext } from '../types';
+
 import { BaseProcessor } from './BaseProcessor';
 
 /**
@@ -6,12 +7,12 @@ import { BaseProcessor } from './BaseProcessor';
  */
 export abstract class BaseProvider extends BaseProcessor {
   // 子类可选择实现；默认不构建额外上下文
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   
   protected async buildContext(_context: PipelineContext): Promise<string | null> {
     return null;
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   
   protected shouldInject(_context: PipelineContext): boolean {
     return true;
   }

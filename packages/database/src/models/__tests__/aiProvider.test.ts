@@ -3,12 +3,14 @@ import { eq } from 'drizzle-orm';
 import { ModelProvider } from 'model-bank';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { sleep } from '@/utils/sleep';
 
 import { aiProviders, users } from '../../schemas';
 import { LobeChatDatabase } from '../../type';
 import { AiProviderModel } from '../aiProvider';
+
 import { getTestDB } from './_util';
+
+import { sleep } from '@/utils/sleep';
 
 const serverDB: LobeChatDatabase = await getTestDB();
 

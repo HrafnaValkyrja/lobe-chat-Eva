@@ -70,7 +70,7 @@ export const createRagEvalDatasetSlice: StateCreator<
   },
   useFetchDatasetRecords: (datasetId) =>
     useClientDataSWR<EvalDatasetRecord[]>(
-      !!datasetId ? [FETCH_DATASET_RECORD_KEY, datasetId] : null,
+      datasetId ? [FETCH_DATASET_RECORD_KEY, datasetId] : null,
       () => ragEvalService.getDatasetRecords(datasetId!),
     ),
   useFetchDatasets: (knowledgeBaseId) =>

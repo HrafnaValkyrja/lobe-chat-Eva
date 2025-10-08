@@ -130,7 +130,7 @@ const Repair = memo(() => {
                     icon={<Icon icon={Play} />}
                     key="retry"
                     onClick={() => {
-                      setShowSQLHash(!!showSQLHash ? '' : migration.hash);
+                      setShowSQLHash(showSQLHash ? '' : migration.hash);
                       setSqlQuery(migration.sql.join('--> statement-breakpoint\n'));
                     }}
                   >

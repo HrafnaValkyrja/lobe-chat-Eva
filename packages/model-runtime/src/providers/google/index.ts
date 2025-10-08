@@ -33,6 +33,7 @@ import { imageUrlToBase64 } from '../../utils/imageToBase64';
 import { StreamingResponse } from '../../utils/response';
 import { safeParseJSON } from '../../utils/safeParseJSON';
 import { parseDataUri } from '../../utils/uriParser';
+
 import { createGoogleImage } from './createImage';
 import { createGoogleGenerateObject } from './generateObject';
 
@@ -559,7 +560,7 @@ export class LobeGoogleAI implements LobeRuntimeAI {
     toolCallNameMap?: Map<string, string>,
   ): Promise<Content> => {
     const content = message.content as string | UserMessageContentPart[];
-    if (!!message.tool_calls) {
+    if (message.tool_calls) {
       return {
         parts: message.tool_calls.map<Part>((tool) => ({
           functionCall: {

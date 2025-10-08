@@ -2,12 +2,13 @@ import { ScrollShadow } from '@lobehub/ui';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
-import { useQuery } from '@/hooks/useQuery';
-import { ProviderNavKey } from '@/types/discover';
 
 import ActionButton from './ActionButton';
 import Related from './Related';
 import RelatedModels from './RelatedModels';
+
+import { useQuery } from '@/hooks/useQuery';
+import { ProviderNavKey } from '@/types/discover';
 
 const Sidebar = memo<{ mobile?: boolean }>(({ mobile }) => {
   const { activeTab = ProviderNavKey.Overview } = useQuery() as { activeTab: ProviderNavKey };

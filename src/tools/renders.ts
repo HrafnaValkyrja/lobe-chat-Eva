@@ -1,4 +1,3 @@
-import { BuiltinRender } from '@/types/tool';
 
 import { CodeInterpreterManifest } from './code-interpreter';
 import CodeInterpreterRender from './code-interpreter/Render';
@@ -8,6 +7,8 @@ import { LocalSystemManifest } from './local-system';
 import LocalFilesRender from './local-system/Render';
 import { WebBrowsingManifest } from './web-browsing';
 import WebBrowsing from './web-browsing/Render';
+
+import { BuiltinRender } from '@/types/tool';
 
 export const BuiltinToolsRenders: Record<string, BuiltinRender> = {
   [DalleManifest.identifier]: DalleRender as BuiltinRender,

@@ -2,6 +2,7 @@ import { LobeChatPluginManifest, LobeChatPluginMeta } from '@lobehub/chat-plugin
 import { describe, expect, it } from 'vitest';
 
 import { ToolStoreState, initialState } from '../../initialState';
+
 import { customPluginSelectors } from './selectors';
 
 const mockState = {

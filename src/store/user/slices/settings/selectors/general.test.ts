@@ -1,8 +1,9 @@
+import { userGeneralSettingsSelectors } from './general';
+
 import { UserStore } from '@/store/user';
 import { UserState, initialState } from '@/store/user/initialState';
 import { merge } from '@/utils/merge';
 
-import { userGeneralSettingsSelectors } from './general';
 
 describe('settingsSelectors', () => {
   describe('generalConfig', () => {

@@ -1,13 +1,14 @@
 import { Skeleton } from 'antd';
 import dynamic from 'next/dynamic';
 
+import Client from '../Client';
+
 import { enableClerk } from '@/const/auth';
 import { metadataModule } from '@/server/metadata';
 import { translation } from '@/server/translation';
 import { DynamicLayoutProps } from '@/types/next';
 import { RouteVariants } from '@/utils/server/routeVariants';
 
-import Client from '../Client';
 
 // 为了兼容 ClerkProfile， 需要使用 [[...slug]]
 

@@ -3,12 +3,12 @@
 import { memo } from 'react';
 
 import { Artifacts } from './Artifacts';
+import Header from './components/Header';
 import { FilePreview } from './FilePreview';
 import { HomeBody, HomeTitle } from './Home';
 import { MessageDetail } from './MessageDetail';
 import { Plugins } from './Plugins';
 import { Thread } from './Thread';
-import Header from './components/Header';
 import { PortalImpl } from './type';
 
 const items: PortalImpl[] = [Thread, MessageDetail, Artifacts, Plugins, FilePreview];

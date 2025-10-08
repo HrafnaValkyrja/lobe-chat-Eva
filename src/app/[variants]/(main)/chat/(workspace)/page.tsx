@@ -1,5 +1,10 @@
 import { Suspense } from 'react';
 
+import PageTitle from '../features/PageTitle';
+
+import Changelog from './features/ChangelogModal';
+import TelemetryNotification from './features/TelemetryNotification';
+
 import StructuredData from '@/components/StructuredData';
 import { serverFeatureFlags } from '@/config/featureFlags';
 import { BRANDING_NAME } from '@/const/branding';
@@ -10,9 +15,6 @@ import { translation } from '@/server/translation';
 import { DynamicLayoutProps } from '@/types/next';
 import { RouteVariants } from '@/utils/server/routeVariants';
 
-import PageTitle from '../features/PageTitle';
-import Changelog from './features/ChangelogModal';
-import TelemetryNotification from './features/TelemetryNotification';
 
 export const generateMetadata = async (props: DynamicLayoutProps) => {
   const locale = await RouteVariants.getLocale(props);

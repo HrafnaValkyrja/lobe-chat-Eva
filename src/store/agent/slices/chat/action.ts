@@ -4,6 +4,10 @@ import { SWRResponse, mutate } from 'swr';
 import type { PartialDeep } from 'type-fest';
 import { StateCreator } from 'zustand/vanilla';
 
+import type { AgentStore } from '../../store';
+
+import { agentSelectors } from './selectors';
+
 import { MESSAGE_CANCEL_FLAT } from '@/const/message';
 import { INBOX_SESSION_ID } from '@/const/session';
 import { useClientDataSWR, useOnlyFetchOnceSWR } from '@/libs/swr';
@@ -15,8 +19,6 @@ import { LobeAgentChatConfig, LobeAgentConfig } from '@/types/agent';
 import { KnowledgeItem } from '@/types/knowledgeBase';
 import { merge } from '@/utils/merge';
 
-import type { AgentStore } from '../../store';
-import { agentSelectors } from './selectors';
 
 /**
  * 助手接口
@@ -190,7 +192,7 @@ export const createChatSlice: StateCreator<
 
   useInitInboxAgentStore: (isLogin, defaultAgentConfig) =>
     useOnlyFetchOnceSWR<PartialDeep<LobeAgentConfig>>(
-      !!isLogin ? 'fetchInboxAgentConfig' : null,
+      isLogin ? 'fetchInboxAgentConfig' : null,
       () => sessionService.getSessionConfig(INBOX_SESSION_ID),
       {
         onSuccess: (data) => {

@@ -2,12 +2,13 @@ import { Highlighter } from '@lobehub/ui';
 import { memo, useEffect, useMemo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import Renderer from './Renderer';
+
 import { useChatStore } from '@/store/chat';
 import { chatPortalSelectors, chatSelectors } from '@/store/chat/selectors';
 import { ArtifactDisplayMode } from '@/store/chat/slices/portal/initialState';
 import { ArtifactType } from '@/types/artifact';
 
-import Renderer from './Renderer';
 
 const ArtifactsUI = memo(() => {
   const [

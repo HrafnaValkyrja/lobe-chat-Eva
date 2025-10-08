@@ -413,7 +413,7 @@ const transformOpenAIStream = (
       },
       type: errorName,
     } as ChatMessageError;
-    /* eslint-enable */
+     
 
     return { data: errorData, id: chunk.id, type: 'error' };
   }

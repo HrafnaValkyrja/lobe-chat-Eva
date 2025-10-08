@@ -6,9 +6,10 @@ import { SettingsIcon } from 'lucide-react';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import SettingModal from './SettingModal';
+
 import { aiProviderSelectors, useAiInfraStore } from '@/store/aiInfra';
 
-import SettingModal from './SettingModal';
 
 const UpdateProviderInfo = memo(() => {
   const { t } = useTranslation('modelProvider');

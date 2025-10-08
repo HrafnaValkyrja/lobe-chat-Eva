@@ -1,15 +1,16 @@
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
-import { useDiscoverStore } from '@/store/discover';
-import { useToolStore } from '@/store/tool';
-import { pluginSelectors } from '@/store/tool/selectors';
 
 import { DetailProvider } from './DetailProvider';
 import EmptyState from './EmptyState';
 import Header from './Header';
 import InstallDetail from './InstallDetail';
 import DetailsLoading from './Loading';
+
+import { useDiscoverStore } from '@/store/discover';
+import { useToolStore } from '@/store/tool';
+import { pluginSelectors } from '@/store/tool/selectors';
 
 const Detail = memo<{ identifier?: string }>(({ identifier: defaultIdentifier }) => {
   const [activeMCPIdentifier, isPluginListInit] = useToolStore((s) => [

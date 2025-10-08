@@ -1,6 +1,7 @@
+import { V4ChatPluginPayload } from './v4';
+
 import { LobeToolRenderType } from '@/types/tool';
 
-import { V4ChatPluginPayload } from './v4';
 
 interface ChatToolPayload {
   apiName: string;

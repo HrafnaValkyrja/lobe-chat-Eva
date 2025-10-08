@@ -1,9 +1,10 @@
 import { and, desc, eq, inArray } from 'drizzle-orm';
 
+import { NewKnowledgeBase, knowledgeBaseFiles, knowledgeBases } from '../schemas';
 import { LobeChatDatabase } from '../type';
+
 import { KnowledgeBaseItem } from '@/types/knowledgeBase';
 
-import { NewKnowledgeBase, knowledgeBaseFiles, knowledgeBases } from '../schemas';
 
 export class KnowledgeBaseModel {
   private userId: string;

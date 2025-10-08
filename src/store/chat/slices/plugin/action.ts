@@ -5,6 +5,9 @@ import isEqual from 'fast-deep-equal';
 import { t } from 'i18next';
 import { StateCreator } from 'zustand/vanilla';
 
+import { chatSelectors } from '../message/selectors';
+import { threadSelectors } from '../thread/selectors';
+
 import { LOADING_FLAT } from '@/const/message';
 import { PLUGIN_SCHEMA_API_MD5_PREFIX, PLUGIN_SCHEMA_SEPARATOR } from '@/const/plugin';
 import { chatService } from '@/services/chat';
@@ -27,8 +30,6 @@ import { safeParseJSON } from '@/utils/safeParseJSON';
 import { setNamespace } from '@/utils/storeDebug';
 import { genToolCallShortMD5Hash } from '@/utils/toolCall';
 
-import { chatSelectors } from '../message/selectors';
-import { threadSelectors } from '../thread/selectors';
 
 const n = setNamespace('plugin');
 
@@ -205,7 +206,7 @@ export const chatPlugin: StateCreator<
     if (!message || message.role !== 'tool' || !message.plugin) return;
 
     // if there is error content, then clear the error
-    if (!!message.pluginError) {
+    if (message.pluginError) {
       get().internal_updateMessagePluginError(id, null);
     }
 
@@ -478,7 +479,7 @@ export const chatPlugin: StateCreator<
         topicId: context?.topicId,
       });
 
-      if (!!result) data = result;
+      if (result) data = result;
     } catch (error) {
       console.log(error);
       const err = error as Error;

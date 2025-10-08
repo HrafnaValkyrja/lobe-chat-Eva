@@ -1,8 +1,10 @@
-import { ARTIFACT_THINKING_TAG } from '@/const/plugin';
 
 import { createRemarkCustomTagPlugin } from '../remarkPlugins/createRemarkCustomTagPlugin';
 import { MarkdownElement } from '../type';
+
 import Component from './Render';
+
+import { ARTIFACT_THINKING_TAG } from '@/const/plugin';
 
 const LobeThinkingElement: MarkdownElement = {
   Component,

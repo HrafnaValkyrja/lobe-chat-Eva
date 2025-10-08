@@ -7,14 +7,15 @@ import isEqual from 'fast-deep-equal';
 import { useQueryState } from 'nuqs';
 import { memo } from 'react';
 
+import DesktopLayout from './_layout/Desktop'
+import MobileLayout from './_layout/Mobile'
+
 import { INBOX_SESSION_ID } from '@/const/session';
 import { AgentSettings } from '@/features/AgentSetting';
 import { useCategory } from '@/features/AgentSetting/AgentCategory/useCategory';
 import { ChatSettingsTabs } from '@/store/global/initialState';
 import { useUserStore } from '@/store/user';
 import { settingsSelectors } from '@/store/user/selectors';
-import DesktopLayout from './_layout/Desktop'
-import MobileLayout from './_layout/Mobile'
 
 type AgentPageType = {
   mobile?: boolean;

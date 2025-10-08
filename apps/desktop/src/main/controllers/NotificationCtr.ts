@@ -5,9 +5,10 @@ import {
 import { Notification, app } from 'electron';
 import { macOS, windows } from 'electron-is';
 
+import { ControllerModule, ipcClientEvent } from './index';
+
 import { createLogger } from '@/utils/logger';
 
-import { ControllerModule, ipcClientEvent } from './index';
 
 const logger = createLogger('controllers:NotificationCtr');
 

@@ -1,10 +1,11 @@
 import { CSSProperties, memo } from 'react';
 
+import File from './File';
+import Image from './Image';
+
 import { useFileStore } from '@/store/file';
 import { UploadFileItem } from '@/types/files';
 
-import File from './File';
-import Image from './Image';
 
 interface FileItemProps extends UploadFileItem {
   alt?: string;

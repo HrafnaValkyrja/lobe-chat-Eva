@@ -2,6 +2,7 @@ import { ModelProvider } from 'model-bank';
 
 import { createOpenAICompatibleRuntime } from '../../core/openaiCompatibleFactory';
 import { MODEL_LIST_CONFIGS, processModelList } from '../../utils/modelParse';
+
 import { createVolcengineImage } from './createImage';
 
 const THINKING_MODELS = [

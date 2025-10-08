@@ -1,9 +1,10 @@
 import { describe, expect, it } from 'vitest';
 
+import { generateMessages } from './generateMessages';
+
 import { LOADING_FLAT } from '@/const/message';
 import { ChatMessage } from '@/types/message';
 
-import { generateMessages } from './generateMessages';
 
 describe('generateMessages', () => {
   // 创建一些测试用的消息数据

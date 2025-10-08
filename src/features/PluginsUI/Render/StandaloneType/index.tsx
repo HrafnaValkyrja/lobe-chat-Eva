@@ -1,10 +1,11 @@
 import { PluginRequestPayload } from '@lobehub/chat-plugin-sdk';
 import { memo } from 'react';
 
+import IFrameRender from './Iframe';
+
 import { useToolStore } from '@/store/tool';
 import { pluginSelectors } from '@/store/tool/slices/plugin/selectors';
 
-import IFrameRender from './Iframe';
 
 export interface PluginStandaloneTypeProps {
   id: string;

@@ -1,11 +1,12 @@
 import { act, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
+import UserAvatar from '../UserAvatar';
+
 import { BRANDING_NAME } from '@/const/branding';
 import { DEFAULT_USER_AVATAR_URL } from '@/const/meta';
 import { useUserStore } from '@/store/user';
 
-import UserAvatar from '../UserAvatar';
 
 vi.mock('zustand/traditional');
 

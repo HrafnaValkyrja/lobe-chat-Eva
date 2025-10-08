@@ -1,10 +1,11 @@
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
+import { DB_SessionGroup } from '../../schemas/sessionGroup';
+import { SessionGroupModel } from '../sessionGroup';
+
 import { SessionModel } from '@/database/_deprecated/models/session';
 import { SessionGroups } from '@/types/session';
 
-import { DB_SessionGroup } from '../../schemas/sessionGroup';
-import { SessionGroupModel } from '../sessionGroup';
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 

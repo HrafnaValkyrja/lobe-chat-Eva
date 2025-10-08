@@ -1,9 +1,10 @@
 import AzureAD from 'next-auth/providers/azure-ad';
 
-import { authEnv } from '@/envs/auth';
 
 import { getMicrosoftEntraIdIssuer } from './microsoft-entra-id-helper';
 import { CommonProviderConfig } from './sso.config';
+
+import { authEnv } from '@/envs/auth';
 
 const provider = {
   id: 'azure-ad',

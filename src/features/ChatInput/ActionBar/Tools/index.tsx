@@ -2,14 +2,16 @@ import { Blocks } from 'lucide-react';
 import { Suspense, memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import Action from '../components/Action';
+
+import { useControls } from './useControls';
+
 import PluginStore from '@/features/PluginStore';
 import { useModelSupportToolUse } from '@/hooks/useModelSupportToolUse';
 import { useAgentStore } from '@/store/agent';
 import { agentSelectors } from '@/store/agent/selectors';
 import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfig';
 
-import Action from '../components/Action';
-import { useControls } from './useControls';
 
 const Tools = memo(() => {
   const { t } = useTranslation('setting');

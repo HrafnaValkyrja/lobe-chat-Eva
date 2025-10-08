@@ -6,7 +6,7 @@ import { StoragePathDispatchEvents } from './storagePath';
 /**
  * next server -> main dispatch events
  */
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
+ 
 export interface ServerDispatchEvents
   extends StoragePathDispatchEvents,
     DatabaseDispatchEvents,

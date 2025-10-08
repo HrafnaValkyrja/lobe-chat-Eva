@@ -1,6 +1,7 @@
+import { IAiProviderService } from './type';
+
 import { lambdaClient } from '@/libs/trpc/client';
 
-import { IAiProviderService } from './type';
 
 export class ServerService implements IAiProviderService {
   createAiProvider: IAiProviderService['createAiProvider'] = async (params) => {

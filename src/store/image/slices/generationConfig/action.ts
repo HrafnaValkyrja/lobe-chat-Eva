@@ -8,14 +8,15 @@ import {
 } from 'model-bank';
 import { StateCreator } from 'zustand/vanilla';
 
+import type { ImageStore } from '../../store';
+import { calculateInitialAspectRatio } from '../../utils/aspectRatio';
+import { adaptSizeToRatio, parseRatio } from '../../utils/size';
+
 import { aiProviderSelectors, getAiInfraStoreState } from '@/store/aiInfra';
 import { useGlobalStore } from '@/store/global';
 import { useUserStore } from '@/store/user';
 import { authSelectors } from '@/store/user/selectors';
 
-import type { ImageStore } from '../../store';
-import { calculateInitialAspectRatio } from '../../utils/aspectRatio';
-import { adaptSizeToRatio, parseRatio } from '../../utils/size';
 
 export interface GenerationConfigAction {
   setParamOnInput<K extends RuntimeImageGenParamsKeys>(

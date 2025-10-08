@@ -5,13 +5,14 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import Title from '../../../../../../features/Title';
+import { useDetailContext } from '../../DetailProvider';
+
 import { BRANDING_NAME } from '@/const/branding';
 import { DEFAULT_USER_AVATAR_URL } from '@/const/meta';
 import { useUserStore } from '@/store/user';
 import { authSelectors, userProfileSelectors } from '@/store/user/selectors';
 
-import Title from '../../../../../../features/Title';
-import { useDetailContext } from '../../DetailProvider';
 
 const Overview = memo(() => {
   const [userAvatar, username] = useUserStore((s) => [

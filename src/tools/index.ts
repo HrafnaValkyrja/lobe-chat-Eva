@@ -1,11 +1,12 @@
-import { isDesktop } from '@/const/version';
-import { LobeBuiltinTool } from '@/types/tool';
 
 import { ArtifactsManifest } from './artifacts';
 import { CodeInterpreterManifest } from './code-interpreter';
 import { DalleManifest } from './dalle';
 import { LocalSystemManifest } from './local-system';
 import { WebBrowsingManifest } from './web-browsing';
+
+import { isDesktop } from '@/const/version';
+import { LobeBuiltinTool } from '@/types/tool';
 
 export const builtinTools: LobeBuiltinTool[] = [
   {

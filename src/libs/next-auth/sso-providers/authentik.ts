@@ -1,8 +1,9 @@
 import Authentik from 'next-auth/providers/authentik';
 
+import { CommonProviderConfig } from './sso.config';
+
 import { authEnv } from '@/envs/auth';
 
-import { CommonProviderConfig } from './sso.config';
 
 const provider = {
   id: 'authentik',

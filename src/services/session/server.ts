@@ -1,7 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+ 
+import { ISessionService } from './type';
+
 import { lambdaClient } from '@/libs/trpc/client';
 
-import { ISessionService } from './type';
 
 export class ServerService implements ISessionService {
   hasSessions: ISessionService['hasSessions'] = async () => {

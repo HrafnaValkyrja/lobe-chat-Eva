@@ -1,10 +1,12 @@
 import { Flexbox } from 'react-layout-kit';
 
-import FilePanel from '@/features/FileSidePanel';
 
 import { LayoutProps } from '../type';
+
 import Container from './Container';
 import RegisterHotkeys from './RegisterHotkeys';
+
+import FilePanel from '@/features/FileSidePanel';
 
 const Layout = ({ children, menu, modal }: LayoutProps) => {
   return (

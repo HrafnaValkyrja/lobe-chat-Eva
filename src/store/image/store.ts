@@ -4,6 +4,7 @@ import { createWithEqualityFn } from 'zustand/traditional';
 import { StateCreator } from 'zustand/vanilla';
 
 import { createDevtools } from '../middleware/createDevtools';
+
 import { ImageStoreState, initialState } from './initialState';
 import { CreateImageAction, createCreateImageSlice } from './slices/createImage/action';
 import { GenerationBatchAction, createGenerationBatchSlice } from './slices/generationBatch/action';

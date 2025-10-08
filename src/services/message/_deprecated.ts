@@ -1,5 +1,7 @@
 import dayjs from 'dayjs';
 
+import { IMessageService } from './type';
+
 import { FileModel } from '@/database/_deprecated/models/file';
 import { MessageModel } from '@/database/_deprecated/models/message';
 import { DB_Message } from '@/database/_deprecated/schemas/message';
@@ -13,7 +15,6 @@ import {
   ModelRankItem,
 } from '@/types/message';
 
-import { IMessageService } from './type';
 
 export class ClientService implements IMessageService {
   async createMessage(data: CreateMessageParams) {

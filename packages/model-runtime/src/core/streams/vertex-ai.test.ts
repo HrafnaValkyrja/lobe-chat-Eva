@@ -1,6 +1,7 @@
 import { describe, expect, it, vi } from 'vitest';
 
 import * as uuidModule from '../../utils/uuid';
+
 import { VertexAIStream } from './vertex-ai';
 
 describe('VertexAIStream', () => {

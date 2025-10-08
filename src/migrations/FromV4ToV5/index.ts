@@ -1,7 +1,8 @@
-import type { Migration, MigrationData } from '@/migrations/VersionController';
 
 import { V4ConfigState, V4Message } from './types/v4';
 import { V5ConfigState, V5Message } from './types/v5';
+
+import type { Migration, MigrationData } from '@/migrations/VersionController';
 
 export class MigrationV4ToV5 implements Migration {
   // from this version to start migration

@@ -9,10 +9,11 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 
+import TokenTag from './TokenTag';
+
 import PublishedTime from '@/components/PublishedTime';
 import { DiscoverAssistantItem } from '@/types/discover';
 
-import TokenTag from './TokenTag';
 
 const useStyles = createStyles(({ css, token }) => {
   return {

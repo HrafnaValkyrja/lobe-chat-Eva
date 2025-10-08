@@ -3,9 +3,10 @@ import { BookUp2Icon } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import SelectForm from './SelectForm';
+
 import { createModal } from '@/components/FunctionModal';
 
-import SelectForm from './SelectForm';
 
 const Title = () => {
   const { t } = useTranslation('knowledgeBase');

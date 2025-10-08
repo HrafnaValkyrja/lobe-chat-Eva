@@ -1,12 +1,15 @@
 import { and, eq, inArray } from 'drizzle-orm';
 
+import * as EXPORT_TABLES from '../../schemas';
+import { LobeChatDatabase } from '../../type';
+
+import { DeprecatedDataImporterRepos } from './deprecated';
+
 import { ImportPgDataStructure } from '@/types/export';
 import { ImportResultData, ImporterEntryData } from '@/types/importer';
 import { uuid } from '@/utils/uuid';
 
-import * as EXPORT_TABLES from '../../schemas';
-import { LobeChatDatabase } from '../../type';
-import { DeprecatedDataImporterRepos } from './deprecated';
+
 
 interface ImportResult {
   added: number;
@@ -351,7 +354,7 @@ export class DataImporterRepos {
     trx: any,
     config: TableImportConfig,
     tableData: any[],
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+     
     _userConflictStrategy: ConflictStrategy,
   ): Promise<ImportResult> {
     const {
@@ -459,7 +462,7 @@ export class DataImporterRepos {
         // 根据是否复合主键和是否保留ID决定如何处理
         if (isCompositeKey) {
           // 对于复合主键表，不包含id字段
-          // eslint-disable-next-line @typescript-eslint/no-unused-vars
+           
           const { id: _, ...rest } = item;
           newRecord = {
             ...rest,

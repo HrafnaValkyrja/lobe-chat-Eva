@@ -1,9 +1,10 @@
 import { and, desc, eq } from 'drizzle-orm';
 
+import { ThreadItem, threads } from '../schemas';
 import { LobeChatDatabase } from '../type';
+
 import { CreateThreadParams, ThreadStatus } from '@/types/topic';
 
-import { ThreadItem, threads } from '../schemas';
 
 const queryColumns = {
   createdAt: threads.createdAt,

@@ -1,9 +1,10 @@
 import { ModelProvider } from 'model-bank';
 
+import { API_ENDPOINTS } from './_url';
+
 import { createHeaderWithAuth } from '@/services/_auth';
 import { OpenAIImagePayload } from '@/types/openai/image';
 
-import { API_ENDPOINTS } from './_url';
 
 interface FetchOptions {
   signal?: AbortSignal | undefined;

@@ -3,12 +3,14 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { useDiscoverStore } from '@/store/discover';
 
 import Title from '../../components/Title';
 import AssistantList from '../assistant/features/List';
 import McpList from '../mcp/features/List';
+
 import Loading from './loading';
+
+import { useDiscoverStore } from '@/store/discover';
 
 const Client = memo<{ mobile?: boolean }>(() => {
   const { t } = useTranslation('discover');

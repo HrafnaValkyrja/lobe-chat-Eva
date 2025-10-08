@@ -2,16 +2,18 @@ import { NetworkProxySettings } from '@lobechat/electron-client-ipc';
 import { merge } from 'lodash';
 import { isEqual } from 'lodash-es';
 
-import { defaultProxySettings } from '@/const/store';
-import { createLogger } from '@/utils/logger';
-
 import {
   ProxyConfigValidator,
   ProxyConnectionTester,
   ProxyDispatcherManager,
   ProxyTestResult,
 } from '../modules/networkProxy';
+
 import { ControllerModule, ipcClientEvent } from './index';
+
+import { defaultProxySettings } from '@/const/store';
+import { createLogger } from '@/utils/logger';
+
 
 // Create logger
 const logger = createLogger('controllers:NetworkProxyCtr');

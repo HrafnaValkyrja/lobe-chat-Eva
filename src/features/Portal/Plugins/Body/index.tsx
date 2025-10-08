@@ -1,11 +1,12 @@
 import isEqual from 'fast-deep-equal';
 import { Flexbox } from 'react-layout-kit';
 
+import ToolRender from './ToolRender';
+
 import { useChatStore } from '@/store/chat';
 import { chatPortalSelectors, chatSelectors } from '@/store/chat/selectors';
 import { safeParseJSON } from '@/utils/safeParseJSON';
 
-import ToolRender from './ToolRender';
 
 const ToolUI = () => {
   const messageId = useChatStore(chatPortalSelectors.toolMessageId);

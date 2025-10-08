@@ -4,10 +4,11 @@ import { ClerkProvider } from '@clerk/nextjs';
 import { PropsWithChildren, memo, useEffect, useMemo, useState, useTransition } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { useAppearance } from './useAppearance';
+import UserUpdater from './UserUpdater';
+
 import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfig';
 
-import UserUpdater from './UserUpdater';
-import { useAppearance } from './useAppearance';
 
 const Clerk = memo(({ children }: PropsWithChildren) => {
   const { enableClerkSignUp } = useServerConfigStore(featureFlagsSelectors);

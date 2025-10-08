@@ -3,7 +3,9 @@ import { LobeOpenAICompatibleRuntime } from '@lobechat/model-runtime';
 import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { testProvider } from '../../providerTestUtils';
+
 import models from './fixtures/models.json';
+
 import { LobeOpenRouterAI } from './index';
 
 const provider = 'openrouter';

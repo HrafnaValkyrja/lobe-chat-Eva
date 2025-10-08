@@ -3,9 +3,10 @@ import { createStyles } from 'antd-style';
 import { Trash } from 'lucide-react';
 import { CSSProperties, memo } from 'react';
 
+import { MIN_IMAGE_SIZE } from './style';
+
 import { usePlatform } from '@/hooks/usePlatform';
 
-import { MIN_IMAGE_SIZE } from './style';
 
 const useStyles = createStyles(({ css, token }) => ({
   deleteButton: css`

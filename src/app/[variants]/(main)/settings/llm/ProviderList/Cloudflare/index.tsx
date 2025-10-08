@@ -3,11 +3,12 @@
 import { Input, InputPassword } from '@lobehub/ui';
 import { useTranslation } from 'react-i18next';
 
+import { KeyVaultsConfigKey } from '../../const';
+import { ProviderItem } from '../../type';
+
 import { CloudflareProviderCard } from '@/config/modelProviders';
 import { GlobalLLMProviderKey } from '@/types/user/settings';
 
-import { KeyVaultsConfigKey } from '../../const';
-import { ProviderItem } from '../../type';
 
 const providerKey: GlobalLLMProviderKey = 'cloudflare';
 

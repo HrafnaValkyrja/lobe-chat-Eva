@@ -1,9 +1,10 @@
 import debug from 'debug';
 
+import { getOIDCProvider } from './oidcProvider';
+
 import { createContextForInteractionDetails } from '@/libs/oidc-provider/http-adapter';
 import { OIDCProvider } from '@/libs/oidc-provider/provider';
 
-import { getOIDCProvider } from './oidcProvider';
 
 const log = debug('lobe-oidc:service');
 

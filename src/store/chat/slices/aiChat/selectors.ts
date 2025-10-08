@@ -1,6 +1,7 @@
+import type { ChatStoreState } from '../../initialState';
+
 import { messageMapKey } from '@/store/chat/utils/messageMapKey';
 
-import type { ChatStoreState } from '../../initialState';
 
 const isMessageInReasoning = (id: string) => (s: ChatStoreState) =>
   s.reasoningLoadingIds.includes(id);

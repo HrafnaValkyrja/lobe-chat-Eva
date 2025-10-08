@@ -1,12 +1,13 @@
 import { Skeleton } from 'antd';
 import { Suspense, memo } from 'react';
 
-import { ChatSettingsTabs } from '@/store/global/initialState';
-import { useServerConfigStore } from '@/store/serverConfig';
 
 import AgentSettingsContent from './AgentSettingsContent';
 import { AgentSettingsProvider } from './AgentSettingsProvider';
 import { StoreUpdaterProps } from './StoreUpdater';
+
+import { ChatSettingsTabs } from '@/store/global/initialState';
+import { useServerConfigStore } from '@/store/serverConfig';
 
 export interface AgentSettingsProps extends StoreUpdaterProps {
   tab: ChatSettingsTabs;

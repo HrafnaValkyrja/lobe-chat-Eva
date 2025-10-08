@@ -1,9 +1,10 @@
 import { StateCreator } from 'zustand/vanilla';
 
+import { PortalFile } from './initialState';
+
 import { ChatStore } from '@/store/chat/store';
 import { PortalArtifact } from '@/types/artifact';
 
-import { PortalFile } from './initialState';
 
 export interface ChatPortalAction {
   closeArtifact: () => void;

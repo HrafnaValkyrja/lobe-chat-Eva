@@ -4,9 +4,10 @@ import dynamic from 'next/dynamic';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import Content from './Content';
+
 import { fileManagerSelectors, useFileStore } from '@/store/file';
 
-import Content from './Content';
 
 const FileViewer = dynamic(() => import('@/features/FileViewer'), { ssr: false });
 

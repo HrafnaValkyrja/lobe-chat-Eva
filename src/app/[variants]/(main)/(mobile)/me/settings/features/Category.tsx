@@ -2,9 +2,10 @@
 
 import { memo } from 'react';
 
+import { useCategory } from './useCategory';
+
 import Cell from '@/components/Cell';
 
-import { useCategory } from './useCategory';
 
 const Category = memo(() => {
   const items = useCategory();

@@ -1,11 +1,12 @@
 // @vitest-environment node
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { DiscoverService } from './index';
+
 import { AssistantStore } from '@/server/modules/AssistantStore';
 import { PluginStore } from '@/server/modules/PluginStore';
 import { AssistantSorts, ModelSorts, PluginSorts, ProviderSorts } from '@/types/discover';
 
-import { DiscoverService } from './index';
 
 // Mock external dependencies
 vi.mock('@/server/modules/AssistantStore');

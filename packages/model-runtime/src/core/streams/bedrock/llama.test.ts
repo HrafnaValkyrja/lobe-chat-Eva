@@ -2,6 +2,7 @@ import { InvokeModelWithResponseStreamResponse } from '@aws-sdk/client-bedrock-r
 import { describe, expect, it, vi } from 'vitest';
 
 import * as uuidModule from '../../../utils/uuid';
+
 import { AWSBedrockLlamaStream } from './llama';
 
 describe('AWSBedrockLlamaStream', () => {

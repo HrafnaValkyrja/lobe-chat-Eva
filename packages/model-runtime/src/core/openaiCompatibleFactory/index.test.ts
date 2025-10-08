@@ -12,6 +12,7 @@ import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import * as debugStreamModule from '../../utils/debugStream';
 import * as openaiHelpers from '../../utils/openaiHelpers';
+
 import { createOpenAICompatibleRuntime } from './index';
 
 const sleep = async (ms: number) =>

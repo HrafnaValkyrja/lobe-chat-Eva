@@ -5,6 +5,8 @@ import { markdownToTxt } from 'markdown-to-txt';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import Title from '../../../../../app/[variants]/(main)/discover/features/Title';
+
 import InlineTable from '@/components/InlineTable';
 import CollapseDesc from '@/features/MCPPluginDetail/CollapseDesc';
 import CollapseLayout from '@/features/MCPPluginDetail/CollapseLayout';
@@ -12,7 +14,6 @@ import { ModeType } from '@/features/MCPPluginDetail/Schema/types';
 import { useToolStore } from '@/store/tool';
 import { pluginSelectors } from '@/store/tool/selectors';
 
-import Title from '../../../../../app/[variants]/(main)/discover/features/Title';
 
 interface ToolProps {
   mode?: ModeType;

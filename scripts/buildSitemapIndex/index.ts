@@ -1,6 +1,7 @@
-import dotenv from 'dotenv';
 import { writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+
+import dotenv from 'dotenv';
 
 import { Sitemap } from '@/server/sitemap';
 

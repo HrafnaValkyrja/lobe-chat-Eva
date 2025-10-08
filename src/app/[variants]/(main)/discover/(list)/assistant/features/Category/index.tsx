@@ -6,14 +6,16 @@ import { useRouter } from 'nextjs-toploader/app';
 import qs from 'query-string';
 import { memo, useMemo } from 'react';
 
+import CategoryMenu from '../../../../components/CategoryMenu';
+
+import { useCategory } from './useCategory';
+
 import { SCROLL_PARENT_ID } from '@/app/[variants]/(main)/discover/features/const';
 import { withSuspense } from '@/components/withSuspense';
 import { useQuery } from '@/hooks/useQuery';
 import { useDiscoverStore } from '@/store/discover';
 import { AssistantCategory } from '@/types/discover';
 
-import CategoryMenu from '../../../../components/CategoryMenu';
-import { useCategory } from './useCategory';
 
 const Category = memo(() => {
   const useAssistantCategories = useDiscoverStore((s) => s.useAssistantCategories);

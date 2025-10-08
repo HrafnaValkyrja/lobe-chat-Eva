@@ -1,4 +1,5 @@
 import type { LobeAgentSettings } from '../../session';
+
 import { UserGeneralConfig } from './general';
 import { UserHotkeyConfig } from './hotkey';
 import { UserKeyVaults } from './keyVaults';

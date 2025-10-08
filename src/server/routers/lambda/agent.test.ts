@@ -1,6 +1,8 @@
 // @vitest-environment node
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { agentRouter } from './agent';
+
 import { INBOX_SESSION_ID } from '@/const/session';
 import { DEFAULT_AGENT_CONFIG } from '@/const/settings';
 import { AgentModel } from '@/database/models/agent';
@@ -12,7 +14,6 @@ import { serverDB } from '@/database/server';
 import { AgentService } from '@/server/services/agent';
 import { KnowledgeType } from '@/types/knowledgeBase';
 
-import { agentRouter } from './agent';
 
 vi.mock('@/database/models/user', () => ({
   UserModel: {

@@ -6,13 +6,14 @@ import { memo } from 'react';
 import { Trans } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import { useSendThreadMessage } from './useSend';
+
 import { type ActionKeys, ChatInputProvider, DesktopChatInput } from '@/features/ChatInput';
 import WideScreenContainer from '@/features/Conversation/components/WideScreenContainer';
 import { useChatStore } from '@/store/chat';
 import { useGlobalStore } from '@/store/global';
 import { systemStatusSelectors } from '@/store/global/selectors';
 
-import { useSendThreadMessage } from './useSend';
 
 const threadActions: ActionKeys[] = ['typo', 'stt', 'portalToken'];
 

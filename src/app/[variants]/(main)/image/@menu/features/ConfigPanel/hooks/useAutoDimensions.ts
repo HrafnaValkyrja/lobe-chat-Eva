@@ -1,9 +1,10 @@
 import { DEFAULT_DIMENSION_CONSTRAINTS } from 'model-bank';
 
+import { constrainDimensions } from '../utils/dimensionConstraints';
+
 import { useImageStore } from '@/store/image';
 import { imageGenerationConfigSelectors } from '@/store/image/selectors';
 
-import { constrainDimensions } from '../utils/dimensionConstraints';
 
 /**
  * Extract URL and dimensions from callback data (supports both old and new API)

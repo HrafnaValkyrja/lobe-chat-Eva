@@ -2,6 +2,11 @@ import { sql } from 'drizzle-orm';
 import { PgliteDatabase, drizzle } from 'drizzle-orm/pglite';
 import { Md5 } from 'ts-md5';
 
+
+import migrations from '../core/migrations.json';
+import { DrizzleMigrationModel } from '../models/drizzleMigration';
+import * as schema from '../schemas';
+
 import {
   ClientDBLoadingProgress,
   DatabaseLoadingState,
@@ -9,10 +14,6 @@ import {
   MigrationTableItem,
 } from '@/types/clientDB';
 import { sleep } from '@/utils/sleep';
-
-import migrations from '../core/migrations.json';
-import { DrizzleMigrationModel } from '../models/drizzleMigration';
-import * as schema from '../schemas';
 
 const pgliteSchemaHashCache = 'LOBE_CHAT_PGLITE_SCHEMA_HASH';
 
@@ -73,7 +74,7 @@ export class DatabaseManager {
     const chunks: Uint8Array[] = [];
 
     // 读取数据流
-    // eslint-disable-next-line no-constant-condition
+     
     while (true) {
       const { done, value } = await reader.read();
 

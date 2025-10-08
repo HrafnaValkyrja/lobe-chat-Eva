@@ -6,6 +6,7 @@ import { PartitionResponse } from 'unstructured-client/src/sdk/models/operations
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { Unstructured } from '../index';
+
 import AutoWithChunkingOutput from './fixtures/table-parse/auto-partition-basic-output.json';
 import AutoWithChunkingRaw from './fixtures/table-parse/auto-partition-basic-raw.json';
 import AutoWithoutChunking from './fixtures/table-parse/auto-partition-raw.json';

@@ -1,9 +1,10 @@
 import { resolveAcceptLanguage } from 'resolve-accept-language';
 
+import { RouteVariants } from './server/routeVariants';
+
 import { DEFAULT_LANG } from '@/const/locale';
 import { Locales, locales, normalizeLocale } from '@/locales/resources';
 
-import { RouteVariants } from './server/routeVariants';
 
 export const getAntdLocale = async (lang?: string) => {
   let normalLang: any = normalizeLocale(lang);

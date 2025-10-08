@@ -1,11 +1,12 @@
 import { eq } from 'drizzle-orm';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { ClientService } from './client';
+
 import { clientDB, initializeDB } from '@/database/client/db';
 import { sessions, topics, users } from '@/database/schemas';
 import { ChatTopic } from '@/types/topic';
 
-import { ClientService } from './client';
 
 // Mock data
 const userId = 'topic-user-test';

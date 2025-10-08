@@ -1,9 +1,10 @@
 import type { PartialDeep } from 'type-fest';
 
-import { IFeatureFlags } from '@/config/featureFlags';
 
 import { ChatModelCard } from './llm';
 import { GlobalLLMProviderKey, UserDefaultAgent, UserSystemAgentConfig } from './user/settings';
+
+import { IFeatureFlags } from '@/config/featureFlags';
 
 export interface ServerModelProviderConfig {
   enabled?: boolean;

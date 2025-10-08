@@ -4,11 +4,12 @@ import { Popover } from 'antd';
 import { createStyles } from 'antd-style';
 import { PropsWithChildren, memo, useState } from 'react';
 
-import { isDesktop } from '@/const/version';
 
 import PanelContent from './PanelContent';
 import UpgradeBadge from './UpgradeBadge';
 import { useNewVersion } from './useNewVersion';
+
+import { isDesktop } from '@/const/version';
 
 const useStyles = createStyles(({ css }) => {
   return {

@@ -5,9 +5,10 @@ import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import CreateNewModelModal from './CreateNewModelModal';
+
 import { useAiInfraStore } from '@/store/aiInfra';
 
-import CreateNewModelModal from './CreateNewModelModal';
 
 const useStyles = createStyles(({ css, token }) => ({
   circle: css`

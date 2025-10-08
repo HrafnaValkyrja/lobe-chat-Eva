@@ -8,10 +8,11 @@ import { useRouter } from 'nextjs-toploader/app';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { useDetailContext } from '../../DetailProvider';
+
 import { SESSION_CHAT_URL } from '@/const/url';
 import { useSessionStore } from '@/store/session';
 
-import { useDetailContext } from '../../DetailProvider';
 
 const useStyles = createStyles(({ css }) => ({
   button: css`

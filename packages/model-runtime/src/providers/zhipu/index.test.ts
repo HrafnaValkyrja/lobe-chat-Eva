@@ -4,6 +4,7 @@ import { OpenAI } from 'openai';
 import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import * as debugStreamModule from '../../utils/debugStream';
+
 import { LobeZhipuAI } from './index';
 
 const bizErrorType = 'ProviderBizError';

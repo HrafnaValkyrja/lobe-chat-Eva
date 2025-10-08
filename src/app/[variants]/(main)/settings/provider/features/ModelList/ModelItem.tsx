@@ -7,6 +7,14 @@ import { memo, use, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import {
+  AiModelSourceEnum,
+  AiProviderModelListItem,
+} from '../../../../../../../../packages/model-bank/src/types/aiModel';
+
+import ModelConfigModal from './ModelConfigModal';
+import { ProviderSettingsContext } from './ProviderSettingsContext';
+
 import { ModelInfoTags } from '@/components/ModelSelect';
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { aiModelSelectors, useAiInfraStore } from '@/store/aiInfra';
@@ -17,12 +25,6 @@ import {
   getTextOutputUnitRate,
 } from '@/utils/pricing';
 
-import {
-  AiModelSourceEnum,
-  AiProviderModelListItem,
-} from '../../../../../../../../packages/model-bank/src/types/aiModel';
-import ModelConfigModal from './ModelConfigModal';
-import { ProviderSettingsContext } from './ProviderSettingsContext';
 
 export const useStyles = createStyles(({ css, token, cx }) => {
   const config = css`

@@ -4,6 +4,7 @@ import { Flexbox } from 'react-layout-kit';
 
 import { useStyles } from '../style';
 import type { ChatItemProps } from '../type';
+
 import Loading from './Loading';
 
 export interface AvatarProps {

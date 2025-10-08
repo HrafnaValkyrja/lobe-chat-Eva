@@ -8,6 +8,7 @@ import MarkdownRender from '../../../app/[variants]/(main)/discover/(detail)/fea
 import McpList from '../../../app/[variants]/(main)/discover/(list)/mcp/features/List';
 import Title from '../../../app/[variants]/(main)/discover/features/Title';
 import { useDetailContext } from '../DetailProvider';
+
 import TagList from './TagList';
 
 const Overview = memo<{ inModal?: boolean }>(({ inModal }) => {
@@ -23,7 +24,7 @@ const Overview = memo<{ inModal?: boolean }>(({ inModal }) => {
         expandIconPosition={'end'}
         items={[
           {
-            children: !!summary ? <Markdown>{summary}</Markdown> : summary,
+            children: summary ? <Markdown>{summary}</Markdown> : summary,
             key: 'summary',
             label: t('mcp.details.summary.title'),
           },

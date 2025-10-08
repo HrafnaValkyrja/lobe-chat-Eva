@@ -1,9 +1,10 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+ 
+import { IMessageService } from './type';
+
 import { INBOX_SESSION_ID } from '@/const/session';
 import { lambdaClient } from '@/libs/trpc/client';
 import { ChatMessage, ChatTranslate } from '@/types/message';
 
-import { IMessageService } from './type';
 
 export class ServerService implements IMessageService {
   createMessage: IMessageService['createMessage'] = async ({ sessionId, ...params }) => {

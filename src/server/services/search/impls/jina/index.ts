@@ -2,10 +2,12 @@ import { TRPCError } from '@trpc/server';
 import debug from 'debug';
 import urlJoin from 'url-join';
 
-import { SearchParams, UniformSearchResponse, UniformSearchResult } from '@/types/tool/search';
 
 import { SearchServiceImpl } from '../type';
+
 import { JinaSearchParameters, JinaResponse } from './type';
+
+import { SearchParams, UniformSearchResponse, UniformSearchResult } from '@/types/tool/search';
 
 const log = debug('lobe-search:Jina');
 

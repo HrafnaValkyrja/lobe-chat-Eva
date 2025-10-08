@@ -1,11 +1,12 @@
 import dynamic from 'next/dynamic';
 
-import { isDesktop } from '@/const/version';
-import { analyticsEnv } from '@/envs/analytics';
 
 import Desktop from './Desktop';
 import Google from './Google';
 import Vercel from './Vercel';
+
+import { isDesktop } from '@/const/version';
+import { analyticsEnv } from '@/envs/analytics';
 
 const Plausible = dynamic(() => import('./Plausible'));
 const Umami = dynamic(() => import('./Umami'));

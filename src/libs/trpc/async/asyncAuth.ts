@@ -2,10 +2,11 @@ import { LobeChatDatabase } from '@lobechat/database';
 import { TRPCError } from '@trpc/server';
 import debug from 'debug';
 
+import { asyncTrpc } from './init';
+
 import { serverDBEnv } from '@/config/db';
 import { UserModel } from '@/database/models/user';
 
-import { asyncTrpc } from './init';
 
 const log = debug('lobe-async:auth');
 

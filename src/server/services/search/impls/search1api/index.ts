@@ -2,10 +2,12 @@ import { TRPCError } from '@trpc/server';
 import debug from 'debug';
 import urlJoin from 'url-join';
 
-import { SearchParams, UniformSearchResponse, UniformSearchResult } from '@/types/tool/search';
 
 import { SearchServiceImpl } from '../type';
+
 import { Search1ApiResponse } from './type';
+
+import { SearchParams, UniformSearchResponse, UniformSearchResult } from '@/types/tool/search';
 
 interface Search1APIQueryParams {
   crawl_results?: 0 | 1;

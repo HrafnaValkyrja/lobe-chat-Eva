@@ -1,6 +1,7 @@
 import { Flexbox } from 'react-layout-kit';
 
 import { MarkdownCustomRender } from '../../../types';
+
 import ContentPreview from './ContentPreview';
 
 export const MarkdownRender: MarkdownCustomRender = ({ text, dom, id, displayMode }) => {

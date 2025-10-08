@@ -5,9 +5,10 @@ import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import ProviderItem from './Item';
+
 import { useAiInfraStore } from '@/store/aiInfra';
 
-import ProviderItem from './Item';
 
 const SearchResult = memo((props:{
   onProviderSelect?: (key: string)=>void

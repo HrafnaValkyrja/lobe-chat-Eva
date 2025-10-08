@@ -3,6 +3,7 @@
 import { useState } from 'react';
 
 import { AppLoadingStage } from '../stage';
+
 import Content from './Content';
 import Redirect from './Redirect';
 

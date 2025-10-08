@@ -1,10 +1,11 @@
 import { LobeChatPluginManifest } from '@lobehub/chat-plugin-sdk';
 
+import { IPluginService, InstallPluginParams } from './type';
+
 import { PluginModel } from '@/database/_deprecated/models/plugin';
 import { LobeTool } from '@/types/tool';
 import { LobeToolCustomPlugin } from '@/types/tool/plugin';
 
-import { IPluginService, InstallPluginParams } from './type';
 
 export class ClientService implements IPluginService {
   installPlugin = async (plugin: InstallPluginParams) => {
@@ -35,7 +36,7 @@ export class ClientService implements IPluginService {
     return PluginModel.clear();
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   
   async updatePluginSettings(id: string, settings: any, _?: AbortSignal) {
     await PluginModel.update(id, { settings });
   }

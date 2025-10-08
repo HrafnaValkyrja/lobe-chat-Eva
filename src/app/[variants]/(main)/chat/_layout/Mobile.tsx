@@ -4,11 +4,12 @@ import { createStyles } from 'antd-style';
 import { Suspense, memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import { LayoutProps } from './type';
+
 import { withSuspense } from '@/components/withSuspense';
 import InitClientDB from '@/features/InitClientDB';
 import { useShowMobileWorkspace } from '@/hooks/useShowMobileWorkspace';
 
-import { LayoutProps } from './type';
 
 const useStyles = createStyles(({ css, token }) => ({
   main: css`

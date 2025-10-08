@@ -5,9 +5,10 @@ import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import urlJoin from 'url-join';
 
+import { useDetailContext } from '../../DetailProvider';
+
 import { OFFICIAL_SITE } from '@/const/url';
 
-import { useDetailContext } from '../../DetailProvider';
 
 type BadgeStyle = 'flat' | 'flat-square' | 'plastic' | 'for-the-badge';
 type BadgeTheme = 'dark' | 'light';

@@ -1,6 +1,8 @@
 import { act } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 
+import { chatSelectors } from './selectors';
+
 import { DEFAULT_INBOX_AVATAR } from '@/const/meta';
 import { INBOX_SESSION_ID } from '@/const/session';
 import { useAgentStore } from '@/store/agent';
@@ -12,7 +14,6 @@ import { LobeAgentConfig } from '@/types/agent';
 import { ChatMessage } from '@/types/message';
 import { merge } from '@/utils/merge';
 
-import { chatSelectors } from './selectors';
 
 vi.mock('i18next', () => ({
   t: vi.fn((key) => key), // Simplified mock return value

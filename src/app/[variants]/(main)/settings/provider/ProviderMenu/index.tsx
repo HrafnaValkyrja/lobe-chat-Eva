@@ -6,12 +6,13 @@ import { ReactNode, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import { useAiInfraStore } from '@/store/aiInfra/store';
 
 import AddNew from './AddNew';
 import ProviderList from './List';
 import SearchResult from './SearchResult';
 import SkeletonList from './SkeletonList';
+
+import { useAiInfraStore } from '@/store/aiInfra/store';
 
 interface ProviderMenuProps {
   children: ReactNode;
@@ -86,7 +87,7 @@ const ProviderMenu = ({
   if (!initAiProviderList) Content = <SkeletonList />;
 
   // search
-  if (!!providerSearchKeyword) Content = <SearchResult onProviderSelect={onProviderSelect} />;
+  if (providerSearchKeyword) Content = <SearchResult onProviderSelect={onProviderSelect} />;
 
   return <Layout mobile={mobile}>{Content}</Layout>;
 };

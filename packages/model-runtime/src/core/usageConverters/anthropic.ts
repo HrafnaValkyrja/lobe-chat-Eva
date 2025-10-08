@@ -1,9 +1,11 @@
 import Anthropic from '@anthropic-ai/sdk';
 
-import { ModelUsage } from '@/types/message';
 
 import { ChatPayloadForTransformStream } from '../streams/protocol';
+
 import { withUsageCost } from './utils/withUsageCost';
+
+import { ModelUsage } from '@/types/message';
 
 const buildInitialUsage = (
   usage: Anthropic.Messages.Usage | null | undefined,

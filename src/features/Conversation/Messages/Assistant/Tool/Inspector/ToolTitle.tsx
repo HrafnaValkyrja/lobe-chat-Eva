@@ -6,6 +6,8 @@ import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import BuiltinPluginTitle from './BuiltinPluginTitle';
+
 import { useChatStore } from '@/store/chat';
 import { chatSelectors } from '@/store/chat/selectors';
 import { pluginHelpers, useToolStore } from '@/store/tool';
@@ -14,7 +16,6 @@ import { shinyTextStylish } from '@/styles/loading';
 import { LocalSystemManifest } from '@/tools/local-system';
 import { WebBrowsingManifest } from '@/tools/web-browsing';
 
-import BuiltinPluginTitle from './BuiltinPluginTitle';
 
 export const useStyles = createStyles(({ css, token }) => ({
   apiName: css`
@@ -74,7 +75,7 @@ const ToolTitle = memo<ToolTitleProps>(({ identifier, messageId, index, apiName,
 
   const builtinPluginTitle = plugins.find((item) => item.id === identifier);
 
-  if (!!builtinPluginTitle) {
+  if (builtinPluginTitle) {
     return (
       <BuiltinPluginTitle
         {...builtinPluginTitle}

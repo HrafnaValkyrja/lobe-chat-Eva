@@ -1,10 +1,11 @@
 import type { PartialDeep } from 'type-fest';
 import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { shareService } from '../share';
+
 import { LOBE_URL_IMPORT_NAME } from '@/const/url';
 import { UserSettings } from '@/types/user/settings';
 
-import { shareService } from '../share';
 
 // Mock dependencies
 vi.mock('@/utils/parseMarkdown', () => ({

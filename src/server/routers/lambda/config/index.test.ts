@@ -4,10 +4,11 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 /**
  * This file contains the root router of your tRPC-backend
  */
+import { configRouter } from './index';
+
 import { createCallerFactory } from '@/libs/trpc/edge';
 import { AuthContext, createContextInner } from '@/libs/trpc/edge/context';
 
-import { configRouter } from './index';
 
 const createCaller = createCallerFactory(configRouter);
 let ctx: AuthContext;

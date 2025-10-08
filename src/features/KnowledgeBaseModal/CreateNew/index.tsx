@@ -3,9 +3,10 @@ import { LibraryBig } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import CreateForm from './CreateForm';
+
 import { createModal } from '@/components/FunctionModal';
 
-import CreateForm from './CreateForm';
 
 const Title = () => {
   const { t } = useTranslation('knowledgeBase');

@@ -1,10 +1,12 @@
 import { PropsWithChildren } from 'react';
 
+import { SCROLL_PARENT_ID } from '../../../features/const';
+
+import Header from './Header';
+
 import MobileContentLayout from '@/components/server/MobileNavLayout';
 import Footer from '@/features/Setting/Footer';
 
-import { SCROLL_PARENT_ID } from '../../../features/const';
-import Header from './Header';
 
 const Layout = ({ children }: PropsWithChildren) => {
   return (

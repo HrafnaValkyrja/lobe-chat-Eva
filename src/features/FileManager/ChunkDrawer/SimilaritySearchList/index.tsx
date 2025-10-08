@@ -3,10 +3,12 @@ import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 import { Virtuoso } from 'react-virtuoso';
 
-import { useFileStore } from '@/store/file';
 
 import SkeletonLoading from '../Loading';
+
 import ChunkItem from './Item';
+
+import { useFileStore } from '@/store/file';
 
 const SimilaritySearchList = memo(() => {
   const isSimilaritySearching = useFileStore((s) => s.isSimilaritySearching);

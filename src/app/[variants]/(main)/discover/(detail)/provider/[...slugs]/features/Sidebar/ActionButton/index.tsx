@@ -7,11 +7,13 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 
-import { OFFICIAL_URL } from '@/const/url';
 
 import ShareButton from '../../../../../features/ShareButton';
 import { useDetailContext } from '../../DetailProvider';
+
 import ProviderConfig from './ProviderConfig';
+
+import { OFFICIAL_URL } from '@/const/url';
 
 const ActionButton = memo(() => {
   const { models = [], identifier, name } = useDetailContext();

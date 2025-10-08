@@ -1,9 +1,11 @@
 import { PropsWithChildren } from 'react';
 
-import MobileContentLayout from '@/components/server/MobileNavLayout';
 
 import SessionSearchBar from '../../features/SessionSearchBar';
+
 import SessionHeader from './SessionHeader';
+
+import MobileContentLayout from '@/components/server/MobileNavLayout';
 
 const MobileLayout = ({ children }: PropsWithChildren) => {
   return (

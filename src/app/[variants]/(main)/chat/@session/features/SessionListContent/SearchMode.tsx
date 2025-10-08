@@ -1,9 +1,11 @@
 import { memo } from 'react';
 
-import { useSessionStore } from '@/store/session';
 
 import SkeletonList from '../SkeletonList';
+
 import SessionList from './List';
+
+import { useSessionStore } from '@/store/session';
 
 const SearchMode = memo(() => {
   const [sessionSearchKeywords, useSearchSessions] = useSessionStore((s) => [

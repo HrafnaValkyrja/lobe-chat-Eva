@@ -4,6 +4,10 @@ import { Globe } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import Action from '../components/Action';
+
+import Controls from './Controls';
+
 import { isDeprecatedEdition } from '@/const/version';
 import { useAgentEnableSearch } from '@/hooks/useAgentEnableSearch';
 import { useIsMobile } from '@/hooks/useIsMobile';
@@ -11,8 +15,6 @@ import { useAgentStore } from '@/store/agent';
 import { agentSelectors } from '@/store/agent/selectors';
 import { agentChatConfigSelectors } from '@/store/agent/slices/chat';
 
-import Action from '../components/Action';
-import Controls from './Controls';
 
 const Search = memo(() => {
   const { t } = useTranslation('chat');

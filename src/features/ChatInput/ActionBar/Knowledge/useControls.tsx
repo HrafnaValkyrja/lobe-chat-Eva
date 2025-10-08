@@ -3,12 +3,13 @@ import isEqual from 'fast-deep-equal';
 import { ArrowRight, LibraryBig } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
+import CheckboxItem from '../components/CheckbokWithLoading';
+
 import FileIcon from '@/components/FileIcon';
 import RepoIcon from '@/components/RepoIcon';
 import { useAgentStore } from '@/store/agent';
 import { agentSelectors } from '@/store/agent/selectors';
 
-import CheckboxItem from '../components/CheckbokWithLoading';
 
 export const useControls = ({
   setModalOpen,

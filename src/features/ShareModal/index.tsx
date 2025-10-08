@@ -3,11 +3,12 @@ import { memo, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import { useIsMobile } from '@/hooks/useIsMobile';
 
 import ShareImage from './ShareImage';
 import ShareJSON from './ShareJSON';
 import ShareText from './ShareText';
+
+import { useIsMobile } from '@/hooks/useIsMobile';
 
 enum Tab {
   JSON = 'json',

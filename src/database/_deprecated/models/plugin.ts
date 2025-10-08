@@ -1,10 +1,11 @@
 import { LobeChatPluginManifest } from '@lobehub/chat-plugin-sdk';
 
+import { DB_Plugin, DB_PluginSchema } from '../schemas/plugin';
+
 import { BaseModel } from '@/database/_deprecated/core';
 import { LobeTool } from '@/types/tool';
 import { merge } from '@/utils/merge';
 
-import { DB_Plugin, DB_PluginSchema } from '../schemas/plugin';
 
 export interface InstallPluginParams {
   identifier: string;

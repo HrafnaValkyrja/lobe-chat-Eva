@@ -2,6 +2,8 @@ import { act, renderHook, waitFor } from '@testing-library/react';
 import { mutate } from 'swr';
 import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { useChatStore } from '../../store';
+
 import { LOADING_FLAT } from '@/const/message';
 import { chatService } from '@/services/chat';
 import { messageService } from '@/services/message';
@@ -10,7 +12,6 @@ import { messageMapKey } from '@/store/chat/utils/messageMapKey';
 import { ChatMessage } from '@/types/message';
 import { ChatTopic } from '@/types/topic';
 
-import { useChatStore } from '../../store';
 
 vi.mock('zustand/traditional');
 // Mock topicService 和 messageService

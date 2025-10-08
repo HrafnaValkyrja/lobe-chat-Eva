@@ -4,12 +4,6 @@ import { eq } from 'drizzle-orm';
 import type { AdapterAccount } from 'next-auth/adapters';
 import type { PartialDeep } from 'type-fest';
 
-import { LobeChatDatabase } from '../type';
-import { UserGuide, UserPreference } from '@/types/user';
-import { UserKeyVaults, UserSettings } from '@/types/user/settings';
-import { merge } from '@/utils/merge';
-import { today } from '@/utils/time';
-
 import {
   NewUser,
   UserItem,
@@ -18,6 +12,13 @@ import {
   userSettings,
   users,
 } from '../schemas';
+import { LobeChatDatabase } from '../type';
+
+import { UserGuide, UserPreference } from '@/types/user';
+import { UserKeyVaults, UserSettings } from '@/types/user/settings';
+import { merge } from '@/utils/merge';
+import { today } from '@/utils/time';
+
 
 type DecryptUserKeyVaults = (
   encryptKeyVaultsStr: string | null,
@@ -197,7 +198,7 @@ export class UserModel {
     // if user already exists, skip creation
     if (params.id) {
       const user = await db.query.users.findFirst({ where: eq(users.id, params.id) });
-      if (!!user) return { duplicate: true };
+      if (user) return { duplicate: true };
     }
 
     const [user] = await db

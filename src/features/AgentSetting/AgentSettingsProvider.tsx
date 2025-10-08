@@ -1,7 +1,7 @@
 import { ReactNode, memo } from 'react';
 
-import StoreUpdater, { StoreUpdaterProps } from './StoreUpdater';
 import { Provider, createStore } from './store';
+import StoreUpdater, { StoreUpdaterProps } from './StoreUpdater';
 
 interface AgentSettingsProps extends StoreUpdaterProps {
   children: ReactNode;

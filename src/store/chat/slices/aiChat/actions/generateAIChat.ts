@@ -6,6 +6,8 @@ import { t } from 'i18next';
 import { produce } from 'immer';
 import { StateCreator } from 'zustand/vanilla';
 
+import { chatSelectors, topicSelectors } from '../../../selectors';
+
 import { LOADING_FLAT, MESSAGE_CANCEL_FLAT } from '@/const/message';
 import { isDesktop, isServerMode } from '@/const/version';
 import { chatService } from '@/services/chat';
@@ -25,7 +27,6 @@ import { ChatImageItem } from '@/types/message/image';
 import { MessageSemanticSearchChunk } from '@/types/rag';
 import { Action, setNamespace } from '@/utils/storeDebug';
 
-import { chatSelectors, topicSelectors } from '../../../selectors';
 
 const n = setNamespace('ai');
 
@@ -233,14 +234,14 @@ export const generateAIChat: StateCreator<
 
     if (!id) {
       set({ isCreatingMessage: false }, false, n('creatingMessage/start'));
-      if (!!newTopicId) get().internal_updateTopicLoading(newTopicId, false);
+      if (newTopicId) get().internal_updateTopicLoading(newTopicId, false);
       return;
     }
 
     if (tempMessageId) get().internal_toggleMessageLoading(false, tempMessageId);
 
     // switch to the new topic if create the new topic
-    if (!!newTopicId) {
+    if (newTopicId) {
       await get().switchTopic(newTopicId, true);
       await get().internal_fetchMessages();
 
@@ -624,7 +625,7 @@ export const generateAIChat: StateCreator<
             ...item,
             function: {
               ...item.function,
-              arguments: !!item.function.arguments ? item.function.arguments : '{}',
+              arguments: item.function.arguments ? item.function.arguments : '{}',
             },
           }));
           isFunctionCall = true;
@@ -633,8 +634,8 @@ export const generateAIChat: StateCreator<
         // update the content after fetch result
         await internal_updateMessageContent(messageId, content, {
           toolCalls: parsedToolCalls,
-          reasoning: !!reasoning ? { ...reasoning, duration } : undefined,
-          search: !!grounding?.citations ? grounding : undefined,
+          reasoning: reasoning ? { ...reasoning, duration } : undefined,
+          search: grounding?.citations ? grounding : undefined,
           imageList: finalImages.length > 0 ? finalImages : undefined,
           metadata: speed ? { ...usage, ...speed } : usage,
         });
@@ -708,7 +709,7 @@ export const generateAIChat: StateCreator<
               type: 'updateMessage',
               value: {
                 content: output,
-                reasoning: !!thinking ? { content: thinking, duration } : undefined,
+                reasoning: thinking ? { content: thinking, duration } : undefined,
               },
             });
             break;
@@ -816,7 +817,7 @@ export const generateAIChat: StateCreator<
     set(
       {
         toolCallingStreamIds: produce(get().toolCallingStreamIds, (draft) => {
-          if (!!streaming) {
+          if (streaming) {
             draft[id] = streaming;
           } else {
             delete draft[id];
@@ -825,7 +826,7 @@ export const generateAIChat: StateCreator<
       },
 
       false,
-      `toggleToolCallingStreaming/${!!streaming ? 'start' : 'end'}`,
+      `toggleToolCallingStreaming/${streaming ? 'start' : 'end'}`,
     );
   },
 

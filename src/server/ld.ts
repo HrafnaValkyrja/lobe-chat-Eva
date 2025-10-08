@@ -2,13 +2,14 @@ import { isString } from 'lodash-es';
 import qs from 'query-string';
 import urlJoin from 'url-join';
 
+import pkg from '../../package.json';
+
 import { BRANDING_EMAIL, BRANDING_NAME, SOCIAL_URL } from '@/const/branding';
 import { DEFAULT_LANG } from '@/const/locale';
 import { OFFICIAL_SITE, OFFICIAL_URL } from '@/const/url';
 import { Locales } from '@/locales/resources';
 import { getCanonicalUrl } from '@/server/utils/url';
 
-import pkg from '../../package.json';
 
 const LAST_MODIFIED = new Date().toISOString();
 export const AUTHOR_LIST = {

@@ -4,6 +4,7 @@ import { createWithEqualityFn } from 'zustand/traditional';
 import { StateCreator } from 'zustand/vanilla';
 
 import { createDevtools } from '../middleware/createDevtools';
+
 import { type UserState, initialState } from './initialState';
 import { type UserAuthAction, createAuthSlice } from './slices/auth/action';
 import { type CommonAction, createCommonSlice } from './slices/common/action';

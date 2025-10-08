@@ -3,10 +3,12 @@ import { FormInstance } from 'antd';
 import { memo, use, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { useAiInfraStore } from '@/store/aiInfra';
 
 import { ProviderSettingsContext } from '../ProviderSettingsContext';
+
 import ModelConfigForm from './Form';
+
+import { useAiInfraStore } from '@/store/aiInfra';
 
 interface ModelConfigModalProps {
   open: boolean;

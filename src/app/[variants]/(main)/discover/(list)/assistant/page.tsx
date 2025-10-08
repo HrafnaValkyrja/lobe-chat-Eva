@@ -1,10 +1,11 @@
+import Client from './Client';
+
 import StructuredData from '@/components/StructuredData';
 import { ldModule } from '@/server/ld';
 import { metadataModule } from '@/server/metadata';
 import { DynamicLayoutProps } from '@/types/next';
 import { parsePageMetaProps } from '@/utils/server/pageProps';
 
-import Client from './Client';
 
 export const generateMetadata = async (props: DynamicLayoutProps) => {
   const { locale, t } = await parsePageMetaProps(props);

@@ -1,9 +1,10 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { getSearchConfig } from './getSearchConfig';
+
 import * as agentSelectors from '@/store/agent/selectors';
 import * as aiInfraSelectors from '@/store/aiInfra/selectors';
 
-import { getSearchConfig } from './getSearchConfig';
 
 // Mock the store dependencies
 vi.mock('@/store/agent', () => ({

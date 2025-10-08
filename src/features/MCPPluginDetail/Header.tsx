@@ -10,14 +10,17 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import InstallationIcon from '../../components/MCPDepsIcon';
+import PublishedTime from '../../components/PublishedTime';
+
+import { useDetailContext } from './DetailProvider';
+
 import OfficialIcon from '@/components/OfficialIcon';
 import Scores from '@/features/MCP/Scores';
 import { getLanguageColor, getRecommendedDeployment } from '@/features/MCP/utils';
 import { useCategory } from '@/hooks/useMCPCategory';
 
-import InstallationIcon from '../../components/MCPDepsIcon';
-import PublishedTime from '../../components/PublishedTime';
-import { useDetailContext } from './DetailProvider';
+
 
 const useStyles = createStyles(({ css, token }) => {
   return {

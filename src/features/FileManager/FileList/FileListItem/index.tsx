@@ -11,14 +11,15 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import ChunksBadge from './ChunkTag';
+import DropdownMenu from './DropdownMenu';
+
 import FileIcon from '@/components/FileIcon';
 import { fileManagerSelectors, useFileStore } from '@/store/file';
 import { FileListItem } from '@/types/files';
 import { formatSize } from '@/utils/format';
 import { isChunkingUnsupported } from '@/utils/isChunkingUnsupported';
 
-import ChunksBadge from './ChunkTag';
-import DropdownMenu from './DropdownMenu';
 
 dayjs.extend(relativeTime);
 

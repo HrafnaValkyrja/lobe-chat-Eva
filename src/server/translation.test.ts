@@ -2,10 +2,11 @@
 import { cookies } from 'next/headers';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { getLocale, translation } from './translation';
+
 import { DEFAULT_LANG } from '@/const/locale';
 import { normalizeLocale } from '@/locales/resources';
 
-import { getLocale, translation } from './translation';
 
 // Mock external dependencies
 vi.mock('next/headers', () => ({

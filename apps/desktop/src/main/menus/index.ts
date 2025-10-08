@@ -1,11 +1,12 @@
 import { platform } from 'node:os';
 
-import { App } from '@/core/App';
 
 import { LinuxMenu } from './impls/linux';
 import { MacOSMenu } from './impls/macOS';
 import { WindowsMenu } from './impls/windows';
 import { IMenuPlatform } from './types';
+
+import { App } from '@/core/App';
 
 export type { IMenuPlatform, MenuOptions } from './types';
 

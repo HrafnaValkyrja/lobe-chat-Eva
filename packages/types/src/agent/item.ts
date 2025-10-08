@@ -3,6 +3,7 @@ import { LLMParams } from 'model-bank';
 import { FileItem } from '../files';
 import { KnowledgeBaseItem } from '../knowledgeBase';
 import { FewShots } from '../llm';
+
 import { LobeAgentChatConfig } from './chatConfig';
 import { LobeAgentTTSConfig } from './tts';
 

@@ -4,6 +4,8 @@ import React, { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import OpeningQuestions from './OpeningQuestions';
+
 import ChatItem from '@/features/ChatItem';
 import { useAgentStore } from '@/store/agent';
 import { agentChatConfigSelectors, agentSelectors } from '@/store/agent/selectors';
@@ -12,7 +14,6 @@ import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfi
 import { useSessionStore } from '@/store/session';
 import { sessionMetaSelectors } from '@/store/session/selectors';
 
-import OpeningQuestions from './OpeningQuestions';
 
 const WelcomeMessage = () => {
   const mobile = useServerConfigStore((s) => s.isMobile);
@@ -40,7 +41,7 @@ const WelcomeMessage = () => {
 
   const message = useMemo(() => {
     if (openingMessage) return openingMessage;
-    return !!meta.description ? agentSystemRoleMsg : agentMsg;
+    return meta.description ? agentSystemRoleMsg : agentMsg;
   }, [openingMessage, agentSystemRoleMsg, agentMsg, meta.description]);
 
   const chatItem = (

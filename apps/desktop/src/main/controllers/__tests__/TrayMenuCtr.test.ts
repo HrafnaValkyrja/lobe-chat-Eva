@@ -1,9 +1,9 @@
-import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { 
   ShowTrayNotificationParams,
   UpdateTrayIconParams,
   UpdateTrayTooltipParams
 } from '@lobechat/electron-client-ipc';
+import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import type { App } from '@/core/App';
 

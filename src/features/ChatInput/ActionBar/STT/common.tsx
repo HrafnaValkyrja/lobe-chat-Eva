@@ -5,9 +5,10 @@ import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import Action from '../components/Action';
+
 import { ChatMessageError } from '@/types/message';
 
-import Action from '../components/Action';
 
 const useStyles = createStyles(({ css, token }) => ({
   recording: css`

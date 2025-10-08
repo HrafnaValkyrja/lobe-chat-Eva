@@ -1,10 +1,12 @@
 import { InterceptRouteParams } from '@lobechat/electron-client-ipc';
-import { extractSubPath, findMatchingRoute } from '~common/routes';
+
+import { ControllerModule, ipcClientEvent, shortcut } from './index';
 
 import { AppBrowsersIdentifiers, BrowsersIdentifiers, WindowTemplateIdentifiers } from '@/appBrowsers';
 import { IpcClientEventSender } from '@/types/ipcClientEvent';
+import { extractSubPath, findMatchingRoute } from '~common/routes';
 
-import { ControllerModule, ipcClientEvent, shortcut } from './index';
+
 
 export default class BrowserWindowsCtr extends ControllerModule {
   @shortcut('showApp')

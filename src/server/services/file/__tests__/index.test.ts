@@ -1,10 +1,11 @@
 import { TRPCError } from '@trpc/server';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { FileService } from '../index';
+
 import { FileModel } from '@/database/models/file';
 import { TempFileManager } from '@/server/utils/tempFileManager';
 
-import { FileService } from '../index';
 
 vi.mock('@/config/db', () => ({
   serverDBEnv: {

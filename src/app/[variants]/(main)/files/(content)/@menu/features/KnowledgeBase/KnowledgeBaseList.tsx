@@ -2,11 +2,12 @@ import React from 'react';
 import { Flexbox } from 'react-layout-kit';
 import { Virtuoso } from 'react-virtuoso';
 
-import { useKnowledgeBaseStore } from '@/store/knowledgeBase';
 
 import EmptyStatus from './EmptyStatus';
 import Item from './Item';
 import { SkeletonList } from './SkeletonList';
+
+import { useKnowledgeBaseStore } from '@/store/knowledgeBase';
 
 const KnowledgeBaseList = () => {
   const useFetchKnowledgeBaseList = useKnowledgeBaseStore((s) => s.useFetchKnowledgeBaseList);

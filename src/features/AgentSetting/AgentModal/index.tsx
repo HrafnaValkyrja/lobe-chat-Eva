@@ -6,11 +6,12 @@ import isEqual from 'fast-deep-equal';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { selectors, useStore } from '../store';
+
 import { FORM_STYLE } from '@/const/layoutTokens';
 import ModelSelect from '@/features/ModelSelect';
 import { useProviderName } from '@/hooks/useProviderName';
 
-import { selectors, useStore } from '../store';
 
 const AgentModal = memo(() => {
   const { t } = useTranslation('setting');

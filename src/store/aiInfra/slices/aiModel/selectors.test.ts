@@ -1,9 +1,10 @@
 import { AiModelSourceEnum } from 'model-bank';
 import { describe, expect, it } from 'vitest';
 
+import { aiModelSelectors } from './selectors';
+
 import { AIProviderStoreState } from '@/store/aiInfra/initialState';
 
-import { aiModelSelectors } from './selectors';
 
 describe('aiModelSelectors', () => {
   const mockState: AIProviderStoreState = {

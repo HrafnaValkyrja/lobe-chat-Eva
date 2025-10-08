@@ -7,11 +7,12 @@ import { Loader2Icon } from 'lucide-react';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { sttOptions } from './const';
+
 import { FORM_STYLE } from '@/const/layoutTokens';
 import { useUserStore } from '@/store/user';
 import { settingsSelectors } from '@/store/user/selectors';
 
-import { sttOptions } from './const';
 
 const STT = memo(() => {
   const { t } = useTranslation('setting');

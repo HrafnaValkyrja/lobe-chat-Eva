@@ -4,9 +4,10 @@ import lobehubChatModels from 'model-bank/lobehub';
 import openaiChatModels from 'model-bank/openai';
 import { describe, expect, it } from 'vitest';
 
+import { computeChatCost } from './computeChatCost';
+
 import { ModelTokensUsage } from '@/types/message';
 
-import { computeChatCost } from './computeChatCost';
 
 describe('computeChatPricing', () => {
   describe('OpenAI', () => {

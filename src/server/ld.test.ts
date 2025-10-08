@@ -1,10 +1,11 @@
 // @vitest-environment node
 import { describe, expect, it } from 'vitest';
 
+import { AUTHOR_LIST, Ld } from './ld';
+
 import { BRANDING_NAME } from '@/const/branding';
 import { DEFAULT_LANG } from '@/const/locale';
 
-import { AUTHOR_LIST, Ld } from './ld';
 
 describe('Ld', () => {
   const ld = new Ld();

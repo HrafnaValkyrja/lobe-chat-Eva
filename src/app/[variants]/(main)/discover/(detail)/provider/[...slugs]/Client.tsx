@@ -4,15 +4,16 @@ import { notFound } from 'next/navigation';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import { DetailProvider } from './features/DetailProvider';
+import Details from './features/Details';
+import Header from './features/Header';
+import Loading from './loading';
+
 import Breadcrumb from '@/app/[variants]/(main)/discover/(detail)/features/Breadcrumb';
 import { withSuspense } from '@/components/withSuspense';
 import { useDiscoverStore } from '@/store/discover';
 import { DiscoverTab } from '@/types/discover';
 
-import { DetailProvider } from './features/DetailProvider';
-import Details from './features/Details';
-import Header from './features/Header';
-import Loading from './loading';
 
 interface ClientProps {
   identifier: string;

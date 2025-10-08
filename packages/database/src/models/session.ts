@@ -15,13 +15,6 @@ import {
 } from 'drizzle-orm';
 import type { PartialDeep } from 'type-fest';
 
-import { DEFAULT_INBOX_AVATAR } from '@/const/meta';
-import { INBOX_SESSION_ID } from '@/const/session';
-import { DEFAULT_AGENT_CONFIG } from '@/const/settings';
-import { LobeAgentConfig } from '@/types/agent';
-import { ChatSessionList, LobeAgentSession, SessionRankItem } from '@/types/session';
-import { merge } from '@/utils/merge';
-
 import {
   AgentItem,
   NewAgent,
@@ -36,6 +29,14 @@ import {
 import { LobeChatDatabase } from '../type';
 import { genEndDateWhere, genRangeWhere, genStartDateWhere, genWhere } from '../utils/genWhere';
 import { idGenerator } from '../utils/idGenerator';
+
+import { DEFAULT_INBOX_AVATAR } from '@/const/meta';
+import { INBOX_SESSION_ID } from '@/const/session';
+import { DEFAULT_AGENT_CONFIG } from '@/const/settings';
+import { LobeAgentConfig } from '@/types/agent';
+import { ChatSessionList, LobeAgentSession, SessionRankItem } from '@/types/session';
+import { merge } from '@/utils/merge';
+
 
 export class SessionModel {
   private userId: string;
@@ -274,11 +275,11 @@ export class SessionModel {
 
     if (!result) return;
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars,unused-imports/no-unused-vars
+    // eslint-disable-next-line unused-imports/no-unused-vars
     const { agent, clientId, ...session } = result;
     const sessionId = this.genId();
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+     
     const { id: _, slug: __, ...config } = agent;
 
     return this.create({

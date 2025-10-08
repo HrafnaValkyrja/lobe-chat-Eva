@@ -4,13 +4,14 @@ import { memo, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import SearchXNGIcon from './SearchXNGIcon';
+import { FormAction } from './style';
+
 import { FormInput, FormPassword } from '@/components/FormInput';
 import { useChatStore } from '@/store/chat';
 import { useUserStore } from '@/store/user';
 import { keyVaultsConfigSelectors } from '@/store/user/selectors';
 
-import SearchXNGIcon from './SearchXNGIcon';
-import { FormAction } from './style';
 
 interface ProviderApiKeyFormProps {
   id: string;

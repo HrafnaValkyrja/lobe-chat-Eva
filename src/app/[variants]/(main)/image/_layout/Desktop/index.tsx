@@ -1,11 +1,13 @@
 import { Flexbox } from 'react-layout-kit';
 
-import ImagePanel from '@/features/ImageSidePanel';
-import ImageTopicPanel from '@/features/ImageTopicPanel';
 
 import { LayoutProps } from '../type';
+
 import Container from './Container';
 import RegisterHotkeys from './RegisterHotkeys';
+
+import ImagePanel from '@/features/ImageSidePanel';
+import ImageTopicPanel from '@/features/ImageTopicPanel';
 
 const Layout = ({ children, menu, topic }: LayoutProps) => {
   return (

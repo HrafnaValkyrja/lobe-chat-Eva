@@ -1,11 +1,12 @@
 import { ChatInputActions, type ChatInputActionsProps } from '@lobehub/editor/react';
 import { memo, useMemo } from 'react';
 
+import { ActionKeys, actionMap } from '../ActionBar/config';
+import { useChatInputStore } from '../store';
+
 import { useGlobalStore } from '@/store/global';
 import { systemStatusSelectors } from '@/store/global/selectors';
 
-import { ActionKeys, actionMap } from '../ActionBar/config';
-import { useChatInputStore } from '../store';
 
 const mapActionsToItems = (keys: ActionKeys[]): ChatInputActionsProps['items'] =>
   keys.map((actionKey, index) => {

@@ -6,10 +6,11 @@ import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 import Balancer from 'react-wrap-balancer';
 
-import { BRANDING_NAME } from '@/const/branding';
 
 import ExportConfigButton from './ExportConfigButton';
 import UpgradeButton, { UpgradeButtonProps } from './UpgradeButton';
+
+import { BRANDING_NAME } from '@/const/branding';
 
 const useStyles = createStyles(({ css, token, isDarkMode, responsive }) => ({
   desc: css`

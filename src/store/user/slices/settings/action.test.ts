@@ -1,7 +1,7 @@
 import { act, renderHook, waitFor } from '@testing-library/react';
 import type { PartialDeep } from 'type-fest';
 import { describe, expect, it, vi } from 'vitest';
-import { withSWR } from '~test-utils';
+
 
 import { DEFAULT_AGENT, DEFAULT_SETTINGS } from '@/const/settings';
 import { userService } from '@/services/user';
@@ -9,6 +9,7 @@ import { useUserStore } from '@/store/user';
 import { LobeAgentSettings } from '@/types/session';
 import { UserSettings } from '@/types/user/settings';
 import { merge } from '@/utils/merge';
+import { withSWR } from '~test-utils';
 
 vi.mock('zustand/traditional');
 

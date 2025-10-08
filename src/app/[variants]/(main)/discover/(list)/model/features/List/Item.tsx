@@ -13,11 +13,13 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 
+import PublishedTime from '../../../../../../../../components/PublishedTime';
+
+import ModelTypeIcon from './ModelTypeIcon';
+
 import { ModelInfoTags } from '@/components/ModelSelect';
 import { DiscoverModelItem } from '@/types/discover';
 
-import PublishedTime from '../../../../../../../../components/PublishedTime';
-import ModelTypeIcon from './ModelTypeIcon';
 
 const useStyles = createStyles(({ css, token }) => {
   return {

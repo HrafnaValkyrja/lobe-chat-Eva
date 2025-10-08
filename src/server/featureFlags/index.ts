@@ -1,5 +1,7 @@
 import createDebug from 'debug';
 
+import { EdgeConfig } from '../modules/EdgeConfig';
+
 import {
   DEFAULT_FEATURE_FLAGS,
   getServerFeatureFlagsValue,
@@ -7,7 +9,6 @@ import {
 } from '@/config/featureFlags';
 import { merge } from '@/utils/merge';
 
-import { EdgeConfig } from '../modules/EdgeConfig';
 
 const debug = createDebug('lobe:featureFlags');
 

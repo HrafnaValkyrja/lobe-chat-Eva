@@ -1,5 +1,6 @@
 // @vitest-environment node
 import { testProvider } from '../../providerTestUtils';
+
 import { LobeMoonshotAI } from './index';
 
 const provider = 'moonshot';

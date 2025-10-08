@@ -3,10 +3,12 @@ import { ChatErrorType } from '@lobechat/types';
 import { getXorPayload } from '@lobechat/utils/server';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { createErrorResponse } from '@/utils/errorResponse';
+import { checkAuthMethod } from './utils';
 
 import { RequestHandler, checkAuth } from './index';
-import { checkAuthMethod } from './utils';
+
+import { createErrorResponse } from '@/utils/errorResponse';
+
 
 vi.mock('@clerk/nextjs/server', () => ({
   getAuth: vi.fn(),

@@ -1,10 +1,12 @@
 import { describe, expect, it, vi } from 'vitest';
 
+import { GlobalState, INITIAL_STATUS, initialState } from '../initialState';
+
+import { systemStatusSelectors } from './systemStatus';
+
 import { DatabaseLoadingState } from '@/types/clientDB';
 import { merge } from '@/utils/merge';
 
-import { GlobalState, INITIAL_STATUS, initialState } from '../initialState';
-import { systemStatusSelectors } from './systemStatus';
 
 // Mock version constants
 vi.mock('@/const/version', () => ({

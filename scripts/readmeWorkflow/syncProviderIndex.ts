@@ -1,6 +1,7 @@
+import { resolve } from 'node:path';
+
 import { consola } from 'consola';
 import { readJSONSync } from 'fs-extra';
-import { resolve } from 'node:path';
 import urlJoin from 'url-join';
 
 import { PROVIDER_LIST, PROVIDER_SPLIT, root } from './const';

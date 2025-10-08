@@ -11,6 +11,8 @@ import {
 import { useRouter } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 
+import { useCategory as useSettingsCategory } from '../../settings/features/useCategory';
+
 import { CellProps } from '@/components/Cell';
 import { enableAuth } from '@/const/auth';
 import { LOBE_CHAT_CLOUD } from '@/const/branding';
@@ -21,7 +23,6 @@ import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfi
 import { useUserStore } from '@/store/user';
 import { authSelectors } from '@/store/user/selectors';
 
-import { useCategory as useSettingsCategory } from '../../settings/features/useCategory';
 
 export const useCategory = () => {
   const router = useRouter();

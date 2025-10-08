@@ -1,9 +1,10 @@
 import { memo, useEffect } from 'react';
 
+import BackBottom from './BackBottom';
+
 import { useChatStore } from '@/store/chat';
 import { chatSelectors } from '@/store/chat/selectors';
 
-import BackBottom from './BackBottom';
 
 interface AutoScrollProps {
   atBottom: boolean;

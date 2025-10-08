@@ -1,10 +1,11 @@
 import type { NextAuthConfig } from 'next-auth';
 
+import { LobeNextAuthDbAdapter } from './adapter';
+import { ssoProviders } from './sso-providers';
+
 import { getServerDBConfig } from '@/config/db';
 import { getAuthConfig } from '@/envs/auth';
 
-import { LobeNextAuthDbAdapter } from './adapter';
-import { ssoProviders } from './sso-providers';
 
 const {
   NEXT_AUTH_DEBUG,

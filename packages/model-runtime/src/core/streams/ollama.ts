@@ -2,6 +2,7 @@ import { ChatResponse } from 'ollama/browser';
 
 import { ChatStreamCallbacks } from '../../types';
 import { nanoid } from '../../utils/uuid';
+
 import {
   StreamContext,
   StreamProtocolChunk,

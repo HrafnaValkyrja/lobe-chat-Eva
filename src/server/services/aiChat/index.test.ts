@@ -1,11 +1,12 @@
 import { LobeChatDatabase } from '@lobechat/database';
 import { describe, expect, it, vi } from 'vitest';
 
+import { AiChatService } from '.';
+
 import { MessageModel } from '@/database/models/message';
 import { TopicModel } from '@/database/models/topic';
 import { FileService } from '@/server/services/file';
 
-import { AiChatService } from '.';
 
 vi.mock('@/database/models/message');
 vi.mock('@/database/models/topic');

@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import ListItem from '../ListItem';
+
 import { DEFAULT_INBOX_AVATAR } from '@/const/meta';
 import { INBOX_SESSION_ID } from '@/const/session';
 import { SESSION_CHAT_URL } from '@/const/url';
@@ -11,7 +13,6 @@ import { chatSelectors } from '@/store/chat/selectors';
 import { useServerConfigStore } from '@/store/serverConfig';
 import { useSessionStore } from '@/store/session';
 
-import ListItem from '../ListItem';
 
 const Inbox = memo(() => {
   const { t } = useTranslation('chat');

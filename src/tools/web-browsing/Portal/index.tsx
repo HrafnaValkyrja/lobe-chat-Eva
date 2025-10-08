@@ -1,13 +1,14 @@
 import { memo } from 'react';
 
+import PageContent from './PageContent';
+import PageContents from './PageContents';
+import Search from './Search';
+
 import { WebBrowsingApiName } from '@/tools/web-browsing';
 import { BuiltinPortalProps } from '@/types/tool';
 import { CrawlPluginState } from '@/types/tool/crawler';
 import { SearchQuery } from '@/types/tool/search';
 
-import PageContent from './PageContent';
-import PageContents from './PageContents';
-import Search from './Search';
 
 const Inspector = memo<BuiltinPortalProps>(({ arguments: args, messageId, state, apiName }) => {
   switch (apiName) {

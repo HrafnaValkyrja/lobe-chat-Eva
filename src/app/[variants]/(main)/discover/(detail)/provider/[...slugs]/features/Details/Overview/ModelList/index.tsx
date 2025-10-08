@@ -10,12 +10,13 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 
+import { useDetailContext } from '../../../DetailProvider';
+
 import InlineTable from '@/components/InlineTable';
 import { ModelInfoTags } from '@/components/ModelSelect';
 import { formatPriceByCurrency, formatTokenNumber } from '@/utils/format';
 import { getTextInputUnitRate, getTextOutputUnitRate } from '@/utils/pricing';
 
-import { useDetailContext } from '../../../DetailProvider';
 
 const ModelList = memo(() => {
   const { models = [] } = useDetailContext();

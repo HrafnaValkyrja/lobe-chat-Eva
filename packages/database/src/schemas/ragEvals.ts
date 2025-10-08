@@ -2,12 +2,13 @@
 import { EvalEvaluationStatus } from '@lobechat/types';
 import { integer, jsonb, pgTable, text, uuid } from 'drizzle-orm/pg-core';
 
-import { DEFAULT_MODEL } from '@/const/settings';
 
 import { timestamps } from './_helpers';
 import { knowledgeBases } from './file';
 import { embeddings } from './rag';
 import { users } from './user';
+
+import { DEFAULT_MODEL } from '@/const/settings';
 
 export const evalDatasets = pgTable('rag_eval_datasets', {
   id: integer('id').generatedAlwaysAsIdentity({ startWith: 30_000 }).primaryKey(),

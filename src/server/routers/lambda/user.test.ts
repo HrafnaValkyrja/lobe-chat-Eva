@@ -1,6 +1,8 @@
 // @vitest-environment node
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { userRouter } from './user';
+
 import { enableClerk } from '@/const/auth';
 import { MessageModel } from '@/database/models/message';
 import { SessionModel } from '@/database/models/session';
@@ -10,7 +12,6 @@ import { KeyVaultsGateKeeper } from '@/server/modules/KeyVaultsEncrypt';
 import { NextAuthUserService } from '@/server/services/nextAuthUser';
 import { UserService } from '@/server/services/user';
 
-import { userRouter } from './user';
 
 // Mock modules
 vi.mock('@clerk/nextjs/server', () => ({

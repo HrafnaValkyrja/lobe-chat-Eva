@@ -1,6 +1,7 @@
+import { FilesStoreState } from '../../initialState';
+
 import { UPLOAD_STATUS_SET } from '@/types/files/upload';
 
-import { FilesStoreState } from '../../initialState';
 
 const chatUploadFileList = (s: FilesStoreState) => s.chatUploadFileList;
 const isImageUploading = (s: FilesStoreState) => s.uploadingIds.length > 0;

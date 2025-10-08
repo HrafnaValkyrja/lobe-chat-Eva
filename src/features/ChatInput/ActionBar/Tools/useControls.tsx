@@ -4,6 +4,8 @@ import { ArrowRight, Store, ToyBrick } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import ToolItem from './ToolItem';
+
 import PluginAvatar from '@/components/Plugins/PluginAvatar';
 import { useCheckPluginsIsInstalled } from '@/hooks/useCheckPluginsIsInstalled';
 import { useFetchInstalledPlugins } from '@/hooks/useFetchInstalledPlugins';
@@ -13,7 +15,6 @@ import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfi
 import { useToolStore } from '@/store/tool';
 import { builtinToolSelectors, pluginSelectors } from '@/store/tool/selectors';
 
-import ToolItem from './ToolItem';
 
 export const useControls = ({
   setModalOpen,

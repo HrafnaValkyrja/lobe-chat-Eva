@@ -5,11 +5,13 @@ import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 
-import { OFFICIAL_URL } from '@/const/url';
 
 import ShareButton from '../../../../../features/ShareButton';
 import { useDetailContext } from '../../DetailProvider';
+
 import ChatWithModel from './ChatWithModel';
+
+import { OFFICIAL_URL } from '@/const/url';
 
 const ActionButton = memo(() => {
   const { description, providers, displayName, identifier } = useDetailContext();

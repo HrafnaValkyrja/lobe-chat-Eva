@@ -6,13 +6,14 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import SearchResultItem from './SearchResultItem';
+import ShowMore from './ShowMore';
+
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { useChatStore } from '@/store/chat';
 import { chatToolSelectors } from '@/store/chat/selectors';
 import { SearchQuery, UniformSearchResponse } from '@/types/tool/search';
 
-import SearchResultItem from './SearchResultItem';
-import ShowMore from './ShowMore';
 
 const ITEM_HEIGHT = 80;
 const ITEM_WIDTH = 160;

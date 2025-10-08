@@ -6,6 +6,7 @@ import { Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 
 import { useDetailContext } from '../../DetailProvider';
+
 import PluginItem from './PluginItem';
 
 const Plugin = memo(() => {

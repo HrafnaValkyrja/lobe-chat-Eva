@@ -1,9 +1,11 @@
-import MainInterfaceTracker from '@/components/Analytics/MainInterfaceTracker';
-import MobileContentLayout from '@/components/server/MobileNavLayout';
 
 import { LayoutProps } from '../type';
+
 import ChatHeader from './ChatHeader';
 import TopicModal from './TopicModal';
+
+import MainInterfaceTracker from '@/components/Analytics/MainInterfaceTracker';
+import MobileContentLayout from '@/components/server/MobileNavLayout';
 
 const Layout = ({ children, topic, conversation, portal }: LayoutProps) => {
   return (

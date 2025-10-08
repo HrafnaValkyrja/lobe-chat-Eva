@@ -1,15 +1,17 @@
 import { eq, inArray } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { ImportPgDataStructure } from '@/types/export';
 
 import { getTestDB } from '../../../models/__tests__/_util';
 import * as Schema from '../../../schemas';
 import { DataImporterRepos } from '../index';
+
 import agentsData from './fixtures/agents.json';
 import agentsToSessionsData from './fixtures/agentsToSessions.json';
 import topicsData from './fixtures/topic.json';
 import userSettingsData from './fixtures/userSettings.json';
+
+import { ImportPgDataStructure } from '@/types/export';
 
 const clientDB = await getTestDB();
 

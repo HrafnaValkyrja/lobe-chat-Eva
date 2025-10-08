@@ -1,5 +1,5 @@
-import createClient, { ModelClient } from '@azure-rest/ai-inference';
 import { AzureKeyCredential } from '@azure/core-auth';
+import createClient, { ModelClient } from '@azure-rest/ai-inference';
 import { ModelProvider } from 'model-bank';
 import OpenAI from 'openai';
 

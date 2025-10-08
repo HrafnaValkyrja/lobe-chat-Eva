@@ -1,10 +1,11 @@
 import { LocalFileItem, LocalMoveFilesResultItem } from '@lobechat/electron-client-ipc';
 import { describe, expect, it, vi } from 'vitest';
 
+import { localFileSlice } from '../localFile';
+
 import { localFileService } from '@/services/electron/localFileService';
 import { ChatStore } from '@/store/chat/store';
 
-import { localFileSlice } from '../localFile';
 
 vi.mock('@/services/electron/localFileService', () => ({
   localFileService: {

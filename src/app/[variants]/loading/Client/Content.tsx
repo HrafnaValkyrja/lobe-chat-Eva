@@ -2,12 +2,13 @@ import dynamic from 'next/dynamic';
 import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { CLIENT_LOADING_STAGES } from '../stage';
+
 import FullscreenLoading from '@/components/Loading/FullscreenLoading';
 import { useGlobalStore } from '@/store/global';
 import { systemStatusSelectors } from '@/store/global/selectors';
 import { DatabaseLoadingState } from '@/types/clientDB';
 
-import { CLIENT_LOADING_STAGES } from '../stage';
 
 const InitError = dynamic(() => import('./Error'), { ssr: false });
 

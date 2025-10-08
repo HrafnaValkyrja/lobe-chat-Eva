@@ -1,6 +1,8 @@
 import { t } from 'i18next';
 import { StateCreator } from 'zustand/vanilla';
 
+import { FileStore } from '../../store';
+
 import { notification } from '@/components/AntdStaticMethods';
 import { FILE_UPLOAD_BLACKLIST } from '@/const/file';
 import { fileService } from '@/services/file';
@@ -17,7 +19,6 @@ import { isChunkingUnsupported } from '@/utils/isChunkingUnsupported';
 import { sleep } from '@/utils/sleep';
 import { setNamespace } from '@/utils/storeDebug';
 
-import { FileStore } from '../../store';
 
 const n = setNamespace('chat');
 

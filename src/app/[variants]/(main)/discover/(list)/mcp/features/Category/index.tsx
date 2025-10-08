@@ -6,6 +6,8 @@ import { useRouter } from 'nextjs-toploader/app';
 import qs from 'query-string';
 import { memo, useMemo } from 'react';
 
+import CategoryMenu from '../../../../components/CategoryMenu';
+
 import { SCROLL_PARENT_ID } from '@/app/[variants]/(main)/discover/features/const';
 import { withSuspense } from '@/components/withSuspense';
 import { useCategory } from '@/hooks/useMCPCategory';
@@ -13,7 +15,6 @@ import { useQuery } from '@/hooks/useQuery';
 import { useDiscoverStore } from '@/store/discover';
 import { McpCategory } from '@/types/discover';
 
-import CategoryMenu from '../../../../components/CategoryMenu';
 
 const Category = memo(() => {
   const useMcpCategories = useDiscoverStore((s) => s.useMcpCategories);

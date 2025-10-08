@@ -123,7 +123,7 @@ const ThinkingBudgetSlider = memo<ThinkingBudgetSliderProps>(
         <div>
           <InputNumber
             changeOnWheel
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+             
             formatter={(value, _info) => {
               if (value === SPECIAL_VALUES.AUTO) return 'Auto';
               if (value === SPECIAL_VALUES.OFF) return 'OFF';

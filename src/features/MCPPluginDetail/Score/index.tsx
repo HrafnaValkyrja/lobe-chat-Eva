@@ -3,6 +3,14 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+
+import Title from '../../../app/[variants]/(main)/discover/features/Title';
+import { useDetailContext } from '../DetailProvider';
+
+import GithubBadge from './GithubBadge';
+import ScoreList from './ScoreList';
+import TotalScore from './TotalScore';
+
 import {
   calculateScore,
   calculateScoreFlags,
@@ -10,12 +18,6 @@ import {
   sortItemsByPriority,
 } from '@/features/MCP/calculateScore';
 import { useScoreList } from '@/features/MCP/useScoreList';
-
-import Title from '../../../app/[variants]/(main)/discover/features/Title';
-import { useDetailContext } from '../DetailProvider';
-import GithubBadge from './GithubBadge';
-import ScoreList from './ScoreList';
-import TotalScore from './TotalScore';
 
 const Score = memo(() => {
   const { t } = useTranslation('discover');

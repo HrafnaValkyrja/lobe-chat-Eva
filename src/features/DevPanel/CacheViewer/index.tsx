@@ -1,8 +1,8 @@
 import { Empty } from 'antd';
 import { Center } from 'react-layout-kit';
 
-import DataTable from './DataTable';
 import { CachePanelContextProvider } from './cacheProvider';
+import DataTable from './DataTable';
 import { getCacheFiles } from './getCacheEntries';
 
 const CacheViewer = async () => {

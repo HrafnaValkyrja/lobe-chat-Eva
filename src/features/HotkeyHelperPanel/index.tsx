@@ -5,10 +5,11 @@ import { MessageSquare, Settings2 } from 'lucide-react';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import HotkeyContent from './HotkeyContent';
+
 import { useGlobalStore } from '@/store/global';
 import { HotkeyGroupEnum, HotkeyGroupId } from '@/types/hotkey';
 
-import HotkeyContent from './HotkeyContent';
 
 const HotkeyHelperPanel = memo(() => {
   const [open, updateSystemStatus] = useGlobalStore((s) => [

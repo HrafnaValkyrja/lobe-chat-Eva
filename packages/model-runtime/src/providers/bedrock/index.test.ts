@@ -5,6 +5,7 @@ import { ModelProvider } from 'model-bank';
 import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import * as debugStreamModule from '../../utils/debugStream';
+
 import { LobeBedrockAI } from './index';
 
 const provider = 'bedrock';

@@ -4,12 +4,14 @@ import { XIcon } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import SearchBar from '../../../components/SearchBar';
+
+import SearchView from './SearchView';
+
 import { useChatStore } from '@/store/chat';
 import { chatToolSelectors } from '@/store/chat/selectors';
 import { SearchQuery, UniformSearchResponse } from '@/types/tool/search';
 
-import SearchBar from '../../../components/SearchBar';
-import SearchView from './SearchView';
 
 interface SearchQueryViewProps {
   args: SearchQuery;

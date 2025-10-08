@@ -2,10 +2,11 @@ import { CrawlErrorResult } from '@lobechat/web-crawler';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
-import { CrawlPluginState } from '@/types/tool/crawler';
 
 import Loading from './Loading';
 import Result from './Result';
+
+import { CrawlPluginState } from '@/types/tool/crawler';
 
 interface PagesContentProps {
   messageId: string;

@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 import Hero from '../../features/Hero';
+
 import Container from './Container';
 
 type Props = { children: ReactNode };

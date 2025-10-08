@@ -6,6 +6,8 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import Actions from './Action';
+
 import PluginAvatar from '@/components/Plugins/PluginAvatar';
 import PluginTag from '@/components/Plugins/PluginTag';
 import { useToolStore } from '@/store/tool';
@@ -14,7 +16,6 @@ import { PluginInstallStep } from '@/store/tool/slices/oldStore/initialState';
 import { DiscoverPluginItem } from '@/types/discover';
 import { LobeToolType } from '@/types/tool/tool';
 
-import Actions from './Action';
 
 interface PluginItemProps extends DiscoverPluginItem {
   active?: boolean;

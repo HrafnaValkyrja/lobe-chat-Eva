@@ -1,6 +1,8 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import TotalCard from './ShareButton/TotalCard';
+
 import Statistic from '@/components/Statistic';
 import StatisticCard from '@/components/StatisticCard';
 import TitleWithPercentage from '@/components/StatisticCard/TitleWithPercentage';
@@ -9,7 +11,6 @@ import { messageService } from '@/services/message';
 import { formatShortenNumber } from '@/utils/format';
 import { lastMonth } from '@/utils/time';
 
-import TotalCard from './ShareButton/TotalCard';
 
 const TotalWords = memo<{ inShare?: boolean }>(({ inShare }) => {
   const { t } = useTranslation('auth');

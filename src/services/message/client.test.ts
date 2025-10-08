@@ -1,6 +1,8 @@
 import { and, eq } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { ClientService } from './client';
+
 import { clientDB, initializeDB } from '@/database/client/db';
 import {
   files,
@@ -21,7 +23,6 @@ import {
   MessageItem,
 } from '@/types/message';
 
-import { ClientService } from './client';
 
 const userId = 'message-db';
 const sessionId = '1';

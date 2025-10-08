@@ -4,11 +4,12 @@ import { InputPassword, Markdown } from '@lobehub/ui';
 import { createStyles } from 'antd-style';
 import { useTranslation } from 'react-i18next';
 
+import { KeyVaultsConfigKey, LLMProviderApiTokenKey } from '../../const';
+import { ProviderItem } from '../../type';
+
 import { GithubProviderCard } from '@/config/modelProviders';
 import { GlobalLLMProviderKey } from '@/types/user/settings';
 
-import { KeyVaultsConfigKey, LLMProviderApiTokenKey } from '../../const';
-import { ProviderItem } from '../../type';
 
 const useStyles = createStyles(({ css, token }) => ({
   markdown: css`

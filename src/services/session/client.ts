@@ -1,12 +1,13 @@
 import { AgentItem, LobeAgentConfig } from '@lobechat/types';
 
+import { ISessionService } from './type';
+
 import { INBOX_SESSION_ID } from '@/const/session';
 import { clientDB } from '@/database/client/db';
 import { SessionModel } from '@/database/models/session';
 import { SessionGroupModel } from '@/database/models/sessionGroup';
 import { BaseClientService } from '@/services/baseClientService';
 
-import { ISessionService } from './type';
 
 export class ClientService extends BaseClientService implements ISessionService {
   private get sessionModel(): SessionModel {
@@ -144,7 +145,7 @@ export class ClientService extends BaseClientService implements ISessionService 
     return item.id;
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   
   batchCreateSessionGroups: ISessionService['batchCreateSessionGroups'] = async (_groups) => {
     return { added: 0, ids: [], skips: [], success: true };
   };

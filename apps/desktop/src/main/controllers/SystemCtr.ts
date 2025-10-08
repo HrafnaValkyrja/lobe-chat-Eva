@@ -1,14 +1,16 @@
-import { ElectronAppState, ThemeMode } from '@lobechat/electron-client-ipc';
-import { app, nativeTheme, shell, systemPreferences } from 'electron';
-import { macOS } from 'electron-is';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import process from 'node:process';
 
+import { ElectronAppState, ThemeMode } from '@lobechat/electron-client-ipc';
+import { app, nativeTheme, shell, systemPreferences } from 'electron';
+import { macOS } from 'electron-is';
+
+import { ControllerModule, ipcClientEvent, ipcServerEvent } from './index';
+
 import { DB_SCHEMA_HASH_FILENAME, LOCAL_DATABASE_DIR, userDataDir } from '@/const/dir';
 import { createLogger } from '@/utils/logger';
 
-import { ControllerModule, ipcClientEvent, ipcServerEvent } from './index';
 
 const logger = createLogger('controllers:SystemCtr');
 

@@ -48,11 +48,11 @@ export const createTraceOptions = (
         const output =
           // if the toolsCalling is not empty, we need to return the toolsCalling
           !!toolsCalling && toolsCalling.length > 0
-            ? !!text
+            ? text
               ? // tools calling with thinking and text
                 { text, thinking, toolsCalling }
               : toolsCalling
-            : !!thinking
+            : thinking
               ? { text, thinking }
               : text;
 

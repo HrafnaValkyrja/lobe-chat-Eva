@@ -5,13 +5,15 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import Action from '../components/Action';
+
+import ControlsForm from './ControlsForm';
+
 import ModelSwitchPanel from '@/features/ModelSwitchPanel';
 import { useAgentStore } from '@/store/agent';
 import { agentSelectors } from '@/store/agent/selectors';
 import { aiModelSelectors, useAiInfraStore } from '@/store/aiInfra';
 
-import Action from '../components/Action';
-import ControlsForm from './ControlsForm';
 
 const useStyles = createStyles(({ css, token, cx }) => ({
   container: css`

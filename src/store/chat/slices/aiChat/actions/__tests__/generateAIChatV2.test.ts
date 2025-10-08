@@ -2,6 +2,9 @@ import { act, renderHook } from '@testing-library/react';
 import { TRPCClientError } from '@trpc/client';
 import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { useChatStore } from '../../../../store';
+import { messageMapKey } from '../../../../utils/messageMapKey';
+
 import { LOADING_FLAT } from '@/const/message';
 import {
   DEFAULT_AGENT_CHAT_CONFIG,
@@ -17,8 +20,6 @@ import { sessionMetaSelectors } from '@/store/session/selectors';
 import { UploadFileItem } from '@/types/files/upload';
 import { ChatMessage } from '@/types/message';
 
-import { useChatStore } from '../../../../store';
-import { messageMapKey } from '../../../../utils/messageMapKey';
 
 vi.stubGlobal(
   'fetch',

@@ -3,11 +3,12 @@ import { memo, useId, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import ShareImage from './ShareImage';
+import ShareText from './ShareText';
+
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { ChatMessage } from '@/types/message';
 
-import ShareImage from './ShareImage';
-import ShareText from './ShareText';
 
 enum Tab {
   Screenshot = 'screenshot',

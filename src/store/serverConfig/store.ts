@@ -1,16 +1,17 @@
 import { StoreApiWithSelector } from '@lobechat/types';
 import { StoreApi } from 'zustand';
-import { createContext } from 'zustand-utils';
 import { shallow } from 'zustand/shallow';
 import { createWithEqualityFn } from 'zustand/traditional';
 import { StateCreator } from 'zustand/vanilla';
+import { createContext } from 'zustand-utils';
+
+import { ServerConfigAction, createServerConfigSlice } from './action';
 
 import { DEFAULT_FEATURE_FLAGS, IFeatureFlags } from '@/config/featureFlags';
 import { createDevtools } from '@/store/middleware/createDevtools';
 import { GlobalServerConfig } from '@/types/serverConfig';
 import { merge } from '@/utils/merge';
 
-import { ServerConfigAction, createServerConfigSlice } from './action';
 
 interface ServerConfigState {
   featureFlags: IFeatureFlags;

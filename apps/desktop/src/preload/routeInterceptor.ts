@@ -1,6 +1,7 @@
+import { invoke } from './invoke';
+
 import { findMatchingRoute } from '~common/routes';
 
-import { invoke } from './invoke';
 
 const interceptRoute = async (
   path: string,

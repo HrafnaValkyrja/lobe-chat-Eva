@@ -1,3 +1,5 @@
+import { Store } from './action';
+
 import { DEFAULT_AGENT_META } from '@/const/meta';
 import {
   DEFAULT_AGENT_CHAT_CONFIG,
@@ -7,7 +9,6 @@ import {
 import { LobeAgentChatConfig } from '@/types/agent';
 import { merge } from '@/utils/merge';
 
-import { Store } from './action';
 
 const chatConfig = (s: Store): LobeAgentChatConfig =>
   s.config.chatConfig || DEFAULT_AGENT_CHAT_CONFIG;

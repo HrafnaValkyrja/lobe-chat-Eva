@@ -3,13 +3,14 @@ import { HardDriveDownload } from 'lucide-react';
 import { memo, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import SubmitAgentButton from './SubmitAgentButton';
+
 import { HEADER_ICON_SIZE } from '@/const/layoutTokens';
 import { isServerMode } from '@/const/version';
 import { configService } from '@/services/config';
 import { useServerConfigStore } from '@/store/serverConfig';
 import { useSessionStore } from '@/store/session';
 
-import SubmitAgentButton from './SubmitAgentButton';
 
 export const HeaderContent = memo<{ mobile?: boolean; modal?: boolean }>(({ modal }) => {
   const { t } = useTranslation('setting');

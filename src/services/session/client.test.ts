@@ -1,6 +1,8 @@
 import { eq, not } from 'drizzle-orm';
 import { Mock, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { ClientService } from './client';
+
 import { INBOX_SESSION_ID } from '@/const/session';
 import { clientDB, initializeDB } from '@/database/client/db';
 import {
@@ -15,7 +17,6 @@ import {
 import { LobeAgentChatConfig, LobeAgentConfig } from '@/types/agent';
 import { LobeAgentSession, LobeSessionType, SessionGroups } from '@/types/session';
 
-import { ClientService } from './client';
 
 const userId = 'message-db';
 const sessionService = new ClientService(userId);

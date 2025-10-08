@@ -5,15 +5,17 @@ import { parseAsStringEnum, useQueryState } from 'nuqs';
 import { memo, useRef } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
-import InitClientDB from '@/features/InitClientDB';
-import SettingContainer from '@/features/Setting/SettingContainer';
-import { SettingsTabs } from '@/store/global/initialState';
 
 import CategoryContent from '../CategoryContent';
 import SettingsContent from '../SettingsContent';
 import { LayoutProps } from '../type';
+
 import Header from './Header';
 import SideBar from './SideBar';
+
+import InitClientDB from '@/features/InitClientDB';
+import SettingContainer from '@/features/Setting/SettingContainer';
+import { SettingsTabs } from '@/store/global/initialState';
 
 const Layout = memo<LayoutProps>((props) => {
   const { showLLM = true } = props;

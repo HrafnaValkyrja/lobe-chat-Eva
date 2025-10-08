@@ -3,9 +3,10 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import PluginSettings from './PluginSettings';
+
 import { ChatMessageError, ChatPluginPayload } from '@/types/message';
 
-import PluginSettings from './PluginSettings';
 
 interface ErrorResponseProps extends ChatMessageError {
   id: string;

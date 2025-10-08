@@ -27,7 +27,7 @@ class MCPService {
 
   private sanitizeForLogging = <T extends Record<string, any>>(obj: T): Omit<T, 'env'> => {
     if (!obj) return obj;
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+     
     const { env: _, ...rest } = obj;
     return rest as Omit<T, 'env'>;
   };

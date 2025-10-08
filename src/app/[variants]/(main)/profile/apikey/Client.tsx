@@ -9,10 +9,11 @@ import { Trash } from 'lucide-react';
 import { FC, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { ApiKeyDisplay, ApiKeyModal, EditableCell } from './features';
+
 import { lambdaClient } from '@/libs/trpc/client';
 import { ApiKeyItem, CreateApiKeyParams, UpdateApiKeyParams } from '@/types/apiKey';
 
-import { ApiKeyDisplay, ApiKeyModal, EditableCell } from './features';
 
 const useStyles = createStyles(({ css, token }) => ({
   container: css`

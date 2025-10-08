@@ -2,6 +2,10 @@ import isEqual from 'fast-deep-equal';
 import { useEffect } from 'react';
 import { useHotkeysContext } from 'react-hotkeys-hook';
 
+import { usePinnedAgentState } from '../usePinnedAgentState';
+
+import { useHotkeyById } from './useHotkeyById';
+
 import { useSend } from '@/app/[variants]/(main)/chat/(workspace)/@conversation/features/ChatInput/useSend';
 import { useClearCurrentMessages } from '@/features/ChatInput/ActionBar/Clear';
 import { useOpenChatSettings } from '@/hooks/useInterceptingRoutes';
@@ -12,8 +16,6 @@ import { useGlobalStore } from '@/store/global';
 import { systemStatusSelectors } from '@/store/global/selectors';
 import { HotkeyEnum, HotkeyScopeEnum } from '@/types/hotkey';
 
-import { usePinnedAgentState } from '../usePinnedAgentState';
-import { useHotkeyById } from './useHotkeyById';
 
 export const useSaveTopicHotkey = () => {
   const openNewTopicOrSaveTopic = useChatStore((s) => s.openNewTopicOrSaveTopic);

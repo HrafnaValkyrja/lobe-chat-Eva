@@ -1,16 +1,18 @@
+import fs from 'node:fs';
+
 import { PGlite } from '@electric-sql/pglite';
 import { vector } from '@electric-sql/pglite/vector';
 import { drizzle as pgliteDrizzle } from 'drizzle-orm/pglite';
-import fs from 'node:fs';
 import { Md5 } from 'ts-md5';
-
-import { electronIpcClient } from '@/server/modules/ElectronIPCClient';
-import { MigrationTableItem } from '@/types/clientDB';
 
 import { DrizzleMigrationModel } from '../models/drizzleMigration';
 import * as schema from '../schemas';
 import { LobeChatDatabase } from '../type';
+
 import migrations from './migrations.json';
+
+import { electronIpcClient } from '@/server/modules/ElectronIPCClient';
+import { MigrationTableItem } from '@/types/clientDB';
 
 // 用于实例管理的全局对象
 interface LobeGlobal {
@@ -24,7 +26,7 @@ interface LobeGlobal {
 
 // 确保 globalThis 有我们的命名空间
 declare global {
-  // eslint-disable-next-line no-var
+   
   var __LOBE__: LobeGlobal;
 }
 

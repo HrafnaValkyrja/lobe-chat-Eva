@@ -14,11 +14,13 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import { useDetailContext } from '../../DetailProvider';
+
+import ParameterItem from './ParameterItem';
+
 import Title from '@/app/[variants]/(main)/discover/features/Title';
 import { formatTokenNumber } from '@/utils/format';
 
-import { useDetailContext } from '../../DetailProvider';
-import ParameterItem from './ParameterItem';
 
 interface Parameter {
   defaultValue: string | number;
@@ -77,7 +79,7 @@ const ParameterList = memo(() => {
       icon: MessageSquareText,
       key: 'max_tokens',
       label: t('models.parameterList.max_tokens.title'),
-      range: Boolean(data?.maxOutput || data?.maxDimension)
+      range: data?.maxOutput || data?.maxDimension
         ? [0, formatTokenNumber(data?.maxOutput || data?.maxDimension || 0)]
         : undefined,
       type: 'int',

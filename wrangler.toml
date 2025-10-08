@@ -1,0 +1,30 @@
+name = "lobe-chat-eva"
+main = ".worker-next/index.mjs"
+compatibility_date = "2025-01-08"
+
+# D1 Database configuration
+# To create a D1 database, run: wrangler d1 create lobe-chat-eva
+# Then update the database_id below with the actual ID from the output
+[[d1_databases]]
+binding = "DB"
+database_name = "lobe-chat-eva"
+database_id = "your-database-id-here"
+
+# R2 bucket for file storage and caching
+[[r2_buckets]]
+binding = "ASSETS"
+bucket_name = "lobe-chat-assets"
+
+# Environment variables for local development
+[vars]
+NEXT_PUBLIC_SERVICE_MODE = "server"
+DATABASE_DRIVER = "d1"
+
+# Production environment configuration
+[env.production]
+name = "lobe-chat-eva-prod"
+
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "lobe-chat-eva-prod"
+database_id = "production-database-id"

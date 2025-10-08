@@ -1,10 +1,11 @@
+import { IThreadService } from './type';
+
 import { INBOX_SESSION_ID } from '@/const/session';
 import { clientDB } from '@/database/client/db';
 import { MessageModel } from '@/database/models/message';
 import { ThreadModel } from '@/database/models/thread';
 import { BaseClientService } from '@/services/baseClientService';
 
-import { IThreadService } from './type';
 
 export class ClientService extends BaseClientService implements IThreadService {
   private get threadModel(): ThreadModel {

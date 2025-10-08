@@ -1,12 +1,6 @@
 import debug from 'debug';
 import { and, eq } from 'drizzle-orm';
 
-import { LobeChatDatabase, Transaction } from '../type';
-import { FileService } from '@/server/services/file';
-import { AsyncTaskError, AsyncTaskStatus } from '@/types/asyncTask';
-import { FileSource } from '@/types/files';
-import { Generation, ImageGenerationAsset } from '@/types/generation';
-
 import { NewFile } from '../schemas';
 import {
   GenerationItem,
@@ -14,7 +8,16 @@ import {
   NewGeneration,
   generations,
 } from '../schemas/generation';
+import { LobeChatDatabase, Transaction } from '../type';
+
 import { FileModel } from './file';
+
+import { FileService } from '@/server/services/file';
+import { AsyncTaskError, AsyncTaskStatus } from '@/types/asyncTask';
+import { FileSource } from '@/types/files';
+import { Generation, ImageGenerationAsset } from '@/types/generation';
+
+
 
 // Create debug logger
 const log = debug('lobe-image:generation-model');

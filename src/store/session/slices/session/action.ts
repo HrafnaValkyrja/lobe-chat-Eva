@@ -5,6 +5,12 @@ import useSWR, { SWRResponse, mutate } from 'swr';
 import type { PartialDeep } from 'type-fest';
 import { StateCreator } from 'zustand/vanilla';
 
+import { sessionGroupSelectors } from '../sessionGroup/selectors';
+
+import { SessionDispatch, sessionsReducer } from './reducers';
+import { sessionSelectors } from './selectors';
+import { sessionMetaSelectors } from './selectors/meta';
+
 import { message } from '@/components/AntdStaticMethods';
 import { MESSAGE_CANCEL_FLAT } from '@/const/message';
 import { DEFAULT_AGENT_LOBE_SESSION, INBOX_SESSION_ID } from '@/const/session';
@@ -25,10 +31,6 @@ import {
 import { merge } from '@/utils/merge';
 import { setNamespace } from '@/utils/storeDebug';
 
-import { sessionGroupSelectors } from '../sessionGroup/selectors';
-import { SessionDispatch, sessionsReducer } from './reducers';
-import { sessionSelectors } from './selectors';
-import { sessionMetaSelectors } from './selectors/meta';
 
 const n = setNamespace('session');
 
@@ -88,7 +90,7 @@ export interface SessionAction {
     customGroups: LobeSessionGroups,
     actions?: string,
   ) => void;
-  /* eslint-enable */
+   
 }
 
 export const createSessionSlice: StateCreator<

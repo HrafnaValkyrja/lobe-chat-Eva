@@ -66,7 +66,7 @@ export const ragEvalRouter = router({
           const embeddings = await agentRuntime.embeddings({
             dimensions: 1024,
             input: question,
-            model: !!embeddingModel ? embeddingModel : DEFAULT_EMBEDDING_MODEL,
+            model: embeddingModel ? embeddingModel : DEFAULT_EMBEDDING_MODEL,
           });
 
           const embeddingId = await ctx.embeddingModel.create({
@@ -102,7 +102,7 @@ export const ragEvalRouter = router({
 
         const response = await agentRuntime.chat({
           messages: messages!,
-          model: !!languageModel ? languageModel : DEFAULT_MODEL,
+          model: languageModel ? languageModel : DEFAULT_MODEL,
           responseMode: 'json',
           stream: false,
           temperature: 1,

@@ -1,9 +1,10 @@
 import { describe, expect, it } from 'vitest';
 
-import { UserStore } from '@/store/user';
 
 import { initialPreferenceState } from './initialState';
 import { preferenceSelectors } from './selectors';
+
+import { UserStore } from '@/store/user';
 
 describe('preferenceSelectors', () => {
   let store: UserStore;

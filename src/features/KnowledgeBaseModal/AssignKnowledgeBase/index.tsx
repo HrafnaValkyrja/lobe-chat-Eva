@@ -3,9 +3,10 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import List from './List';
+
 import { useServerConfigStore } from '@/store/serverConfig';
 
-import List from './List';
 
 interface AssignKnowledgeBaseProps {
   open?: boolean;

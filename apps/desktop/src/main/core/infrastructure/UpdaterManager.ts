@@ -1,11 +1,12 @@
 import log from 'electron-log';
 import { autoUpdater } from 'electron-updater';
 
+import type { App as AppCore } from '../App';
+
 import { isDev } from '@/const/env';
 import { UPDATE_CHANNEL as channel, updaterConfig } from '@/modules/updater/configs';
 import { createLogger } from '@/utils/logger';
 
-import type { App as AppCore } from '../App';
 
 // Create logger
 const logger = createLogger('core:UpdaterManager');

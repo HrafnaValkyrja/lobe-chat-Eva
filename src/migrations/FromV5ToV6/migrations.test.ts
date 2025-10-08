@@ -1,16 +1,19 @@
 import { describe } from 'vitest';
 
-import { MigrationData, VersionController } from '@/migrations/VersionController';
 
 import { MigrationV1ToV2 } from '../FromV1ToV2';
 import inputV1Data from '../FromV1ToV2/fixtures/input-v1-session.json';
 import { MigrationV2ToV3 } from '../FromV2ToV3';
 import { MigrationV3ToV4 } from '../FromV3ToV4';
 import { MigrationV4ToV5 } from '../FromV4ToV5';
+
 import outputDataFromV1ToV6 from './fixtures/from-v1-to-v6-output.json';
 import sessionInputV5 from './fixtures/session-input-v5.json';
 import sessionOutputV6 from './fixtures/session-output-v6.json';
+
 import { MigrationV5ToV6 } from './index';
+
+import { MigrationData, VersionController } from '@/migrations/VersionController';
 
 describe('MigrationV5ToV6', () => {
   let migrations;

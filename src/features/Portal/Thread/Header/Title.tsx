@@ -1,9 +1,10 @@
 import { Skeleton } from 'antd';
 
-import { useChatStore } from '@/store/chat';
 
 import ActiveThread from './Active';
 import NewThread from './New';
+
+import { useChatStore } from '@/store/chat';
 
 const Header = () => {
   const isInNew = useChatStore((s) => s.startToForkThread);

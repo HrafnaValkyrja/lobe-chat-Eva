@@ -8,6 +8,11 @@ import { t } from 'i18next';
 import useSWR, { SWRResponse, mutate } from 'swr';
 import { StateCreator } from 'zustand/vanilla';
 
+import { chatSelectors } from '../message/selectors';
+
+import { ChatTopicDispatch, topicReducer } from './reducer';
+import { topicSelectors } from './selectors';
+
 import { message } from '@/components/AntdStaticMethods';
 import { LOADING_FLAT } from '@/const/message';
 import { useClientDataSWR } from '@/libs/swr';
@@ -24,9 +29,6 @@ import { ChatTopic } from '@/types/topic';
 import { merge } from '@/utils/merge';
 import { setNamespace } from '@/utils/storeDebug';
 
-import { chatSelectors } from '../message/selectors';
-import { ChatTopicDispatch, topicReducer } from './reducer';
-import { topicSelectors } from './selectors';
 
 const n = setNamespace('t');
 

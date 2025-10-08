@@ -1,6 +1,8 @@
 import { act, cleanup, fireEvent, render, renderHook, screen } from '@testing-library/react';
 import { afterEach, beforeAll, describe, expect, it, vi } from 'vitest';
 
+import TopActions, { TopActionProps } from './TopActions';
+
 import { useGlobalStore } from '@/store/global';
 import { SidebarTabKey } from '@/store/global/initialState';
 import {
@@ -10,7 +12,6 @@ import {
 } from '@/store/serverConfig/store';
 import { useSessionStore } from '@/store/session';
 
-import TopActions, { TopActionProps } from './TopActions';
 
 beforeAll(() => {
   initServerConfigStore({ featureFlags: { market: true, ai_image: true } });

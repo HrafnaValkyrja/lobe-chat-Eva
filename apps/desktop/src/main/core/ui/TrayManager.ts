@@ -2,11 +2,14 @@ import { MainBroadcastEventKey, MainBroadcastParams } from '@lobechat/electron-c
 import { nativeTheme } from 'electron';
 
 import { name } from '@/../../package.json';
+
+import type { App } from '../App';
+
+import { Tray, TrayOptions } from './Tray';
+
 import { isMac } from '@/const/env';
 import { createLogger } from '@/utils/logger';
 
-import type { App } from '../App';
-import { Tray, TrayOptions } from './Tray';
 
 // 创建日志记录器
 const logger = createLogger('core:TrayManager');

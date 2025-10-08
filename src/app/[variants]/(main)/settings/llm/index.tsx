@@ -1,10 +1,11 @@
 'use client';
 
-import { isCustomBranding } from '@/const/version';
 
-import { useProviderList } from './ProviderList/providers';
 import ProviderConfig from './components/ProviderConfig';
 import Footer from './features/Footer';
+import { useProviderList } from './ProviderList/providers';
+
+import { isCustomBranding } from '@/const/version';
 
 const Page = () => {
   const list = useProviderList();

@@ -1,6 +1,8 @@
 import dayjs from 'dayjs';
 import { Mock, describe, expect, it, vi } from 'vitest';
 
+import { ClientService } from './_deprecated';
+
 import { CreateMessageParams, MessageModel } from '@/database/_deprecated/models/message';
 import {
   ChatMessage,
@@ -10,7 +12,6 @@ import {
   ChatTranslate,
 } from '@/types/message';
 
-import { ClientService } from './_deprecated';
 
 const messageService = new ClientService();
 

@@ -1,11 +1,12 @@
 import { describe, expect, it, vi } from 'vitest';
 
+import { generationTopicRouter } from './generationTopic';
+
 import { GenerationTopicModel } from '@/database/models/generationTopic';
 import { GenerationTopicItem } from '@/database/schemas/generation';
 import { FileService } from '@/server/services/file';
 import { GenerationService } from '@/server/services/generation';
 
-import { generationTopicRouter } from './generationTopic';
 
 vi.mock('@/database/models/generationTopic');
 vi.mock('@/server/services/file');

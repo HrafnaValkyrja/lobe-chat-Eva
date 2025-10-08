@@ -1,16 +1,17 @@
 import { pluginPrompts } from '@lobechat/prompts';
 import { LobeChatPluginManifest } from '@lobehub/chat-plugin-sdk';
 
+import { pluginHelpers } from '../helpers';
+import { ToolStoreState } from '../initialState';
+import { builtinToolSelectors } from '../slices/builtin/selectors';
+import { pluginSelectors } from '../slices/plugin/selectors';
+
 import { MetaData } from '@/types/meta';
 import { LobeToolMeta } from '@/types/tool/tool';
 import { globalAgentContextManager } from '@/utils/client/GlobalAgentContextManager';
 import { hydrationPrompt } from '@/utils/promptTemplate';
 import { genToolCallingName } from '@/utils/toolCall';
 
-import { pluginHelpers } from '../helpers';
-import { ToolStoreState } from '../initialState';
-import { builtinToolSelectors } from '../slices/builtin/selectors';
-import { pluginSelectors } from '../slices/plugin/selectors';
 
 const enabledSystemRoles =
   (tools: string[] = []) =>
@@ -92,7 +93,7 @@ const getManifestLoadingStatus = (id: string) => (s: ToolStoreState) => {
 
   if (!manifest) return 'error';
 
-  if (!!manifest) return 'success';
+  if (manifest) return 'success';
 };
 
 const isToolHasUI = (id: string) => (s: ToolStoreState) => {

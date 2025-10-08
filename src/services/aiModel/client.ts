@@ -1,9 +1,10 @@
+import { IAiModelService } from './type';
+
 import { clientDB } from '@/database/client/db';
 import { AiModelModel } from '@/database/models/aiModel';
 import { AiInfraRepos } from '@/database/repositories/aiInfra';
 import { BaseClientService } from '@/services/baseClientService';
 
-import { IAiModelService } from './type';
 
 export class ClientService extends BaseClientService implements IAiModelService {
   private get aiModel(): AiModelModel {

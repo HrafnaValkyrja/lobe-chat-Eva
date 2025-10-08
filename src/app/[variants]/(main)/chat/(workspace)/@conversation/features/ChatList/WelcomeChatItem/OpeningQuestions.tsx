@@ -6,9 +6,10 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import { useSend } from '../../ChatInput/useSend';
+
 import { useChatStore } from '@/store/chat';
 
-import { useSend } from '../../ChatInput/useSend';
 
 const useStyles = createStyles(({ css, token, responsive }) => ({
   card: css`

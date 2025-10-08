@@ -6,14 +6,15 @@ import { memo, useEffect, useState } from 'react';
 import { Trans, useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import MCPManifestForm from './MCPManifestForm';
+import PluginPreview from './PluginPreview';
+import UrlManifestForm from './UrlManifestForm';
+
 import { WIKI_PLUGIN_GUIDE } from '@/const/url';
 import { isDesktop } from '@/const/version';
 import { TITLE_BAR_HEIGHT } from '@/features/ElectronTitlebar';
 import { LobeToolCustomPlugin } from '@/types/tool/plugin';
 
-import MCPManifestForm from './MCPManifestForm';
-import PluginPreview from './PluginPreview';
-import UrlManifestForm from './UrlManifestForm';
 
 interface DevModalProps {
   mode?: 'edit' | 'create';

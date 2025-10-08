@@ -8,10 +8,11 @@ import { memo, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import Item from './Item';
+
 import { fileManagerSelectors, useFileStore } from '@/store/file';
 import { convertAlphaToSolid } from '@/utils/colorUtils';
 
-import Item from './Item';
 
 const useStyles = createStyles(({ css, token }) => {
   return {

@@ -1,6 +1,8 @@
 import { PluginManifest } from '@lobehub/market-sdk';
 import { CallReportRequest } from '@lobehub/market-types';
 
+import { discoverService } from './discover';
+
 import { CURRENT_VERSION, isDesktop } from '@/const/version';
 import { desktopClient, toolsClient } from '@/libs/trpc/client';
 import { ChatToolPayload } from '@/types/message';
@@ -8,7 +10,6 @@ import { CheckMcpInstallResult } from '@/types/plugins';
 import { CustomPluginMetadata } from '@/types/tool/plugin';
 import { safeParseJSON } from '@/utils/safeParseJSON';
 
-import { discoverService } from './discover';
 
 /**
  * 计算对象的字节大小

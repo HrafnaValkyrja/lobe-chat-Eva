@@ -42,7 +42,7 @@ class _MessageModel extends BaseModel {
   }: QueryMessageParams): Promise<ChatMessage[]> {
     const offset = current * pageSize;
 
-    const query = !!topicId
+    const query = topicId
       ? // TODO: The query {"sessionId":"xxx","topicId":"xxx"} on messages would benefit of a compound index [sessionId+topicId]
         this.table.where({ sessionId, topicId }) // Use a compound index
       : this.table
@@ -154,7 +154,7 @@ class _MessageModel extends BaseModel {
   async batchDelete(sessionId: string, topicId: string | undefined): Promise<void> {
     // If topicId is specified, use both assistantId and topicId as the filter criteria in the query.
     // Otherwise, filter by assistantId and require that topicId is undefined.
-    const query = !!topicId
+    const query = topicId
       ? this.table.where({ sessionId, topicId }) // Use a compound index
       : this.table
           .where('sessionId')

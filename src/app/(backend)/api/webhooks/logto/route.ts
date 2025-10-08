@@ -1,11 +1,12 @@
 import { NextResponse } from 'next/server';
 
+import { validateRequest } from './validateRequest';
+
 import { serverDB } from '@/database/server';
 import { authEnv } from '@/envs/auth';
 import { pino } from '@/libs/logger';
 import { NextAuthUserService } from '@/server/services/nextAuthUser';
 
-import { validateRequest } from './validateRequest';
 
 export const POST = async (req: Request): Promise<NextResponse> => {
   const payload = await validateRequest(req, authEnv.LOGTO_WEBHOOK_SIGNING_KEY!);

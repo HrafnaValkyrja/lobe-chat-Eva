@@ -4,11 +4,12 @@ import { usePathname } from 'next/navigation';
 import { memo } from 'react';
 import urlJoin from 'url-join';
 
+import { useCategory } from '../../hooks/useCategory';
+
 import Menu from '@/components/Menu';
 import { useQueryRoute } from '@/hooks/useQueryRoute';
 import { ProfileTabs } from '@/store/global/initialState';
 
-import { useCategory } from '../../hooks/useCategory';
 
 const CategoryContent = memo(() => {
   const pathname = usePathname();

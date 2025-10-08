@@ -1,17 +1,12 @@
-import { ElectronIPCEventHandler, ElectronIPCServer } from '@lobechat/electron-server-ipc';
-import { Session, app, ipcMain, protocol } from 'electron';
-import { macOS, windows } from 'electron-is';
 import os from 'node:os';
 import { join } from 'node:path';
 
+import { ElectronIPCEventHandler, ElectronIPCServer } from '@lobechat/electron-server-ipc';
+import { Session, app, ipcMain, protocol } from 'electron';
+import { macOS, windows } from 'electron-is';
+
 import { name } from '@/../../package.json';
-import { buildDir, nextStandaloneDir } from '@/const/dir';
-import { isDev } from '@/const/env';
-import { IControlModule } from '@/controllers';
-import { IServiceModule } from '@/services';
-import { IpcClientEventSender } from '@/types/ipcClientEvent';
-import { createLogger } from '@/utils/logger';
-import { CustomRequestHandler, createHandler } from '@/utils/next-electron-rsc';
+
 
 import { BrowserManager } from './browser/BrowserManager';
 import { I18nManager } from './infrastructure/I18nManager';
@@ -23,6 +18,14 @@ import { UpdaterManager } from './infrastructure/UpdaterManager';
 import { MenuManager } from './ui/MenuManager';
 import { ShortcutManager } from './ui/ShortcutManager';
 import { TrayManager } from './ui/TrayManager';
+
+import { buildDir, nextStandaloneDir } from '@/const/dir';
+import { isDev } from '@/const/env';
+import { IControlModule } from '@/controllers';
+import { IServiceModule } from '@/services';
+import { IpcClientEventSender } from '@/types/ipcClientEvent';
+import { createLogger } from '@/utils/logger';
+import { CustomRequestHandler, createHandler } from '@/utils/next-electron-rsc';
 
 const logger = createLogger('core:App');
 

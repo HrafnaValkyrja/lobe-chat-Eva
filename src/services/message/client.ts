@@ -1,3 +1,5 @@
+import { IMessageService } from './type';
+
 import { INBOX_SESSION_ID } from '@/const/session';
 import { clientDB } from '@/database/client/db';
 import { MessageModel } from '@/database/models/message';
@@ -5,7 +7,6 @@ import { BaseClientService } from '@/services/baseClientService';
 import { clientS3Storage } from '@/services/file/ClientS3';
 import { ChatMessage } from '@/types/message';
 
-import { IMessageService } from './type';
 
 export class ClientService extends BaseClientService implements IMessageService {
   private get messageModel(): MessageModel {

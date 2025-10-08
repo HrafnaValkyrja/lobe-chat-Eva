@@ -15,8 +15,6 @@ import { Suspense, memo, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import { useIsMobile } from '@/hooks/useIsMobile';
-import { aiModelSelectors, useAiInfraStore } from '@/store/aiInfra';
 
 import DisabledModels from './DisabledModels';
 import EmptyModels from './EmptyModels';
@@ -25,6 +23,9 @@ import ModelTitle from './ModelTitle';
 import { ProviderSettingsContext, ProviderSettingsContextValue } from './ProviderSettingsContext';
 import SearchResult from './SearchResult';
 import SkeletonList from './SkeletonList';
+
+import { useIsMobile } from '@/hooks/useIsMobile';
+import { aiModelSelectors, useAiInfraStore } from '@/store/aiInfra';
 
 interface ContentProps {
   id: string;

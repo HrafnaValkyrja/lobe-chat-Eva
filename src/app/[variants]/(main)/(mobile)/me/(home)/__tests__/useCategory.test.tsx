@@ -1,10 +1,11 @@
 import { act, renderHook } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 
+import { useCategory } from '../features/useCategory';
+
 import { ServerConfigStoreProvider } from '@/store/serverConfig/Provider';
 import { useUserStore } from '@/store/user';
 
-import { useCategory } from '../features/useCategory';
 
 const wrapper: React.JSXElementConstructor<{ children: React.ReactNode }> = ({ children }) => (
   <ServerConfigStoreProvider>{children}</ServerConfigStoreProvider>

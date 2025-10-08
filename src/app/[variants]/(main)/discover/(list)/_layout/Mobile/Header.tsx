@@ -7,11 +7,13 @@ import { SearchIcon } from 'lucide-react';
 import { memo, useState } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import StoreSearchBar from '../../../features/Search';
+
+import Nav from './Nav';
+
 import { MOBILE_HEADER_ICON_SIZE } from '@/const/layoutTokens';
 import { mobileHeaderSticky } from '@/styles/mobileHeader';
 
-import StoreSearchBar from '../../../features/Search';
-import Nav from './Nav';
 
 const useStyles = createStyles(({ css, token }) => ({
   search: css`

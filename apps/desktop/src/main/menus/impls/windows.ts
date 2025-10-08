@@ -1,9 +1,11 @@
 import { Menu, MenuItemConstructorOptions, app, shell } from 'electron';
 
-import { isDev } from '@/const/env';
 
 import type { IMenuPlatform, MenuOptions } from '../types';
+
 import { BaseMenuPlatform } from './BaseMenuPlatform';
+
+import { isDev } from '@/const/env';
 
 export class WindowsMenu extends BaseMenuPlatform implements IMenuPlatform {
   private appMenu: Menu | null = null;
@@ -172,7 +174,7 @@ export class WindowsMenu extends BaseMenuPlatform implements IMenuPlatform {
     ];
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   
   private getEditorContextMenuTemplate(_data?: any): MenuItemConstructorOptions[] {
     const t = this.app.i18n.ns('menu');
 

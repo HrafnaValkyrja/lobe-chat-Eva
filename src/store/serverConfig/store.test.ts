@@ -1,9 +1,10 @@
 import { act } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { ServerConfigStore, createServerConfigStore, initServerConfigStore } from './store';
+
 import { DEFAULT_FEATURE_FLAGS } from '@/config/featureFlags';
 
-import { ServerConfigStore, createServerConfigStore, initServerConfigStore } from './store';
 
 describe('createServerConfigStore', () => {
   beforeEach(() => {

@@ -1,9 +1,10 @@
 import { memo } from 'react';
 
+import PageContent from '../PageContent';
+
 import { useChatStore } from '@/store/chat';
 import { CrawlResult } from '@/types/tool/crawler';
 
-import PageContent from '../PageContent';
 
 interface PageContentProps {
   messageId: string;

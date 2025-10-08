@@ -4,6 +4,8 @@ import { gt, parse, valid } from 'semver';
 import { SWRResponse } from 'swr';
 import type { StateCreator } from 'zustand/vanilla';
 
+import type { GlobalStore } from '../store';
+
 import { LOBE_THEME_APPEARANCE } from '@/const/theme';
 import { CURRENT_VERSION, isDesktop } from '@/const/version';
 import { useOnlyFetchOnceSWR } from '@/libs/swr';
@@ -15,7 +17,6 @@ import { switchLang } from '@/utils/client/switchLang';
 import { merge } from '@/utils/merge';
 import { setNamespace } from '@/utils/storeDebug';
 
-import type { GlobalStore } from '../store';
 
 const n = setNamespace('g');
 

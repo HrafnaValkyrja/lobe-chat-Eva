@@ -2,9 +2,10 @@ import { NetworkProxySettings } from '@lobechat/electron-client-ipc';
 import { SocksProxies, socksDispatcher } from 'fetch-socks';
 import { Agent, ProxyAgent, getGlobalDispatcher, setGlobalDispatcher } from 'undici';
 
+import { ProxyUrlBuilder } from './urlBuilder';
+
 import { createLogger } from '@/utils/logger';
 
-import { ProxyUrlBuilder } from './urlBuilder';
 
 // Create logger
 const logger = createLogger('modules:networkProxy:dispatcher');

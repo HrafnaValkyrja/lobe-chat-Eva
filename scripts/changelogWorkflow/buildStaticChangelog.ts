@@ -1,8 +1,9 @@
+import { existsSync, readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+
 import { consola } from 'consola';
 import { readJsonSync, writeJSONSync } from 'fs-extra';
 import { markdownToTxt } from 'markdown-to-txt';
-import { existsSync, readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
 import semver from 'semver';
 
 import { CHANGELOG_DIR, CHANGELOG_FILE } from './const';

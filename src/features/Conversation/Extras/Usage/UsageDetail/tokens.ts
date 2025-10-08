@@ -1,9 +1,10 @@
 import { LobeDefaultAiModelListItem } from 'model-bank';
 
+import { getPrice } from './pricing';
+
 import type { ModelTokensUsage } from '@/types/message';
 import { getAudioInputUnitRate, getAudioOutputUnitRate } from '@/utils/pricing';
 
-import { getPrice } from './pricing';
 
 const calcCredit = (token: number, pricing?: number) => {
   if (!pricing) return '-';
@@ -42,90 +43,90 @@ export const getDetailsToken = (
   const formatPrice = getPrice(modelCard?.pricing || { units: [] });
 
   const inputCacheMissCredit = (
-    !!inputCacheMissTokens ? calcCredit(inputCacheMissTokens, formatPrice.input) : 0
+    inputCacheMissTokens ? calcCredit(inputCacheMissTokens, formatPrice.input) : 0
   ) as number;
 
   const inputCachedCredit = (
-    !!inputCacheTokens ? calcCredit(inputCacheTokens, formatPrice.cachedInput) : 0
+    inputCacheTokens ? calcCredit(inputCacheTokens, formatPrice.cachedInput) : 0
   ) as number;
 
-  const inputWriteCachedCredit = !!inputWriteCacheTokens
+  const inputWriteCachedCredit = inputWriteCacheTokens
     ? (calcCredit(inputWriteCacheTokens, formatPrice.writeCacheInput) as number)
     : 0;
 
   const totalOutputCredit = (
-    !!totalOutputTokens ? calcCredit(totalOutputTokens, formatPrice.output) : 0
+    totalOutputTokens ? calcCredit(totalOutputTokens, formatPrice.output) : 0
   ) as number;
   const totalInputCredit = (
-    !!totalInputTokens ? calcCredit(totalInputTokens, formatPrice.input) : 0
+    totalInputTokens ? calcCredit(totalInputTokens, formatPrice.input) : 0
   ) as number;
 
   const totalCredit =
     inputCacheMissCredit + inputCachedCredit + inputWriteCachedCredit + totalOutputCredit;
 
   return {
-    inputAudio: !!usage.inputAudioTokens
+    inputAudio: usage.inputAudioTokens
       ? {
           credit: calcCredit(usage.inputAudioTokens, getAudioInputUnitRate(modelCard?.pricing)),
           token: usage.inputAudioTokens,
         }
       : undefined,
-    inputCacheMiss: !!inputCacheMissTokens
+    inputCacheMiss: inputCacheMissTokens
       ? { credit: inputCacheMissCredit, token: inputCacheMissTokens }
       : undefined,
-    inputCached: !!inputCacheTokens
+    inputCached: inputCacheTokens
       ? { credit: inputCachedCredit, token: inputCacheTokens }
       : undefined,
-    inputCachedWrite: !!inputWriteCacheTokens
+    inputCachedWrite: inputWriteCacheTokens
       ? { credit: inputWriteCachedCredit, token: inputWriteCacheTokens }
       : undefined,
-    inputCitation: !!usage.inputCitationTokens
+    inputCitation: usage.inputCitationTokens
       ? {
           credit: calcCredit(usage.inputCitationTokens, formatPrice.input),
           token: usage.inputCitationTokens,
         }
       : undefined,
-    inputText: !!inputTextTokens
+    inputText: inputTextTokens
       ? {
           credit: calcCredit(inputTextTokens, formatPrice.input),
           token: inputTextTokens,
         }
       : undefined,
 
-    outputAudio: !!usage.outputAudioTokens
+    outputAudio: usage.outputAudioTokens
       ? {
           credit: calcCredit(usage.outputAudioTokens, getAudioOutputUnitRate(modelCard?.pricing)),
           id: 'outputAudio',
           token: usage.outputAudioTokens,
         }
       : undefined,
-    outputImage: !!outputImageTokens
+    outputImage: outputImageTokens
       ? {
           credit: calcCredit(outputImageTokens, formatPrice.output),
           id: 'outputImage',
           token: outputImageTokens,
         }
       : undefined,
-    outputReasoning: !!outputReasoningTokens
+    outputReasoning: outputReasoningTokens
       ? {
           credit: calcCredit(outputReasoningTokens, formatPrice.output),
           token: outputReasoningTokens,
         }
       : undefined,
-    outputText: !!outputTextTokens
+    outputText: outputTextTokens
       ? {
           credit: calcCredit(outputTextTokens, formatPrice.output),
           token: outputTextTokens,
         }
       : undefined,
 
-    totalInput: !!totalInputTokens
+    totalInput: totalInputTokens
       ? { credit: totalInputCredit, token: totalInputTokens }
       : undefined,
-    totalOutput: !!totalOutputTokens
+    totalOutput: totalOutputTokens
       ? { credit: totalOutputCredit, token: totalOutputTokens }
       : undefined,
-    totalTokens: !!usage.totalTokens
+    totalTokens: usage.totalTokens
       ? { credit: totalCredit, token: usage.totalTokens }
       : undefined,
   };

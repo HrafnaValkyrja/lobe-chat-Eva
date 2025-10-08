@@ -4,11 +4,12 @@ import DocViewer from '@cyntler/react-doc-viewer';
 import { css, cx } from 'antd-style';
 import { CSSProperties, memo } from 'react';
 
-import { FileListItem } from '@/types/files';
 
 import NotSupport from './NotSupport';
 import { FileViewRenderers } from './Renderer';
 import PDFRenderer from './Renderer/PDF';
+
+import { FileListItem } from '@/types/files';
 
 const container = css`
   background: transparent !important;

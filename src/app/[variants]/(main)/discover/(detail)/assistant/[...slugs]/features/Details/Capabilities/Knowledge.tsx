@@ -4,6 +4,7 @@ import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
 import { useDetailContext } from '../../DetailProvider';
+
 import KnowledgeItem from './KnowledgeItem';
 
 const Knowledge = memo(() => {

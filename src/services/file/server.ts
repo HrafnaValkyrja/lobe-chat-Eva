@@ -1,7 +1,8 @@
+import { IFileService } from './type';
+
 import { lambdaClient } from '@/libs/trpc/client';
 import { QueryFileListParams, QueryFileListSchemaType, UploadFileParams } from '@/types/files';
 
-import { IFileService } from './type';
 
 interface CreateFileParams extends Omit<UploadFileParams, 'url'> {
   knowledgeBaseId?: string;

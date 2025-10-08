@@ -6,12 +6,13 @@ import type { PluginEnableChecker } from '@lobechat/context-engine';
 import { ChatCompletionTool, WorkingModel } from '@lobechat/types';
 import { LobeChatPluginManifest } from '@lobehub/chat-plugin-sdk';
 
+import { isCanUseFC } from '../isCanUseFC';
+
 import { getSearchConfig } from '@/helpers/getSearchConfig';
 import { getToolStoreState } from '@/store/tool';
 import { pluginSelectors } from '@/store/tool/selectors';
 import { WebBrowsingManifest } from '@/tools/web-browsing';
 
-import { isCanUseFC } from '../isCanUseFC';
 
 /**
  * Tools engine configuration options

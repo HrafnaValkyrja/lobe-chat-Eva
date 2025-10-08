@@ -1,8 +1,9 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import ShortcutController from '../ShortcutCtr';
+
 import type { App } from '@/core/App';
 
-import ShortcutController from '../ShortcutCtr';
 
 // 模拟 App 及其依赖项
 const mockGetShortcutsConfig = vi.fn().mockReturnValue({

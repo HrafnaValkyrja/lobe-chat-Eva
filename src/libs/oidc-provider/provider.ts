@@ -3,14 +3,15 @@ import debug from 'debug';
 import Provider, { Configuration, KoaContextWithOIDC, errors } from 'oidc-provider';
 import urlJoin from 'url-join';
 
+import { DrizzleAdapter } from './adapter';
+import { defaultClaims, defaultClients, defaultScopes } from './config';
+import { createInteractionPolicy } from './interaction-policy';
+
 import { serverDBEnv } from '@/config/db';
 import { UserModel } from '@/database/models/user';
 import { appEnv } from '@/envs/app';
 import { getJWKS } from '@/libs/oidc-provider/jwt';
 
-import { DrizzleAdapter } from './adapter';
-import { defaultClaims, defaultClients, defaultScopes } from './config';
-import { createInteractionPolicy } from './interaction-policy';
 
 const logProvider = debug('lobe-oidc:provider'); // <--- 添加 provider 日志实例
 

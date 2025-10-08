@@ -38,7 +38,7 @@ export interface CustomPluginParams {
   };
   avatar?: string;
   description?: string;
-  /* eslint-enable */
+   
 }
 
 export interface LobeToolCustomPlugin {

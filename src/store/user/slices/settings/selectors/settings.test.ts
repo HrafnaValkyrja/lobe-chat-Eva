@@ -1,8 +1,10 @@
+import { UserStore } from '../../../store';
+
+import { settingsSelectors } from './settings';
+
 import { HotkeyId } from '@/types/hotkey';
 import { GlobalLLMProviderKey } from '@/types/user/settings';
 
-import { UserStore } from '../../../store';
-import { settingsSelectors } from './settings';
 
 describe('settingsSelectors', () => {
   describe('currentSettings', () => {

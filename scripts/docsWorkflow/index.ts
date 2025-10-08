@@ -1,5 +1,6 @@
-import { consola } from 'consola';
 import { relative, resolve } from 'node:path';
+
+import { consola } from 'consola';
 import pMap from 'p-map';
 import urlJoin from 'url-join';
 

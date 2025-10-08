@@ -5,10 +5,11 @@ import { Divider } from 'antd';
 import { Fragment, memo, useEffect, useRef } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import { GenerationBatchItem } from './BatchItem';
+
 import { useImageStore } from '@/store/image';
 import { generationBatchSelectors } from '@/store/image/selectors';
 
-import { GenerationBatchItem } from './BatchItem';
 
 const GenerationFeed = memo(() => {
   const [parent, enableAnimations] = useAutoAnimate();

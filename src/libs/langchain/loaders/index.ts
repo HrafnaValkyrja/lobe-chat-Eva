@@ -3,8 +3,6 @@ import {
   SupportedTextSplitterLanguages,
 } from 'langchain/text_splitter';
 
-import { LANGCHAIN_SUPPORT_TEXT_LIST } from '@/libs/langchain/file';
-import { LangChainLoaderType } from '@/libs/langchain/types';
 
 import { CodeLoader } from './code';
 import { CsVLoader } from './csv';
@@ -15,6 +13,9 @@ import { MarkdownLoader } from './markdown';
 import { PdfLoader } from './pdf';
 import { PPTXLoader } from './pptx';
 import { TextLoader } from './txt';
+
+import { LANGCHAIN_SUPPORT_TEXT_LIST } from '@/libs/langchain/file';
+import { LangChainLoaderType } from '@/libs/langchain/types';
 
 class LangChainError extends Error {
   constructor(message: string) {

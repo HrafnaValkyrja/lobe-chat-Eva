@@ -4,9 +4,10 @@ import {
   UpdateTrayTooltipParams,
 } from '@lobechat/electron-client-ipc';
 
+import { ControllerModule, ipcClientEvent } from './index';
+
 import { createLogger } from '@/utils/logger';
 
-import { ControllerModule, ipcClientEvent } from './index';
 
 // 创建日志记录器
 const logger = createLogger('controllers:TrayMenuCtr');

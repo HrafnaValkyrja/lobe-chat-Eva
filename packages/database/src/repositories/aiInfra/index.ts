@@ -7,6 +7,10 @@ import {
 } from 'model-bank';
 import pMap from 'p-map';
 
+import { AiModelModel } from '../../models/aiModel';
+import { AiProviderModel } from '../../models/aiProvider';
+import { LobeChatDatabase } from '../../type';
+
 import { DEFAULT_MODEL_PROVIDER_LIST } from '@/config/modelProviders';
 import {
   AiProviderDetailItem,
@@ -17,9 +21,6 @@ import {
 import { ProviderConfig } from '@/types/user/settings';
 import { merge, mergeArrayById } from '@/utils/merge';
 
-import { AiModelModel } from '../../models/aiModel';
-import { AiProviderModel } from '../../models/aiProvider';
-import { LobeChatDatabase } from '../../type';
 
 type DecryptUserKeyVaults = (encryptKeyVaultsStr: string | null) => Promise<any>;
 

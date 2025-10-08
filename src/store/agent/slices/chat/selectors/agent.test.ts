@@ -1,13 +1,15 @@
 import { describe, expect, it } from 'vitest';
 
+import { initialState } from '../../../initialState';
+
+import { agentSelectors } from './agent';
+
 import { INBOX_SESSION_ID } from '@/const/session';
 import { DEFAULT_AGENT_CONFIG, DEFAUTT_AGENT_TTS_CONFIG } from '@/const/settings';
 import { AgentStore } from '@/store/agent';
 import { AgentState } from '@/store/agent/slices/chat/initialState';
 import { merge } from '@/utils/merge';
 
-import { initialState } from '../../../initialState';
-import { agentSelectors } from './agent';
 
 vi.mock('i18next', () => ({
   t: vi.fn((key) => key), // Simplified mock return value

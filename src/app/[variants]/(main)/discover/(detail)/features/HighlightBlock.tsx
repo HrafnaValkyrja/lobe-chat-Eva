@@ -7,9 +7,10 @@ import { rgba } from 'polished';
 import { ReactNode, memo } from 'react';
 import { Flexbox, FlexboxProps } from 'react-layout-kit';
 
+import CardBanner from '../../components/CardBanner';
+
 import { useServerConfigStore } from '@/store/serverConfig';
 
-import CardBanner from '../../components/CardBanner';
 
 const useStyles = createStyles(({ css, token }) => ({
   background: css`

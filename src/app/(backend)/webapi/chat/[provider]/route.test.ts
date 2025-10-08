@@ -5,10 +5,11 @@ import { ChatErrorType } from '@lobechat/types';
 import { getXorPayload } from '@lobechat/utils/server';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { POST } from './route';
+
 import { checkAuthMethod } from '@/app/(backend)/middleware/auth/utils';
 import { LOBE_CHAT_AUTH_HEADER, OAUTH_AUTHORIZED } from '@/const/auth';
 
-import { POST } from './route';
 
 vi.mock('@clerk/nextjs/server', () => ({
   getAuth: vi.fn(),

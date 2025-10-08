@@ -5,11 +5,12 @@ import { CSSProperties, memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import { shinyTextStylish } from '@/styles/loading';
 
 import Debug from './Debug';
 import Settings from './Settings';
 import ToolTitle from './ToolTitle';
+
+import { shinyTextStylish } from '@/styles/loading';
 
 export const useStyles = createStyles(({ css, token, cx }) => ({
   actions: cx(

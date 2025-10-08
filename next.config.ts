@@ -9,6 +9,7 @@ const isDesktop = process.env.NEXT_PUBLIC_IS_DESKTOP_APP === '1';
 const enableReactScan = !!process.env.REACT_SCAN_MONITOR_API_KEY;
 const isUsePglite = process.env.NEXT_PUBLIC_CLIENT_DB === 'pglite';
 const shouldUseCSP = process.env.ENABLED_CSP === '1';
+const isCloudflareBuild = process.env.BUILD_TARGET === 'cloudflare';
 
 // if you need to proxy the api endpoint to remote server
 
@@ -19,8 +20,10 @@ const standaloneConfig: NextConfig = {
   outputFileTracingIncludes: { '*': ['public/**/*', '.next/static/**/*'] },
 };
 
+/** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
   ...(isStandaloneMode ? standaloneConfig : {}),
+  output: 'standalone', // for cloudflare edge functions
   assetPrefix: process.env.NEXT_PUBLIC_ASSET_PREFIX,
   compiler: {
     emotion: true,
@@ -276,7 +279,7 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
 
-  webpack(config) {
+  webpack(config, { isServer }) {
     config.experiments = {
       asyncWebAssembly: true,
       layers: true,
@@ -309,6 +312,110 @@ const nextConfig: NextConfig = {
       zipfile: false,
     };
 
+    // Cloudflare Workers specific configuration
+    if (isCloudflareBuild && isServer) {
+      // Custom plugin to handle dynamic imports for Cloudflare Workers
+      const DynamicImportReplacerPlugin = {
+        apply: (compiler: any) => {
+          compiler.hooks.compilation.tap('DynamicImportReplacerPlugin', (compilation: any) => {
+            compilation.hooks.optimizeChunkAssets.tap('DynamicImportReplacerPlugin', (chunks: any) => {
+              chunks.forEach((chunk: any) => {
+                chunk.files.forEach((filename: string) => {
+                  if (filename.endsWith('.js')) {
+                    const asset = compilation.assets[filename];
+                    if (asset) {
+                      let source = asset.source();
+
+                      // Replace problematic dynamic imports with empty modules
+                      source = source.replace(
+                        /await import\("\.\/empty-[A-Za-z0-9]+\.js"\)/g,
+                        'Promise.resolve({})'
+                      );
+                      source = source.replace(
+                        /await import\("\.\/index-[A-Za-z0-9]+\.js"\)/g,
+                        'Promise.resolve({})'
+                      );
+                      source = source.replace(
+                        /await import\("\.\/url-[A-Za-z0-9]+\.js"\)/g,
+                        'Promise.resolve({})'
+                      );
+
+                      compilation.assets[filename] = {
+                        source: () => source,
+                        size: () => source.length,
+                      };
+                    }
+                  }
+                });
+              });
+            });
+          });
+        },
+      };
+
+      config.plugins.push(DynamicImportReplacerPlugin);
+
+      // Exclude problematic modules for Cloudflare Workers
+      config.externals = config.externals || [];
+      config.externals.push({
+        '@electric-sql/pglite': 'commonjs @electric-sql/pglite',
+        '@electric-sql/pglite/vector': 'commonjs @electric-sql/pglite/vector',
+        'systemjs': 'commonjs systemjs',
+        // Exclude PDF.js and other problematic libraries
+        'pdfjs-dist': 'commonjs pdfjs-dist',
+        'pdfjs-dist/build/pdf': 'commonjs pdfjs-dist/build/pdf',
+        'pdfjs-dist/build/pdf.worker': 'commonjs pdfjs-dist/build/pdf.worker',
+        'pdfjs-dist/build/pdf.worker.mjs': 'commonjs pdfjs-dist/build/pdf.worker.mjs',
+        'pdfjs-dist/build/pdf.worker.min': 'commonjs pdfjs-dist/build/pdf.worker.min',
+        'pdfjs-dist/build/pdf.worker.min.mjs': 'commonjs pdfjs-dist/build/pdf.worker.min.mjs',
+      });
+
+      // Disable dynamic imports that cause issues in Cloudflare Workers
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        path: false,
+        crypto: false,
+        stream: false,
+        util: false,
+        buffer: false,
+        process: false,
+        'pglite': false,
+        'pglite/vector': false,
+        // Disable PDF.js related fallbacks
+        'pdfjs-dist': false,
+        'pdfjs-dist/build/pdf': false,
+        'pdfjs-dist/build/pdf.worker': false,
+        'pdfjs-dist/build/pdf.worker.mjs': false,
+        'pdfjs-dist/build/pdf.worker.min': false,
+        'pdfjs-dist/build/pdf.worker.min.mjs': false,
+      };
+
+      // Ignore problematic dynamic imports and modules
+      config.module.rules.push({
+        test: /\.(js|mjs)$/,
+        use: {
+          loader: 'ignore-loader',
+        },
+        include: [
+          /node_modules\/@electric-sql\/pglite/,
+          /node_modules\/systemjs/,
+          /node_modules\/pdfjs-dist/,
+        ],
+      });
+
+      // Replace problematic imports with empty modules
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        'pdfjs-dist': false,
+        'pdfjs-dist/build/pdf': false,
+        'pdfjs-dist/build/pdf.worker': false,
+        'pdfjs-dist/build/pdf.worker.mjs': false,
+        'pdfjs-dist/build/pdf.worker.min': false,
+        'pdfjs-dist/build/pdf.worker.min.mjs': false,
+      };
+    }
+
     return config;
   },
 };
@@ -320,10 +427,8 @@ const withBundleAnalyzer = process.env.ANALYZE === 'true' ? analyzer() : noWrapp
 const withPWA =
   isProd && !isDesktop
     ? withSerwistInit({
-        register: false,
-        swDest: 'public/sw.js',
-        swSrc: 'src/app/sw.ts',
-      })
+      register: false,
+      swDest: 'public/sw.js',
+      swSrc: 'src/app/sw.ts',
+    })
     : noWrapper;
-
-export default withBundleAnalyzer(withPWA(nextConfig as NextConfig));

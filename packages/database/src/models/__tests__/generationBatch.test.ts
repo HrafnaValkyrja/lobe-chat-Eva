@@ -2,8 +2,6 @@
 import { eq } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { AsyncTaskStatus } from '@/types/asyncTask';
-import { GenerationConfig } from '@/types/generation';
 
 import {
   NewGenerationBatch,
@@ -14,7 +12,11 @@ import {
 } from '../../schemas';
 import { LobeChatDatabase } from '../../type';
 import { GenerationBatchModel } from '../generationBatch';
+
 import { getTestDB } from './_util';
+
+import { AsyncTaskStatus } from '@/types/asyncTask';
+import { GenerationConfig } from '@/types/generation';
 
 const serverDB: LobeChatDatabase = await getTestDB();
 

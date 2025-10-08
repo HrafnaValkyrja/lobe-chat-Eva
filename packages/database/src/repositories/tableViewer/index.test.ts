@@ -1,8 +1,9 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { TableViewerRepo } from './index';
+
 import { clientDB, initializeDB } from '@/database/client/db';
 
-import { TableViewerRepo } from './index';
 
 const userId = 'user-table-viewer';
 const repo = new TableViewerRepo(clientDB as any, userId);

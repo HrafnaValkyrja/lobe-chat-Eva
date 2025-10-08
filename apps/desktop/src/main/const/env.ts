@@ -1,5 +1,6 @@
-import { dev, linux, macOS, windows } from 'electron-is';
 import os from 'node:os';
+
+import { dev, linux, macOS, windows } from 'electron-is';
 
 export const isDev = dev();
 

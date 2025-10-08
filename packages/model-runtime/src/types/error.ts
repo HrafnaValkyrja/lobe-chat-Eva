@@ -54,7 +54,7 @@ export const StandardErrorType = {
   ServiceUnavailable: 503,
   GatewayTimeout: 504,
 } as const;
-/* eslint-enable */
+ 
 
 export type ErrorType = (typeof StandardErrorType)[keyof typeof StandardErrorType];
 

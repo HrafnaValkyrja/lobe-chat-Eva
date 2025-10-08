@@ -4,9 +4,10 @@ import { useResponsive } from 'antd-style';
 import { ReactNode, memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import SidebarContainer from './SidebarContainer';
+
 import Footer from '@/features/Setting/Footer';
 
-import SidebarContainer from './SidebarContainer';
 
 interface DetailLayoutProps {
   actions?: ReactNode;

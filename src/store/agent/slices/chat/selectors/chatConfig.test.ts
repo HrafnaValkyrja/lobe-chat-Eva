@@ -1,11 +1,12 @@
 import { describe, expect, it } from 'vitest';
 
+import { agentChatConfigSelectors, currentAgentChatConfig } from './chatConfig';
+
 import { DEFAULT_AGENT_CHAT_CONFIG, DEFAULT_AGENT_CONFIG } from '@/const/settings';
 import { AgentStoreState, initialState } from '@/store/agent/initialState';
 import { LobeAgentChatConfig, LobeAgentConfig } from '@/types/agent';
 import { merge } from '@/utils/merge';
 
-import { agentChatConfigSelectors, currentAgentChatConfig } from './chatConfig';
 
 // Helper function to create mock state
 const createMockState = (

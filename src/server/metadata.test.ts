@@ -1,10 +1,11 @@
 // @vitest-environment node
 import { describe, expect, it } from 'vitest';
 
+import { Meta } from './metadata';
+
 import { BRANDING_NAME } from '@/const/branding';
 import { OG_URL } from '@/const/url';
 
-import { Meta } from './metadata';
 
 describe('Metadata', () => {
   const meta = new Meta();

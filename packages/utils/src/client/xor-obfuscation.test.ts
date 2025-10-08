@@ -1,8 +1,9 @@
 import { describe, expect, it } from 'vitest';
 
+import { obfuscatePayloadWithXOR } from './xor-obfuscation';
+
 import { SECRET_XOR_KEY } from '@/const/auth';
 
-import { obfuscatePayloadWithXOR } from './xor-obfuscation';
 
 describe('xor-obfuscation', () => {
   describe('obfuscatePayloadWithXOR', () => {

@@ -1,7 +1,8 @@
-import type { Migration, MigrationData } from '@/migrations/VersionController';
 
 import { V5ConfigState, V5Session } from './types/v5';
 import { V6ConfigState, V6Session } from './types/v6';
+
+import type { Migration, MigrationData } from '@/migrations/VersionController';
 
 export class MigrationV5ToV6 implements Migration {
   // from this version to start migration

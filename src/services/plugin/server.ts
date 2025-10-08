@@ -1,6 +1,7 @@
+import { IPluginService } from './type';
+
 import { lambdaClient } from '@/libs/trpc/client';
 
-import { IPluginService } from './type';
 
 export class ServerService implements IPluginService {
   installPlugin: IPluginService['installPlugin'] = async (plugin) => {

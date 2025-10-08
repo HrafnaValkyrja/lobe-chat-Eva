@@ -3,6 +3,7 @@ import { createWithEqualityFn } from 'zustand/traditional';
 import { StateCreator } from 'zustand/vanilla';
 
 import { createDevtools } from '../middleware/createDevtools';
+
 import { AIProviderStoreState, initialState } from './initialState';
 import { AiModelAction, createAiModelSlice } from './slices/aiModel';
 import { AiProviderAction, createAiProviderSlice } from './slices/aiProvider';

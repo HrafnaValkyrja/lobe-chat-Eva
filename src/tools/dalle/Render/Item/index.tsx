@@ -6,13 +6,14 @@ import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import EditMode from './EditMode';
+import Error from './Error';
+import ImagePreview from './Image';
+
 import { useChatStore } from '@/store/chat';
 import { chatToolSelectors } from '@/store/chat/selectors';
 import { DallEImageItem } from '@/types/tool/dalle';
 
-import EditMode from './EditMode';
-import Error from './Error';
-import ImagePreview from './Image';
 
 const useStyles = createStyles(({ css, token, prefixCls }) => ({
   action: css`

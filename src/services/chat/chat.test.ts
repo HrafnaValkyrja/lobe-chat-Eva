@@ -2,6 +2,10 @@ import { LobeChatPluginManifest } from '@lobehub/chat-plugin-sdk';
 import { act } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import * as helpers from './helper';
+
+import { chatService } from './index';
+
 import { DEFAULT_USER_AVATAR } from '@/const/meta';
 import { DEFAULT_AGENT_CONFIG } from '@/const/settings';
 import * as isCanUseFCModule from '@/helpers/isCanUseFC';
@@ -18,8 +22,6 @@ import { ChatImageItem, ChatMessage } from '@/types/message';
 import { ChatStreamPayload, type OpenAIChatMessage } from '@/types/openai/chat';
 import { LobeTool } from '@/types/tool';
 
-import * as helpers from './helper';
-import { chatService } from './index';
 
 // Mocking external dependencies
 vi.mock('i18next', () => ({

@@ -1,9 +1,11 @@
 import { ReactNode } from 'react';
 
-import MobileContentLayout from '@/components/server/MobileNavLayout';
 
 import Hero from '../../features/Hero';
+
 import Header from './Header';
+
+import MobileContentLayout from '@/components/server/MobileNavLayout';
 
 type Props = { children: ReactNode };
 

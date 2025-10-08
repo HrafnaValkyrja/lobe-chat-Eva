@@ -1,8 +1,8 @@
 import { useEditor } from '@lobehub/editor/react';
 import { ReactNode, memo, useRef } from 'react';
 
-import StoreUpdater, { StoreUpdaterProps } from './StoreUpdater';
 import { Provider, createStore } from './store';
+import StoreUpdater, { StoreUpdaterProps } from './StoreUpdater';
 
 interface ChatInputProviderProps extends StoreUpdaterProps {
   children: ReactNode;

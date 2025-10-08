@@ -2,13 +2,15 @@
 
 import { Center } from 'react-layout-kit';
 
-import { useImageStore } from '@/store/image';
-import { generationBatchSelectors, generationTopicSelectors } from '@/store/image/selectors';
 
 import GenerationFeed from '../GenerationFeed';
 import PromptInput from '../PromptInput';
+
 import EmptyState from './EmptyState';
 import SkeletonList from './SkeletonList';
+
+import { useImageStore } from '@/store/image';
+import { generationBatchSelectors, generationTopicSelectors } from '@/store/image/selectors';
 
 const ImageWorkspaceContent = () => {
   const activeTopicId = useImageStore(generationTopicSelectors.activeGenerationTopicId);

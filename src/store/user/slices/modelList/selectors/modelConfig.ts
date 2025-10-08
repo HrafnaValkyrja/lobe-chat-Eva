@@ -1,10 +1,12 @@
+import { currentLLMSettings, getProviderConfigById } from '../../settings/selectors/settings';
+
+import { keyVaultsConfigSelectors } from './keyVaults';
+
 import { isProviderDisableBrowserRequest } from '@/config/modelProviders';
 import { isDesktop } from '@/const/version';
 import { UserStore } from '@/store/user';
 import { GlobalLLMProviderKey } from '@/types/user/settings';
 
-import { currentLLMSettings, getProviderConfigById } from '../../settings/selectors/settings';
-import { keyVaultsConfigSelectors } from './keyVaults';
 
 const isProviderEnabled = (provider: GlobalLLMProviderKey) => (s: UserStore) =>
   getProviderConfigById(provider)(s)?.enabled || false;

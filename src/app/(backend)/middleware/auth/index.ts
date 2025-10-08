@@ -8,6 +8,8 @@ import { ChatErrorType, ClientSecretPayload } from '@lobechat/types';
 import { getXorPayload } from '@lobechat/utils/server';
 import { NextRequest } from 'next/server';
 
+import { checkAuthMethod } from './utils';
+
 import {
   LOBE_CHAT_AUTH_HEADER,
   LOBE_CHAT_OIDC_AUTH_HEADER,
@@ -18,7 +20,6 @@ import { ClerkAuth } from '@/libs/clerk-auth';
 import { validateOIDCJWT } from '@/libs/oidc-provider/jwt';
 import { createErrorResponse } from '@/utils/errorResponse';
 
-import { checkAuthMethod } from './utils';
 
 type CreateRuntime = (jwtPayload: ClientSecretPayload) => ModelRuntime;
 type RequestOptions = { createRuntime?: CreateRuntime; params: Promise<{ provider: string }> };
@@ -62,7 +63,7 @@ export const checkAuth =
 
       const oidcAuthorization = req.headers.get(LOBE_CHAT_OIDC_AUTH_HEADER);
       let isUseOidcAuth = false;
-      if (!!oidcAuthorization) {
+      if (oidcAuthorization) {
         const oidc = await validateOIDCJWT(oidcAuthorization);
 
         isUseOidcAuth = true;

@@ -8,9 +8,10 @@ import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import WaitingAnim from './WaitingAnim';
+
 import { useElectronStore } from '@/store/electron';
 
-import WaitingAnim from './WaitingAnim';
 
 const useStyles = createStyles(({ css, token }) => ({
   container: css`

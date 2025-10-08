@@ -4,6 +4,7 @@ import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { responsesAPIModels } from '../../const/models';
 import { ChatStreamPayload } from '../../types/chat';
 import * as modelParseModule from '../../utils/modelParse';
+
 import { LobeNewAPIAI, NewAPIModelCard, NewAPIPricing } from './index';
 
 // Mock external dependencies

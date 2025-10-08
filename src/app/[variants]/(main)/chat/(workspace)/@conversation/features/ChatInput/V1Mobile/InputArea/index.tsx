@@ -1,8 +1,8 @@
 import { ActionIcon, TextArea } from '@lobehub/ui';
 import { SafeArea } from '@lobehub/ui/mobile';
 import { useSize } from 'ahooks';
-import { createStyles } from 'antd-style';
 import { TextAreaRef } from 'antd/es/input/TextArea';
+import { createStyles } from 'antd-style';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { rgba } from 'polished';
 import { CSSProperties, ReactNode, forwardRef, useEffect, useRef, useState } from 'react';

@@ -11,7 +11,7 @@ import { camelCase, identity, pickBy } from 'lodash-es';
 import qs from 'query-string';
 
 const stringifyHashtags = (hashtags: string[], joinfix: string = ',', prefix?: string) => {
-  // eslint-disable-next-line no-param-reassign
+   
   if (prefix) hashtags = hashtags.map((tag) => prefix + camelCase(tag));
   return hashtags.filter(Boolean).join(joinfix);
 };

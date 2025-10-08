@@ -1,9 +1,11 @@
 import { existsSync, readFileSync } from 'node:fs';
+
 import { beforeEach, describe, expect, it, vi } from 'vitest';
+
+import { DesktopLocalFileImpl } from './local';
 
 import { electronIpcClient } from '@/server/modules/ElectronIPCClient';
 
-import { DesktopLocalFileImpl } from './local';
 
 // 模拟依赖项
 vi.mock('node:fs', async (importOriginal) => ({

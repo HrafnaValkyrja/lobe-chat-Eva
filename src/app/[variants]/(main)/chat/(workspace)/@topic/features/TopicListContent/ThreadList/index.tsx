@@ -1,10 +1,11 @@
 import { memo } from 'react';
 
+import ThreadItem from '../ThreadItem';
+
 import { useFetchThreads } from '@/hooks/useFetchThreads';
 import { useChatStore } from '@/store/chat';
 import { threadSelectors } from '@/store/chat/selectors';
 
-import ThreadItem from '../ThreadItem';
 
 const ThreadList = memo(() => {
   const [id] = useChatStore((s) => [s.activeTopicId]);

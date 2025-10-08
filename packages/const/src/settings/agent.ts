@@ -6,6 +6,7 @@ import {
 } from '@lobechat/types';
 
 import { DEFAULT_AGENT_META } from '../meta';
+
 import { DEFAULT_MODEL, DEFAULT_PROVIDER } from './llm';
 
 export const DEFAUTT_AGENT_TTS_CONFIG: LobeAgentTTSConfig = {

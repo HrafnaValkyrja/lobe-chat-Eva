@@ -49,7 +49,7 @@ const Header = memo<{ mobile?: boolean }>(({ mobile: isMobile }) => {
         <Flexbox align={'flex-start'} width={'100%'}>
           <ProviderCombine provider={identifier} size={mobile ? 32 : 48} />
           <Flexbox align={'center'} gap={4} horizontal>
-            {Boolean(url || modelsUrl) ? (
+            {url || modelsUrl ? (
               <Link href={url || (modelsUrl as string)} target={'_blank'}>
                 @{name}
               </Link>

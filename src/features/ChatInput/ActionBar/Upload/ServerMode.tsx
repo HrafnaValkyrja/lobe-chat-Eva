@@ -6,13 +6,14 @@ import { FileUp, FolderUp, ImageUp, Paperclip } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import Action from '../components/Action';
+
 import { message } from '@/components/AntdStaticMethods';
 import { useModelSupportVision } from '@/hooks/useModelSupportVision';
 import { useAgentStore } from '@/store/agent';
 import { agentSelectors } from '@/store/agent/selectors';
 import { useFileStore } from '@/store/file';
 
-import Action from '../components/Action';
 
 const hotArea = css`
   &::before {

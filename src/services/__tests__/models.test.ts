@@ -1,11 +1,12 @@
 import { Mock, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { aiProviderSelectors } from '@/store/aiInfra';
 
 import { createHeaderWithAuth } from '../_auth';
 import { initializeWithClientStore } from '../chat/clientModelRuntime';
 import { resolveRuntimeProvider } from '../chat/helper';
 import { ModelsService } from '../models';
+
+import { aiProviderSelectors } from '@/store/aiInfra';
 
 vi.stubGlobal('fetch', vi.fn());
 

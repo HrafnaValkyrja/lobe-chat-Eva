@@ -3,11 +3,12 @@ import { Checkbox, Form, FormInstance, Select } from 'antd';
 import { memo, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { AiModelType } from '../../../../../../../../../packages/model-bank/src/types/aiModel';
+
 import MaxTokenSlider from '@/components/MaxTokenSlider';
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { ChatModelCard } from '@/types/llm';
 
-import { AiModelType } from '../../../../../../../../../packages/model-bank/src/types/aiModel';
 
 interface ModelConfigFormProps {
   idEditable?: boolean;

@@ -7,6 +7,11 @@ import { useTranslation } from 'react-i18next';
 import { Center } from 'react-layout-kit';
 import LazyLoad from 'react-lazy-load';
 
+import SkeletonList from '../../SkeletonList';
+
+import AddButton from './AddButton';
+import SessionItem from './Item';
+
 import { SESSION_CHAT_URL } from '@/const/url';
 import { useSwitchSession } from '@/hooks/useSwitchSession';
 import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfig';
@@ -16,9 +21,6 @@ import { getUserStoreState } from '@/store/user';
 import { userProfileSelectors } from '@/store/user/selectors';
 import { LobeAgentSession } from '@/types/session';
 
-import SkeletonList from '../../SkeletonList';
-import AddButton from './AddButton';
-import SessionItem from './Item';
 
 const useStyles = createStyles(
   ({ css }) => css`

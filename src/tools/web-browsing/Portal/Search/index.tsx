@@ -3,13 +3,15 @@ import { uniq } from 'lodash-es';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import SearchBar from '../../components/SearchBar';
+
+import Footer from './Footer';
+import ResultList from './ResultList';
+
 import { useChatStore } from '@/store/chat';
 import { chatToolSelectors } from '@/store/chat/selectors';
 import { SearchQuery, UniformSearchResponse } from '@/types/tool/search';
 
-import SearchBar from '../../components/SearchBar';
-import Footer from './Footer';
-import ResultList from './ResultList';
 
 interface InspectorUIProps {
   messageId: string;

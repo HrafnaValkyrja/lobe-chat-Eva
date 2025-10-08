@@ -5,12 +5,13 @@ import { createStyles } from 'antd-style';
 import { ModelProvider } from 'model-bank';
 import { useTranslation } from 'react-i18next';
 
+import { KeyVaultsConfigKey, LLMProviderApiTokenKey } from '../../const';
+import { ProviderItem } from '../../type';
+
 import { AzureProviderCard } from '@/config/modelProviders';
 import { useUserStore } from '@/store/user';
 import { modelProviderSelectors } from '@/store/user/selectors';
 
-import { KeyVaultsConfigKey, LLMProviderApiTokenKey } from '../../const';
-import { ProviderItem } from '../../type';
 
 const useStyles = createStyles(({ css, token }) => ({
   markdown: css`

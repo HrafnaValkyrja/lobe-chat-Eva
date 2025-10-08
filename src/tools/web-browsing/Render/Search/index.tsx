@@ -2,12 +2,13 @@ import { Alert, Highlighter } from '@lobehub/ui';
 import { memo, useState } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
-import { ChatMessagePluginError } from '@/types/message';
-import { SearchQuery, UniformSearchResponse } from '@/types/tool/search';
 
 import ConfigForm from './ConfigForm';
 import SearchQueryView from './SearchQuery';
 import SearchResult from './SearchResult';
+
+import { ChatMessagePluginError } from '@/types/message';
+import { SearchQuery, UniformSearchResponse } from '@/types/tool/search';
 
 interface SearchProps {
   messageId: string;

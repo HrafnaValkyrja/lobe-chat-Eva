@@ -2,12 +2,13 @@ import { Block, Text } from '@lobehub/ui';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import Actions from './Action';
+
 import PluginAvatar from '@/components/Plugins/PluginAvatar';
 import PluginTag from '@/components/Plugins/PluginTag';
 import { DiscoverPluginItem } from '@/types/discover';
 import { LobeToolType } from '@/types/tool/tool';
 
-import Actions from './Action';
 
 interface PluginItemProps extends DiscoverPluginItem {
   active?: boolean;

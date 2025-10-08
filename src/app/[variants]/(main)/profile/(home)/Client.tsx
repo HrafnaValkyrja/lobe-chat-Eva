@@ -5,6 +5,8 @@ import { Skeleton } from 'antd';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import SSOProvidersList from './features/SSOProvidersList';
+
 import { enableAuth } from '@/const/auth';
 import { FORM_STYLE } from '@/const/layoutTokens';
 import AvatarWithUpload from '@/features/AvatarWithUpload';
@@ -12,7 +14,6 @@ import UserAvatar from '@/features/User/UserAvatar';
 import { useUserStore } from '@/store/user';
 import { authSelectors, userProfileSelectors } from '@/store/user/selectors';
 
-import SSOProvidersList from './features/SSOProvidersList';
 
 const Client = memo<{ mobile?: boolean }>(({ mobile }) => {
   const [isLoginWithNextAuth, isLogin] = useUserStore((s) => [

@@ -4,11 +4,12 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import UploadStatus from './UploadStatus';
+
 import FileParsingStatus from '@/components/FileParsingStatus';
 import { FileParsingTask } from '@/types/asyncTask';
 import { FileUploadState, FileUploadStatus } from '@/types/files';
 
-import UploadStatus from './UploadStatus';
 
 const useStyles = createStyles(({ css }) => ({
   status: css`

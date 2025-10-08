@@ -3,9 +3,10 @@ import isEqual from 'fast-deep-equal';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import { useStore } from '../store';
+
 import { useToolStore } from '@/store/tool';
 
-import { useStore } from '../store';
 
 const MarketList = memo<{ id: string }>(({ id }) => {
   const [toggleAgentPlugin, hasPlugin] = useStore((s) => [s.toggleAgentPlugin, !!s.config.plugins]);

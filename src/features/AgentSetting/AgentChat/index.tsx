@@ -8,10 +8,11 @@ import { LayoutList, MessagesSquare } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { selectors, useStore } from '../store';
+
 import { FORM_STYLE } from '@/const/layoutTokens';
 import { imageUrl } from '@/const/url';
 
-import { selectors, useStore } from '../store';
 
 const AgentChat = memo(() => {
   const { t } = useTranslation('setting');

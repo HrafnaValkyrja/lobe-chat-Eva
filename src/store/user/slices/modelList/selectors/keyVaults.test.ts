@@ -1,5 +1,9 @@
 import { describe, expect, it } from 'vitest';
 
+import { initialSettingsState } from '../../settings/initialState';
+
+import { keyVaultsConfigSelectors } from './keyVaults';
+
 import { UserStore } from '@/store/user';
 import {
   AWSBedrockKeyVault,
@@ -8,8 +12,6 @@ import {
 } from '@/types/user/settings';
 import { merge } from '@/utils/merge';
 
-import { initialSettingsState } from '../../settings/initialState';
-import { keyVaultsConfigSelectors } from './keyVaults';
 
 describe('keyVaultsConfigSelectors', () => {
   describe('isProviderEndpointNotEmpty', () => {

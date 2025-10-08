@@ -1,7 +1,6 @@
 import { and, asc, count, desc, eq, ilike, inArray, like, notExists, or, sum } from 'drizzle-orm';
 import type { PgTransaction } from 'drizzle-orm/pg-core';
 
-import { FilesTabs, QueryFileListParams, SortType } from '@/types/files';
 
 import {
   FileItem,
@@ -16,6 +15,8 @@ import {
   knowledgeBaseFiles,
 } from '../schemas';
 import { LobeChatDatabase, Transaction } from '../type';
+
+import { FilesTabs, QueryFileListParams, SortType } from '@/types/files';
 
 export class FileModel {
   private readonly userId: string;

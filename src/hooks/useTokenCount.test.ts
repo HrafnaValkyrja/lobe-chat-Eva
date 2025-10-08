@@ -1,9 +1,10 @@
 import { renderHook, waitFor } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 
+import { useTokenCount } from './useTokenCount';
+
 import * as tokenizers from '@/utils/tokenizer';
 
-import { useTokenCount } from './useTokenCount';
 
 describe('useTokenCount', () => {
   // TODO: need to be fixed in the future

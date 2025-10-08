@@ -21,7 +21,7 @@ const displayMigrationStatus = (s: GlobalState) => {
           index: index + 1,
           migratedAt: recordInTable ? new Date(recordInTable.created_at) : undefined,
           sql: item.sql,
-          status: !!recordInTable ? 'success' : 'error',
+          status: recordInTable ? 'success' : 'error',
         };
       })
       // 时间倒序

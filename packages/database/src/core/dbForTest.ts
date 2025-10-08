@@ -1,15 +1,17 @@
+import { join } from 'node:path';
+
 import { Pool as NeonPool, neonConfig } from '@neondatabase/serverless';
 import { drizzle as neonDrizzle } from 'drizzle-orm/neon-serverless';
 import * as migrator from 'drizzle-orm/neon-serverless/migrator';
 import { drizzle as nodeDrizzle } from 'drizzle-orm/node-postgres';
 import * as nodeMigrator from 'drizzle-orm/node-postgres/migrator';
-import { join } from 'node:path';
 import { Pool as NodePool } from 'pg';
 import ws from 'ws';
 
+import * as schema from '../schemas';
+
 import { serverDBEnv } from '@/config/db';
 
-import * as schema from '../schemas';
 
 const migrationsFolder = join(__dirname, '../../migrations');
 

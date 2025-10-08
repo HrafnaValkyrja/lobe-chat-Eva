@@ -3,10 +3,11 @@
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import PanelTitle from '@/components/PanelTitle';
 
 import FileMenu from './features/FileMenu';
 import KnowledgeBase from './features/KnowledgeBase';
+
+import PanelTitle from '@/components/PanelTitle';
 
 const Menu = () => {
   const { t } = useTranslation('file');

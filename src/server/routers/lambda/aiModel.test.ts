@@ -1,10 +1,11 @@
 import { describe, expect, it, vi } from 'vitest';
 
+import { aiModelRouter } from './aiModel';
+
 import { AiModelModel } from '@/database/models/aiModel';
 import { UserModel } from '@/database/models/user';
 import { AiInfraRepos } from '@/database/repositories/aiInfra';
 
-import { aiModelRouter } from './aiModel';
 
 vi.mock('@/database/models/aiModel');
 vi.mock('@/database/models/user');

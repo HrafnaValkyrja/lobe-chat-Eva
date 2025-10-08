@@ -1,9 +1,11 @@
 import { describe, expect, it } from 'vitest';
 
-import { ModelUsage } from '@/types/message';
 
 import { LobeDefaultAiModelListItem } from '../../../../../../packages/model-bank/src/types/aiModel';
+
 import { getDetailsToken } from './tokens';
+
+import { ModelUsage } from '@/types/message';
 
 describe('getDetailsToken', () => {
   // 基本测试数据

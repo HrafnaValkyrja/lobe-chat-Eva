@@ -8,9 +8,10 @@ import { ListRestartIcon } from 'lucide-react';
 import { memo, useMemo, useState } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import Header from '../features/Header';
+
 import { DEFAULT_FEATURE_FLAGS } from '@/config/featureFlags';
 
-import Header from '../features/Header';
 
 const useStyles = createStyles(({ css, token, prefixCls }) => ({
   container: css`

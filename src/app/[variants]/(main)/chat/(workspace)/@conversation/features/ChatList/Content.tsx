@@ -2,14 +2,15 @@
 
 import React, { memo, useCallback } from 'react';
 
+import MainChatItem from './ChatItem';
+import Welcome from './WelcomeChatItem';
+
 import { SkeletonList, VirtualizedList } from '@/features/Conversation';
 import WideScreenContainer from '@/features/Conversation/components/WideScreenContainer';
 import { useFetchMessages } from '@/hooks/useFetchMessages';
 import { useChatStore } from '@/store/chat';
 import { chatSelectors } from '@/store/chat/selectors';
 
-import MainChatItem from './ChatItem';
-import Welcome from './WelcomeChatItem';
 
 interface ListProps {
   mobile?: boolean;

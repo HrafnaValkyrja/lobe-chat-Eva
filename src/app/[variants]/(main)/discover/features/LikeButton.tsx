@@ -5,9 +5,10 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import { useStyles } from '../components/Statistic';
+
 import { formatShortenNumber } from '@/utils/format';
 
-import { useStyles } from '../components/Statistic';
 
 interface LikeButtonProps {
   count: number;

@@ -1,9 +1,10 @@
 import { act, fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 
+import Avatar from './Avatar';
+
 import { useUserStore } from '@/store/user';
 
-import Avatar from './Avatar';
 
 // Mock UserAvatar and UserPanel components
 vi.mock('@/features/User/UserAvatar', () => ({

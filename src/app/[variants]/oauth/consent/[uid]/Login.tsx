@@ -7,10 +7,11 @@ import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import OAuthApplicationLogo from './components/OAuthApplicationLogo';
+
 import { useUserStore } from '@/store/user';
 import { userProfileSelectors } from '@/store/user/selectors';
 
-import OAuthApplicationLogo from './components/OAuthApplicationLogo';
 
 interface LoginConfirmProps {
   clientMetadata: {

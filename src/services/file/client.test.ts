@@ -1,12 +1,13 @@
 import { eq } from 'drizzle-orm';
 import { beforeEach, describe, expect, it } from 'vitest';
 
+import { ClientService } from './client';
+
 import { clientDB, initializeDB } from '@/database/client/db';
 import { files, globalFiles, users } from '@/database/schemas';
 import { clientS3Storage } from '@/services/file/ClientS3';
 import { UploadFileParams } from '@/types/files';
 
-import { ClientService } from './client';
 
 const userId = 'file-user';
 

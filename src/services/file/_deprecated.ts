@@ -1,8 +1,9 @@
+import { IFileService } from './type';
+
 import { FileModel } from '@/database/_deprecated/models/file';
 import { clientS3Storage } from '@/services/file/ClientS3';
 import { FileItem, UploadFileParams } from '@/types/files';
 
-import { IFileService } from './type';
 
 export class ClientService implements IFileService {
   async createFile(file: UploadFileParams) {
@@ -29,7 +30,7 @@ export class ClientService implements IFileService {
     };
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   
   async checkFileHash(_hash: string) {
     return { isExist: false, metadata: {}, url: '' };
   }
@@ -41,7 +42,7 @@ export class ClientService implements IFileService {
     }
 
     // arrayBuffer to blob or base64 to blob
-    const blob = !!item.data
+    const blob = item.data
       ? new Blob([item.data!], { type: item.fileType })
       : // @ts-ignore
         new Blob([Buffer.from(item.base64!, 'base64')], { type: item.fileType });

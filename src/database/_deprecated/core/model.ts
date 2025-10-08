@@ -1,10 +1,11 @@
 import Dexie, { BulkError } from 'dexie';
 import { ZodObject } from 'zod';
 
-import { nanoid } from '@/utils/uuid';
 
 import { BrowserDB, BrowserDBSchema, browserDB } from './db';
 import { DBBaseFieldsSchema } from './types/db';
+
+import { nanoid } from '@/utils/uuid';
 
 export class BaseModel<N extends keyof BrowserDBSchema = any, T = BrowserDBSchema[N]['table']> {
   protected readonly db: BrowserDB;

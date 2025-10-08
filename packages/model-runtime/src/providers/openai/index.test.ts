@@ -3,7 +3,9 @@ import OpenAI from 'openai';
 import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import * as debugStreamModule from '../../utils/debugStream';
+
 import officalOpenAIModels from './fixtures/openai-models.json';
+
 import { LobeOpenAI } from './index';
 
 // Mock the console.error to avoid polluting test output

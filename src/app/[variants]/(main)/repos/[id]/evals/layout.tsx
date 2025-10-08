@@ -2,10 +2,11 @@ import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
-import { serverFeatureFlags } from '@/config/featureFlags';
 
 import Container from './components/Container';
 import { Tabs } from './components/Tabs';
+
+import { serverFeatureFlags } from '@/config/featureFlags';
 
 interface LayoutProps {
   children: ReactNode;

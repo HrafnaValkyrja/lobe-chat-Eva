@@ -7,10 +7,11 @@ import type {
 import { ServerModelProviderConfig } from '@lobechat/types';
 import { uniqBy } from 'lodash-es';
 
+import { currentSettings, getProviderConfigById } from '../../settings/selectors/settings';
+
 import { filterEnabledModels } from '@/config/modelProviders';
 import type { UserStore } from '@/store/user';
 
-import { currentSettings, getProviderConfigById } from '../../settings/selectors/settings';
 
 /**
  * get the server side model cards

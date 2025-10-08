@@ -1,8 +1,9 @@
 import { describe, expect, it, vi } from 'vitest';
 
 import * as chains from './chains';
-import * as mainExports from './index';
 import * as prompts from './prompts';
+
+import * as mainExports from './index';
 
 // Mock the problematic dependency
 vi.mock('@/locales/resources', () => ({

@@ -20,6 +20,9 @@ import { Trans, useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 
+import Checker from '../Checker';
+import ProviderModelListSelect from '../ProviderModelList';
+
 import { useSyncSettings } from '@/app/[variants]/(main)/settings/hooks/useSyncSettings';
 import {
   KeyVaultsConfigKey,
@@ -36,8 +39,6 @@ import { keyVaultsConfigSelectors, modelConfigSelectors } from '@/store/user/sel
 import { ModelProviderCard } from '@/types/llm';
 import { GlobalLLMProviderKey } from '@/types/user/settings';
 
-import Checker from '../Checker';
-import ProviderModelListSelect from '../ProviderModelList';
 
 const useStyles = createStyles(({ css, prefixCls, responsive, token }) => ({
   aceGcm: css`

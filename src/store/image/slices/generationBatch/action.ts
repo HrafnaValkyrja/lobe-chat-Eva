@@ -3,6 +3,11 @@ import { useRef } from 'react';
 import { SWRResponse, mutate } from 'swr';
 import { StateCreator } from 'zustand';
 
+import { ImageStore } from '../../store';
+import { generationTopicSelectors } from '../generationTopic/selectors';
+
+import { GenerationBatchDispatch, generationBatchReducer } from './reducer';
+
 import { useClientDataSWR } from '@/libs/swr';
 import { GetGenerationStatusResult } from '@/server/routers/lambda/generation';
 import { generationService } from '@/services/generation';
@@ -11,9 +16,7 @@ import { AsyncTaskStatus } from '@/types/asyncTask';
 import { GenerationBatch } from '@/types/generation';
 import { setNamespace } from '@/utils/storeDebug';
 
-import { ImageStore } from '../../store';
-import { generationTopicSelectors } from '../generationTopic/selectors';
-import { GenerationBatchDispatch, generationBatchReducer } from './reducer';
+
 
 const n = setNamespace('generationBatch');
 

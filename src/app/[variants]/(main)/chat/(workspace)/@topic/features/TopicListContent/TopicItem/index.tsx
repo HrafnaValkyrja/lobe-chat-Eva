@@ -3,12 +3,14 @@ import { createStyles } from 'antd-style';
 import { Suspense, memo, useState } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
-import { useChatStore } from '@/store/chat';
-import { useGlobalStore } from '@/store/global';
 
 import ThreadList from '../ThreadList';
+
 import DefaultContent from './DefaultContent';
 import TopicContent from './TopicContent';
+
+import { useChatStore } from '@/store/chat';
+import { useGlobalStore } from '@/store/global';
 
 const useStyles = createStyles(({ css, token, isDarkMode }) => ({
   active: css`

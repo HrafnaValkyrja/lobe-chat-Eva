@@ -8,12 +8,13 @@ import React, { type FC, memo, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center } from 'react-layout-kit';
 
-import { useFileStore } from '@/store/file';
-import { FileUploadStatus } from '@/types/files/upload';
 
 import { useDragAndDrop } from '../hooks/useDragAndDrop';
 import { useUploadFilesValidation } from '../hooks/useUploadFilesValidation';
 import { useConfigPanelStyles } from '../style';
+
+import { useFileStore } from '@/store/file';
+import { FileUploadStatus } from '@/types/files/upload';
 
 // ======== Business Types ======== //
 

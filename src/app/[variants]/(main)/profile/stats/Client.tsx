@@ -5,7 +5,6 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import { FORM_STYLE } from '@/const/layoutTokens';
 
 import AiHeatmaps from './features/AiHeatmaps';
 import AssistantsRank from './features/AssistantsRank';
@@ -17,6 +16,8 @@ import TotalMessages from './features/TotalMessages';
 import TotalTopics from './features/TotalTopics';
 import TotalWords from './features/TotalWords';
 import Welcome from './features/Welcome';
+
+import { FORM_STYLE } from '@/const/layoutTokens';
 
 const Client = memo<{ mobile?: boolean }>(({ mobile }) => {
   const { t } = useTranslation('auth');

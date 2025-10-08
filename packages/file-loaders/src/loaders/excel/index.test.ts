@@ -1,7 +1,9 @@
 import path from 'node:path';
+
 import { beforeEach, describe, expect, it } from 'vitest';
 
 import type { FileLoaderInterface } from '../../types';
+
 import { ExcelLoader } from './index';
 
 // 确保你已经在 fixtures 目录下放置了 test.xlsx 文件

@@ -5,6 +5,8 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import { useStyles } from './style';
+
 import PluginAvatar from '@/features/PluginAvatar';
 import { useYamlArguments } from '@/hooks/useYamlArguments';
 import { useChatStore } from '@/store/chat';
@@ -12,7 +14,6 @@ import { pluginHelpers, useToolStore } from '@/store/tool';
 import { toolSelectors } from '@/store/tool/selectors';
 import { ChatPluginPayload } from '@/types/message';
 
-import { useStyles } from './style';
 
 export interface ArtifactItemProps {
   identifier?: string;

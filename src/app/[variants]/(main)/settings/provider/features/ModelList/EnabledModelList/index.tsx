@@ -5,11 +5,12 @@ import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import ModelItem from '../ModelItem';
+import SortModelModal from '../SortModelModal';
+
 import { useAiInfraStore } from '@/store/aiInfra';
 import { aiModelSelectors } from '@/store/aiInfra/selectors';
 
-import ModelItem from '../ModelItem';
-import SortModelModal from '../SortModelModal';
 
 interface EnabledModelListProps {
   activeTab: string;

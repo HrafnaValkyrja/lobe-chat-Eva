@@ -2,10 +2,11 @@
 
 import { memo } from 'react';
 
+import { useCategory } from './useCategory';
+
 import Menu from '@/components/Menu';
 import { ChatSettingsTabs } from '@/store/global/initialState';
 
-import { useCategory } from './useCategory';
 
 interface CategoryContentProps {
   setTab: (tab: ChatSettingsTabs) => void;

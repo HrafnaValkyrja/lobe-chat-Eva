@@ -1,7 +1,8 @@
+import { GlobalState, INITIAL_STATUS } from '../initialState';
+
 import { isServerMode, isUsePgliteDB } from '@/const/version';
 import { DatabaseLoadingState } from '@/types/clientDB';
 
-import { GlobalState, INITIAL_STATUS } from '../initialState';
 
 export const systemStatus = (s: GlobalState) => s.status;
 

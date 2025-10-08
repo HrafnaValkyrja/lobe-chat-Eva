@@ -5,11 +5,12 @@ import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 import { Virtuoso } from 'react-virtuoso';
 
+import PluginItem from './Item';
+
 import { useToolStore } from '@/store/tool';
 import { pluginSelectors } from '@/store/tool/selectors';
 import { LobeToolType } from '@/types/tool/tool';
 
-import PluginItem from './Item';
 
 interface ListProps {
   identifier?: string;

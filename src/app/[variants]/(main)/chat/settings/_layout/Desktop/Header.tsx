@@ -5,9 +5,10 @@ import { useRouter } from 'next/navigation';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import HeaderContent from '../../features/HeaderContent';
+
 import { pathString } from '@/utils/url';
 
-import HeaderContent from '../../features/HeaderContent';
 
 const Header = memo(() => {
   const { t } = useTranslation('setting');

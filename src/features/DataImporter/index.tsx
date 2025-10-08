@@ -7,6 +7,14 @@ import React, { ReactNode, memo, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center } from 'react-layout-kit';
 
+import { importConfigFile } from './_deprecated';
+import { parseConfigFile } from './config';
+import ImportError from './Error';
+import { FileUploading } from './FileUploading';
+import ImportPreviewModal from './ImportDetail';
+import DataLoading from './Loading';
+import SuccessResult from './SuccessResult';
+
 import DataStyleModal from '@/components/DataStyleModal';
 import { importService } from '@/services/import';
 import { ImportResult, ImportResults } from '@/services/import/_deprecated';
@@ -16,13 +24,6 @@ import { ImportPgDataStructure } from '@/types/export';
 import { ConfigFile } from '@/types/exportConfig';
 import { ErrorShape, FileUploadState, ImportStage, OnImportCallbacks } from '@/types/importer';
 
-import ImportError from './Error';
-import { FileUploading } from './FileUploading';
-import ImportPreviewModal from './ImportDetail';
-import DataLoading from './Loading';
-import SuccessResult from './SuccessResult';
-import { importConfigFile } from './_deprecated';
-import { parseConfigFile } from './config';
 
 const useStyles = createStyles(({ css }) => ({
   children: css`

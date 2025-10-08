@@ -2,6 +2,7 @@
 import { ModelProvider } from 'model-bank';
 
 import { testProvider } from '../../providerTestUtils';
+
 import { LobeNebiusAI } from './index';
 
 const provider = ModelProvider.Nebius;

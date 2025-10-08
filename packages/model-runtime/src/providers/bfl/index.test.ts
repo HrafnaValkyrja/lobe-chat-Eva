@@ -2,6 +2,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { CreateImagePayload } from '../../types/image';
+
 import { LobeBflAI } from './index';
 
 // Mock the createBflImage function

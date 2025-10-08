@@ -1,14 +1,15 @@
 import { LocalFileItem } from '@lobechat/electron-client-ipc';
 import { memo } from 'react';
 
-import { LocalSystemApiName } from '@/tools/local-system';
-import { BuiltinRenderProps } from '@/types/tool';
 
 import ListFiles from './ListFiles';
 import ReadLocalFile from './ReadLocalFile';
 import RenameLocalFile from './RenameLocalFile';
 import SearchFiles from './SearchFiles';
 import WriteFile from './WriteFile';
+
+import { LocalSystemApiName } from '@/tools/local-system';
+import { BuiltinRenderProps } from '@/types/tool';
 
 const RenderMap = {
   [LocalSystemApiName.searchLocalFiles]: SearchFiles,

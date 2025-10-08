@@ -3,6 +3,7 @@ import * as fs from 'node:fs';
 import { join } from 'node:path';
 
 import { TextLoader } from '../index';
+
 import longResult from './long.json';
 
 describe('TextLoader', () => {

@@ -6,12 +6,13 @@ import { ReactNode, memo, useCallback, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import { useDownloadMonitor } from './useDownloadMonitor';
+
 import FormAction from '@/components/FormAction';
 import { useActionSWR } from '@/libs/swr';
 import { ModelProgressInfo, modelsService } from '@/services/models';
 import { formatSize } from '@/utils/format';
 
-import { useDownloadMonitor } from './useDownloadMonitor';
 
 interface OllamaModelDownloaderProps {
   extraAction?: ReactNode;

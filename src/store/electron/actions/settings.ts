@@ -3,9 +3,10 @@ import isEqual from 'fast-deep-equal';
 import useSWR, { SWRResponse, mutate } from 'swr';
 import type { StateCreator } from 'zustand/vanilla';
 
+import type { ElectronStore } from '../store';
+
 import { desktopSettingsService } from '@/services/electron/settings';
 
-import type { ElectronStore } from '../store';
 
 /**
  * 设置操作

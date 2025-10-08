@@ -2,10 +2,11 @@ import { Button } from '@lobehub/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { ErrorActionContainer } from '../style';
+
 import OllamaModelDownloader from '@/features/OllamaModelDownloader';
 import { useChatStore } from '@/store/chat';
 
-import { ErrorActionContainer } from '../style';
 
 interface InvalidOllamaModelProps {
   id: string;

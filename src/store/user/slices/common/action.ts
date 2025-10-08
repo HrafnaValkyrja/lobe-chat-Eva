@@ -3,6 +3,8 @@ import useSWR, { SWRResponse, mutate } from 'swr';
 import type { PartialDeep } from 'type-fest';
 import type { StateCreator } from 'zustand/vanilla';
 
+import { preferenceSelectors } from '../preference/selectors';
+
 import { DEFAULT_PREFERENCE } from '@/const/user';
 import { useOnlyFetchOnceSWR } from '@/libs/swr';
 import { userService } from '@/services/user';
@@ -13,7 +15,6 @@ import type { UserSettings } from '@/types/user/settings';
 import { merge } from '@/utils/merge';
 import { setNamespace } from '@/utils/storeDebug';
 
-import { preferenceSelectors } from '../preference/selectors';
 
 const n = setNamespace('common');
 
@@ -68,7 +69,7 @@ export const createCommonSlice: StateCreator<
 
   useInitUserState: (isLogin, serverConfig, options) =>
     useOnlyFetchOnceSWR<UserInitializationState>(
-      !!isLogin ? GET_USER_STATE_KEY : null,
+      isLogin ? GET_USER_STATE_KEY : null,
       () => userService.getUserState(),
       {
         onSuccess: (data) => {

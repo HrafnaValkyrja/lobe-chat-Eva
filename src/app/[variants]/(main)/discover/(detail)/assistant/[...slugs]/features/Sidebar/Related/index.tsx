@@ -7,6 +7,7 @@ import urlJoin from 'url-join';
 
 import Title from '../../../../../../features/Title';
 import { useDetailContext } from '../../DetailProvider';
+
 import Item from './Item';
 
 const Related = memo(() => {

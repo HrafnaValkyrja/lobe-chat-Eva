@@ -2,16 +2,17 @@ import { Divider } from 'antd';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import Connection from './Connection';
+import { TITLE_BAR_HEIGHT } from './const';
+import { useWatchThemeUpdate } from './hooks/useWatchThemeUpdate';
+import { UpdateModal } from './UpdateModal';
+import { UpdateNotification } from './UpdateNotification';
+import WinControl from './WinControl';
+
 import { useElectronStore } from '@/store/electron';
 import { electronStylish } from '@/styles/electron';
 import { isMacOS } from '@/utils/platform';
 
-import Connection from './Connection';
-import { UpdateModal } from './UpdateModal';
-import { UpdateNotification } from './UpdateNotification';
-import WinControl from './WinControl';
-import { TITLE_BAR_HEIGHT } from './const';
-import { useWatchThemeUpdate } from './hooks/useWatchThemeUpdate';
 
 const isMac = isMacOS();
 

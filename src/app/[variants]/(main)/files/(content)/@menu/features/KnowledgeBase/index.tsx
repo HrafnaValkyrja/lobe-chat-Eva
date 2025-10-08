@@ -6,9 +6,10 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import KnowledgeBaseList from './KnowledgeBaseList';
+
 import { useCreateNewModal } from '@/features/KnowledgeBaseModal';
 
-import KnowledgeBaseList from './KnowledgeBaseList';
 
 const useStyles = createStyles(({ css, token }) => ({
   header: css`

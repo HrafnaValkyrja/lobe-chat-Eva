@@ -5,6 +5,11 @@ import { useQueryState } from 'nuqs';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import Sidebar from '../Sidebar';
+
+import Related from './Related';
+import Versions from './Versions';
+
 import Deployment from '@/features/MCPPluginDetail/Deployment';
 import Nav from '@/features/MCPPluginDetail/Nav';
 import Overview from '@/features/MCPPluginDetail/Overview';
@@ -12,9 +17,6 @@ import Schema from '@/features/MCPPluginDetail/Schema';
 import Score from '@/features/MCPPluginDetail/Score';
 import { McpNavKey } from '@/types/discover';
 
-import Sidebar from '../Sidebar';
-import Related from './Related';
-import Versions from './Versions';
 
 const Details = memo<{ mobile?: boolean }>(({ mobile: isMobile }) => {
   const { mobile = isMobile } = useResponsive();

@@ -1,8 +1,9 @@
 import { PropsWithChildren } from 'react';
 
+import Body from '../features/Body';
+
 import { PortalHeader } from '@/features/Portal/router';
 
-import Body from '../features/Body';
 
 const Layout = ({ children }: PropsWithChildren) => {
   return (

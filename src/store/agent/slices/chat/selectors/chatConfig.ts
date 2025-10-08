@@ -1,9 +1,10 @@
+import { currentAgentConfig } from './agent';
+
 import { contextCachingModels, thinkingWithToolClaudeModels } from '@/const/models';
 import { DEFAULT_AGENT_CHAT_CONFIG, DEFAULT_AGENT_SEARCH_FC_MODEL } from '@/const/settings';
 import { AgentStoreState } from '@/store/agent/initialState';
 import { LobeAgentChatConfig } from '@/types/agent';
 
-import { currentAgentConfig } from './agent';
 
 export const currentAgentChatConfig = (s: AgentStoreState): LobeAgentChatConfig =>
   currentAgentConfig(s).chatConfig || {};

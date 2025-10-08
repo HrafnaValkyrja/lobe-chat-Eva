@@ -3,9 +3,10 @@ import { createStyles } from 'antd-style';
 import { memo } from 'react';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import TokenDetail from './UsageDetail';
+
 import { MessageMetadata } from '@/types/message';
 
-import TokenDetail from './UsageDetail';
 
 export const useStyles = createStyles(({ token, css, cx }) => ({
   container: cx(css`

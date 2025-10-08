@@ -1,9 +1,10 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import InputNumber from '../../../components/SeedNumberInput';
+
 import { useGenerationConfigParam } from '@/store/image/slices/generationConfig/hooks';
 
-import InputNumber from '../../../components/SeedNumberInput';
 
 const SeedNumberInput = memo(() => {
   const { t } = useTranslation('image');

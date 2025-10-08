@@ -4,11 +4,12 @@ import { Spin } from 'antd';
 import dynamic from 'next/dynamic';
 import { memo, useEffect, useState } from 'react';
 
+import { V2DBReader } from './DBReader';
+
 import { isServerMode } from '@/const/version';
 import { useGlobalStore } from '@/store/global';
 import { systemStatusSelectors } from '@/store/global/selectors';
 
-import { V2DBReader } from './DBReader';
 
 const Modal = dynamic(() => import('./Modal'), { loading: () => <Spin fullscreen />, ssr: false });
 

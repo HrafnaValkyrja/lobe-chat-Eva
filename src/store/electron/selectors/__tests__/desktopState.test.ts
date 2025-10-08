@@ -1,9 +1,10 @@
 import { describe, expect, it } from 'vitest';
 
+import { desktopStateSelectors } from '../desktopState';
+
 import { ElectronState, defaultProxySettings, initialState } from '@/store/electron/initialState';
 import { merge } from '@/utils/merge';
 
-import { desktopStateSelectors } from '../desktopState';
 
 describe('desktopStateSelectors', () => {
   describe('usePath', () => {

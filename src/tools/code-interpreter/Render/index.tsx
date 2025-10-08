@@ -10,11 +10,12 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import ResultFileGallery from './components/ResultFileGallery';
+
 import BubblesLoading from '@/components/BubblesLoading';
 import { useChatStore } from '@/store/chat';
 import { chatToolSelectors } from '@/store/chat/slices/builtinTool/selectors';
 
-import ResultFileGallery from './components/ResultFileGallery';
 
 const CodeInterpreter = memo<
   BuiltinRenderProps<CodeInterpreterResponse, CodeInterpreterParams, CodeInterpreterState>

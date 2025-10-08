@@ -1,7 +1,8 @@
-import { OpenAIProviderCard } from '@/config/modelProviders';
 
 import { useSettingsContext } from '../../../_layout/ContextProvider';
 import ProviderDetail from '../default';
+
+import { OpenAIProviderCard } from '@/config/modelProviders';
 
 const Page = () => {
   const { showOpenAIProxyUrl, showOpenAIApiKey } = useSettingsContext();

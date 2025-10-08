@@ -1,4 +1,5 @@
 import { RenderMessageExtra } from '../types';
+
 import { AssistantMessageExtra } from './Assistant';
 import { UserMessageExtra } from './User';
 

@@ -1,9 +1,10 @@
 import { BrandLoading, LobeHubText } from '@lobehub/ui/brand';
 import { Center } from 'react-layout-kit';
 
+import CircleLoading from '../CircleLoading';
+
 import { isCustomBranding } from '@/const/version';
 
-import CircleLoading from '../CircleLoading';
 
 export default () => {
   if (isCustomBranding) return <CircleLoading />;

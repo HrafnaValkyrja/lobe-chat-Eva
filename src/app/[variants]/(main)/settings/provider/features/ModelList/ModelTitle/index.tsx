@@ -6,12 +6,14 @@ import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import CreateNewModelModal from '../CreateNewModelModal';
+
+import Search from './Search';
+
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { useAiInfraStore } from '@/store/aiInfra';
 import { aiModelSelectors } from '@/store/aiInfra/selectors';
 
-import CreateNewModelModal from '../CreateNewModelModal';
-import Search from './Search';
 
 interface ModelFetcherProps {
   provider: string;

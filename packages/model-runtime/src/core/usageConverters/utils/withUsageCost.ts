@@ -1,9 +1,10 @@
 import type { Pricing } from 'model-bank';
 
-import type { ModelUsage } from '@/types/message';
 
 import { computeChatCost } from './computeChatCost';
 import type { ComputeChatCostOptions } from './computeChatCost';
+
+import type { ModelUsage } from '@/types/message';
 
 export const withUsageCost = (
   usage: ModelUsage,

@@ -2,10 +2,11 @@ import { renderHook } from '@testing-library/react';
 import { uniq } from 'lodash-es';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { useHotkeyById } from './useHotkeyById';
+
 import { HOTKEYS_REGISTRATION } from '@/const/hotkeys';
 import { HotkeyEnum, HotkeyScopeEnum } from '@/types/hotkey';
 
-import { useHotkeyById } from './useHotkeyById';
 
 // Mock dependencies
 vi.mock('lodash-es', async (importOriginal) => {

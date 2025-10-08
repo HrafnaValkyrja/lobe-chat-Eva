@@ -1,9 +1,10 @@
 import { Menu } from 'electron';
 
+import type { App } from '../App';
+
 import { IMenuPlatform, MenuOptions, createMenuImpl } from '@/menus';
 import { createLogger } from '@/utils/logger';
 
-import type { App } from '../App';
 
 // Create logger
 const logger = createLogger('core:MenuManager');

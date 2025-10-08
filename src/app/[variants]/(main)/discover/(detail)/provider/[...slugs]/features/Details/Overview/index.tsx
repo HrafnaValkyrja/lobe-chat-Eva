@@ -3,10 +3,12 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import Title from '@/app/[variants]/(main)/discover/features/Title';
 
 import { useDetailContext } from '../../DetailProvider';
+
 import ModelList from './ModelList';
+
+import Title from '@/app/[variants]/(main)/discover/features/Title';
 
 const Overview = memo(() => {
   const { t } = useTranslation('discover');

@@ -1,7 +1,8 @@
+import { globalGeneralSelectors } from './general';
+
 import { GlobalState, initialState } from '@/store/global/initialState';
 import { merge } from '@/utils/merge';
 
-import { globalGeneralSelectors } from './general';
 
 describe('settingsSelectors', () => {
   describe('currentLanguage', () => {

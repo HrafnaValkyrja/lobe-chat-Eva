@@ -1,7 +1,9 @@
-import { createLogger } from '@/utils/logger';
+import { McpSchema } from '../types/protocol';
 
 import { ControllerModule, createProtocolHandler } from '.';
-import { McpSchema } from '../types/protocol';
+
+import { createLogger } from '@/utils/logger';
+
 
 const logger = createLogger('controllers:McpInstallCtr');
 

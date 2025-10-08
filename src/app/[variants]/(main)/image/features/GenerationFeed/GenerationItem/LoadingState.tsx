@@ -6,13 +6,14 @@ import { Spin } from 'antd';
 import { memo } from 'react';
 import { Center } from 'react-layout-kit';
 
-import { AsyncTaskStatus } from '@/types/asyncTask';
 
 import { ActionButtons } from './ActionButtons';
 import { ElapsedTime } from './ElapsedTime';
 import { useStyles } from './styles';
 import { LoadingStateProps } from './types';
 import { getThumbnailMaxWidth } from './utils';
+
+import { AsyncTaskStatus } from '@/types/asyncTask';
 
 // 加载状态组件
 export const LoadingState = memo<LoadingStateProps>(

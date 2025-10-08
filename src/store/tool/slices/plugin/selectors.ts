@@ -1,9 +1,10 @@
 import { LobeChatPluginManifest } from '@lobehub/chat-plugin-sdk';
 import { uniq } from 'lodash-es';
 
+import type { ToolStoreState } from '../../initialState';
+
 import { InstallPluginMeta, LobeToolCustomPlugin } from '@/types/tool/plugin';
 
-import type { ToolStoreState } from '../../initialState';
 
 const installedPlugins = (s: ToolStoreState) => s.installedPlugins;
 

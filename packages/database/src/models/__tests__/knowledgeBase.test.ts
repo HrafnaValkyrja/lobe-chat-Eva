@@ -2,7 +2,6 @@
 import { and, eq } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
-import { LobeChatDatabase } from '../../type';import { sleep } from '@/utils/sleep';
 
 import {
   NewKnowledgeBase,
@@ -12,8 +11,12 @@ import {
   knowledgeBases,
   users,
 } from '../../schemas';
+import { LobeChatDatabase } from '../../type';
 import { KnowledgeBaseModel } from '../knowledgeBase';
+
 import { getTestDB } from './_util';
+
+import { sleep } from '@/utils/sleep';
 
 const serverDB: LobeChatDatabase = await getTestDB();
 

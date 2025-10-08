@@ -3,11 +3,13 @@ import { Empty } from 'antd';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import InlineTable from '@/components/InlineTable';
 
 import { useDetailContext } from '../DetailProvider';
+
 import { useStyles } from './style';
 import { ModeType } from './types';
+
+import InlineTable from '@/components/InlineTable';
 
 const Resources = memo<{ mode?: ModeType }>(({ mode }) => {
   const { t } = useTranslation('discover');

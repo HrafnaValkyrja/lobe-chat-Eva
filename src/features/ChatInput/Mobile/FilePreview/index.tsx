@@ -4,10 +4,11 @@ import isEqual from 'fast-deep-equal';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import FileItem from './FileItem';
+
 import { useChatInputStore } from '@/features/ChatInput/store';
 import { filesSelectors, useFileStore } from '@/store/file';
 
-import FileItem from './FileItem';
 
 const useStyles = createStyles(({ css }) => ({
   container: css`

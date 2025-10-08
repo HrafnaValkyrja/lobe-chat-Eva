@@ -4,9 +4,10 @@ import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import DataLoading from './Loading';
+
 import { formatSpeed, formatTime } from '@/utils/format';
 
-import DataLoading from './Loading';
 
 interface FileUploadingProps {
   progress?: number;

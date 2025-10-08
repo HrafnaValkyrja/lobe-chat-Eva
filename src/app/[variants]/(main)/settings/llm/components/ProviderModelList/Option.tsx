@@ -7,12 +7,13 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import CustomModelOption from './CustomModelOption';
+
 import { ModelInfoTags } from '@/components/ModelSelect';
 import { useUserStore } from '@/store/user';
 import { modelProviderSelectors } from '@/store/user/selectors';
 import { GlobalLLMProviderKey } from '@/types/user/settings';
 
-import CustomModelOption from './CustomModelOption';
 
 interface OptionRenderProps {
   displayName: string;

@@ -7,10 +7,11 @@ import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 import Balancer from 'react-wrap-balancer';
 
+import ArtifactItem from './Item';
+
 import { useChatStore } from '@/store/chat';
 import { chatSelectors } from '@/store/chat/selectors';
 
-import ArtifactItem from './Item';
 
 const ArtifactList = () => {
   const { t } = useTranslation('portal');

@@ -1,9 +1,10 @@
+import { BaseModel } from '../core';
+
 import { DBModel } from '@/database/_deprecated/core/types/db';
 import { DB_File, DB_FileSchema } from '@/database/_deprecated/schemas/files';
 import { clientS3Storage } from '@/services/file/ClientS3';
 import { nanoid } from '@/utils/uuid';
 
-import { BaseModel } from '../core';
 
 class _FileModel extends BaseModel<'files'> {
   constructor() {

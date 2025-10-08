@@ -1,9 +1,10 @@
 import { Mock, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { globalService } from '../global';
+
 import { lambdaClient } from '@/libs/trpc/client';
 import { GlobalRuntimeConfig } from '@/types/serverConfig';
 
-import { globalService } from '../global';
 
 global.fetch = vi.fn();
 

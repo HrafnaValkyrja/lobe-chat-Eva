@@ -2,10 +2,11 @@ import { act, renderHook } from '@testing-library/react';
 import { pwaInstallHandler } from 'pwa-install-handler';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
+import { usePlatform } from './usePlatform';
+import { usePWAInstall } from './usePWAInstall';
+
 import { PWA_INSTALL_ID } from '@/const/layoutTokens';
 
-import { usePWAInstall } from './usePWAInstall';
-import { usePlatform } from './usePlatform';
 
 // Mocks
 vi.mock('./usePlatform', () => ({

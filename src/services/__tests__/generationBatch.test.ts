@@ -1,8 +1,9 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { generationBatchService } from '../generationBatch';
+
 import { lambdaClient } from '@/libs/trpc/client';
 
-import { generationBatchService } from '../generationBatch';
 
 vi.mock('@/libs/trpc/client', () => ({
   lambdaClient: {

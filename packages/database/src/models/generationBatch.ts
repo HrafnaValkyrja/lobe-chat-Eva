@@ -1,8 +1,6 @@
 import debug from 'debug';
 import { and, eq } from 'drizzle-orm';
 
-import { FileService } from '@/server/services/file';
-import { Generation, GenerationAsset, GenerationBatch, GenerationConfig } from '@/types/generation';
 
 import {
   GenerationBatchItem,
@@ -11,7 +9,11 @@ import {
   generationBatches,
 } from '../schemas/generation';
 import { LobeChatDatabase } from '../type';
+
 import { GenerationModel } from './generation';
+
+import { FileService } from '@/server/services/file';
+import { Generation, GenerationAsset, GenerationBatch, GenerationConfig } from '@/types/generation';
 
 const log = debug('lobe-image:generation-batch-model');
 

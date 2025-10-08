@@ -1,3 +1,5 @@
+import { IUserService } from './type';
+
 import { clientDB } from '@/database/client/db';
 import { MessageModel } from '@/database/models/message';
 import { SessionModel } from '@/database/models/session';
@@ -7,7 +9,6 @@ import { BaseClientService } from '@/services/baseClientService';
 import { UserPreference } from '@/types/user';
 import { AsyncLocalStorage } from '@/utils/localStorage';
 
-import { IUserService } from './type';
 
 export class ClientService extends BaseClientService implements IUserService {
   private preferenceStorage: AsyncLocalStorage<UserPreference>;

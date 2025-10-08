@@ -1,12 +1,14 @@
 import { MainBroadcastEventKey, MainBroadcastParams } from '@lobechat/electron-client-ipc';
 import { WebContents } from 'electron';
 
-import { createLogger } from '@/utils/logger';
 
 import { AppBrowsersIdentifiers, appBrowsers, WindowTemplate, WindowTemplateIdentifiers, windowTemplates } from '../../appBrowsers';
 import type { App } from '../App';
+
 import type { BrowserWindowOpts } from './Browser';
 import Browser from './Browser';
+
+import { createLogger } from '@/utils/logger';
 
 // Create logger
 const logger = createLogger('core:BrowserManager');

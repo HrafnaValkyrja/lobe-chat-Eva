@@ -104,7 +104,7 @@ export const chatRag: StateCreator<ChatStore, [['zustand/devtools', never]], [],
       ...chainRewriteQuery(
         content,
         messages,
-        !!queryRewriteConfig.customPrompt ? queryRewriteConfig.customPrompt : undefined,
+        queryRewriteConfig.customPrompt ? queryRewriteConfig.customPrompt : undefined,
       ),
     };
 

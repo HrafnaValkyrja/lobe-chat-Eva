@@ -1,10 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 
+import BuiltinType from './index';
+
 import { DalleManifest } from '@/tools/dalle';
 import { BuiltinToolsRenders } from '@/tools/renders';
 
-import BuiltinType from './index';
 
 // Mock Render component and useParseContent hook
 vi.mock('@/tools/renders', () => ({

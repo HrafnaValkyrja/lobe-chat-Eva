@@ -1,9 +1,10 @@
+import { IFileService } from './type';
+
 import { clientDB } from '@/database/client/db';
 import { FileModel } from '@/database/models/file';
 import { BaseClientService } from '@/services/baseClientService';
 import { clientS3Storage } from '@/services/file/ClientS3';
 
-import { IFileService } from './type';
 
 export class ClientService extends BaseClientService implements IFileService {
   private get fileModel(): FileModel {

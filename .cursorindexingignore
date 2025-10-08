@@ -4,3 +4,20 @@ apps/desktop/resources/locales/
 **/__snapshots__/
 **/fixtures/
 src/database/migrations/
+# Build artifacts
+.next
+.open-next
+.worker-next
+dist
+out
+coverage
+
+# Dependencies
+node_modules
+.pnpm-store
+
+# Environment and cache files
+.env*
+.cache
+tmp
+logs

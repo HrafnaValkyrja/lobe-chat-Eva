@@ -2,9 +2,10 @@ import { Skeleton } from 'antd';
 import dynamic from 'next/dynamic';
 import { ReactNode } from 'react';
 
+import Container from './Container';
+
 import { ChatMessageError } from '@/types/message';
 
-import Container from './Container';
 
 const loading = () => <Skeleton active style={{ width: 400 }} />;
 

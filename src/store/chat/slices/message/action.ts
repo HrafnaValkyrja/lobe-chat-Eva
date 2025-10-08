@@ -20,6 +20,12 @@ import isEqual from 'fast-deep-equal';
 import { SWRResponse, mutate } from 'swr';
 import { StateCreator } from 'zustand/vanilla';
 
+import type { ChatStoreState } from '../../initialState';
+import { chatSelectors } from '../../selectors';
+import { preventLeavingFn, toggleBooleanList } from '../../utils';
+
+import { MessageDispatch, messagesReducer } from './reducer';
+
 import { useClientDataSWR } from '@/libs/swr';
 import { messageService } from '@/services/message';
 import { topicService } from '@/services/topic';
@@ -29,10 +35,7 @@ import { messageMapKey } from '@/store/chat/utils/messageMapKey';
 import { Action, setNamespace } from '@/utils/storeDebug';
 import { nanoid } from '@/utils/uuid';
 
-import type { ChatStoreState } from '../../initialState';
-import { chatSelectors } from '../../selectors';
-import { preventLeavingFn, toggleBooleanList } from '../../utils';
-import { MessageDispatch, messagesReducer } from './reducer';
+
 
 const n = setNamespace('m');
 

@@ -91,7 +91,7 @@ export class DataExporterRepos {
 
   private removeUserId(data: any[]) {
     return data.map((item) => {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+       
       const { userId: _, ...rest } = item;
       return rest;
     });

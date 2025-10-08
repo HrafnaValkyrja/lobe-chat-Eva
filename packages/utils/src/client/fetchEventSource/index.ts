@@ -8,7 +8,7 @@ export const EventStreamContentType = 'text/event-stream';
 
 const LastEventId = 'last-event-id';
 
-// eslint-disable-next-line no-undef
+ 
 export interface FetchEventSourceInit extends RequestInit {
   /** The Fetch function to use. Defaults to window.fetch */
   fetch?: typeof fetch;
@@ -51,7 +51,7 @@ export interface FetchEventSourceInit extends RequestInit {
 }
 
 export function fetchEventSource(
-  // eslint-disable-next-line no-undef
+   
   input: RequestInfo,
   {
     signal: inputSignal,

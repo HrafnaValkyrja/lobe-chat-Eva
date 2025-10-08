@@ -1,11 +1,13 @@
-import { DeploymentOption, SystemDependency } from '@lobehub/market-sdk';
-import debug from 'debug';
 import { exec } from 'node:child_process';
 import { promisify } from 'node:util';
 
-import { SystemDependencyCheckResult } from '@/types/plugins';
+import { DeploymentOption, SystemDependency } from '@lobehub/market-sdk';
+import debug from 'debug';
 
 import { InstallationChecker, PackageInstallCheckResult } from './types';
+
+import { SystemDependencyCheckResult } from '@/types/plugins';
+
 
 const execPromise = promisify(exec);
 const log = debug('lobe-mcp:deps-check');

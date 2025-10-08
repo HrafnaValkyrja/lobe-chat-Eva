@@ -4,10 +4,11 @@ import * as path from 'node:path';
 import readline from 'node:readline';
 import { promisify } from 'node:util';
 
+import { FileSearchImpl } from '../type';
+
 import { FileResult, SearchOptions } from '@/types/fileSearch';
 import { createLogger } from '@/utils/logger';
 
-import { FileSearchImpl } from '../type';
 
 const execPromise = promisify(exec);
 const statPromise = promisify(fs.stat);

@@ -5,11 +5,12 @@ import React from 'react';
 import { Center, Flexbox } from 'react-layout-kit';
 import { mutate } from 'swr';
 
-import { exportService } from '@/services/export';
 
 import Header from '../../features/Header';
 import Table from '../../features/Table';
 import { FETCH_TABLE_DATA_KEY, usePgTable, useTableColumns } from '../usePgTable';
+
+import { exportService } from '@/services/export';
 
 const useStyles = createStyles(({ token, css }) => ({
   dataPanel: css`

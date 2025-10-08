@@ -1,9 +1,10 @@
 import { FluentEmoji } from '@lobehub/ui';
 import { t } from 'i18next';
 
+import RedirectLogin from './RedirectLogin';
+
 import { notification } from '@/components/AntdStaticMethods';
 
-import RedirectLogin from './RedirectLogin';
 
 export const loginRequired = {
   redirect: ({ timeout = 2000 }: { timeout?: number } = {}) => {

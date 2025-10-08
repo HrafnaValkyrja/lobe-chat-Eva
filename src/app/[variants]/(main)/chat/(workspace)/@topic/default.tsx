@@ -1,13 +1,14 @@
 // import TopicListContent from './features/TopicListContent';
 import React, { Suspense, lazy } from 'react';
 
-import { DynamicLayoutProps } from '@/types/next';
-import { RouteVariants } from '@/utils/server/routeVariants';
 
 import Desktop from './_layout/Desktop';
 import Mobile from './_layout/Mobile';
 import SkeletonList from './features/SkeletonList';
 import SystemRole from './features/SystemRole';
+
+import { DynamicLayoutProps } from '@/types/next';
+import { RouteVariants } from '@/utils/server/routeVariants';
 
 const TopicContent = lazy(() => import('./features/TopicListContent'));
 

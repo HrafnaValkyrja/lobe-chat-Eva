@@ -3,14 +3,15 @@ import dayjs from 'dayjs';
 import { count, eq } from 'drizzle-orm';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
-import { INBOX_SESSION_ID } from '@/const/session';
-import { KeyVaultsGateKeeper } from '@/server/modules/KeyVaultsEncrypt';
-import { UserGuide, UserPreference } from '@/types/user';
 
 import { getTestDBInstance } from '../../../core/dbForTest';
 import { SessionModel } from '../../../models/session';
 import { UserModel, UserNotFoundError } from '../../../models/user';
 import { UserSettingsItem, nextauthAccounts, userSettings, users } from '../../../schemas';
+
+import { INBOX_SESSION_ID } from '@/const/session';
+import { KeyVaultsGateKeeper } from '@/server/modules/KeyVaultsEncrypt';
+import { UserGuide, UserPreference } from '@/types/user';
 
 let serverDB = await getTestDBInstance();
 

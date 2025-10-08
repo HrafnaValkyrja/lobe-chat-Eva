@@ -1,8 +1,9 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { DatabaseManager } from './db';
+
 import { ClientDBLoadingProgress, DatabaseLoadingState } from '@/types/clientDB';
 
-import { DatabaseManager } from './db';
 
 // Mock 所有外部依赖
 vi.mock('@electric-sql/pglite', () => ({

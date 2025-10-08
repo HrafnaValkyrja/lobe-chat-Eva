@@ -7,6 +7,10 @@ import { Suspense, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import TogglePanelButton from '../../../../features/TogglePanelButton';
+
+import Tags from './Tags';
+
 import { useInitAgentConfig } from '@/hooks/useInitAgentConfig';
 import { useOpenChatSettings } from '@/hooks/useInterceptingRoutes';
 import { usePinnedAgentState } from '@/hooks/usePinnedAgentState';
@@ -15,8 +19,6 @@ import { systemStatusSelectors } from '@/store/global/selectors';
 import { useSessionStore } from '@/store/session';
 import { sessionMetaSelectors, sessionSelectors } from '@/store/session/selectors';
 
-import TogglePanelButton from '../../../../features/TogglePanelButton';
-import Tags from './Tags';
 
 const useStyles = createStyles(({ css }) => ({
   container: css`

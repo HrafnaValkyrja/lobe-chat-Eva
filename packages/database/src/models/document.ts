@@ -1,8 +1,8 @@
 import { and, desc, eq } from 'drizzle-orm';
 
+import { DocumentItem, NewDocument, documents } from '../schemas';
 import { LobeChatDatabase } from '../type';
 
-import { DocumentItem, NewDocument, documents } from '../schemas';
 
 export class DocumentModel {
   private userId: string;

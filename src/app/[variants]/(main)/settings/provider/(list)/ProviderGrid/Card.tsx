@@ -6,10 +6,11 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import { AiProviderListItem } from '@/types/aiProvider';
 
 import EnableSwitch from './EnableSwitch';
 import { useStyles } from './style';
+
+import { AiProviderListItem } from '@/types/aiProvider';
 
 interface ProviderCardProps extends AiProviderListItem {
   loading?: boolean;

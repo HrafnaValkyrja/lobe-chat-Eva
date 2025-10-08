@@ -1,10 +1,11 @@
+import { ITopicService } from './type';
+
 import { INBOX_SESSION_ID } from '@/const/session';
 import { clientDB } from '@/database/client/db';
 import { TopicModel } from '@/database/models/topic';
 import { BaseClientService } from '@/services/baseClientService';
 import { ChatTopic } from '@/types/topic';
 
-import { ITopicService } from './type';
 
 export class ClientService extends BaseClientService implements ITopicService {
   private get topicModel(): TopicModel {

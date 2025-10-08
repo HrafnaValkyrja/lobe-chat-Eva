@@ -6,6 +6,10 @@ import { PropsWithChildren, Suspense, memo } from 'react';
 import { HotkeysProvider } from 'react-hotkeys-hook';
 import { Flexbox } from 'react-layout-kit';
 
+import DesktopLayoutContainer from './DesktopLayoutContainer';
+import RegisterHotkeys from './RegisterHotkeys';
+import SideBar from './SideBar';
+
 import { isDesktop } from '@/const/version';
 import { BANNER_HEIGHT } from '@/features/AlertBanner/CloudBanner';
 import TitleBar, { TITLE_BAR_HEIGHT } from '@/features/ElectronTitlebar';
@@ -14,9 +18,6 @@ import { usePlatform } from '@/hooks/usePlatform';
 import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfig';
 import { HotkeyScopeEnum } from '@/types/hotkey';
 
-import DesktopLayoutContainer from './DesktopLayoutContainer';
-import RegisterHotkeys from './RegisterHotkeys';
-import SideBar from './SideBar';
 
 const CloudBanner = dynamic(() => import('@/features/AlertBanner/CloudBanner'));
 

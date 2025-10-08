@@ -1,10 +1,10 @@
 import Anthropic from '@anthropic-ai/sdk';
 import type { Stream } from '@anthropic-ai/sdk/streaming';
 
-import { ChatCitationItem } from '@/types/message';
 
 import { ChatStreamCallbacks } from '../../types';
 import { convertAnthropicUsage } from '../usageConverters';
+
 import {
   ChatPayloadForTransformStream,
   StreamContext,
@@ -16,6 +16,8 @@ import {
   createSSEProtocolTransformer,
   createTokenSpeedCalculator,
 } from './protocol';
+
+import { ChatCitationItem } from '@/types/message';
 
 export const transformAnthropicStream = (
   chunk: Anthropic.MessageStreamEvent,
@@ -105,7 +107,7 @@ export const transformAnthropicStream = (
           const thinkingChunk = chunk.content_block;
 
           // if there is signature in the thinking block, return both thinking and signature
-          if (!!thinkingChunk.signature) {
+          if (thinkingChunk.signature) {
             return [
               { data: thinkingChunk.thinking, id: context.id, type: 'reasoning' },
               { data: thinkingChunk.signature, id: context.id, type: 'reasoning_signature' },

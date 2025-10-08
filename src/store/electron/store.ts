@@ -3,6 +3,7 @@ import { createWithEqualityFn } from 'zustand/traditional';
 import { StateCreator } from 'zustand/vanilla';
 
 import { createDevtools } from '../middleware/createDevtools';
+
 import { type ElectronAppAction, createElectronAppSlice } from './actions/app';
 import { type ElectronSettingsAction, settingsSlice } from './actions/settings';
 import { type ElectronRemoteServerAction, remoteSyncSlice } from './actions/sync';

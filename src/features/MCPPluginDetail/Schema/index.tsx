@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
 import { useDetailContext } from '../DetailProvider';
+
 import Block from './Block';
 import Prompts from './Prompts';
 import Resources from './Resources';

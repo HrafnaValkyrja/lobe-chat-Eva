@@ -1,6 +1,7 @@
+import { ControllerModule, ipcClientEvent } from '.';
+
 import { ShortcutUpdateResult } from '@/core/ui/ShortcutManager';
 
-import { ControllerModule, ipcClientEvent } from '.';
 
 export default class ShortcutController extends ControllerModule {
   /**

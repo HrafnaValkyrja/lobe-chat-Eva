@@ -56,7 +56,7 @@ const SystemAgentForm = memo(
           name: systemAgentKey,
         },
         (!!allowCustomPrompt && {
-          children: !!value.customPrompt ? (
+          children: value.customPrompt ? (
             <TextArea
               onBlur={async (e) => {
                 setLoading(true);

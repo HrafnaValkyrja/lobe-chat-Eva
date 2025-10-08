@@ -3,10 +3,11 @@ import { memo, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
-import { useChatStore } from '@/store/chat';
 
 import SearchXNGIcon from './SearchXNGIcon';
 import { FormAction } from './style';
+
+import { useChatStore } from '@/store/chat';
 
 interface ConfigAlertProps {
   id: string;

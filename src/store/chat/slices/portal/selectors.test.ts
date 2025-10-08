@@ -1,9 +1,10 @@
 import { describe, expect, it } from 'vitest';
 
+import { chatPortalSelectors } from './selectors';
+
 import type { ChatStoreState } from '@/store/chat';
 import { ChatMessage } from '@/types/message';
 
-import { chatPortalSelectors } from './selectors';
 
 describe('chatDockSelectors', () => {
   const createState = (overrides?: Partial<ChatStoreState>) => {

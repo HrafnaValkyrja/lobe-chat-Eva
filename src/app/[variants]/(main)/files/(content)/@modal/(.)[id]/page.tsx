@@ -1,8 +1,9 @@
-import { PagePropsWithId } from '@/types/next';
 
 import FileDetail from './FileDetail';
 import FilePreview from './FilePreview';
 import FullscreenModal from './FullscreenModal';
+
+import { PagePropsWithId } from '@/types/next';
 
 const Page = async (props: PagePropsWithId) => {
   const params = await props.params;

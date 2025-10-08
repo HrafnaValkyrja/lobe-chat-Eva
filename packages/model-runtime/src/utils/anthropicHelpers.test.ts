@@ -3,6 +3,7 @@ import { describe, expect, it, vi } from 'vitest';
 
 import { OpenAIChatMessage, UserMessageContentPart } from '../types/chat';
 import { imageUrlToBase64 } from '../utils/imageToBase64';
+
 import {
   buildAnthropicBlock,
   buildAnthropicMessage,

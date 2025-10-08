@@ -1,8 +1,9 @@
 import Auth0 from 'next-auth/providers/auth0';
 
+import { CommonProviderConfig } from './sso.config';
+
 import { authEnv } from '@/envs/auth';
 
-import { CommonProviderConfig } from './sso.config';
 
 const provider = {
   id: 'auth0',

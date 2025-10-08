@@ -4,11 +4,12 @@ import { ChatHeader } from '@lobehub/ui/chat';
 import Link from 'next/link';
 import { memo } from 'react';
 
+import CreateButton from '../../features/CreateButton';
+import StoreSearchBar from '../../features/Search';
+
 import { ProductLogo } from '@/components/Branding';
 import { isCustomBranding } from '@/const/version';
 
-import CreateButton from '../../features/CreateButton';
-import StoreSearchBar from '../../features/Search';
 
 const Header = memo(() => {
   return (

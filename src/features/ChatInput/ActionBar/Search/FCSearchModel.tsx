@@ -3,11 +3,12 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import FunctionCallingModelSelect from './FunctionCallingModelSelect';
+
 import InfoTooltip from '@/components/InfoTooltip';
 import { useAgentStore } from '@/store/agent';
 import { agentChatConfigSelectors } from '@/store/agent/slices/chat';
 
-import FunctionCallingModelSelect from './FunctionCallingModelSelect';
 
 const useStyles = createStyles(({ css, token }) => ({
   check: css`

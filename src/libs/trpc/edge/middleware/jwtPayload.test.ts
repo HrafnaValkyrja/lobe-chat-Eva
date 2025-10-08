@@ -3,11 +3,12 @@ import * as utils from '@lobechat/utils/server';
 import { TRPCError } from '@trpc/server';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { jwtPayloadChecker } from './jwtPayload';
+
 import { createCallerFactory } from '@/libs/trpc/edge';
 import { AuthContext, createContextInner } from '@/libs/trpc/edge/context';
 import { edgeTrpc as trpc } from '@/libs/trpc/edge/init';
 
-import { jwtPayloadChecker } from './jwtPayload';
 
 const appRouter = trpc.router({
   protectedQuery: trpc.procedure.use(jwtPayloadChecker).query(async ({ ctx }) => {

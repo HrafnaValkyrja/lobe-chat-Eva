@@ -1,6 +1,8 @@
 import isEqual from 'fast-deep-equal';
 import { useHotkeys } from 'react-hotkeys-hook';
 
+import { useHotkeyById } from './useHotkeyById';
+
 import { INBOX_SESSION_ID } from '@/const/session';
 import { usePinnedAgentState } from '@/hooks/usePinnedAgentState';
 import { useSwitchSession } from '@/hooks/useSwitchSession';
@@ -12,7 +14,6 @@ import { useUserStore } from '@/store/user';
 import { settingsSelectors } from '@/store/user/selectors';
 import { HotkeyEnum, HotkeyScopeEnum, KeyEnum } from '@/types/hotkey';
 
-import { useHotkeyById } from './useHotkeyById';
 
 export const useSwitchAgentHotkey = () => {
   const { showPinList } = useServerConfigStore(featureFlagsSelectors);

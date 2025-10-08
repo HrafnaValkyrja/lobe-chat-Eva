@@ -20,6 +20,13 @@ import { Center, Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 import { z } from 'zod';
 
+import { KeyVaultsConfigKey, LLMProviderApiTokenKey, LLMProviderBaseUrlKey } from '../../const';
+
+import Checker, { CheckErrorRender } from './Checker';
+import EnableSwitch from './EnableSwitch';
+import { SkeletonInput } from './SkeletonInput';
+import UpdateProviderInfo from './UpdateProviderInfo';
+
 import { FormInput, FormPassword } from '@/components/FormInput';
 import { FORM_STYLE } from '@/const/layoutTokens';
 import { AES_GCM_URL, BASE_PROVIDER_DOC_URL } from '@/const/url';
@@ -31,11 +38,6 @@ import {
   AiProviderSourceType,
 } from '@/types/aiProvider';
 
-import { KeyVaultsConfigKey, LLMProviderApiTokenKey, LLMProviderBaseUrlKey } from '../../const';
-import Checker, { CheckErrorRender } from './Checker';
-import EnableSwitch from './EnableSwitch';
-import { SkeletonInput } from './SkeletonInput';
-import UpdateProviderInfo from './UpdateProviderInfo';
 
 const useStyles = createStyles(({ css, prefixCls, responsive, token }) => ({
   aceGcm: css`

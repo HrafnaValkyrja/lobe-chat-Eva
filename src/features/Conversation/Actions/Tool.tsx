@@ -1,10 +1,11 @@
 import { ActionIconGroup } from '@lobehub/ui';
 import { memo } from 'react';
 
-import { useChatStore } from '@/store/chat';
 
 import { useChatListActionsBar } from '../hooks/useChatListActionsBar';
 import { RenderAction } from '../types';
+
+import { useChatStore } from '@/store/chat';
 
 export const ToolActionsBar: RenderAction = memo(({ id }) => {
   const { regenerate, del } = useChatListActionsBar();

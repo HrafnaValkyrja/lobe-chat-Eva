@@ -1,3 +1,8 @@
+import { genServerLLMConfig } from './_deprecated';
+import { genServerAiProvidersConfig } from './genServerAiProviderConfig';
+import { parseAgentConfig } from './parseDefaultAgent';
+import { parseFilesConfig } from './parseFilesConfig';
+
 import { enableNextAuth } from '@/const/auth';
 import { isDesktop } from '@/const/version';
 import { appEnv, getAppConfig } from '@/envs/app';
@@ -8,10 +13,6 @@ import { langfuseEnv } from '@/envs/langfuse';
 import { parseSystemAgent } from '@/server/globalConfig/parseSystemAgent';
 import { GlobalServerConfig } from '@/types/serverConfig';
 
-import { genServerLLMConfig } from './_deprecated';
-import { genServerAiProvidersConfig } from './genServerAiProviderConfig';
-import { parseAgentConfig } from './parseDefaultAgent';
-import { parseFilesConfig } from './parseFilesConfig';
 
 export const getServerGlobalConfig = async () => {
   const { ACCESS_CODES, DEFAULT_AGENT_CONFIG } = getAppConfig();

@@ -2,9 +2,10 @@
 
 import { memo } from 'react';
 
+import Detail from '../../../features/FileDetail';
+
 import { fileManagerSelectors, useFileStore } from '@/store/file';
 
-import Detail from '../../../features/FileDetail';
 
 const FileDetail = memo<{ id: string }>(({ id }) => {
   const file = useFileStore(fileManagerSelectors.getFileById(id));

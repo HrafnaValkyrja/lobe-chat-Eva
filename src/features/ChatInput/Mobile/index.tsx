@@ -6,11 +6,12 @@ import dynamic from 'next/dynamic';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
-import { useChatInputStore } from '@/features/ChatInput/store';
 
 import ActionBar from '../ActionBar';
 import InputEditor from '../InputEditor';
 import SendArea from '../SendArea';
+
+import { useChatInputStore } from '@/features/ChatInput/store';
 
 const FilePreview = dynamic(() => import('./FilePreview'), { ssr: false });
 

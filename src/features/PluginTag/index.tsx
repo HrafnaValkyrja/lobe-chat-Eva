@@ -6,12 +6,13 @@ import { LucideToyBrick } from 'lucide-react';
 import { memo } from 'react';
 import { Center } from 'react-layout-kit';
 
+import PluginStatus from './PluginStatus';
+
 import Avatar from '@/components/Plugins/PluginAvatar';
 import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfig';
 import { pluginHelpers, useToolStore } from '@/store/tool';
 import { toolSelectors } from '@/store/tool/selectors';
 
-import PluginStatus from './PluginStatus';
 
 export interface PluginTagProps {
   plugins: string[];

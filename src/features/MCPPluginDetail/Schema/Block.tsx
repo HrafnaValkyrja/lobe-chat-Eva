@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
 import Title from '../../../app/[variants]/(main)/discover/features/Title';
+
 import { ModeType } from './types';
 
 interface BlockProps {

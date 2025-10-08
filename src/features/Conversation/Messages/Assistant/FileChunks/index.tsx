@@ -5,9 +5,10 @@ import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import ChunkItem from './Item';
+
 import { ChatFileChunk } from '@/types/message';
 
-import ChunkItem from './Item';
 
 const useStyles = createStyles(({ css, token, isDarkMode }) => ({
   container: css`

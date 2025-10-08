@@ -1,3 +1,5 @@
+import { join } from 'node:path';
+
 import { MainBroadcastEventKey, MainBroadcastParams } from '@lobechat/electron-client-ipc';
 import {
   BrowserWindow,
@@ -6,7 +8,8 @@ import {
   nativeTheme,
   screen,
 } from 'electron';
-import { join } from 'node:path';
+
+import type { App } from '../App';
 
 import { buildDir, preloadDir, resourcesDir } from '@/const/dir';
 import { isDev, isMac, isWindows } from '@/const/env';
@@ -20,7 +23,6 @@ import {
 } from '@/const/theme';
 import { createLogger } from '@/utils/logger';
 
-import type { App } from '../App';
 
 // Create logger
 const logger = createLogger('core:Browser');

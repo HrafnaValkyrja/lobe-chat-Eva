@@ -7,17 +7,20 @@ import { memo, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import ActionBar from '../ActionBar';
+import InputEditor from '../InputEditor';
+import SendArea from '../SendArea';
+import TypoBar from '../TypoBar';
+
+import FilePreview from './FilePreview';
+
 import { useChatInputStore } from '@/features/ChatInput/store';
 import { useChatStore } from '@/store/chat';
 import { chatSelectors } from '@/store/chat/selectors';
 import { useGlobalStore } from '@/store/global';
 import { systemStatusSelectors } from '@/store/global/selectors';
 
-import ActionBar from '../ActionBar';
-import InputEditor from '../InputEditor';
-import SendArea from '../SendArea';
-import TypoBar from '../TypoBar';
-import FilePreview from './FilePreview';
+
 
 const useStyles = createStyles(({ css, token }) => ({
   container: css`

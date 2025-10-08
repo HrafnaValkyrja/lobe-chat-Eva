@@ -2,6 +2,9 @@ import { and, asc, desc, eq } from 'drizzle-orm';
 import { isEmpty } from 'lodash-es';
 import { ModelProvider } from 'model-bank';
 
+import { AiProviderSelectItem, aiModels, aiProviders } from '../schemas';
+import { LobeChatDatabase } from '../type';
+
 import { DEFAULT_MODEL_PROVIDER_LIST } from '@/config/modelProviders';
 import {
   AiProviderDetailItem,
@@ -12,8 +15,6 @@ import {
 } from '@/types/aiProvider';
 import { merge } from '@/utils/merge';
 
-import { AiProviderSelectItem, aiModels, aiProviders } from '../schemas';
-import { LobeChatDatabase } from '../type';
 
 type DecryptUserKeyVaults = (encryptKeyVaultsStr: string | null) => Promise<any>;
 
@@ -218,7 +219,7 @@ export class AiProviderModel {
 
     let keyVaults = {};
 
-    if (!!result.keyVaults) {
+    if (result.keyVaults) {
       try {
         keyVaults = await decrypt(result.keyVaults);
       } catch {
@@ -255,7 +256,7 @@ export class AiProviderModel {
       const userSettings = item.settings || {};
 
       let keyVaults = {};
-      if (!!item.keyVaults) {
+      if (item.keyVaults) {
         try {
           keyVaults = await decrypt(item.keyVaults);
         } catch {
@@ -267,7 +268,7 @@ export class AiProviderModel {
         config: item.config || {},
         fetchOnClient: typeof item.fetchOnClient === 'boolean' ? item.fetchOnClient : undefined,
         keyVaults,
-        settings: !!builtin ? merge(builtin.settings, userSettings) : userSettings,
+        settings: builtin ? merge(builtin.settings, userSettings) : userSettings,
       };
     }
 

@@ -8,11 +8,13 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import PublishedTime from '../../../../../../../../components/PublishedTime';
+
+import { useDetailContext } from './DetailProvider';
+
 import ModelTypeIcon from '@/app/[variants]/(main)/discover/(list)/model/features/List/ModelTypeIcon';
 import { ModelInfoTags } from '@/components/ModelSelect';
 
-import PublishedTime from '../../../../../../../../components/PublishedTime';
-import { useDetailContext } from './DetailProvider';
 
 const useStyles = createStyles(({ css, token }) => {
   return {

@@ -1,10 +1,11 @@
 import { t } from 'i18next';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
+import { authSelectors, userProfileSelectors } from './selectors';
+
 import { BRANDING_NAME } from '@/const/branding';
 import { UserStore } from '@/store/user';
 
-import { authSelectors, userProfileSelectors } from './selectors';
 
 vi.mock('i18next', () => ({
   t: vi.fn((key) => key),

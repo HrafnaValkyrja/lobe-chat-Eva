@@ -1,14 +1,15 @@
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
 
+import Post from './features/Post';
+import UpdateChangelogStatus from './features/UpdateChangelogStatus';
+import Loading from './loading';
+
 import { serverFeatureFlags } from '@/config/featureFlags';
 import { ChangelogService } from '@/server/services/changelog';
 import { DynamicLayoutProps } from '@/types/next';
 import { RouteVariants } from '@/utils/server/routeVariants';
 
-import Post from './features/Post';
-import UpdateChangelogStatus from './features/UpdateChangelogStatus';
-import Loading from './loading';
 
 const Page = async (props: DynamicLayoutProps) => {
   const hideDocs = serverFeatureFlags().hideDocs;

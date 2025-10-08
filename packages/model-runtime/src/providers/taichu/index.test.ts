@@ -6,6 +6,7 @@ import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { testProvider } from '../../providerTestUtils';
 import * as debugStreamModule from '../../utils/debugStream';
+
 import { LobeTaichuAI } from './index';
 
 const provider = ModelProvider.Taichu;

@@ -1,3 +1,5 @@
+import { spawn } from 'node:child_process';
+
 import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import {
   StdioClientTransport,
@@ -7,7 +9,6 @@ import { StreamableHTTPClientTransport } from '@modelcontextprotocol/sdk/client/
 import type { Transport } from '@modelcontextprotocol/sdk/shared/transport.d.ts';
 import type { Progress } from '@modelcontextprotocol/sdk/types.js';
 import debug from 'debug';
-import { spawn } from 'node:child_process';
 
 import {
   MCPClientParams,

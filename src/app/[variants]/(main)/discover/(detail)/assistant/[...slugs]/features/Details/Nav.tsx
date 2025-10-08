@@ -9,10 +9,11 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 import urlJoin from 'url-join';
 
+import { useDetailContext } from '../DetailProvider';
+
 import { SOCIAL_URL } from '@/const/branding';
 import { AssistantNavKey, McpNavKey } from '@/types/discover';
 
-import { useDetailContext } from '../DetailProvider';
 
 const useStyles = createStyles(({ css, token }) => {
   return {

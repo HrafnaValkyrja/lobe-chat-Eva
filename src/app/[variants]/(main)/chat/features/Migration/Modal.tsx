@@ -5,12 +5,13 @@ import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center } from 'react-layout-kit';
 
+import { MigrationError, UpgradeStatus } from './const';
+import Failed from './Failed';
+import MigrationStart from './Start';
+
 import DataStyleModal from '@/components/DataStyleModal';
 import { BRANDING_NAME } from '@/const/branding';
 
-import Failed from './Failed';
-import MigrationStart from './Start';
-import { MigrationError, UpgradeStatus } from './const';
 
 interface MigrationModalProps {
   open: boolean;

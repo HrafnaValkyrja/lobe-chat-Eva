@@ -1,6 +1,7 @@
+import { systemPrompt } from './systemRole';
+
 import { BuiltinToolManifest } from '@/types/tool';
 
-import { systemPrompt } from './systemRole';
 
 export const LocalSystemApiName = {
   listLocalFiles: 'listLocalFiles',

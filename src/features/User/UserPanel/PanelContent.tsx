@@ -3,6 +3,14 @@ import { useRouter } from 'next/navigation';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import DataStatistics from '../DataStatistics';
+import UserInfo from '../UserInfo';
+import UserLoginOrSignup from '../UserLoginOrSignup';
+
+import LangButton from './LangButton';
+import ThemeButton from './ThemeButton';
+import { useMenu } from './useMenu';
+
 import BrandWatermark from '@/components/BrandWatermark';
 import Menu from '@/components/Menu';
 import { enableAuth, enableNextAuth } from '@/const/auth';
@@ -10,12 +18,7 @@ import { isDeprecatedEdition } from '@/const/version';
 import { useUserStore } from '@/store/user';
 import { authSelectors } from '@/store/user/selectors';
 
-import DataStatistics from '../DataStatistics';
-import UserInfo from '../UserInfo';
-import UserLoginOrSignup from '../UserLoginOrSignup';
-import LangButton from './LangButton';
-import ThemeButton from './ThemeButton';
-import { useMenu } from './useMenu';
+
 
 const PanelContent = memo<{ closePopover: () => void }>(({ closePopover }) => {
   const router = useRouter();

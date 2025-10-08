@@ -17,15 +17,17 @@ import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import Descriptions from '@/components/Descriptions';
-import InlineTable from '@/components/InlineTable';
 
 import Title from '../../../app/[variants]/(main)/discover/features/Title';
 import InstallationIcon from '../../../components/MCPDepsIcon';
 import CollapseDesc from '../CollapseDesc';
 import CollapseLayout from '../CollapseLayout';
 import { useDetailContext } from '../DetailProvider';
+
 import Platform from './Platform';
+
+import Descriptions from '@/components/Descriptions';
+import InlineTable from '@/components/InlineTable';
 
 const useStyles = createStyles(({ css, token }) => {
   return {

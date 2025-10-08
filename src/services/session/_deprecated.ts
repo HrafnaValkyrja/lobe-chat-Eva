@@ -1,5 +1,7 @@
 import type { PartialDeep } from 'type-fest';
 
+import { ISessionService } from './type';
+
 import { INBOX_SESSION_ID } from '@/const/session';
 import { DEFAULT_AGENT_CONFIG } from '@/const/settings';
 import { SessionModel } from '@/database/_deprecated/models/session';
@@ -18,7 +20,6 @@ import {
 } from '@/types/session';
 import { merge } from '@/utils/merge';
 
-import { ISessionService } from './type';
 
 export class ClientService implements ISessionService {
   async createSession(
@@ -109,7 +110,7 @@ export class ClientService implements ISessionService {
   async updateSessionConfig(
     activeId: string,
     config: PartialDeep<LobeAgentConfig>,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+     
     _?: AbortSignal,
   ) {
     // TODO: 需要删除这部分处理逻辑
@@ -124,7 +125,7 @@ export class ClientService implements ISessionService {
   async updateSessionMeta(
     activeId: string,
     meta: Partial<MetaData>,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+     
     _?: AbortSignal,
   ) {
     // inbox 不允许修改 meta
@@ -136,7 +137,7 @@ export class ClientService implements ISessionService {
   async updateSessionChatConfig(
     activeId: string,
     config: PartialDeep<LobeAgentChatConfig>,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+     
     _?: AbortSignal,
   ) {
     return this.updateSessionConfig(activeId, { chatConfig: config });

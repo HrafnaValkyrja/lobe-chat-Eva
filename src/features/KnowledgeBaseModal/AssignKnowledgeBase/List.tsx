@@ -6,10 +6,11 @@ import { useTranslation } from 'react-i18next';
 import { Center } from 'react-layout-kit';
 import { Virtuoso } from 'react-virtuoso';
 
-import { useAgentStore } from '@/store/agent';
 
 import Item from './Item';
 import Loading from './Loading';
+
+import { useAgentStore } from '@/store/agent';
 
 export const List = memo(() => {
   const { t } = useTranslation('file');

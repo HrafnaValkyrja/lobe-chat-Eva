@@ -13,7 +13,7 @@ export class Crawler {
   impls: CrawlImplType[];
 
   constructor(options: CrawlOptions = {}) {
-    this.impls = !!options.impls?.length
+    this.impls = options.impls?.length
       ? (options.impls.filter((impl) => Object.keys(crawlImpls).includes(impl)) as CrawlImplType[])
       : defaultImpls;
   }

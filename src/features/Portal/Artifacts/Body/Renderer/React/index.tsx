@@ -1,10 +1,11 @@
 import { SandpackLayout, SandpackPreview, SandpackProvider } from '@codesandbox/sandpack-react';
 import { memo } from 'react';
 
+import { createTemplateFiles } from './template';
+
 import { useChatStore } from '@/store/chat';
 import { chatPortalSelectors } from '@/store/chat/selectors';
 
-import { createTemplateFiles } from './template';
 
 interface ReactRendererProps {
   code: string;

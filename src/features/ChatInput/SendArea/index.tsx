@@ -4,6 +4,7 @@ import { Flexbox } from 'react-layout-kit';
 
 import { ActionKey, actionMap } from '../ActionBar/config';
 import { useChatInputStore } from '../store';
+
 import ExpandButton from './ExpandButton';
 import SendButton from './SendButton';
 

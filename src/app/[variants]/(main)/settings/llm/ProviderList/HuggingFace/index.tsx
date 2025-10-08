@@ -5,10 +5,11 @@ import { InputPassword, Markdown } from '@lobehub/ui';
 import { createStyles } from 'antd-style';
 import { useTranslation } from 'react-i18next';
 
-import { HuggingFaceProviderCard } from '@/config/modelProviders';
 
 import { KeyVaultsConfigKey, LLMProviderApiTokenKey } from '../../const';
 import { ProviderItem } from '../../type';
+
+import { HuggingFaceProviderCard } from '@/config/modelProviders';
 
 const useStyles = createStyles(({ css, token }) => ({
   markdown: css`

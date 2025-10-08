@@ -1,11 +1,12 @@
 import { t } from 'i18next';
 import { describe, expect, it } from 'vitest';
 
+import { topicSelectors } from './selectors';
+
 import { ChatStore } from '@/store/chat';
 import { initialState } from '@/store/chat/initialState';
 import { merge } from '@/utils/merge';
 
-import { topicSelectors } from './selectors';
 
 // Mock i18next
 vi.mock('i18next', () => ({

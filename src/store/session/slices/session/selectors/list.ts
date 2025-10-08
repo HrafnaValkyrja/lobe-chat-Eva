@@ -1,9 +1,10 @@
+import { SessionStore } from '../../../store';
+
 import { DEFAULT_AGENT_LOBE_SESSION, INBOX_SESSION_ID } from '@/const/session';
 import { sessionHelpers } from '@/store/session/slices/session/helpers';
 import { MetaData } from '@/types/meta';
 import { CustomSessionGroup, LobeAgentSession, LobeSessions } from '@/types/session';
 
-import { SessionStore } from '../../../store';
 
 const defaultSessions = (s: SessionStore): LobeSessions => s.defaultSessions;
 const pinnedSessions = (s: SessionStore): LobeSessions => s.pinnedSessions;

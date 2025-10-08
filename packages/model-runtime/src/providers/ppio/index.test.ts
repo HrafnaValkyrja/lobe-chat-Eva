@@ -4,7 +4,9 @@ import { ModelProvider } from 'model-bank';
 import { Mock, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { testProvider } from '../../providerTestUtils';
+
 import models from './fixtures/models.json';
+
 import { LobePPIOAI } from './index';
 
 const provider = ModelProvider.PPIO;

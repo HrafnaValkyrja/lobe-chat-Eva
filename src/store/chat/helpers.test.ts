@@ -1,12 +1,13 @@
 import { describe, expect, it, vi } from 'vitest';
 
+import { chatHelpers } from './helpers';
+
 import { LobeAgentChatConfig, LobeAgentConfig } from '@/types/agent';
 import { ChatMessage } from '@/types/message';
 import { OpenAIChatMessage } from '@/types/openai/chat';
 import { encodeAsync } from '@/utils/tokenizer';
 import * as tokenizerObj from '@/utils/tokenizer';
 
-import { chatHelpers } from './helpers';
 
 // Mock encodeAsync function
 vi.mock('@/utils/tokenizer', () => ({

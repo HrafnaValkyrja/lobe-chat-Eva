@@ -3,11 +3,12 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import useMergeState from 'use-merge-value';
 
+import APIs from './APIs';
+import Meta from './Meta';
+
 import PluginSettingsConfig from '@/features/PluginSettings';
 import { pluginHelpers } from '@/store/tool';
 
-import APIs from './APIs';
-import Meta from './Meta';
 
 interface PluginDetailModalProps {
   id: string;

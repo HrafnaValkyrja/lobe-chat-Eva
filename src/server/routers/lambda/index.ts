@@ -1,7 +1,6 @@
 /**
  * This file contains the root router of Lobe Chat tRPC-backend
  */
-import { publicProcedure, router } from '@/libs/trpc/lambda';
 
 import { agentRouter } from './agent';
 import { aiChatRouter } from './aiChat';
@@ -28,6 +27,8 @@ import { sessionGroupRouter } from './sessionGroup';
 import { threadRouter } from './thread';
 import { topicRouter } from './topic';
 import { userRouter } from './user';
+
+import { publicProcedure, router } from '@/libs/trpc/lambda';
 
 export const lambdaRouter = router({
   agent: agentRouter,

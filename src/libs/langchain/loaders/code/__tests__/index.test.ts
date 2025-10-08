@@ -3,6 +3,7 @@ import * as fs from 'node:fs';
 import { join } from 'node:path';
 
 import { CodeLoader } from '../index';
+
 import longResult from './long.json';
 
 describe('CodeLoader', () => {

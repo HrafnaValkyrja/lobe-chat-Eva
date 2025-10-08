@@ -5,15 +5,16 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import ArgsInput from './ArgsInput';
+import CollapsibleSection from './CollapsibleSection';
+import MCPTypeSelect from './MCPTypeSelect';
+import QuickImportSection from './QuickImportSection';
+
 import KeyValueEditor from '@/components/KeyValueEditor';
 import MCPStdioCommandInput from '@/components/MCPStdioCommandInput';
 import { useToolStore } from '@/store/tool';
 import { mcpStoreSelectors, pluginSelectors } from '@/store/tool/selectors';
 
-import ArgsInput from './ArgsInput';
-import CollapsibleSection from './CollapsibleSection';
-import MCPTypeSelect from './MCPTypeSelect';
-import QuickImportSection from './QuickImportSection';
 
 interface MCPManifestFormProps {
   form: FormInstance;
@@ -262,7 +263,7 @@ const MCPManifestForm = ({ form, isEditMode }: MCPManifestFormProps) => {
               <Button
                 loading={isTesting}
                 onClick={handleTestConnection}
-                type={!!mcpType ? 'primary' : undefined}
+                type={mcpType ? 'primary' : undefined}
               >
                 {t('dev.mcp.testConnection')}
               </Button>

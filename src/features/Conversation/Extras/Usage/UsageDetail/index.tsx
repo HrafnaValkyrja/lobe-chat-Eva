@@ -6,6 +6,10 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Center, Flexbox } from 'react-layout-kit';
 
+import ModelCard from './ModelCard';
+import TokenProgress, { TokenProgressItem } from './TokenProgress';
+import { getDetailsToken } from './tokens';
+
 import InfoTooltip from '@/components/InfoTooltip';
 import { aiModelSelectors, useAiInfraStore } from '@/store/aiInfra';
 import { useGlobalStore } from '@/store/global';
@@ -13,9 +17,6 @@ import { systemStatusSelectors } from '@/store/global/selectors';
 import { MessageMetadata } from '@/types/message';
 import { formatNumber } from '@/utils/format';
 
-import ModelCard from './ModelCard';
-import TokenProgress, { TokenProgressItem } from './TokenProgress';
-import { getDetailsToken } from './tokens';
 
 interface TokenDetailProps {
   meta: MessageMetadata;

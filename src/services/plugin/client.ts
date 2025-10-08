@@ -1,9 +1,10 @@
+import { IPluginService } from './type';
+
 import { clientDB } from '@/database/client/db';
 import { PluginModel } from '@/database/models/plugin';
 import { BaseClientService } from '@/services/baseClientService';
 import { LobeTool } from '@/types/tool';
 
-import { IPluginService } from './type';
 
 export class ClientService extends BaseClientService implements IPluginService {
   private get pluginModel(): PluginModel {
@@ -38,7 +39,7 @@ export class ClientService extends BaseClientService implements IPluginService {
     await this.pluginModel.deleteAll();
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+   
   updatePluginSettings: IPluginService['updatePluginSettings'] = async (id, settings, _?) => {
     await this.pluginModel.update(id, { settings });
   };

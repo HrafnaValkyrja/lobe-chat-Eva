@@ -9,7 +9,7 @@ export const edgeClient = createTRPCClient<EdgeRouter>({
   links: [
     httpBatchLink({
       fetch: isDesktop
-        ? // eslint-disable-next-line no-undef
+        ?  
           (input, init) => fetchWithDesktopRemoteRPC(input as string, init as RequestInit)
         : undefined,
       headers: async () => {

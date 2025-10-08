@@ -1,5 +1,6 @@
-import debug from 'debug';
 import path from 'node:path';
+
+import debug from 'debug';
 
 import type { DocumentPage, FileLoaderInterface } from '../../types';
 import { type ExtractedFile, extractFiles, parseString } from '../../utils/parser-utils';

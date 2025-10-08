@@ -62,7 +62,7 @@ export interface LobeAgentChatConfig {
   urlContext?: boolean;
   useModelBuiltinSearch?: boolean;
 }
-/* eslint-enable */
+ 
 
 export const AgentChatConfigSchema = z.object({
   autoCreateTopicThreshold: z.number().default(2),

@@ -29,7 +29,7 @@ export class UserService {
     const email = params.email_addresses.find((e) => e.id === params.primary_email_address_id);
 
     const phone = params.phone_numbers.find((e, index) => {
-      if (!!params.primary_phone_number_id) return e.id === params.primary_phone_number_id;
+      if (params.primary_phone_number_id) return e.id === params.primary_phone_number_id;
 
       return index === 0;
     });

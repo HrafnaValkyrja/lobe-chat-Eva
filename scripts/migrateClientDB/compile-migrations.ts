@@ -1,6 +1,7 @@
-import { readMigrationFiles } from 'drizzle-orm/migrator';
 import { writeFileSync } from 'node:fs';
 import { join } from 'node:path';
+
+import { readMigrationFiles } from 'drizzle-orm/migrator';
 
 const dbBase = join(__dirname, '../../packages/database');
 const migrationsFolder = join(dbBase, './migrations');

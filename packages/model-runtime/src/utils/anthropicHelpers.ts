@@ -3,6 +3,7 @@ import OpenAI from 'openai';
 
 import { OpenAIChatMessage, UserMessageContentPart } from '../types';
 import { imageUrlToBase64 } from '../utils/imageToBase64';
+
 import { parseDataUri } from './uriParser';
 
 export const buildAnthropicBlock = async (
@@ -15,7 +16,7 @@ export const buildAnthropicBlock = async (
     }
 
     case 'text': {
-      if (!!content.text) return content as any;
+      if (content.text) return content as any;
 
       return undefined;
     }

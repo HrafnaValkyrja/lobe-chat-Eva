@@ -2,13 +2,15 @@
 import { integer, jsonb, pgTable, text, uuid, varchar } from 'drizzle-orm/pg-core';
 import { createInsertSchema } from 'drizzle-zod';
 
-import { ImageGenerationAsset } from '@/types/generation';
 
 import { idGenerator } from '../utils/idGenerator';
+
 import { timestamps } from './_helpers';
 import { AsyncTaskSelectItem, asyncTasks } from './asyncTask';
 import { files } from './file';
 import { users } from './user';
+
+import { ImageGenerationAsset } from '@/types/generation';
 
 /**
  * 生成主题表 - 用于组织和管理 AI 生成内容的主题
